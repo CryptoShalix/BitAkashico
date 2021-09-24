@@ -28,7 +28,7 @@ jobs:
           base_href: 'https://adlrg.github.io/CryptoLovers/'
 
       - name: Build
-        run: npm run build --base-href https://adlrg.github.io/CryptoLovers/ # The build command of your project
+        run: npm run build # The build command of your project
     
       - name: Push
         uses: s0/git-publish-subdir-action@develop
