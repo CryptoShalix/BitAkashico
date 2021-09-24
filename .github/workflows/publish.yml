@@ -24,7 +24,7 @@ jobs:
       - name: Change base-href path
         uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
         with:
-          html_path: '/src/index.html'
+          html_path: './src/index.html'
           base_href: 'https://adlrg.github.io/CryptoLovers/'
 
       - name: Build
