@@ -25,7 +25,7 @@ jobs:
         uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
         with:
           html_path: './src/index.html'
-          base_href: 'https://adlrg.github.io/CryptoLovers'
+          base_href: 'https://adlrg.github.io/'
 
       - name: Build
         run: npm run build # The build command of your project
