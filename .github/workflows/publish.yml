@@ -21,15 +21,14 @@ jobs:
       - name: Install all dependencies
         run: npm install
         
-#       - name: Change base-href path
-#         uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
-#         with:
-#           html_path: './src/index.html'
-#           base_href: 'https://adlrg.github.io/'
+      - name: Change base-href path
+        uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
+        with:
+          html_path: './src/index.html'
+          base_href: 'https://adlrg.github.io/CryptoLovers'
 
       - name: Build
-          ng build --prod --base-href "https://adlrg.github.io/CryptoLovers/"
-#         run: npm run build # The build command of your project
+        run: npm run build # The build command of your project
     
       - name: Push
         uses: s0/git-publish-subdir-action@develop
