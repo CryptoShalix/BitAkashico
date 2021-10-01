@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
       {
         title: this.title,
         href: '/',
-        path: '../assets/images/Logo. Crypto Lovers. Short.png',
+        path: '../assets/images/Logo. Crypto Lovers v2 transparent.png',
         target: '_self',
         isSVG: false
       }
@@ -48,5 +48,9 @@ export class AppComponent implements OnInit {
         href: 'https://t.me/CryptoLoversESFeed',
       }
     ));
+  }
+
+  getCurrentBreadcrumb(): string {
+    return this.title;
   }
 }

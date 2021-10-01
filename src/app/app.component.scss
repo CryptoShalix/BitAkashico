@@ -1,28 +1,59 @@
 @import '../styles-colors.scss';
 
-.toolbar,
-.toolbar-media {
-  position: absolute;
+.toolbar {
+  position: fixed;
+  display: flex;
+  height: 60px;
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
-  display: flex;
   align-items: center;
   justify-content: center;
   background-color: $toolbar_background;
   color: $toolbar_text;
   font-weight: 600;
 
-  .icons {
-    position: relative;
+  .toolbar-menu,
+  .toolbar-media {
+    position: absolute;
     display: flex;
+    top: 0;
+    bottom: 0;
+
+    .icons {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .toolbar-menu {
+    left: 15px;
+
+    .linkable-icon {
+      width: 100%;
+    }
+  }
+
+  .toolbar-media {
+    right: 15px;
   }
 }
 
-.toolbar-media {
-  top: 60px;
+.breadcrumb {
+  position: fixed;
+  display: flex;
   height: 30px;
+  top: 60px;
+  left: 0;
+  right: 0;
+  padding: 0 25px;
+  align-items: center;
+  justify-content: left;
+  background-color: $toolbar_breadcrumb_background;
+  color: $toolbar_breadcrumb_text;
+  font-weight: 600;
 }
 
 .spacer {
