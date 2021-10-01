@@ -1,6 +1,7 @@
-@import '../styles_colors.scss';
+@import '../styles-colors.scss';
 
-.toolbar {
+.toolbar,
+.toolbar-media {
   position: absolute;
   top: 0;
   left: 0;
@@ -13,29 +14,25 @@
   color: $toolbar_text;
   font-weight: 600;
 
-  .spacer {
-    flex: 1;
-  }
-
-  img.logo {
-    margin: 0 15px;
-    width: 60px;
-    height: 60px;
-  }
-
-  #twitter-logo {
-    height: 40px;
-    margin: 0 16px;
-
-    &:hover {
-      opacity: 0.8;
-    }
+  .icons {
+    position: relative;
+    display: flex;
   }
 }
 
+.toolbar-media {
+  top: 60px;
+  height: 30px;
+}
+
+.spacer {
+  flex: 1;
+}
+
 .content {
+  position: relative;
   display: flex;
-  margin: 82px auto 32px;
+  margin: 90px auto 0;
   padding: 0 16px;
   max-width: 960px;
   flex-direction: column;

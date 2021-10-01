@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SocialMediaIconComponent } from './shared/components/social-media-icon/social-media-icon.component';
+import { PipesModule } from './shared/pipes/pipes.module';
+import { LinkableIconComponent } from './shared/components/linkable-icon/linkable-icon.component';
 
 @NgModule({
   declarations: [
-    SocialMediaIconComponent
+    LinkableIconComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PipesModule,
   ],
   exports: [
-    SocialMediaIconComponent
+    LinkableIconComponent,
+    PipesModule,
   ]
 })
 export class SharedModule { }

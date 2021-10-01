@@ -1,4 +1,5 @@
-@import './styles_colors.scss';
+@import './styles-colors.scss';
+@import './styles-icons.scss';
 
 :host {
   font-family: "Segoe UI";
@@ -20,15 +21,6 @@ h6 {
 
 p {
   margin: 0;
-}
-
-svg.material-icons {
-  height: 24px;
-  width: auto;
-}
-
-svg.material-icons:not(:last-child) {
-  margin-right: 8px;
 }
 
 .card svg.material-icons path {

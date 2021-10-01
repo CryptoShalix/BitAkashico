@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ESocialMediaIcon, SocialMediaIcon } from './shared/components/social-media-icon/social-media-icon';
+import { LinkableIcon, ELinkableIcon } from './shared/components/linkable-icon/linkable-icon';
 
 @Component({
   selector: 'app-root',
@@ -8,18 +8,45 @@ import { ESocialMediaIcon, SocialMediaIcon } from './shared/components/social-me
 })
 export class AppComponent implements OnInit {
   title = 'Crypto Lovers';
-  defaultIcons: SocialMediaIcon[] = [];
+  slogan = '';
+  menuIcons: LinkableIcon[] = [];
+  defaultIcons: LinkableIcon[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
-    this.prepareSocialMediaIcons();
+    this.prepareMenu();
+    this.prepareLinkableIcons();
   }
 
-  private prepareSocialMediaIcons(): void {
+  private prepareMenu(): void {
+    this.menuIcons = [];
+    this.menuIcons.push(new LinkableIcon(this.title,
+      {
+        title: this.title,
+        href: '/',
+        path: '../assets/images/Logo. Crypto Lovers. Short.png',
+        target: '_self',
+        isSVG: false
+      }
+    ));
+  }
+
+  private prepareLinkableIcons(): void {
     this.defaultIcons = [];
-    this.defaultIcons.push(new SocialMediaIcon(ESocialMediaIcon.Twitter));
-    this.defaultIcons.push(new SocialMediaIcon(ESocialMediaIcon.Discord));
-    this.defaultIcons.push(new SocialMediaIcon(this.title, this.title, '../assets/images/Logo. Crypto Lovers. Short.png', '/', false));
+    this.defaultIcons.push(new LinkableIcon(ELinkableIcon.Twitter));
+    this.defaultIcons.push(new LinkableIcon(ELinkableIcon.Discord));
+    this.defaultIcons.push(new LinkableIcon(ELinkableIcon.Telegram,
+      {
+        title: ELinkableIcon.Telegram,
+        href: 'https://t.me/CryptoLoversES',
+      }
+    ));
+    this.defaultIcons.push(new LinkableIcon(ELinkableIcon.Telegram,
+      {
+        title: ELinkableIcon.Telegram + ' Feed',
+        href: 'https://t.me/CryptoLoversESFeed',
+      }
+    ));
   }
 }

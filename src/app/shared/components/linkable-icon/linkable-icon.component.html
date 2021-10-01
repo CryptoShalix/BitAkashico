@@ -1,0 +1,11 @@
+<ng-container *ngIf="defaultIcon">
+  <a class="linkable-icon" [attr.aria-valuenow]="defaultIcon.label" [target]="defaultIcon.target" rel="noopener"
+    [href]="defaultIcon.href" [title]="defaultIcon.title" [attr.tooltip]="defaultIcon.tooltip">
+    <ng-container *ngIf="defaultIcon.isSVG; else imageTemplate">
+      <div [innerHTML]="svgPath | safe:'html'"></div>
+    </ng-container>
+    <ng-template #imageTemplate>
+      <img [src]="defaultIcon.path">
+    </ng-template>
+  </a>
+</ng-container>
