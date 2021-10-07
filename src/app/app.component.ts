@@ -21,13 +21,14 @@ export class AppComponent implements OnInit {
 
   private prepareMenu(): void {
     this.menuIcons = [];
+    this.defaultIcons.push(new LinkableIcon(ELinkableIcon.Home));
     this.menuIcons.push(new LinkableIcon(this.title,
       {
         title: this.title,
         href: '/',
         path: '../assets/images/Logo. Crypto Lovers v2 transparent.png',
         target: '_self',
-        isSVG: false
+        showText: true
       }
     ));
   }
@@ -46,6 +47,14 @@ export class AppComponent implements OnInit {
       {
         title: ELinkableIcon.Telegram + ' Feed',
         href: 'https://t.me/CryptoLoversESFeed',
+      }
+    ));
+    this.defaultIcons.push(new LinkableIcon(ELinkableIcon.Twitter,
+      {
+        title: 'Test',
+        href: 'https://www.google.es',
+        showText: true,
+        isCard: true,
       }
     ));
   }
