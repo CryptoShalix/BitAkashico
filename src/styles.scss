@@ -73,10 +73,6 @@
   font-family: inherit;
 }
 
-*+* {
-  margin-top: var(--spacing);
-}
-
 *,
 *:before,
 *:after {
@@ -266,6 +262,12 @@ img {
   width: 100%;
 }
 
+.material-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #svelte>*:not(footer, script) {
   display: grid;
   grid-template-columns:
@@ -419,3 +421,6 @@ pre ::selection {
   border-radius: 0px;
   background-color: #eef0f2;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

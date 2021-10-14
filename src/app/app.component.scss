@@ -1,71 +1,58 @@
 @import '../styles-colors.scss';
 
-.toolbar {
-  position: fixed;
-  display: flex;
-  height: 60px;
-  top: 0;
-  left: 0;
-  right: 0;
-  align-items: center;
-  justify-content: center;
+.main-container {
+  position: relative;
+  margin: 0;
+  padding: 0;
   background-color: $toolbar_background;
   color: $toolbar_text;
   font-weight: 600;
 
-  .toolbar-menu,
-  .toolbar-media {
-    position: absolute;
+  .header,
+  .content,
+  .footer {
+    position: fixed;
     display: flex;
-    top: 0;
-    bottom: 0;
+    margin: 0;
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
 
     .icons {
-      position: relative;
       display: flex;
+      height: 50px;
       align-items: center;
       justify-content: center;
     }
   }
 
-  .toolbar-menu {
-    left: 15px;
-
-    .linkable-icon {
-      width: 100%;
-    }
+  .header {
+    height: 75px;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid $toolbar-border-color;
   }
 
-  .toolbar-media {
-    right: 15px;
+  .content {
+    max-width: 960px;
+    height: 100%;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    padding: 0 16px;
   }
-}
 
-.breadcrumb {
-  position: fixed;
-  display: flex;
-  height: 30px;
-  top: 60px;
-  left: 0;
-  right: 0;
-  padding: 0 25px;
-  align-items: center;
-  justify-content: left;
-  background-color: $toolbar_breadcrumb_background;
-  color: $toolbar_breadcrumb_text;
-  font-weight: 600;
+  .footer {
+    height: 30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 1px solid $toolbar-border-color;
+  }
 }
 
 .spacer {
   flex: 1;
-}
-
-.content {
-  position: relative;
-  display: flex;
-  margin: 90px auto 0;
-  padding: 0 16px;
-  max-width: 960px;
-  flex-direction: column;
-  align-items: center;
 }

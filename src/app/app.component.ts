@@ -28,7 +28,6 @@ export class AppComponent implements OnInit {
         href: '/',
         path: '../assets/images/Logo. Crypto Lovers v2 transparent.png',
         target: '_self',
-        showText: true
       }
     ));
   }
@@ -47,14 +46,6 @@ export class AppComponent implements OnInit {
       {
         title: ELinkableIcon.Telegram + ' Feed',
         href: 'https://t.me/CryptoLoversESFeed',
-      }
-    ));
-    this.defaultIcons.push(new LinkableIcon(ELinkableIcon.Twitter,
-      {
-        title: 'Test',
-        href: 'https://www.google.es',
-        showText: true,
-        isCard: true,
       }
     ));
   }

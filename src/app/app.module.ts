@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared.module';
 import { PipesModule } from './shared/pipes/pipes.module';
+import { MaterialModule } from './material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,8 +17,10 @@ import { PipesModule } from './shared/pipes/pipes.module';
     CommonModule,
     BrowserModule,
     AppRoutingModule,
+    MaterialModule,
     SharedModule,
     PipesModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
