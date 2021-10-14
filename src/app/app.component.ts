@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LinkableIcon, ELinkableIcon } from './shared/components/linkable-icon/linkable-icon';
 
+// Angular Material Icons: https://fonts.google.com/icons
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

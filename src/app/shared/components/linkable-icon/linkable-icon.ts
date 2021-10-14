@@ -61,7 +61,7 @@ export class LinkableIcon {
     const target = linkableIcon?.target;
     const isSVG = linkableIcon && linkableIcon.isSVG ? true : false;
     const isCard = linkableIcon && linkableIcon.isCard ? true : false;
-    const showText = linkableIcon && linkableIcon.showText ? true : false;
+    let showText = linkableIcon && linkableIcon.showText ? true : false;
     switch (id) {
       case ELinkableIcon.Home:
         this.id = title ? title : ELinkableIcon.Home.toLowerCase();
@@ -71,6 +71,7 @@ export class LinkableIcon {
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
         this.isSVG = true;
+        showText = true;
         break;
       case ELinkableIcon.Twitter:
         this.id = ELinkableIcon.Twitter.toLowerCase();

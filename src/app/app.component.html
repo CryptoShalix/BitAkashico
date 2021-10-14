@@ -3,15 +3,21 @@
   <div class="header" role="banner">
     <div class="toolbar-menu">
       <div class="icons">
-        <mat-icon>home</mat-icon>
+        <mat-icon>account balance</mat-icon>
+        <mat-icon>account balance wallet</mat-icon>
+        <mat-icon>savings</mat-icon>
+        <mat-icon>dangerous</mat-icon>
+        <mat-icon>school</mat-icon>
+        <mat-icon>menu book</mat-icon>
+        <mat-icon>games</mat-icon>
+        <mat-icon>games</mat-icon>
         <app-linkable-icon *ngFor="let menuOption of menuIcons" [sDefaultIcon]="menuOption"></app-linkable-icon>
       </div>
     </div>
   </div>
 
-  <div class="content" role="main">
+  <div class="body" role="main">
 
-    <!-- Highlight Card -->
     <!-- <div class="card highlight-card card-small">
 
     <svg id="rocket" alt="Rocket Ship" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678"
@@ -39,10 +45,9 @@
         transform="translate(-147.025 -140.939)" fill="#f5f5f5" />
     </svg>
 
-  </div> -->
+  </div> 
 
-    <!-- Resources -->
-    <!-- <h2>Resources</h2>
+   <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>
 
   <div class="card-container">
@@ -79,8 +84,7 @@
 
   </div>
 
-  <-- Next Steps -->
-    <!-- <h2>Next Steps</h2>
+     <h2>Next Steps</h2>
   <p>What do you want to do next with your app?</p>
 
   <input type="hidden" #selection>
@@ -127,20 +131,18 @@
 
       <span>Build for Production</span>
     </div>
-  </div> -->
+  </div>
 
-    <!-- Terminal -->
-    <!-- <div class="terminal" [ngSwitch]="selection.value">
+    <div class="terminal" [ngSwitch]="selection.value">
     <pre *ngSwitchDefault>ng generate component xyz</pre>
     <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
     <pre *ngSwitchCase="'pwa'">ng add @angular/pwa</pre>
     <pre *ngSwitchCase="'dependency'">ng add _____</pre>
     <pre *ngSwitchCase="'test'">ng test</pre>
     <pre *ngSwitchCase="'build'">ng build --prod</pre>
-  </div> -->
-
-    <!-- Links -->
-    <!-- <div class="card-container">
+  </div> 
+  
+  <div class="card-container">
     <a class="circle-link" title="Animations" href="https://angular.io/guide/animations" target="_blank" rel="noopener">
       <svg id="Group_20" data-name="Group 20" xmlns="http://www.w3.org/2000/svg" width="21.813" height="23.453"
         viewBox="0 0 21.813 23.453">
@@ -256,10 +258,9 @@
         </g>
       </svg>
     </a>
-  </div> -->
-
-    <!-- Footer -->
-    <!-- <footer>
+  </div> 
+  
+  <footer>
     Love Angular?&nbsp;
     <a href="https://github.com/angular/angular" target="_blank" rel="noopener"> Give our repo a star.
       <div class="github-star-badge">
@@ -283,7 +284,9 @@
       transform="translate(142.69 -634.312)" fill="#eee" />
   </svg> -->
 
-    <router-outlet></router-outlet>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 
   <div class="footer">

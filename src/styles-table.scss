@@ -1,0 +1,31 @@
+table {
+  border-collapse: collapse;
+  text-align: left;
+  table-layout: fixed;
+  font-variant-numeric: tabular-nums;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+table,
+td,
+th {
+  border: 1px solid;
+}
+
+td,
+th {
+  padding: 4px 7px;
+  width: 100%;
+}
+
+thead {
+  background: var(--accent-color);
+  word-break: break-word;
+  font-weight: 900;
+}
+
+tbody tr:nth-child(even) {
+  background: var(--accent-color-03);
+}
