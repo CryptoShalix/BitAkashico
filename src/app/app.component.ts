@@ -1,7 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { LinkableIcon, ELinkableIcon } from './shared/components/linkable-icon/linkable-icon';
+import { ELinkableIcon, ELinkableIconType, LinkableIcon } from './shared/components/linkable-icon/linkable-icon';
 
 // Angular Material Icons: https://fonts.google.com/icons
+
+/**
+ * To publish this app on Github Pages
+ *
+ * 1. ng build --prod --base-href "https://adlrg.github.io/CryptoLovers/"
+ * 2. ngh -d dist/CryptoLovers
+ * OR
+ * 1. npm run publish
+ * (this one launches a package.json script. Check it out to update any details)
+ */
 
 @Component({
   selector: 'app-root',
@@ -9,50 +19,47 @@ import { LinkableIcon, ELinkableIcon } from './shared/components/linkable-icon/l
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'Crypto Lovers';
+  title = ELinkableIcon.Home;
   slogan = '';
-  menuIcons: LinkableIcon[] = [];
-  defaultIcons: LinkableIcon[] = [];
+  iconHome: LinkableIcon;
+  iconListMenu: LinkableIcon[] = [];
+  iconListMedia: LinkableIcon[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
-    this.prepareMenu();
     this.prepareLinkableIcons();
   }
 
-  private prepareMenu(): void {
-    this.menuIcons = [];
-    this.defaultIcons.push(new LinkableIcon(ELinkableIcon.Home));
-    this.menuIcons.push(new LinkableIcon(this.title,
-      {
-        title: this.title,
-        href: '/',
-        path: '../assets/images/Logo. Crypto Lovers v2 transparent.png',
-        target: '_self',
-      }
-    ));
-  }
-
   private prepareLinkableIcons(): void {
-    this.defaultIcons = [];
-    this.defaultIcons.push(new LinkableIcon(ELinkableIcon.Twitter));
-    this.defaultIcons.push(new LinkableIcon(ELinkableIcon.Discord));
-    this.defaultIcons.push(new LinkableIcon(ELinkableIcon.Telegram,
+    this.prepareIconMenu();
+    this.prepareIconListMenu();
+    this.prepareIconListMedia();
+  }
+
+  private prepareIconMenu(): void {
+    this.iconHome = new LinkableIcon(ELinkableIcon.Home);
+  }
+
+  private prepareIconListMenu(): void {
+    this.iconListMenu = [];
+    this.iconListMenu.push(new LinkableIcon(this.title,
       {
-        title: ELinkableIcon.Telegram,
-        href: 'https://t.me/CryptoLoversES',
-      }
-    ));
-    this.defaultIcons.push(new LinkableIcon(ELinkableIcon.Telegram,
-      {
-        title: ELinkableIcon.Telegram + ' Feed',
-        href: 'https://t.me/CryptoLoversESFeed',
-      }
+        href: '/',
+        path: 'home',
+        target: '_self',
+        title: this.title,
+        showText: true,
+        isCard: true,
+        type: ELinkableIconType.ICON,
+      },
     ));
   }
 
-  getCurrentBreadcrumb(): string {
-    return this.title;
+  private prepareIconListMedia(): void {
+    this.iconListMedia = [];
+    this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Twitter));
+    this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Discord));
+    this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Telegram));
   }
 }

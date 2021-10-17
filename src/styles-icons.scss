@@ -18,60 +18,27 @@ svg.material-icons:not(:last-child) {
   justify-content: center;
   align-items: center;
   border: 1px solid transparent;
-  transition: 0.25s all ease-in-out;
 
-  &:hover {
-    border-color: $global-link-color-hover;
-    transition: 0.25s all ease-in-out;
-  }
-
-  &:hover span,
-  &:hover .svgControl {
+  &.no-border:hover span {
     opacity: 1;
     color: $global-link-color-hover;
-    transition: 0.25s all ease-in-out;
   }
 
-  &:hover .svgControl .svgPath {
-    fill: $global-link-color-hover;
-    transition: 0.25s all ease-in-out;
-  }
+  &:not(.no-border):hover {
+    border-color: $global-link-color-hover;
 
-  .svgControl {
-    width: 100%;
-    height: 100%;
-    max-width: 30px;
-    max-height: 30px;
-    margin: 5px;
-    opacity: 0.5;
-    transition: 0.25s all ease-in-out;
-
-    &:hover {
+    span,
+    .svgControl {
       opacity: 1;
-      transition: 0.25s all ease-in-out;
+      color: $global-link-color-hover;
+
+      .svgPath {
+        fill: $global-link-color-hover;
+      }
     }
-
-    .svgPath {
-      fill: #ffffff;
-    }
   }
 
-  img {
-    width: 100%;
-    height: 100%;
-    max-width: 60px;
-    max-height: 60px;
-  }
-
-  span {
-    font-size: 20px;
-    font-weight: bold;
-    color: $toolbar_text;
-    opacity: 0.5;
-    transition: 0.25s all ease-in-out;
-  }
-
-  .card {
+  &.card {
     border-radius: 4px;
     border: 1px solid #eee;
     background-color: #fafafa;
@@ -118,10 +85,61 @@ svg.material-icons:not(:last-child) {
       fill: #888;
     }
   }
+
+  .svgControl {
+    width: 100%;
+    height: 100%;
+    max-width: 30px;
+    max-height: 30px;
+    min-width: 20px;
+    min-height: 20px;
+    margin: 5px;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+      color: $global-link-color-hover;
+    }
+
+    .svgPath {
+      fill: #ffffff;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  span {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $toolbar_text;
+  }
 }
 
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
+
+  .linkable-icon {
+    max-height: 60px;
+
+    img {
+      max-width: 50px;
+      max-height: 50px;
+    }
+
+    span,
+    .svgControl {
+      opacity: 1;
+      font-size: 14px;
+      color: $global-link-color;
+    }
+  }
 
   .card:not(.highlight-card) {
     height: 16px;

@@ -1,13 +1,23 @@
 <ng-container *ngIf="defaultIcon">
-  <a class="linkable-icon" [ngClass]="{'card': defaultIcon.isCard}" [attr.aria-valuenow]="defaultIcon.label"
-    [target]="defaultIcon.target" rel="noopener" [href]="defaultIcon.href" [title]="defaultIcon.title"
-    [attr.tooltip]="defaultIcon.tooltip">
+  <a class="linkable-icon" [ngClass]="{'card': defaultIcon.isCard, 'no-border': defaultIcon.isImage}"
+    [attr.aria-valuenow]="defaultIcon.label" [target]="defaultIcon.target" rel="noopener" [href]="defaultIcon.href"
+    [title]="defaultIcon.title" [attr.tooltip]="defaultIcon.tooltip">
+
     <ng-container *ngIf="defaultIcon.isSVG; else imageTemplate">
       <div class="material-icons" [innerHTML]="svgPath | safe:'html'"></div>
     </ng-container>
+
     <ng-template #imageTemplate>
-      <img [src]="defaultIcon.path">
+      <ng-container *ngIf="defaultIcon.isImage; else iconTemplate">
+        <img [src]="defaultIcon.path">
+      </ng-container>
+
+      <ng-template #iconTemplate>
+        <mat-icon [ngStyle]="{color: defaultIcon.color}">{{ defaultIcon.path }}
+        </mat-icon>
+      </ng-template>
     </ng-template>
+
     <span *ngIf="defaultIcon.showText">{{ defaultIcon.title }}</span>
   </a>
 </ng-container>

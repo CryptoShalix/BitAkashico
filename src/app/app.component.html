@@ -1,19 +1,22 @@
 <div class="main-container">
 
   <div class="header" role="banner">
+
     <div class="toolbar-menu">
       <div class="icons">
-        <mat-icon>account balance</mat-icon>
-        <mat-icon>account balance wallet</mat-icon>
-        <mat-icon>savings</mat-icon>
-        <mat-icon>dangerous</mat-icon>
-        <mat-icon>school</mat-icon>
-        <mat-icon>menu book</mat-icon>
-        <mat-icon>games</mat-icon>
-        <mat-icon>games</mat-icon>
-        <app-linkable-icon *ngFor="let menuOption of menuIcons" [sDefaultIcon]="menuOption"></app-linkable-icon>
+        <app-linkable-icon [sDefaultIcon]="iconHome"></app-linkable-icon>
       </div>
     </div>
+
+    <div class="spacer"></div>
+
+    <div class="toolbar-media">
+      <div class="icons">
+        <app-linkable-icon *ngFor="let icon of iconListMedia" [sDefaultIcon]="icon">
+        </app-linkable-icon>
+      </div>
+    </div>
+
   </div>
 
   <div class="body" role="main">
@@ -285,17 +288,26 @@
   </svg> -->
 
     <div class="content">
+      <app-linkable-icon *ngFor="let icon of iconListMenu" [sDefaultIcon]="icon"></app-linkable-icon>
+      <mat-icon>account balance</mat-icon>
+      <mat-icon>account balance wallet</mat-icon>
+      <mat-icon>savings</mat-icon>
+      <mat-icon>dangerous</mat-icon>
+      <mat-icon>school</mat-icon>
+      <mat-icon>menu book</mat-icon>
+      <mat-icon>games</mat-icon>
+      <mat-icon>games</mat-icon>
       <router-outlet></router-outlet>
     </div>
   </div>
 
-  <div class="footer">
+  <!-- <div class="footer">
     <div class="toolbar-media">
       <div class="icons">
-        <app-linkable-icon *ngFor="let defaultIcon of defaultIcons" [sDefaultIcon]="defaultIcon">
+        <app-linkable-icon *ngFor="let icon of iconListMedia" [sDefaultIcon]="icon">
         </app-linkable-icon>
       </div>
     </div>
-  </div>
+  </div> -->
 
 </div>

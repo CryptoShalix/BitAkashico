@@ -1,5 +1,12 @@
 @import '../styles-colors.scss';
 
+$header-height: 75px;
+$header-border: 2px;
+$footer-height: 30px;
+$footer-border: 2px;
+// $body-height: calc(100% - 130px);
+$body-height: calc(100% - 77px);
+
 .main-container {
   position: relative;
   margin: 0;
@@ -27,20 +34,22 @@
   }
 
   .header {
-    height: 75px;
+    height: $header-height;
     top: 0;
     left: 0;
     right: 0;
-    border-bottom: 1px solid $toolbar-border-color;
+    border-bottom: $header-border solid $toolbar-border-color;
+    z-index: 1;
   }
 
   .body {
-    height: calc(100% - 125px);
-    top: 75px;
+    height: $body-height;
+    top: $header-height+$header-border;
     left: 0;
     right: 0;
     margin: 0;
     padding: 0;
+    z-index: 999;
 
     .content {
       position: relative;
@@ -55,14 +64,21 @@
   }
 
   .footer {
-    height: 30px;
+    height: $footer-height;
     left: 0;
     right: 0;
     bottom: 0;
-    border-top: 1px solid $toolbar-border-color;
+    border-top: $footer-border solid $toolbar-border-color;
+    z-index: 1;
   }
 }
 
 .spacer {
   flex: 1;
+}
+
+@media (min-width: 1000px) {
+  .main-container .body .content {
+    max-width: 100%;
+  }
 }

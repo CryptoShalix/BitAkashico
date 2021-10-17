@@ -1,8 +1,14 @@
 export enum ELinkableIcon {
-  Home = 'Home',
+  Home = 'Crypto Lovers',
   Twitter = 'Twitter',
   Discord = 'Discord',
   Telegram = 'Telegram',
+}
+
+export enum ELinkableIconType {
+  ICON = 'icon',
+  IMAGE = 'image',
+  SVG = 'svg',
 }
 
 export enum ELinkableIconSVG {
@@ -31,46 +37,60 @@ export interface ILinkableIcon {
   tooltip?: string;
   color?: string;
   target?: string;
-  isSVG?: boolean;
-  isCard?: boolean;
   showText?: boolean;
+  isCard?: boolean;
+  type?: ELinkableIconType;
 }
 
 export class LinkableIcon {
-  id: string;
-  label: string;
-  title: string;
-  path: string;
-  href: string;
-  tooltip: string;
-  color: string;
-  isSVG: boolean;
-  isCard: boolean;
-  showText: boolean;
-  target: string;
+  public id: string;
+  public label: string;
+  public title: string;
+  public path: string;
+  public href: string;
+  public tooltip: string;
+  public color: string;
+  public isCard: boolean;
+  public isSVG: boolean;
+  public isImage: boolean;
+  public showText: boolean;
+  public target: string;
 
   constructor(
     id: string | ELinkableIcon,
-    linkableIcon?: ILinkableIcon
+    linkableIcon?: ILinkableIcon,
   ) {
     const title = linkableIcon?.title;
     const href = linkableIcon?.href;
     const tooltip = linkableIcon?.tooltip;
     const color = linkableIcon?.color;
     const path = linkableIcon?.path;
-    const target = linkableIcon?.target;
-    const isSVG = linkableIcon && linkableIcon.isSVG ? true : false;
-    const isCard = linkableIcon && linkableIcon.isCard ? true : false;
+    let target = linkableIcon?.target;
     let showText = linkableIcon && linkableIcon.showText ? true : false;
+    this.isCard = linkableIcon && linkableIcon.isCard ? true : false;
+    this.isImage = false;
+    this.isSVG = false;
+
+    switch (linkableIcon?.type) {
+      case ELinkableIconType.IMAGE: this.isImage = true; break;
+      case ELinkableIconType.SVG: this.isSVG = true; break;
+      default:
+        this.isImage = false;
+        this.isSVG = false;
+        break;
+    }
+
     switch (id) {
       case ELinkableIcon.Home:
         this.id = title ? title : ELinkableIcon.Home.toLowerCase();
         this.title = title ? title : ELinkableIcon.Home;
-        this.href = href ? href : '';
-        this.path = this.setSVGComponent(ELinkableIconSVG.Rocket);
+        this.href = '/';
+        this.path = '../assets/images/logo_transparent_square.png';
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
-        this.isSVG = true;
+        this.isSVG = false;
+        this.isImage = true;
+        target = ELinkableTarget.SELF;
         showText = true;
         break;
       case ELinkableIcon.Twitter:
@@ -81,6 +101,7 @@ export class LinkableIcon {
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = color ? color : '#ffffff';
         this.isSVG = true;
+        this.isImage = false;
         break;
       case ELinkableIcon.Discord:
         this.id = ELinkableIcon.Discord.toLowerCase();
@@ -90,15 +111,17 @@ export class LinkableIcon {
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
         this.isSVG = true;
+        this.isImage = false;
         break;
       case ELinkableIcon.Telegram:
         this.id = ELinkableIcon.Telegram.toLowerCase();
         this.title = title ? title : ELinkableIcon.Telegram;
-        this.href = href ? href : '';
+        this.href = 'https://t.me/CryptoLoversES';
         this.path = this.setSVGComponent(ELinkableIconSVG.Telegram);
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
         this.isSVG = true;
+        this.isImage = false;
         break;
       default:
         this.id = id.toLowerCase();
@@ -107,10 +130,8 @@ export class LinkableIcon {
         this.href = href ? href : '';
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = color ? color : '';
-        this.isSVG = isSVG === undefined ? false : isSVG;
         break;
     }
-    this.isCard = isCard;
     this.showText = showText;
     this.label = this.title;
     this.target = target ? target : ELinkableTarget.BLANK;
