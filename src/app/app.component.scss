@@ -1,11 +1,11 @@
 @import '../styles-colors.scss';
 
-$header-height: 75px;
+$header-height: 65px;
 $header-border: 2px;
 $footer-height: 30px;
 $footer-border: 2px;
-// $body-height: calc(100% - 130px);
-$body-height: calc(100% - 77px);
+$body-max-width: 960px;
+$body-height: calc(100% - 67px);
 
 .main-container {
   position: relative;
@@ -15,7 +15,7 @@ $body-height: calc(100% - 77px);
   color: $toolbar_text;
   font-weight: 600;
 
-  .header,
+  .header-bar,
   .body,
   .footer {
     position: fixed;
@@ -25,15 +25,25 @@ $body-height: calc(100% - 77px);
     align-items: center;
     justify-content: center;
 
-    .icons {
+    .header {
       display: flex;
-      height: 50px;
+      width: 100%;
+      max-width: $body-max-width;
+      margin: 0;
+      padding: 0;
       align-items: center;
       justify-content: center;
+
+      .icons {
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
 
-  .header {
+  .header-bar {
     height: $header-height;
     top: 0;
     left: 0;
@@ -49,16 +59,16 @@ $body-height: calc(100% - 77px);
     right: 0;
     margin: 0;
     padding: 0;
+    background: $content-background;
     z-index: 999;
 
     .content {
       position: relative;
       width: 100%;
       height: 100%;
-      max-width: 90%;
+      max-width: $body-max-width;
       margin: 0 auto;
-      padding: 0 16px;
-      background: $content-background;
+      padding: 15px;
       color: $content-text;
     }
   }
@@ -75,10 +85,4 @@ $body-height: calc(100% - 77px);
 
 .spacer {
   flex: 1;
-}
-
-@media (min-width: 1000px) {
-  .main-container .body .content {
-    max-width: 100%;
-  }
 }
