@@ -289,7 +289,7 @@ pre ::selection {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--accent-color);
+  background-color: $toolbar-border-color;
   border-radius: 8px;
 }
 

@@ -1,5 +1,5 @@
 export enum ELinkableIcon {
-  Home = 'Crypto Lovers',
+  Home = 'Crypto Shalix',
   Twitter = 'Twitter',
   Discord = 'Discord',
   Telegram = 'Telegram',
@@ -85,18 +85,18 @@ export class LinkableIcon {
         this.id = title ? title : ELinkableIcon.Home.toLowerCase();
         this.title = title ? title : ELinkableIcon.Home;
         this.href = '/';
-        this.path = '../assets/images/logo_transparent_square.png';
+        this.path = '../assets/images/logo_square.png';
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
         this.isSVG = false;
         this.isImage = true;
         target = ELinkableTarget.SELF;
-        showText = true;
+        showText = false;
         break;
       case ELinkableIcon.Twitter:
         this.id = ELinkableIcon.Twitter.toLowerCase();
         this.title = title ? title : ELinkableIcon.Twitter;
-        this.href = href ? href : 'https://twitter.com/adlrg1991';
+        this.href = href ? href : 'https://twitter.com/CryptoShalix';
         this.path = this.setSVGComponent(ELinkableIconSVG.Twitter);
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = color ? color : '#ffffff';
@@ -116,7 +116,7 @@ export class LinkableIcon {
       case ELinkableIcon.Telegram:
         this.id = ELinkableIcon.Telegram.toLowerCase();
         this.title = title ? title : ELinkableIcon.Telegram;
-        this.href = 'https://t.me/CryptoLoversES';
+        this.href = 'https://t.me/CryptoShalixES';
         this.path = this.setSVGComponent(ELinkableIconSVG.Telegram);
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';

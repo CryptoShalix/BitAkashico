@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CoreService {
-  private appTitle = 'Crypto Lovers';
+  private appTitle = 'Crypto Shalix';
 
   constructor() { }
 

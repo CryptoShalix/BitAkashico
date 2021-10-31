@@ -1,0 +1,84 @@
+@import '../styles-colors.scss';
+
+$header-height: 75px;
+$header-border: 2px;
+$footer-height: 30px;
+$footer-border: 2px;
+// $body-height: calc(100% - 130px);
+$body-height: calc(100% - 77px);
+
+.main-container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: $toolbar_background;
+  color: $toolbar_text;
+  font-weight: 600;
+
+  .header,
+  .body,
+  .footer {
+    position: fixed;
+    display: flex;
+    margin: 0;
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+
+    .icons {
+      display: flex;
+      height: 50px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .header {
+    height: $header-height;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: $header-border solid $toolbar-border-color;
+    z-index: 1;
+  }
+
+  .body {
+    height: $body-height;
+    top: $header-height+$header-border;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 999;
+
+    .content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 0 16px;
+      background: $content-background;
+      color: $content-text;
+    }
+  }
+
+  .footer {
+    height: $footer-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: $footer-border solid $toolbar-border-color;
+    z-index: 1;
+  }
+}
+
+.spacer {
+  flex: 1;
+}
+
+@media (min-width: 1000px) {
+  .main-container .body .content {
+    max-width: 100%;
+  }
+}
