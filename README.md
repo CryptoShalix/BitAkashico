@@ -1,5 +1,6 @@
 # CryptoShalix
 
+<<<<<<< HEAD
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
 
 ## Development server
@@ -26,3 +27,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 # CryptoShalix
+=======
+Crypto Shalix pretende agrupar todo lo relacionado con criptomonedas en un solo lugar, desde el que poder aprender, compartir, y tradear en este nuevo mundo que ha llegado a nosotros.
+>>>>>>> 0391e1bbbfa584183edaeb4e1c9674a48550eb24

@@ -1,6 +1,17 @@
 @import '../styles-colors.scss';
 
+<<<<<<< HEAD
 .body {
+=======
+$header-height: 65px;
+$header-border: 2px;
+$footer-height: 30px;
+$footer-border: 2px;
+$body-max-width: 960px;
+$body-height: calc(100% - 67px);
+
+.main-container {
+>>>>>>> 0391e1bbbfa584183edaeb4e1c9674a48550eb24
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -22,8 +33,14 @@
     padding: 15px;
   }
 
+<<<<<<< HEAD
   .toolbar-top,
   .toolbar-bottom {
+=======
+  .header-bar,
+  .body,
+  .footer {
+>>>>>>> 0391e1bbbfa584183edaeb4e1c9674a48550eb24
     position: fixed;
     display: flex;
     width: 100%;
@@ -31,6 +48,7 @@
     justify-content: center;
     align-items: center;
 
+<<<<<<< HEAD
     .menu-top,
     .menu-bottom {
       position: relative;
@@ -43,14 +61,73 @@
   }
 
   .toolbar-top {
+=======
+    .header {
+      display: flex;
+      width: 100%;
+      max-width: $body-max-width;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+
+      .icons {
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .header-bar {
+    height: $header-height;
+>>>>>>> 0391e1bbbfa584183edaeb4e1c9674a48550eb24
     top: 0;
     padding: 5px;
     border-bottom: 1px solid $toolbar-border-color;
   }
 
+<<<<<<< HEAD
   .toolbar-bottom {
     bottom: 0;
     padding: 0;
     border-top: 1px solid $toolbar-border-color;
   }
 }
+=======
+  .body {
+    height: $body-height;
+    top: $header-height+$header-border;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    background: $content-background;
+    z-index: 999;
+
+    .content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: $body-max-width;
+      margin: 0 auto;
+      padding: 15px;
+      color: $content-text;
+    }
+  }
+
+  .footer {
+    height: $footer-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: $footer-border solid $toolbar-border-color;
+    z-index: 1;
+  }
+}
+
+.spacer {
+  flex: 1;
+}
+>>>>>>> 0391e1bbbfa584183edaeb4e1c9674a48550eb24
