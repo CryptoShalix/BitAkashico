@@ -9,10 +9,14 @@ import { ELinkableIcon, ELinkableIconType, LinkableIcon } from './shared/compone
  * Source: https://medium.com/tech-insights/how-to-deploy-angular-apps-to-github-pages-gh-pages-896c4e10f9b4
  *
  * 1. Install: npm i angular-cli-ghpages - save-dev
- * 2. ng build --prod --base-href "https://adlrg.github.io/CryptoShalix/"
+ * 2. ng build --configuration production --base-href "https://adlrg.github.io/CryptoShalix/"
  * 3. ngh -d dist/CryptoShalix || npx angular-cli-ghpages - dir=dist/CryptoShalix
+ *
+ * Sum up: ng build --configuration production --base-href "https://adlrg.github.io/CryptoShalix/" && ngh -d dist/CryptoShalix
+ *
  * OR
- * 1. npm run publish
+ * 1. npm run publish-generate
+ * 2. npm run publish-upload
  * (this one launches a package.json script. Check it out to update any details)
  */
 
@@ -64,5 +68,6 @@ export class AppComponent implements OnInit {
     this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Twitter));
     this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Discord));
     this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Telegram));
+    this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Youtube));
   }
 }

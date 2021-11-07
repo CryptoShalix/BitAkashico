@@ -3,6 +3,7 @@ export enum ELinkableIcon {
   Twitter = 'Twitter',
   Discord = 'Discord',
   Telegram = 'Telegram',
+  Youtube = 'Youtube',
 }
 
 export enum ELinkableIconType {
@@ -18,6 +19,8 @@ export enum ELinkableIconSVG {
   Discord = 'M 386 203C 387 203 388 203 388 203C 388 203 395 212 395 212C 267 248 209 304 209 304C 209 304 224 296 250 284C 326 250 386 241 411 239C 415 238 419 238 423 238C 466 232 515 231 566 236C 633 244 705 264 779 304C 779 304 723 251 603 214C 603 214 612 203 612 203C 612 203 709 201 811 277C 811 277 913 462 913 689C 913 689 853 792 697 797C 697 797 671 767 650 740C 743 714 778 656 778 656C 749 675 721 688 697 697C 661 712 627 722 594 728C 526 740 464 737 411 727C 371 719 336 708 307 697C 291 690 273 682 255 673C 253 671 251 670 249 669C 248 668 247 668 246 667C 233 660 226 655 226 655C 226 655 260 711 350 738C 329 765 303 797 303 797C 146 792 87 689 87 689C 87 462 189 277 189 277C 284 206 375 203 386 203C 386 203 386 203 386 203M 368 467C 327 467 296 502 296 545C 296 588 328 624 368 624C 408 624 440 588 440 545C 441 502 408 467 368 467C 368 467 368 467 368 467M 626 467C 586 467 554 502 554 545C 554 588 586 624 626 624C 666 624 698 588 698 545C 698 502 666 467 626 467C 626 467 626 467 626 467',
   // Telegram: https://friconix.com/icon/fi-xnsuxl-telegram/?sid=342413&iid=21250
   Telegram = 'M 185 525C 185 525 185 525 185 525C 244 492 309 465 370 438C 476 394 581 350 688 309C 709 302 746 296 750 326C 748 370 740 413 734 457C 720 552 703 647 687 742C 681 774 642 790 616 770C 555 729 494 688 434 646C 414 626 432 597 450 583C 500 533 553 491 601 439C 614 408 576 434 563 442C 495 490 428 540 355 581C 318 602 275 584 238 573C 205 559 156 546 185 525C 185 525 185 525 185 525',
+  // Youtube: https://friconix.com/icon/fi-xwsuxl-youtube/?sid=363118&iid=5543
+  Youtube = 'M 500 275C 500 275 500 275 500 275C 500 275 703 275 754 288C 781 296 803 318 811 346C 825 396 824 502 824 502C 824 502 824 607 811 658C 803 686 781 707 754 715C 703 728 500 728 500 728C 500 728 298 728 246 714C 219 707 197 685 189 657C 176 607 176 501 176 501C 176 501 176 396 189 346C 197 318 219 295 246 288C 297 275 500 275 500 275M 435 404C 435 404 435 404 435 404C 435 404 435 599 435 599C 435 599 604 501 604 501C 604 501 435 404 435 404',
   Academy = 'M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z',
   GreaterThan = 'M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z',
   Distinct = 'M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z',
@@ -85,7 +88,7 @@ export class LinkableIcon {
         this.id = title ? title : ELinkableIcon.Home.toLowerCase();
         this.title = title ? title : ELinkableIcon.Home;
         this.href = '/';
-        this.path = '../assets/images/logo_square.png';
+        this.path = '/assets/images/logo_square.png';
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
         this.isSVG = false;
@@ -118,6 +121,16 @@ export class LinkableIcon {
         this.title = title ? title : ELinkableIcon.Telegram;
         this.href = 'https://t.me/CryptoShalixES';
         this.path = this.setSVGComponent(ELinkableIconSVG.Telegram);
+        this.tooltip = tooltip ? tooltip : this.title;
+        this.color = '#ffffff';
+        this.isSVG = true;
+        this.isImage = false;
+        break;
+      case ELinkableIcon.Youtube:
+        this.id = ELinkableIcon.Youtube.toLowerCase();
+        this.title = title ? title : ELinkableIcon.Youtube;
+        this.href = 'https://www.youtube.com/channel/UCde7n5s8Ed1OAlq46k_MBVA';
+        this.path = this.setSVGComponent(ELinkableIconSVG.Youtube);
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
         this.isSVG = true;

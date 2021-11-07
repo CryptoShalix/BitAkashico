@@ -1,6 +1,6 @@
 {
   "name": "crypto-shalix",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "publish": "ng build --configuration production --base-href 'https://adlrg.github.io/CryptoShalix/' && ngh -d dist/CryptoShalix"
+    "publish-generate": "ng build --configuration production --base-href CryptoShalix",
+    "publish-upload": "ngh -d dist/CryptoShalix"
   },
   "private": false,
   "dependencies": {
