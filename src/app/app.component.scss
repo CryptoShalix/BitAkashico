@@ -9,7 +9,7 @@
   background-color: $body-background;
   color: $body-text;
 
-  .content {
+  .main-container {
     position: relative;
     display: block;
     width: 100%;
@@ -20,6 +20,10 @@
     bottom: 43px;
     margin: 0 auto;
     padding: 15px;
+
+    .content {
+      font-size: 14px;
+    }
   }
 
   .toolbar-top,
