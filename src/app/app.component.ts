@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ELinkableIcon, ELinkableIconType, LinkableIcon } from './shared/components/linkable-icon/linkable-icon';
-
-// Ejecutar esto: npx @angular/cli@12 update @angular/material@12
+import { ELinkableIcon, LinkableIcon } from './shared/components/linkable-icon/linkable-icon';
 
 // Angular Material Icons: https://fonts.google.com/icons
 // Angular translate: https://medium.com/angular-chile/aplicaciones-multilenguaje-en-angular-7-con-ngx-translate-db8d1e7b380c
@@ -31,7 +29,6 @@ export class AppComponent implements OnInit {
   title = ELinkableIcon.Home;
   slogan = '';
   iconHome: LinkableIcon;
-  iconListMenu: LinkableIcon[] = [];
   iconListMedia: LinkableIcon[] = [];
 
   constructor() { }
@@ -42,27 +39,11 @@ export class AppComponent implements OnInit {
 
   private prepareLinkableIcons(): void {
     this.prepareIconMenu();
-    this.prepareIconListMenu();
     this.prepareIconListMedia();
   }
 
   private prepareIconMenu(): void {
     this.iconHome = new LinkableIcon(ELinkableIcon.Home);
-  }
-
-  private prepareIconListMenu(): void {
-    this.iconListMenu = [];
-    this.iconListMenu.push(new LinkableIcon(this.title,
-      {
-        href: '/',
-        path: 'home',
-        target: '_self',
-        title: this.title,
-        showText: true,
-        isCard: true,
-        type: ELinkableIconType.ICON,
-      },
-    ));
   }
 
   private prepareIconListMedia(): void {

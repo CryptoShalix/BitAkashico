@@ -1,10 +1,20 @@
 <ng-container *ngIf="defaultIcon">
-  <a class="linkable-icon" [ngClass]="{'card': defaultIcon.isCard, 'no-border': defaultIcon.isImage}"
-    [attr.aria-valuenow]="defaultIcon.label" [target]="defaultIcon.target" rel="noopener" [href]="defaultIcon.href"
-    [title]="defaultIcon.title" [attr.tooltip]="defaultIcon.tooltip">
+  <a
+    class="linkable-icon"
+    [ngClass]="{'card': defaultIcon.isCard, 'no-border': defaultIcon.isImage}"
+    [attr.aria-valuenow]="defaultIcon.label"
+    [target]="defaultIcon.target"
+    rel="noopener"
+    [href]="defaultIcon.href"
+    [title]="defaultIcon.title"
+    [attr.tooltip]="defaultIcon.tooltip"
+  >
 
     <ng-container *ngIf="defaultIcon.isSVG; else imageTemplate">
-      <div class="material-icons" [innerHTML]="svgPath | safe:'html'"></div>
+      <div
+        class="material-icons"
+        [innerHTML]="svgPath | safe:'html'"
+      ></div>
     </ng-container>
 
     <ng-template #imageTemplate>
@@ -13,7 +23,10 @@
       </ng-container>
 
       <ng-template #iconTemplate>
-        <mat-icon [ngStyle]="{color: defaultIcon.color}">{{ defaultIcon.path }}
+        <mat-icon
+          class="material-icons"
+          [ngStyle]="{color: defaultIcon.color}"
+        >{{ defaultIcon.path }}
         </mat-icon>
       </ng-template>
     </ng-template>

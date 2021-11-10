@@ -40,50 +40,56 @@ svg.material-icons:not(:last-child) {
   }
 
   &.card {
+    position: relative;
+    display: block;
     border-radius: 4px;
     border: 1px solid #eee;
-    background-color: #fafafa;
-    height: 40px;
-    width: 200px;
-    margin: 0 8px 16px;
-    padding: 16px;
-    display: flex;
+    min-height: 40px;
+    max-width: 200px;
+    margin: 15px;
+    padding: 15px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    transition: all 0.2s ease-in-out;
     line-height: 24px;
+    background-color: $card-background;
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 
-    &.card-small {
-      height: 16px;
-      width: 168px;
-    }
+    &:hover {
+      background-color: $card-background-hover;
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
 
-    &.highlight-card {
-      background-color: #1976d2;
-      color: white;
-      font-weight: 600;
-      border: none;
-      width: auto;
-      min-width: 30%;
-      position: relative;
-    }
+      .material-icons path {
+        fill: $card-text-hover;
+      }
 
-    &:not(.highlight-card) {
-      cursor: pointer;
+      span {
+        color: $card-text-hover;
+      }
 
-      &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-
-        .material-icons path {
-          fill: rgb(105, 103, 103);
-        }
+      svg.material-icons path {
+        fill: $card-text-hover;
       }
     }
 
+    .material-icons {
+      position: absolute;
+      display: block;
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+    }
+
+    span {
+      color: $card-text;
+    }
+
     svg.material-icons path {
-      fill: #888;
+      fill: $card-text;
     }
   }
 
@@ -140,14 +146,5 @@ svg.material-icons:not(:last-child) {
       font-size: 14px;
       color: $global-link-color;
     }
-  }
-
-  .card:not(.highlight-card) {
-    height: 16px;
-    margin: 8px 0;
-  }
-
-  .card.highlight-card span {
-    margin-left: 72px;
   }
 }

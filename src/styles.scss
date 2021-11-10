@@ -105,7 +105,7 @@ html {
 }
 
 body {
-  background: var(--background-color);
+  background-color: var(--background-color);
   font-family: var(--text-font);
   line-height: 1.8;
 }
@@ -178,20 +178,6 @@ a {
   font-size: var(--font-size);
   position: relative;
 }
-
-// a:hover,
-// button:hover,
-// pre:hover,
-// h2:hover {
-//   filter: brightness(120%) saturate(120%);
-// }
-
-// [data-schema='light'] a:hover,
-// [data-schema='light'] button:hover,
-// [data-schema='light'] pre:hover,
-// [data-schema='light'] h2:hover {
-//   filter: brightness(95%) saturate(95%);
-// }
 
 ul {
   list-style-type: none;

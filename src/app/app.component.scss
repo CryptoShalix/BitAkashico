@@ -6,6 +6,13 @@
   height: 100vh;
   margin: 0;
   padding: 0;
+
+  background: url(../assets/images/background.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100%;
+
   background-color: $body-background;
   color: $body-text;
 
@@ -20,10 +27,6 @@
     bottom: 43px;
     margin: 0 auto;
     padding: 15px;
-
-    .content {
-      font-size: 14px;
-    }
   }
 
   .toolbar-top,
@@ -34,6 +37,7 @@
     margin: 0 auto;
     justify-content: center;
     align-items: center;
+    background-color: $body-background;
 
     .menu-top,
     .menu-bottom {
