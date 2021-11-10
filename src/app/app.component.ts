@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ELinkableIcon, ELinkableIconType, LinkableIcon } from './shared/components/linkable-icon/linkable-icon';
 
+// Ejecutar esto: npx @angular/cli@12 update @angular/material@12
+
 // Angular Material Icons: https://fonts.google.com/icons
 // Angular translate: https://medium.com/angular-chile/aplicaciones-multilenguaje-en-angular-7-con-ngx-translate-db8d1e7b380c
 
