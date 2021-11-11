@@ -88,7 +88,7 @@ export class LinkableIcon {
         this.id = title ? title : ELinkableIcon.Home.toLowerCase();
         this.title = title ? title : ELinkableIcon.Home;
         this.href = '/';
-        this.path = '/assets/images/logo_square.png';
+        this.path = 'assets/images/logo_square.png';
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
         this.isSVG = false;
