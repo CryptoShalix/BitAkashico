@@ -2,6 +2,38 @@
   <div class="toolbar-top">
     <div class="menu-top">
       <app-linkable-icon [sDefaultIcon]="iconHome"></app-linkable-icon>
+      <span class="spacer"></span>
+      <div class="nav-menu">
+        <button
+          mat-icon-button
+          [matMenuTriggerFor]="menu"
+          aria-label="Example icon-button with a menu"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+          </button>
+          <button
+            mat-menu-item
+            disabled
+          >
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voice mail</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+        </mat-menu>
+      </div>
+      <span class="spacer"></span>
+      <app-linkable-icon
+        *ngFor="let icon of iconListMedia"
+        [sDefaultIcon]="icon"
+      ></app-linkable-icon>
     </div>
   </div>
 

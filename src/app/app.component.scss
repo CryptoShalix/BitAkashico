@@ -21,7 +21,7 @@
     display: block;
     width: 100%;
     min-width: 400px;
-    max-width: 960px;
+    // max-width: 960px;
     height: calc(100% - 115px);
     top: 72px;
     bottom: 43px;
@@ -45,7 +45,8 @@
       position: relative;
       display: flex;
       min-width: 400px;
-      max-width: 960px;
+      // max-width: 960px;
+      margin: 2px auto;
       justify-content: center;
       align-items: center;
     }

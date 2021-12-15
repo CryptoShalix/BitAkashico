@@ -94,7 +94,7 @@ export class LinkableIcon {
         this.isSVG = false;
         this.isImage = true;
         target = ELinkableTarget.SELF;
-        showText = false;
+        showText = true;
         break;
       case ELinkableIcon.Twitter:
         this.id = ELinkableIcon.Twitter.toLowerCase();
@@ -104,7 +104,7 @@ export class LinkableIcon {
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = color ? color : '#ffffff';
         this.isSVG = true;
-        this.isImage = false;
+        this.isImage = true;
         break;
       case ELinkableIcon.Discord:
         this.id = ELinkableIcon.Discord.toLowerCase();
@@ -114,7 +114,7 @@ export class LinkableIcon {
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
         this.isSVG = true;
-        this.isImage = false;
+        this.isImage = true;
         break;
       case ELinkableIcon.Telegram:
         this.id = ELinkableIcon.Telegram.toLowerCase();
@@ -124,7 +124,7 @@ export class LinkableIcon {
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
         this.isSVG = true;
-        this.isImage = false;
+        this.isImage = true;
         break;
       case ELinkableIcon.Youtube:
         this.id = ELinkableIcon.Youtube.toLowerCase();
@@ -134,7 +134,7 @@ export class LinkableIcon {
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
         this.isSVG = true;
-        this.isImage = false;
+        this.isImage = true;
         break;
       default:
         this.id = id.toLowerCase();

@@ -20,13 +20,9 @@ svg.material-icons:not(:last-child) {
   align-items: center;
   border: 1px solid transparent;
 
-  &.no-border:hover span {
+  &:hover {
     opacity: 1;
     color: $global-link-color-hover;
-  }
-
-  &:not(.no-border):hover {
-    border-color: $global-link-color-hover;
 
     span,
     .svgControl {
@@ -37,6 +33,10 @@ svg.material-icons:not(:last-child) {
         fill: $global-link-color-hover;
       }
     }
+  }
+
+  &:not(.no-border):hover {
+    border-color: $global-link-color-hover;
   }
 
   &.card {

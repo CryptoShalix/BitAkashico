@@ -73,6 +73,7 @@
   margin: 0;
   padding: 0;
   font-family: inherit;
+  outline: none;
 }
 
 *,
@@ -247,6 +248,10 @@ small {
 
 label {
   font-size: inherit;
+}
+
+.spacer {
+  flex: 1 1 auto;
 }
 
 [hidden] {
