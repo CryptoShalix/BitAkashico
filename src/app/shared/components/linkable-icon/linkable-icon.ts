@@ -74,10 +74,10 @@ export class LinkableIcon {
         this.id = title ? title : ELinkableIcon.Home.toLowerCase();
         this.title = title ? title : ELinkableIcon.Home;
         this.href = '/';
-        this.path = IMAGES.HOME_SVG;
+        this.path = IMAGES.HOME_IMG;
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
-        this.isSVG = true;
+        this.isSVG = false;
         this.isImage = true;
         target = ELinkableTarget.SELF;
         showText = linkableIcon && linkableIcon.showText !== undefined ? linkableIcon.showText : true;

@@ -661,6 +661,7 @@ export class IMAGES {
       </g>
     </svg>
     `;
+  static HOME_IMG = `/assets/images/logo_square.png`;
   // Twitter: https://friconix.com/icon/fi-xnsuxl-twitter-solid/?sid=342104&iid=2859
   static Twitter = 'M 342 828C 252 828 163 802 88 754C 175 764 265 739 333 685C 266 685 203 640 181 577C 188 566 232 579 253 568C 178 554 119 482 121 406C 140 412 170 426 196 424C 124 379 100 276 144 204C 227 306 354 371 485 376C 474 330 484 278 513 240C 564 169 672 152 741 204C 774 247 827 205 865 189C 873 206 830 262 799 277C 829 274 859 266 888 254C 886 271 839 317 811 337C 816 452 777 568 705 658C 619 768 480 830 342 828';
   // Discord: https://friconix.com/icon/fi-xnsuxl-discord-alt/

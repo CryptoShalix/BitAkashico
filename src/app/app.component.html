@@ -50,8 +50,12 @@
       <app-linkable-icon
         [sDefaultIcon]="iconListMenu[0]"
         [matMenuTriggerFor]="menu"
+        class="nav-menu-link"
       >
-        <mat-menu #menu="matMenu">
+        <mat-menu
+          #menu="matMenu"
+          class="nav-menu-container"
+        >
           <button
             *ngFor="let menu of navMenu"
             mat-menu-item

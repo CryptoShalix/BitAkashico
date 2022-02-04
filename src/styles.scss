@@ -4,6 +4,21 @@
 @import './styles-table.scss';
 @import './styles-inputs.scss';
 
+@font-face {
+  font-family: 'rowdies-regular';
+  src: url('./assets/Rowdies-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'rowdies-bold';
+  src: url('./assets/Rowdies-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'rowdies-light';
+  src: url('./assets/Rowdies-Light.ttf');
+}
+
 :root {
   --text-font: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica,
     ubuntu, roboto, noto, segoe ui, arial, sans-serif;

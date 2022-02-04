@@ -45,22 +45,51 @@ export class AppComponent implements OnInit {
 
   private prepareMenu(): void {
     this.navMenu = [];
-    this.navMenu.push({ text: 'Academia', link: '/', icon: 'school', disabled: true });
-    this.navMenu.push({ text: 'Herramientas', link: '/', icon: 'construction', disabled: true });
     this.navMenu.push({ text: 'Seguridad', link: '/', icon: 'security', disabled: true });
     this.navMenu.push({ text: 'Libros', link: '/', icon: 'menu_book', disabled: true });
-    this.navMenu.push({ text: 'Juegos', link: '/', icon: 'sports_esports', disabled: true });
+    this.navMenu.push({ text: 'Juegos', link: '/', icon: 'sports_esports', disabled: false });
 
     this.iconListMenu = [];
-    this.iconListMenu.push(new LinkableIcon('home', { href: '#', target: ELinkableTarget.SELF, title: 'Home', path: IMAGES.HOME_SVG, showText: false, type: ELinkableIconType.SVG }));
-    // this.iconListMenu.push(new LinkableIcon('test', { href: '/', title: '', path: 'apps', color: '#fff', type: ELinkableIconType.ICON }));
-    this.iconListMenu.push(new LinkableIcon('test', { href: '/', title: 'Academia', path: 'school', color: '#fff', type: ELinkableIconType.ICON }));
-    this.iconListMenu.push(new LinkableIcon('test', { href: '/', title: 'Herramientas', path: 'construction', color: '#fff', type: ELinkableIconType.ICON }));
-    // this.iconListMenu.push(new LinkableIcon('test', { href: '/', title: 'Seguridad', path: 'security', color: '#fff', type: ELinkableIconType.ICON }));
-    // this.iconListMenu.push(new LinkableIcon('test', { href: '/', title: 'Libros', path: 'menu_book', color: '#fff', type: ELinkableIconType.ICON }));
-    // this.iconListMenu.push(new LinkableIcon('test', { href: '/', title: 'Juegos', path: 'sports_esports', color: '#fff', type: ELinkableIconType.ICON }));
-    this.iconListMenu.push(new LinkableIcon('test', { href: '/', title: 'P2P', path: 'groups', color: '#fff', type: ELinkableIconType.ICON }));
-    this.iconListMenu.push(new LinkableIcon('test', { href: '/', title: 'Portfolio', path: 'pie_chart', color: '#fff', type: ELinkableIconType.ICON }));
+    this.iconListMenu.push(new LinkableIcon('home', {
+      href: '#',
+      target: ELinkableTarget.SELF,
+      title: 'Home',
+      path: IMAGES.HOME_SVG,
+      showText: false,
+      type: ELinkableIconType.SVG
+    }));
+    this.iconListMenu.push(new LinkableIcon('test', {
+      href: '#',
+      title: 'Academia',
+      path: 'school',
+      color: '#fff',
+      type: ELinkableIconType.ICON,
+      target: ELinkableTarget.SELF
+    }));
+    this.iconListMenu.push(new LinkableIcon('test', {
+      href: '#',
+      title: 'Herramientas',
+      path: 'construction',
+      color: '#fff',
+      type: ELinkableIconType.ICON,
+      target: ELinkableTarget.SELF
+    }));
+    this.iconListMenu.push(new LinkableIcon('test', {
+      href: '#',
+      title: 'Trading',
+      path: 'groups',
+      color: '#fff',
+      type: ELinkableIconType.ICON,
+      target: ELinkableTarget.SELF
+    }));
+    this.iconListMenu.push(new LinkableIcon('test', {
+      href: '#',
+      title: 'Portfolio',
+      path: 'pie_chart',
+      color: '#fff',
+      type: ELinkableIconType.ICON,
+      target: ELinkableTarget.SELF
+    }));
   }
 
   private prepareLinkableIcons(): void {
