@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ELinkableIconType, LinkableIcon } from 'src/app/shared/components/linkable-icon/linkable-icon';
+import { ELinkableIcon, ELinkableIconType, LinkableIcon } from 'src/app/shared/components/linkable-icon/linkable-icon';
 
 @Component({
   selector: 'app-main-page',
@@ -7,31 +7,19 @@ import { ELinkableIconType, LinkableIcon } from 'src/app/shared/components/linka
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
-  iconListMenu: LinkableIcon[];
+  iconListMedia: LinkableIcon[];
 
   constructor() { }
 
   ngOnInit(): void {
-    this.prepareIconListMenu();
+    this.prepareIconListMedia();
   }
 
-  private prepareIconListMenu(): void {
-    this.iconListMenu = [];
-    // this.iconListMenu.push(this.createMenuIcon('/', 'accountBalance', 'account balance'));
-  }
-
-  private createMenuIcon(href: string, text: string, icon: string): LinkableIcon {
-    const textTranslated = text; // this.translate.instant(text);
-    return new LinkableIcon(textTranslated,
-      {
-        href,
-        path: icon,
-        target: '_self',
-        title: textTranslated,
-        showText: true,
-        isCard: true,
-        type: ELinkableIconType.ICON,
-      },
-    );
+  private prepareIconListMedia(): void {
+    this.iconListMedia = [];
+    this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Twitter));
+    this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Discord));
+    this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Telegram));
+    this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Youtube));
   }
 }

@@ -2,38 +2,39 @@
   <div class="toolbar-top">
     <div class="menu-top">
       <app-linkable-icon [sDefaultIcon]="iconHome"></app-linkable-icon>
-      <span class="spacer"></span>
+
+      <!-- <span class="spacer"></span>
+
       <div class="nav-menu">
+
         <button
           mat-icon-button
           [matMenuTriggerFor]="menu"
-          aria-label="Example icon-button with a menu"
+          aria-label="CryptoShalix menu"
         >
           <mat-icon>menu</mat-icon>
         </button>
+
         <mat-menu #menu="matMenu">
-          <button mat-menu-item>
-            <mat-icon>dialpad</mat-icon>
-            <span>Redial</span>
-          </button>
           <button
+            *ngFor="let menu of navMenu"
             mat-menu-item
-            disabled
+            [routerLink]="menu.link"
+            [disabled]="menu.disabled"
           >
-            <mat-icon>voicemail</mat-icon>
-            <span>Check voice mail</span>
-          </button>
-          <button mat-menu-item>
-            <mat-icon>notifications_off</mat-icon>
-            <span>Disable alerts</span>
+            <mat-icon>{{ menu.icon }}</mat-icon>
+            <span>{{ menu.text }}</span>
           </button>
         </mat-menu>
+
       </div>
+
       <span class="spacer"></span>
+
       <app-linkable-icon
         *ngFor="let icon of iconListMedia"
         [sDefaultIcon]="icon"
-      ></app-linkable-icon>
+      ></app-linkable-icon> -->
     </div>
   </div>
 
@@ -43,10 +44,54 @@
 
   <div class="toolbar-bottom">
     <div class="menu-bottom">
+
+      <app-linkable-icon [sDefaultIcon]="iconListMenu[1]"></app-linkable-icon>
+      <app-linkable-icon [sDefaultIcon]="iconListMenu[2]"></app-linkable-icon>
       <app-linkable-icon
-        *ngFor="let icon of iconListMedia"
+        [sDefaultIcon]="iconListMenu[0]"
+        [matMenuTriggerFor]="menu"
+      >
+        <mat-menu #menu="matMenu">
+          <button
+            *ngFor="let menu of navMenu"
+            mat-menu-item
+            [routerLink]="menu.link"
+            [disabled]="menu.disabled"
+          >
+            <mat-icon>{{ menu.icon }}</mat-icon>
+            <span>{{ menu.text }}</span>
+          </button>
+        </mat-menu>
+      </app-linkable-icon>
+      <app-linkable-icon [sDefaultIcon]="iconListMenu[3]"></app-linkable-icon>
+      <app-linkable-icon [sDefaultIcon]="iconListMenu[4]"></app-linkable-icon>
+
+      <!-- <div class="nav-menu">
+        <button
+          mat-icon-button
+          [matMenuTriggerFor]="menu"
+          aria-label="CryptoShalix menu"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+
+        <mat-menu #menu="matMenu">
+          <button
+            *ngFor="let menu of navMenu"
+            mat-menu-item
+            [routerLink]="menu.link"
+            [disabled]="menu.disabled"
+          >
+            <mat-icon>{{ menu.icon }}</mat-icon>
+            <span>{{ menu.text }}</span>
+          </button>
+        </mat-menu>
+      </div> -->
+
+      <!-- <app-linkable-icon
+        *ngFor="let icon of iconListMenu"
         [sDefaultIcon]="icon"
-      ></app-linkable-icon>
+      ></app-linkable-icon> -->
     </div>
   </div>
 </div>

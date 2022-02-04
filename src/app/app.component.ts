@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ELinkableIcon, LinkableIcon } from './shared/components/linkable-icon/linkable-icon';
+import { ELinkableIcon, LinkableIcon, ILinkableIcon, ELinkableTarget } from './shared/components/linkable-icon/linkable-icon';
+import { INavMenu } from './shared/models/menu';
+import { ELinkableIconType } from 'src/app/shared/components/linkable-icon/linkable-icon';
+import { IMAGES } from 'src/assets/images/images';
 
 // Angular Material Icons: https://fonts.google.com/icons
 // Angular translate: https://medium.com/angular-chile/aplicaciones-multilenguaje-en-angular-7-con-ngx-translate-db8d1e7b380c
@@ -30,11 +33,34 @@ export class AppComponent implements OnInit {
   slogan = '';
   iconHome: LinkableIcon;
   iconListMedia: LinkableIcon[] = [];
+  iconListMenu: LinkableIcon[] = [];
+  navMenu: INavMenu[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
+    this.prepareMenu();
     this.prepareLinkableIcons();
+  }
+
+  private prepareMenu(): void {
+    this.navMenu = [];
+    this.navMenu.push({ text: 'Academia', link: '/', icon: 'school', disabled: true });
+    this.navMenu.push({ text: 'Herramientas', link: '/', icon: 'construction', disabled: true });
+    this.navMenu.push({ text: 'Seguridad', link: '/', icon: 'security', disabled: true });
+    this.navMenu.push({ text: 'Libros', link: '/', icon: 'menu_book', disabled: true });
+    this.navMenu.push({ text: 'Juegos', link: '/', icon: 'sports_esports', disabled: true });
+
+    this.iconListMenu = [];
+    this.iconListMenu.push(new LinkableIcon('home', { href: '#', target: ELinkableTarget.SELF, title: 'Home', path: IMAGES.HOME_SVG, showText: false, type: ELinkableIconType.SVG }));
+    // this.iconListMenu.push(new LinkableIcon('test', { href: '/', title: '', path: 'apps', color: '#fff', type: ELinkableIconType.ICON }));
+    this.iconListMenu.push(new LinkableIcon('test', { href: '/', title: 'Academia', path: 'school', color: '#fff', type: ELinkableIconType.ICON }));
+    this.iconListMenu.push(new LinkableIcon('test', { href: '/', title: 'Herramientas', path: 'construction', color: '#fff', type: ELinkableIconType.ICON }));
+    // this.iconListMenu.push(new LinkableIcon('test', { href: '/', title: 'Seguridad', path: 'security', color: '#fff', type: ELinkableIconType.ICON }));
+    // this.iconListMenu.push(new LinkableIcon('test', { href: '/', title: 'Libros', path: 'menu_book', color: '#fff', type: ELinkableIconType.ICON }));
+    // this.iconListMenu.push(new LinkableIcon('test', { href: '/', title: 'Juegos', path: 'sports_esports', color: '#fff', type: ELinkableIconType.ICON }));
+    this.iconListMenu.push(new LinkableIcon('test', { href: '/', title: 'P2P', path: 'groups', color: '#fff', type: ELinkableIconType.ICON }));
+    this.iconListMenu.push(new LinkableIcon('test', { href: '/', title: 'Portfolio', path: 'pie_chart', color: '#fff', type: ELinkableIconType.ICON }));
   }
 
   private prepareLinkableIcons(): void {

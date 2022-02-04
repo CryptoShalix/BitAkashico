@@ -86,8 +86,7 @@ button:focus,
 button:active,
 a:focus,
 a:active {
-  outline: 2px solid var(--accent-color) !important;
-  outline-offset: 0.25em !important;
+  outline: none;
 }
 
 :focus:not(:focus-visible) {
