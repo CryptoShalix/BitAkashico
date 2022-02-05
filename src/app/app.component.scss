@@ -20,13 +20,13 @@
     position: relative;
     display: block;
     width: 100%;
-    min-width: 400px;
-    // max-width: 960px;
-    height: calc(100% - 115px);
+    // min-width: 400px;
+    height: calc(100% - 157px);
     top: 72px;
-    bottom: 43px;
+    bottom: 85px;
     margin: 0 auto;
     padding: 15px;
+    overflow: auto;
   }
 
   .toolbar-top,
@@ -44,8 +44,7 @@
     .menu-bottom {
       position: relative;
       display: flex;
-      min-width: 400px;
-      // max-width: 960px;
+      min-width: 300px;
       margin: 2px auto;
       justify-content: center;
       align-items: center;
@@ -62,5 +61,13 @@
     bottom: 0;
     padding: 10px;
     border-top: 1px solid $toolbar-border-color;
+  }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+
+  .main-container {
+    min-width: 100%;
   }
 }

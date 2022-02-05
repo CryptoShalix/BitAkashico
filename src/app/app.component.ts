@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ELinkableIcon, LinkableIcon, ILinkableIcon, ELinkableTarget } from './shared/components/linkable-icon/linkable-icon';
+import { ELinkableIcon, LinkableIcon, ELinkableTarget } from './shared/components/linkable-icon/linkable-icon';
 import { INavMenu } from './shared/models/menu';
 import { ELinkableIconType } from 'src/app/shared/components/linkable-icon/linkable-icon';
 import { IMAGES } from 'src/assets/images/images';
@@ -30,7 +30,8 @@ import { IMAGES } from 'src/assets/images/images';
 })
 export class AppComponent implements OnInit {
   title = ELinkableIcon.Home;
-  slogan = '';
+  showTopNavMenu = false;
+
   iconHome: LinkableIcon;
   iconListMedia: LinkableIcon[] = [];
   iconListMenu: LinkableIcon[] = [];
@@ -58,7 +59,7 @@ export class AppComponent implements OnInit {
       showText: false,
       type: ELinkableIconType.SVG
     }));
-    this.iconListMenu.push(new LinkableIcon('test', {
+    this.iconListMenu.push(new LinkableIcon('academy', {
       href: '#',
       title: 'Academia',
       path: 'school',
@@ -66,7 +67,7 @@ export class AppComponent implements OnInit {
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF
     }));
-    this.iconListMenu.push(new LinkableIcon('test', {
+    this.iconListMenu.push(new LinkableIcon('utils', {
       href: '#',
       title: 'Herramientas',
       path: 'construction',
@@ -74,7 +75,7 @@ export class AppComponent implements OnInit {
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF
     }));
-    this.iconListMenu.push(new LinkableIcon('test', {
+    this.iconListMenu.push(new LinkableIcon('trading', {
       href: '#',
       title: 'Trading',
       path: 'groups',
@@ -82,7 +83,7 @@ export class AppComponent implements OnInit {
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF
     }));
-    this.iconListMenu.push(new LinkableIcon('test', {
+    this.iconListMenu.push(new LinkableIcon('portfolio', {
       href: '#',
       title: 'Portfolio',
       path: 'pie_chart',
@@ -93,11 +94,11 @@ export class AppComponent implements OnInit {
   }
 
   private prepareLinkableIcons(): void {
-    this.prepareIconMenu();
+    this.prepareLogo();
     this.prepareIconListMedia();
   }
 
-  private prepareIconMenu(): void {
+  private prepareLogo(): void {
     this.iconHome = new LinkableIcon(ELinkableIcon.Home);
   }
 

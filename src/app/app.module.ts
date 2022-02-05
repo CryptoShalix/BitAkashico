@@ -14,6 +14,7 @@ import { PipesModule } from './shared/pipes/pipes.module';
 
 const appRoutes: Routes = [
   { path: '', component: MainPageComponent },
+  { path: '/', component: MainPageComponent },
   { path: '**', component: ErrorPageComponent }
 ];
 
