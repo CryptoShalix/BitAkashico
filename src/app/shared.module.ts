@@ -4,6 +4,7 @@ import { MaterialModule } from './material.module';
 
 import { LinkableIconComponent } from './shared/components/linkable-icon/linkable-icon.component';
 import { PipesModule } from './shared/pipes/pipes.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { PipesModule } from './shared/pipes/pipes.module';
     CommonModule,
     PipesModule,
     MaterialModule,
+    RouterModule,
   ],
   exports: [
     LinkableIconComponent,

@@ -52,41 +52,39 @@ export class AppComponent implements OnInit {
 
     this.iconListMenu = [];
     this.iconListMenu.push(new LinkableIcon('home', {
-      href: '#',
-      target: ELinkableTarget.SELF,
       title: 'Home',
-      path: IMAGES.HOME_SVG,
+      iconPath: IMAGES.HOME_SVG,
       showText: false,
       type: ELinkableIconType.SVG
     }));
     this.iconListMenu.push(new LinkableIcon('academy', {
-      href: '#',
+      routerLink: '/',
       title: 'Academia',
-      path: 'school',
+      iconPath: 'school',
       color: '#fff',
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF
     }));
     this.iconListMenu.push(new LinkableIcon('utils', {
-      href: '#',
+      routerLink: '/',
       title: 'Herramientas',
-      path: 'construction',
+      iconPath: 'construction',
       color: '#fff',
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF
     }));
     this.iconListMenu.push(new LinkableIcon('trading', {
-      href: '#',
+      routerLink: '/',
       title: 'Trading',
-      path: 'groups',
+      iconPath: 'groups',
       color: '#fff',
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF
     }));
     this.iconListMenu.push(new LinkableIcon('portfolio', {
-      href: '#',
+      routerLink: '/',
       title: 'Portfolio',
-      path: 'pie_chart',
+      iconPath: 'pie_chart',
       color: '#fff',
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF

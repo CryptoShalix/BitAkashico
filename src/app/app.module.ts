@@ -12,11 +12,11 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
 import { SharedModule } from './shared.module';
 import { PipesModule } from './shared/pipes/pipes.module';
 
-const appRoutes: Routes = [
-  { path: '', component: MainPageComponent },
-  { path: '/', component: MainPageComponent },
-  { path: '**', component: ErrorPageComponent }
-];
+// const appRoutes: Routes = [
+//   { path: '', component: MainPageComponent },
+//   { path: '/', component: MainPageComponent },
+//   { path: '**', component: ErrorPageComponent }
+// ];
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ const appRoutes: Routes = [
     MaterialModule,
     SharedModule,
     PipesModule,
-    RouterModule.forRoot(appRoutes),
+    // RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]

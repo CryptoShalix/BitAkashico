@@ -23,8 +23,8 @@ export class LinkableIconComponent {
 
   private createSVG(): void {
     if (this.defaultIcon && this.defaultIcon.isSVG) {
-      if (!this.coreService.isNullOrEmpty(this.defaultIcon.path)) {
-        this.svgPath = this.defaultIcon.path;
+      if (!this.coreService.isNullOrEmpty(this.defaultIcon.iconPath)) {
+        this.svgPath = this.defaultIcon.iconPath;
       }
     }
   }

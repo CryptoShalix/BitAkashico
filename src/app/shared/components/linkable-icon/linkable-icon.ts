@@ -22,7 +22,8 @@ export enum ELinkableTarget {
 export interface ILinkableIcon {
   title?: string;
   href?: string;
-  path?: string;
+  routerLink?: string;
+  iconPath?: string;
   tooltip?: string;
   color?: string;
   target?: string;
@@ -35,8 +36,9 @@ export class LinkableIcon {
   public id: string;
   public label: string;
   public title: string;
-  public path: string;
+  public iconPath: string;
   public href: string;
+  public routerLink: string;
   public tooltip: string;
   public color: string;
   public isCard: boolean;
@@ -51,14 +53,17 @@ export class LinkableIcon {
   ) {
     const title = linkableIcon?.title;
     const href = linkableIcon?.href;
+    const routerLink = linkableIcon?.routerLink;
     const tooltip = linkableIcon?.tooltip;
     const color = linkableIcon?.color;
-    const path = linkableIcon?.path;
+    const iconPath = linkableIcon?.iconPath;
     let target = linkableIcon?.target;
     let showText = linkableIcon && linkableIcon.showText ? true : false;
     this.isCard = linkableIcon && linkableIcon.isCard ? true : false;
     this.isImage = false;
     this.isSVG = false;
+    this.routerLink = '';
+    this.href = '';
 
     switch (linkableIcon?.type) {
       case ELinkableIconType.IMAGE: this.isImage = true; break;
@@ -73,8 +78,8 @@ export class LinkableIcon {
       case ELinkableIcon.Home:
         this.id = title ? title : ELinkableIcon.Home.toLowerCase();
         this.title = title ? title : ELinkableIcon.Home;
-        this.href = '/';
-        this.path = IMAGES.HOME_IMG;
+        this.routerLink = 'home';
+        this.iconPath = IMAGES.HOME_IMG;
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
         this.isSVG = false;
@@ -86,7 +91,7 @@ export class LinkableIcon {
         this.id = ELinkableIcon.Twitter.toLowerCase();
         this.title = title ? title : ELinkableIcon.Twitter;
         this.href = href ? href : 'https://twitter.com/CryptoShalix';
-        this.path = this.setSVGComponent(IMAGES.Twitter);
+        this.iconPath = this.setSVGComponent(IMAGES.Twitter);
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = color ? color : '#ffffff';
         this.isSVG = true;
@@ -96,7 +101,7 @@ export class LinkableIcon {
         this.id = ELinkableIcon.Discord.toLowerCase();
         this.title = title ? title : ELinkableIcon.Discord;
         this.href = 'https://discord.gg/9QQhZhn3Gc';
-        this.path = this.setSVGComponent(IMAGES.Discord);
+        this.iconPath = this.setSVGComponent(IMAGES.Discord);
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
         this.isSVG = true;
@@ -106,7 +111,7 @@ export class LinkableIcon {
         this.id = ELinkableIcon.Telegram.toLowerCase();
         this.title = title ? title : ELinkableIcon.Telegram;
         this.href = 'https://t.me/CryptoShalixES';
-        this.path = this.setSVGComponent(IMAGES.Telegram);
+        this.iconPath = this.setSVGComponent(IMAGES.Telegram);
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
         this.isSVG = true;
@@ -116,7 +121,7 @@ export class LinkableIcon {
         this.id = ELinkableIcon.Youtube.toLowerCase();
         this.title = title ? title : ELinkableIcon.Youtube;
         this.href = 'https://www.youtube.com/channel/UCde7n5s8Ed1OAlq46k_MBVA';
-        this.path = this.setSVGComponent(IMAGES.Youtube);
+        this.iconPath = this.setSVGComponent(IMAGES.Youtube);
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
         this.isSVG = true;
@@ -125,8 +130,9 @@ export class LinkableIcon {
       default:
         this.id = id.toLowerCase();
         this.title = title ? title : '';
-        this.path = path ? path : '';
+        this.iconPath = iconPath ? iconPath : '';
         this.href = href ? href : '';
+        this.routerLink = routerLink ? routerLink : '';
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = color ? color : '';
         break;

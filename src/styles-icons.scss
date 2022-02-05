@@ -23,6 +23,7 @@ svg.material-icons:not(:last-child) {
   justify-content: center;
   align-items: center;
   border: 1px solid transparent;
+  cursor: pointer;
 
   &:hover {
     opacity: 1;
