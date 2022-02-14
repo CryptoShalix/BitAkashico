@@ -1,73 +1,91 @@
-@import '../styles-colors.scss';
+// @import '../styles-colors.scss';
 
-.body {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+// .body {
+//   position: relative;
+//   width: 100vw;
+//   height: 100vh;
+//   margin: 0;
+//   padding: 0;
 
-  background: url(../assets/images/background.svg);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  -webkit-background-size: 100% 100%;
-  background-size: 100%;
+//   background: url(../assets/images/background.svg);
+//   background-position: bottom;
+//   background-repeat: no-repeat;
+//   -webkit-background-size: 100% 100%;
+//   background-size: 100%;
 
-  background-color: $body-background;
-  color: $body-text;
+//   background-color: $body-background;
+//   color: $body-text;
 
-  .main-container {
-    position: relative;
-    display: block;
-    width: 100%;
-    // min-width: 400px;
-    height: calc(100% - 157px);
-    top: 72px;
-    bottom: 85px;
-    margin: 0 auto;
-    padding: 15px;
-    overflow: auto;
-  }
+//   .main-container {
+//     position: relative;
+//     display: block;
+//     width: 100%;
+//     // min-width: 400px;
+//     height: calc(100% - 157px);
+//     top: 112px;
+//     bottom: 85px;
+//     margin: 0 auto;
+//     padding: 15px;
+//     overflow: auto;
+//   }
 
-  .toolbar-top,
-  .toolbar-bottom {
-    position: fixed;
-    display: flex;
-    width: 100%;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    background-color: $toolbar-background;
-    z-index: 1;
+//   .bit2me-carousel {
+//     position: relative;
+//     display: block;
+//     width: 100%;
+//     height: auto;
+//     top: 85px;
 
-    .menu-top,
-    .menu-bottom {
-      position: relative;
-      display: flex;
-      min-width: 300px;
-      margin: 2px auto;
-      justify-content: center;
-      align-items: center;
-    }
-  }
+//     .bit2me-carousel-component {
+//       display: block;
+//       width: 100%;
+//       height: 40px;
 
-  .toolbar-top {
-    top: 0;
-    padding: 10px;
-    border-bottom: 1px solid $toolbar-border-color;
-  }
+//       .carousel-wrapper {
+//         background: transparent !important;
+//       }
+//     }
+//   }
 
-  .toolbar-bottom {
-    bottom: 0;
-    padding: 10px;
-    border-top: 1px solid $toolbar-border-color;
-  }
-}
+//   .toolbar-top,
+//   .toolbar-bottom {
+//     position: fixed;
+//     display: flex;
+//     width: 100%;
+//     margin: 0 auto;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: $toolbar-background;
+//     z-index: 1;
 
-/* Responsive Styles */
-@media screen and (max-width: 767px) {
+//     .menu-top,
+//     .menu-bottom {
+//       position: relative;
+//       display: flex;
+//       min-width: 300px;
+//       margin: 2px auto;
+//       justify-content: center;
+//       align-items: center;
+//     }
+//   }
 
-  .main-container {
-    min-width: 100%;
-  }
-}
+//   .toolbar-top {
+//     top: 0;
+//     padding: 10px;
+//     border-bottom: 1px solid $toolbar-border-color;
+//   }
+
+//   .toolbar-bottom {
+//     bottom: 0;
+//     padding: 10px;
+//     border-top: 1px solid $toolbar-border-color;
+//   }
+// }
+
+// /* Responsive Styles */
+// @media screen and (max-width: 767px) {
+
+//   .main-container {
+//     min-width: 100%;
+//   }
+// }

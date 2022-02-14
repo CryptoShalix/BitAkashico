@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { ELinkableIcon, LinkableIcon, ELinkableTarget } from './shared/components/linkable-icon/linkable-icon';
-import { INavMenu } from './shared/models/menu';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ELinkableIconType } from 'src/app/shared/components/linkable-icon/linkable-icon';
 import { IMAGES } from 'src/assets/images/images';
+import { ELinkableIcon, ELinkableTarget, LinkableIcon } from './shared/components/linkable-icon/linkable-icon';
+import { INavMenu } from './shared/models/menu';
 
 // Angular Material Icons: https://fonts.google.com/icons
 // Angular translate: https://medium.com/angular-chile/aplicaciones-multilenguaje-en-angular-7-con-ngx-translate-db8d1e7b380c
@@ -28,7 +28,9 @@ import { IMAGES } from 'src/assets/images/images';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
+  @ViewChild('bit2meCarousel') bit2meCarousel: ElementRef;
+
   title = ELinkableIcon.Home;
   showTopNavMenu = false;
 
@@ -44,11 +46,15 @@ export class AppComponent implements OnInit {
     this.prepareLinkableIcons();
   }
 
+  ngAfterViewInit(): void {
+    this.customizeIframe();
+  }
+
   private prepareMenu(): void {
     this.navMenu = [];
     this.navMenu.push({ text: 'Seguridad', link: '/', icon: 'security', disabled: true });
     this.navMenu.push({ text: 'Libros', link: '/', icon: 'menu_book', disabled: true });
-    this.navMenu.push({ text: 'Juegos', link: '/', icon: 'sports_esports', disabled: false });
+    this.navMenu.push({ text: 'Juegos', link: '/', icon: 'sports_esports', disabled: true });
 
     this.iconListMenu = [];
     this.iconListMenu.push(new LinkableIcon('home', {
@@ -74,7 +80,7 @@ export class AppComponent implements OnInit {
       target: ELinkableTarget.SELF
     }));
     this.iconListMenu.push(new LinkableIcon('trading', {
-      routerLink: '/',
+      routerLink: 'trading',
       title: 'Trading',
       iconPath: 'groups',
       color: '#fff',
@@ -106,5 +112,10 @@ export class AppComponent implements OnInit {
     this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Discord));
     this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Telegram));
     this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Youtube));
+  }
+
+  private customizeIframe(): void {
+    this.bit2meCarousel.nativeElement.style.backgroundColor = '#2c2f33';
+    console.log(this.bit2meCarousel.nativeElement.style);
   }
 }

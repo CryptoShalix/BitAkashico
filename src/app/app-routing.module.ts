@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
+import { TradingPageComponent } from './pages/trading-page/trading-page.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
   { path: '/', component: MainPageComponent, pathMatch: 'full' },
   { path: 'home', component: MainPageComponent, pathMatch: 'full' },
+  { path: 'trading', component: TradingPageComponent, pathMatch: 'full' },
   { path: '**', component: ErrorPageComponent }
 ];
 
