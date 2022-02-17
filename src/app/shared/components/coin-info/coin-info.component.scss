@@ -1,0 +1,19 @@
+.coin-item {
+  position: relative;
+  display: inline-flex;
+  width: 200px;
+  height: 35px;
+  align-items: center;
+
+  .coin-item-image {
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    margin-right: 5px;
+  }
+
+  .coin-item-label {
+    font-size: 15px;
+  }
+}

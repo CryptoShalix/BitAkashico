@@ -1,39 +1,40 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule, Routes } from '@angular/router';
+
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
-import { ErrorPageComponent } from './pages/error-page/error-page.component';
-import { MainPageComponent } from './pages/main-page/main-page.component';
 import { SharedModule } from './shared.module';
 import { PipesModule } from './shared/pipes/pipes.module';
 
-// const appRoutes: Routes = [
-//   { path: '', component: MainPageComponent },
-//   { path: '/', component: MainPageComponent },
-//   { path: '**', component: ErrorPageComponent }
-// ];
+import { AppComponent } from './app.component';
+import { MainPageComponent } from './pages/main-page/main-page.component';
+import { TradingPageComponent } from './pages/trading-page/trading-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
+    TradingPageComponent,
   ],
   imports: [
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
     MaterialModule,
     SharedModule,
     PipesModule,
-    // RouterModule.forRoot(appRoutes),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

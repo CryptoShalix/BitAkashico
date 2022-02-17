@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ELinkableIcon, ELinkableIconType, LinkableIcon } from 'src/app/shared/components/linkable-icon/linkable-icon';
+import { ELinkableIcon, LinkableIcon } from 'src/app/shared/components/linkable-icon/linkable-icon';
 
 @Component({
   selector: 'app-main-page',

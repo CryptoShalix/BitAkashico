@@ -1,11 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import {
-  SafeHtml,
-  SafeStyle,
-  SafeScript,
   DomSanitizer,
-  SafeUrl,
-  SafeResourceUrl
+  SafeHtml,
+  SafeResourceUrl,
+  SafeScript,
+  SafeStyle,
+  SafeUrl
 } from '@angular/platform-browser';
 
 @Pipe({

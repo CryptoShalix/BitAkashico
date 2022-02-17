@@ -1,8 +1,12 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ELinkableIconType } from 'src/app/shared/components/linkable-icon/linkable-icon';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { IMAGES } from 'src/assets/images/images';
-import { ELinkableIcon, ELinkableTarget, LinkableIcon } from './shared/components/linkable-icon/linkable-icon';
+
+import { CoingeckoService } from 'src/app/shared/services/coingecko.service';
+
+import { Coin } from './shared/models/currency';
 import { INavMenu } from './shared/models/menu';
+
+import { ELinkableIcon, ELinkableIconType, ELinkableTarget, LinkableIcon } from './shared/components/linkable-icon/linkable-icon';
 
 // Angular Material Icons: https://fonts.google.com/icons
 // Angular translate: https://medium.com/angular-chile/aplicaciones-multilenguaje-en-angular-7-con-ngx-translate-db8d1e7b380c
@@ -28,9 +32,10 @@ import { INavMenu } from './shared/models/menu';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent implements OnInit {
   @ViewChild('bit2meCarousel') bit2meCarousel: ElementRef;
 
+  coins: Coin[] = [];
   title = ELinkableIcon.Home;
   showTopNavMenu = false;
 
@@ -39,15 +44,14 @@ export class AppComponent implements OnInit, AfterViewInit {
   iconListMenu: LinkableIcon[] = [];
   navMenu: INavMenu[] = [];
 
-  constructor() { }
+  constructor(
+    private coingeckoService: CoingeckoService,
+  ) { }
 
   ngOnInit(): void {
     this.prepareMenu();
     this.prepareLinkableIcons();
-  }
-
-  ngAfterViewInit(): void {
-    this.customizeIframe();
+    this.getData();
   }
 
   private prepareMenu(): void {
@@ -114,8 +118,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Youtube));
   }
 
-  private customizeIframe(): void {
-    this.bit2meCarousel.nativeElement.style.backgroundColor = '#2c2f33';
-    console.log(this.bit2meCarousel.nativeElement.style);
+  private async getData(): Promise<void> {
+    this.coins = await this.coingeckoService.getCoins();
   }
 }

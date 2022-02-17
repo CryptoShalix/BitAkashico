@@ -7,7 +7,7 @@ import { TradingPageComponent } from './pages/trading-page/trading-page.componen
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
-  { path: '/', component: MainPageComponent, pathMatch: 'full' },
+  { path: '/', component: MainPageComponent },
   { path: 'home', component: MainPageComponent, pathMatch: 'full' },
   { path: 'trading', component: TradingPageComponent, pathMatch: 'full' },
   { path: '**', component: ErrorPageComponent }

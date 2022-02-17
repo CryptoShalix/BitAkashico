@@ -1,0 +1,12 @@
+<div
+  *ngIf="coinItem"
+  class="coin-item"
+>
+  <img
+    class="coin-item-image"
+    [src]="coinItem.image"
+  >
+  <span class="coin-item-label">
+    {{ coinItem.name }} [{{ coinItem.symbol }}]
+  </span>
+</div>

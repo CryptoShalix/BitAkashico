@@ -1,0 +1,11 @@
+<div
+  *ngIf="coins && coins.length"
+  class="carousel"
+>
+  <div class="carousel-track">
+    <app-coin-info
+      *ngFor="let coin of coins"
+      [sCoinItem]="coin"
+    ></app-coin-info>
+  </div>
+</div>
