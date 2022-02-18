@@ -1,12 +1,111 @@
 <div
+  [ngSwitch]="type"
   *ngIf="coinItem"
   class="coin-item"
+  (click)="onItemClick()"
 >
-  <img
-    class="coin-item-image"
-    [src]="coinItem.image"
-  >
-  <span class="coin-item-label">
-    {{ coinItem.name }} [{{ coinItem.symbol }}]
-  </span>
+  <ng-container *ngSwitchCase="'card'">
+
+    <img
+      class="coin-item-image"
+      [src]="coinItem.image"
+    >
+    <span class="coin-item-label">
+      <div class="label-main-data">
+        <div class="label-name">
+          {{ coinItem.marketCapRank }}.[{{ coinItem.symbol | uppercase }}] {{ coinItem.name }}
+        </div>
+
+        <div class="label-price">
+          {{ coinItem.currentPrice | number : '1.2-4' }}{{ coinItem.currency.text }}
+        </div>
+      </div>
+
+      <div
+        class="label-price-change"
+        [ngClass]="{
+        'positive': coinItem.priceChangePercentage24h > 0,
+        'negative': coinItem.priceChangePercentage24h < 0
+      }"
+      >
+        {{ coinItem.priceChangePercentage24h > 0 ? '&#9650;' : '&#9660;' }}
+        {{ coinItem.priceChangePercentage24h | number : '1.2-2' }}%
+      </div>
+    </span>
+
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'full'">
+
+    <img
+      class="coin-item-image"
+      [src]="coinItem.image"
+    >
+    <span class="coin-item-label">
+      <div class="label-main-data">
+        <div class="label-name">
+          {{ coinItem.marketCapRank }}.[{{ coinItem.symbol | uppercase }}] {{ coinItem.name }}
+        </div>
+
+        <div class="label-price">
+          {{ coinItem.currentPrice | number : '1.2-4' }}{{ coinItem.currency.text }}
+        </div>
+      </div>
+
+      <div
+        class="label-price-change"
+        [ngClass]="{
+        'positive': coinItem.priceChangePercentage24h > 0,
+        'negative': coinItem.priceChangePercentage24h < 0
+      }"
+      >
+        {{ coinItem.priceChangePercentage24h > 0 ? '&#9650;' : '&#9660;' }}
+        {{ coinItem.priceChangePercentage24h | number : '1.2-2' }}%
+      </div>
+    </span>
+
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'info'">
+
+    <img
+      class="coin-item-image"
+      [src]="coinItem.image"
+    >
+    <span class="coin-item-label">
+      <div class="label-main-data">
+        <div class="label-name">
+          {{ coinItem.symbol | uppercase }}
+        </div>
+
+        <div class="label-price">
+          {{ coinItem.currentPrice | number : '1.2-8' }}{{ coinItem.currency.text }}
+        </div>
+      </div>
+
+      <div
+        class="label-price-change"
+        [ngClass]="{
+        'positive': coinItem.priceChangePercentage24h > 0,
+        'negative': coinItem.priceChangePercentage24h < 0
+      }"
+      >
+        {{ coinItem.priceChangePercentage24h > 0 ? '&#9650;' : '&#9660;' }}
+        {{ coinItem.priceChangePercentage24h | number : '1.2-2' }}%
+      </div>
+    </span>
+
+  </ng-container>
+
+  <ng-container *ngSwitchDefault>
+
+    <img
+      class="coin-item-image"
+      [src]="coinItem.image"
+    >
+    <span class="coin-item-label">
+      {{ coinItem.name }} [{{ coinItem.symbol | uppercase }}]
+    </span>
+
+  </ng-container>
 </div>

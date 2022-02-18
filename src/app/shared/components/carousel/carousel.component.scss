@@ -1,44 +1,61 @@
-.carousel {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 40px;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-}
+@import '../../../../styles-colors.scss';
 
-.carousel-track {
+.carousel {
   position: relative;
   display: flex;
   width: 100%;
-  height: 40px;
-  left: 100%;
-  padding: 5px;
-  overflow: hidden;
-  justify-content: space-between;
+  height: 50px;
+  padding: 0;
+  margin: 0 auto;
   align-items: center;
-  animation: marquee 30s linear infinite;
+  overflow: hidden;
+  background: $toolbar-background;
+  border-bottom: 1px solid $toolbar-border-color;
 }
 
-.carousel-track:hover {
-  animation-play-state: paused;
+.carousel>* {
+  white-space: nowrap;
+  position: absolute;
+  animation: marquee linear 0s infinite;
+}
+
+.carousel-track {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+
+  .carousel-item {
+    display: inline-flex;
+    width: auto;
+    height: 100%;
+    margin: 0 5px;
+    padding: 5px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+
+    &:hover {
+      color: $toolbar-background;
+      background: $toolbar-border-color;
+      font-weight: bold;
+      border-color: $toolbar-background;
+    }
+
+  }
 }
 
 @keyframes marquee {
-  from {
-    left: 100vw;
+  0% {
+    left: 100%;
+    transform: translateX(0%);
   }
 
-  to {
-    left: -100%;
+  100% {
+    left: 0%;
+    transform: translateX(-100%);
   }
-
-  // from {
-  //   transform: translateX(100%);
-  // }
-
-  // to {
-  //   transform: translateX(-100%);
-  // }
 }

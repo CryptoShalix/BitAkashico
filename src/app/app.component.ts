@@ -1,9 +1,9 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IMAGES } from 'src/assets/images/images';
 
-import { CoingeckoService } from 'src/app/shared/services/coingecko.service';
+import { CoreService } from './shared/services/core.service';
 
-import { Coin } from './shared/models/currency';
+import { ECurrency } from './shared/models/currency';
 import { INavMenu } from './shared/models/menu';
 
 import { ELinkableIcon, ELinkableIconType, ELinkableTarget, LinkableIcon } from './shared/components/linkable-icon/linkable-icon';
@@ -33,9 +33,6 @@ import { ELinkableIcon, ELinkableIconType, ELinkableTarget, LinkableIcon } from 
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  @ViewChild('bit2meCarousel') bit2meCarousel: ElementRef;
-
-  coins: Coin[] = [];
   title = ELinkableIcon.Home;
   showTopNavMenu = false;
 
@@ -45,13 +42,13 @@ export class AppComponent implements OnInit {
   navMenu: INavMenu[] = [];
 
   constructor(
-    private coingeckoService: CoingeckoService,
+    private coreService: CoreService,
   ) { }
 
   ngOnInit(): void {
     this.prepareMenu();
     this.prepareLinkableIcons();
-    this.getData();
+    this.prepareData();
   }
 
   private prepareMenu(): void {
@@ -118,7 +115,7 @@ export class AppComponent implements OnInit {
     this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Youtube));
   }
 
-  private async getData(): Promise<void> {
-    this.coins = await this.coingeckoService.getCoins();
+  private prepareData(): void {
+    this.coreService.setDefaultCurrency(ECurrency.USD);
   }
 }

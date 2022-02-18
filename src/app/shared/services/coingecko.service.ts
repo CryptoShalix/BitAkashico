@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { first, map } from 'rxjs/operators';
+import { IValueText } from '../models/core';
 
 import { Coin, ECurrency } from '../models/currency';
 
@@ -19,13 +20,13 @@ export class CoingeckoService {
   ) { }
 
   getCoins(
-    currency: ECurrency = ECurrency.USD,
-    itemsPerPage: number = 100,
+    currency: IValueText = ECurrency.USD,
+    itemsPerPage: number = 10,
     currentPage: number = 1,
     sparkline: boolean = false
   ): Promise<Coin[]> {
     // Prepare params
-    const pCurrency = `?vs_currency=${currency}`;
+    const pCurrency = `?vs_currency=${currency.value}`;
     const pOrder = `&order=market_cap_desc`;
     const pItemsPerPage = `&per_page=${itemsPerPage}`;
     const pPage = `&page=${currentPage}`;
@@ -41,7 +42,7 @@ export class CoingeckoService {
     return new Promise<Coin[]>((resolve, reject) => {
       this.http.get<string>(path)
         .pipe(first(),
-          map((data: any) => data.map((item: any) => new Coin(item)))
+          map((data: any) => data.map((item: any) => new Coin(currency, item)))
         )
         .subscribe({
           next: (response: Coin[]) => {

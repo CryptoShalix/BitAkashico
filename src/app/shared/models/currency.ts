@@ -1,8 +1,20 @@
-export enum ECurrency {
-  USD = 'usd',
-  EUR = 'eur',
-  GBP = 'gbp',
-  BTC = 'btc',
+import { IValueText, URLS } from './core';
+
+export class ECurrency {
+  static USD: IValueText = { value: 'usd', text: '$' };
+  static EUR: IValueText = { value: 'eur', text: '€' };
+  static GBP: IValueText = { value: 'gbp', text: '£' };
+  static YEN: IValueText = { value: 'yen', text: '¥' };
+  static BTC: IValueText = { value: 'btc', text: '₿' };
+  static BTC_ALT: IValueText = { value: 'btc_alt', text: '฿' };
+
+  constructor() { }
+}
+
+export enum ECoinFormat {
+  CARD = 'card',
+  FULL = 'full',
+  INFO = 'info',
 }
 
 export class Coin {
@@ -62,9 +74,10 @@ export class Coin {
   totalSupply: number;
   totalVolume: number;
 
-  // image: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
+  currency: IValueText;
+  url: string;
 
-  constructor(data?: any) {
+  constructor(currency: IValueText, data?: any) {
     if (data) {
       this.ath = data[Coin.parameters.ath];
       this.athChangePercentage = data[Coin.parameters.athChangePercentage];
@@ -93,5 +106,7 @@ export class Coin {
       this.totalSupply = data[Coin.parameters.totalSupply];
       this.totalVolume = data[Coin.parameters.totalVolume];
     }
+    this.currency = currency;
+    this.url = `${URLS.COINGECKO}${this.id}`;
   }
 }

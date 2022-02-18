@@ -1,8 +1,7 @@
 import { Component, Input } from '@angular/core';
 
+import { Coin, ECoinFormat } from '../../models/currency';
 import { CoreService } from '../../services/core.service';
-
-import { Coin } from '../../models/currency';
 
 @Component({
   selector: 'app-coin-info',
@@ -10,15 +9,18 @@ import { Coin } from '../../models/currency';
   styleUrls: ['./coin-info.component.scss']
 })
 export class CoinComponent {
-  coinItem: Coin;
-
+  @Input() type: ECoinFormat = ECoinFormat.INFO;
   @Input() set sCoinItem(item: Coin) {
     this.coinItem = item;
   }
 
+  coinItem: Coin;
+
   constructor(
-    private coreService: CoreService,
-  ) {
-    console.log(this.sCoinItem);
+    private coreService: CoreService
+  ) { }
+
+  onItemClick(): void {
+    this.coreService.navigateTo(this.coinItem.url);
   }
 }

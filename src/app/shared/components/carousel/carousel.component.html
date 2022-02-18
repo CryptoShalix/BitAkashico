@@ -2,10 +2,15 @@
   *ngIf="coins && coins.length"
   class="carousel"
 >
-  <div class="carousel-track">
+  <div
+    class="carousel-track"
+    [style]="'animation-duration: ' + carouselTiming + 's'"
+  >
     <app-coin-info
+      class="carousel-item"
       *ngFor="let coin of coins"
       [sCoinItem]="coin"
+      [type]="coinFormat"
     ></app-coin-info>
   </div>
 </div>

@@ -1,23 +1,39 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { map, Subscription, timer } from 'rxjs';
 
-import { CoreService } from '../../services/core.service';
+import { CoingeckoService } from '../../services/coingecko.service';
 
-import { Coin } from '../../models/currency';
+import { Coin, ECoinFormat, ECurrency } from '../../models/currency';
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss']
 })
-export class CarouselComponent {
+export class CarouselComponent implements OnInit, OnDestroy {
+  private callTiming = 30;
+  private timerSubscription: Subscription;
+
+  coinsToShow = 100;
+  carouselTiming = this.coinsToShow * 3;
+  coinFormat = ECoinFormat.INFO;
   coins: Coin[];
 
-  @Input() set sCoins(items: Coin[]) {
-    this.coins = items;
-    console.log(this.coins);
+  constructor(
+    private coingeckoService: CoingeckoService,
+  ) { }
+
+  ngOnInit(): void {
+    this.getData();
   }
 
-  constructor(
-    private coreService: CoreService,
-  ) { }
+  private async getData(): Promise<void> {
+    this.timerSubscription = timer(0, this.callTiming * 1000).pipe(map(async () => {
+      this.coins = await this.coingeckoService.getCoins(ECurrency.USD, this.coinsToShow);
+    })).subscribe();
+  }
+
+  ngOnDestroy(): void {
+    this.timerSubscription.unsubscribe();
+  }
 }

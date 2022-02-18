@@ -1,4 +1,5 @@
 import { IMAGES } from 'src/assets/images/images';
+import { URLS } from '../../models/core';
 
 export enum ELinkableIcon {
   Home = 'Crypto Shalix',
@@ -90,7 +91,7 @@ export class LinkableIcon {
       case ELinkableIcon.Twitter:
         this.id = ELinkableIcon.Twitter.toLowerCase();
         this.title = title ? title : ELinkableIcon.Twitter;
-        this.href = href ? href : 'https://twitter.com/CryptoShalix';
+        this.href = href ? href : URLS.TWITTER;
         this.iconPath = this.setSVGComponent(IMAGES.Twitter);
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = color ? color : '#ffffff';
@@ -100,7 +101,7 @@ export class LinkableIcon {
       case ELinkableIcon.Discord:
         this.id = ELinkableIcon.Discord.toLowerCase();
         this.title = title ? title : ELinkableIcon.Discord;
-        this.href = 'https://discord.gg/9QQhZhn3Gc';
+        this.href = URLS.DISCORD;
         this.iconPath = this.setSVGComponent(IMAGES.Discord);
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
@@ -110,7 +111,7 @@ export class LinkableIcon {
       case ELinkableIcon.Telegram:
         this.id = ELinkableIcon.Telegram.toLowerCase();
         this.title = title ? title : ELinkableIcon.Telegram;
-        this.href = 'https://t.me/CryptoShalixES';
+        this.href = URLS.TELEGRAM;
         this.iconPath = this.setSVGComponent(IMAGES.Telegram);
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
@@ -120,7 +121,7 @@ export class LinkableIcon {
       case ELinkableIcon.Youtube:
         this.id = ELinkableIcon.Youtube.toLowerCase();
         this.title = title ? title : ELinkableIcon.Youtube;
-        this.href = 'https://www.youtube.com/channel/UCde7n5s8Ed1OAlq46k_MBVA';
+        this.href = URLS.YOUTUBE;
         this.iconPath = this.setSVGComponent(IMAGES.Youtube);
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
