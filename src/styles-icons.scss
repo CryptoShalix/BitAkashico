@@ -166,12 +166,21 @@ svg.material-icons:not(:last-child) {
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
 
+  .logo {
+    margin: 0 5px 0 0;
+  }
+
   .linkable-icon {
     max-height: 60px;
 
     img {
       max-width: 50px;
       max-height: 50px;
+      margin: 0 5px;
+    }
+
+    span {
+      font-size: 12px !important;
     }
 
     span,

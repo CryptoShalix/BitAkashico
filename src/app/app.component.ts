@@ -81,7 +81,8 @@ export class AppComponent implements OnInit {
       target: ELinkableTarget.SELF
     }));
     this.iconListMenu.push(new LinkableIcon('trading', {
-      routerLink: 'trading',
+      // routerLink: 'trading',
+      routerLink: '/',
       title: 'Trading',
       iconPath: 'groups',
       color: '#fff',
