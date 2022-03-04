@@ -1,8 +1,11 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { first } from 'rxjs/operators';
+
+import { CoreService } from './core.service';
+
+import { ValueText } from '../models/core';
 
 import * as jsonEN from '../../../assets/languages/en.json';
+import * as jsonES from '../../../assets/languages/es.json';
 
 export enum ELanguage {
   EN = 'en',
@@ -13,49 +16,77 @@ export enum ELanguage {
   providedIn: 'root'
 })
 export class TranslateService {
-  private pathJSONFiles = '../../../assets/languages/';
-  // private jsonData: any;
-  private jsonData: any = (jsonEN as any).default;
   private userLang: string;
 
   constructor(
-    private httpClient: HttpClient,
+    private coreService: CoreService
   ) {
+    this.getUserLanguage();
+  }
+
+  private getUserLanguage(): void {
     this.userLang = navigator.language || window.navigator.language;
-    // this.getJSONFile(ELanguage.EN);
+    this.userLang = this.userLang.split('-')[0];
+    console.log(`User language: ${this.userLang}`);
   }
 
-  instant(value: string, options?: string[]): string {
+  /**
+   * Get the text at the specified user language, so translated.
+   * Example:
+   * - .json file:
+   * ```json
+   * [{...
+   *  "test": "A long text with {data}",
+   *  "LEVEL1.test": "A long text with {data}"
+   * ...}]
+   * ```
+   * - app.component.ts:
+   * ```typescript
+   * string result = ...instant('test', [{value: 'data', text: 'MyReplacedData'}]);
+   * ```
+   * - Result:
+   * ```string
+   * 'A long text with MyReplacedData'
+   * ```
+   * - [TIP] You can even set levels by adding a fullstop between those levels, like this:
+   * ```typescript
+   * string result = ...instant('LEVEL1.test', [{value: 'data', text: 'MyReplacedData'}]);
+   * ```
+   * @param value The first part that contains the text. Should be in english and easy to read.
+   * @param options [Optional] A list of value-text pair in which the 'value' is the string to replace and the 'text' the new string.
+   * @returns Returns a string totally parsed and with all value-text pairs integrated.
+   */
+  instant(value: string, options?: ValueText[]): string {
     let result = '';
-    result = value;
-    const file: any[] = this.getData();
-    console.log(value);
-    console.log(file);
-    console.log(file[0][value]);
-    return result;
+    try {
+      const file: any = this.getJSONFile();
+      if (file) {
+        if (value.includes('.')) {
+          const valueLevels = value.split('.');
+          let base = file[0];
+          for (const level of valueLevels) {
+            base = base[level];
+          }
+          result = base;
+        } else {
+          result = file[0][value];
+        }
+
+        if (options && options.length > 0) {
+          for (const option of options) {
+            result = result.replace(`{${option.value}}`, option.text);
+          }
+        }
+      }
+    } catch (error) { console.error(error); }
+    return this.coreService.isNullOrEmpty(result) ? value : result;
   }
 
-  private getData() {
-    // return await this.getJSONFile(ELanguage.EN);
-    return this.jsonData;
-  }
-
-  private getJSONFile(language: ELanguage): void {
-    const filePath = `${this.pathJSONFiles}${language.toLowerCase()}.json`;
-    this.httpClient.get(filePath).subscribe((data) => {
-      this.jsonData = data;
-    });
-  }
-
-  private async getJSONFile2(language: ELanguage): Promise<any> {
-    return new Promise<any>((resolve, reject) => {
-      const filePath = `${this.pathJSONFiles}${language.toLowerCase()}.json`;
-      this.httpClient.get(filePath)
-        .pipe(first())
-        .subscribe({
-          next: (res: any) => { console.log('complete'); resolve(res); },
-          error: (err: any) => { reject(err); },
-        });
-    });
+  private getJSONFile(): any {
+    switch (this.userLang) {
+      case ELanguage.ES: return (jsonES as any).default;
+      case ELanguage.EN:
+      default: return (jsonEN as any).default;
+    }
   }
 }

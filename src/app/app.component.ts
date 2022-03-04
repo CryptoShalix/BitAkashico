@@ -7,7 +7,6 @@ import { ECurrency } from './shared/models/currency';
 import { INavMenu } from './shared/models/menu';
 
 import { ELinkableIcon, ELinkableIconType, ELinkableTarget, LinkableIcon } from './shared/components/linkable-icon/linkable-icon';
-import { TranslateService } from './shared/services/translate.service';
 
 // Angular Material Icons: https://fonts.google.com/icons
 // Angular translate: https://medium.com/angular-chile/aplicaciones-multilenguaje-en-angular-7-con-ngx-translate-db8d1e7b380c
@@ -44,40 +43,39 @@ export class AppComponent implements OnInit {
 
   constructor(
     private coreService: CoreService,
-    private translateService: TranslateService,
   ) { }
 
   ngOnInit(): void {
-    this.translateService.instant('test');
     this.prepareMenu();
-    this.prepareLinkableIcons();
+    this.prepareLogo();
+    this.prepareIconListMedia();
     this.prepareData();
   }
 
   private prepareMenu(): void {
     this.navMenu = [];
-    this.navMenu.push({ text: 'Seguridad', link: '/', icon: 'security', disabled: true });
-    this.navMenu.push({ text: 'Libros', link: '/', icon: 'menu_book', disabled: true });
-    this.navMenu.push({ text: 'Juegos', link: '/', icon: 'sports_esports', disabled: true });
+    this.navMenu.push({ text: 'MENU.security', link: '/', icon: 'security', disabled: true });
+    this.navMenu.push({ text: 'MENU.books', link: '/', icon: 'menu_book', disabled: true });
+    this.navMenu.push({ text: 'MENU.games', link: '/', icon: 'sports_esports', disabled: true });
 
     this.iconListMenu = [];
     this.iconListMenu.push(new LinkableIcon('home', {
-      title: 'Home',
+      title: 'MENU.home',
       iconPath: IMAGES.HOME_SVG,
       showText: false,
       type: ELinkableIconType.SVG
     }));
     this.iconListMenu.push(new LinkableIcon('academy', {
       routerLink: '/',
-      title: 'Academia',
+      title: 'MENU.academy',
       iconPath: 'school',
       color: '#fff',
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF
     }));
-    this.iconListMenu.push(new LinkableIcon('utils', {
+    this.iconListMenu.push(new LinkableIcon('tools', {
       routerLink: '/',
-      title: 'Herramientas',
+      title: 'MENU.tools',
       iconPath: 'construction',
       color: '#fff',
       type: ELinkableIconType.ICON,
@@ -86,7 +84,7 @@ export class AppComponent implements OnInit {
     this.iconListMenu.push(new LinkableIcon('trading', {
       // routerLink: 'trading',
       routerLink: '/',
-      title: 'Trading',
+      title: 'MENU.trading',
       iconPath: 'groups',
       color: '#fff',
       type: ELinkableIconType.ICON,
@@ -94,17 +92,12 @@ export class AppComponent implements OnInit {
     }));
     this.iconListMenu.push(new LinkableIcon('portfolio', {
       routerLink: '/',
-      title: 'Portfolio',
+      title: 'MENU.portfolio',
       iconPath: 'pie_chart',
       color: '#fff',
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF
     }));
-  }
-
-  private prepareLinkableIcons(): void {
-    this.prepareLogo();
-    this.prepareIconListMedia();
   }
 
   private prepareLogo(): void {

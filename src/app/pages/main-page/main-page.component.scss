@@ -1,18 +1,37 @@
 @import '../../../styles-colors.scss';
 
-.video-responsive {
-  position: relative;
-  height: 0;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
+.content {
+  display: block;
+  max-width: 50%;
+  margin: 0 auto;
+  font-size: 16px;
+  text-align: center;
+  line-height: 30px;
+  letter-spacing: 1px;
 
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px solid $toolbar-border-color;
-    border-radius: 10px;
+  .about,
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    margin: 0;
+  }
+
+  .video-responsive {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid $toolbar-border-color;
+      border-radius: 10px;
+    }
   }
 }

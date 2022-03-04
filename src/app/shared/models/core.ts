@@ -14,13 +14,22 @@ export enum URLS {
   BIT2ME_BUY = 'https://bit2me.com/buy-',
 }
 
-export class URLGenerator {
-  constructor() {
-
-  }
-}
-
 export interface IValueText {
   value: string;
   text: string;
+}
+
+export class ValueText {
+  protected static parameters = {
+    value: 'value',
+    text: 'text',
+  };
+
+  value: string;
+  text: string;
+
+  constructor(value: string, text: string) {
+    this.value = value;
+    this.text = text;
+  }
 }

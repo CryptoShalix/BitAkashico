@@ -41,24 +41,24 @@
     padding: 10px;
     overflow: auto;
 
-    .content {
-      display: block;
-      max-width: 50%;
-      margin: 0 auto;
-      font-size: 16px;
-      text-align: center;
-      line-height: 30px;
-      letter-spacing: 1px;
+    // .content {
+    //   display: block;
+    //   max-width: 50%;
+    //   margin: 0 auto;
+    //   font-size: 16px;
+    //   text-align: center;
+    //   line-height: 30px;
+    //   letter-spacing: 1px;
 
-      .about,
-      .cards {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 0;
-        margin: 0;
-      }
-    }
+    //   .about,
+    //   .cards {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     padding: 10px 0;
+    //     margin: 0;
+    //   }
+    // }
   }
 
   .toolbar-top,

@@ -6,34 +6,6 @@
         [sDefaultIcon]="iconHome"
       ></app-linkable-icon>
 
-      <ng-container *ngIf="showTopNavMenu">
-        <span class="spacer"></span>
-
-        <div class="nav-menu">
-
-          <button
-            mat-icon-button
-            [matMenuTriggerFor]="menu"
-            aria-label="CryptoShalix menu"
-          >
-            <mat-icon>menu</mat-icon>
-          </button>
-
-          <mat-menu #menu="matMenu">
-            <button
-              *ngFor="let menu of navMenu"
-              mat-menu-item
-              [routerLink]="menu.link"
-              [disabled]="menu.disabled"
-            >
-              <mat-icon>{{ menu.icon }}</mat-icon>
-              <span>{{ menu.text }}</span>
-            </button>
-          </mat-menu>
-
-        </div>
-      </ng-container>
-
       <span class="spacer"></span>
 
       <app-linkable-icon
@@ -57,24 +29,34 @@
       <app-linkable-icon [sDefaultIcon]="iconListMenu[1]"></app-linkable-icon>
       <app-linkable-icon [sDefaultIcon]="iconListMenu[2]"></app-linkable-icon>
       <app-linkable-icon
+        *ngIf="!showTopNavMenu"
         [sDefaultIcon]="iconListMenu[0]"
         [matMenuTriggerFor]="menu"
         class="nav-menu-link"
+      ></app-linkable-icon>
+      <button
+        *ngIf="showTopNavMenu"
+        mat-icon-button
+        [matMenuTriggerFor]="menu"
+        aria-label="CryptoShalix menu"
       >
-        <mat-menu #menu="matMenu">
-          <button
-            *ngFor="let menu of navMenu"
-            mat-menu-item
-            [routerLink]="menu.link"
-            [disabled]="menu.disabled"
-          >
-            <mat-icon>{{ menu.icon }}</mat-icon>
-            <span>{{ menu.text }}</span>
-          </button>
-        </mat-menu>
-      </app-linkable-icon>
+        <mat-icon>menu</mat-icon>
+      </button>
       <app-linkable-icon [sDefaultIcon]="iconListMenu[3]"></app-linkable-icon>
       <app-linkable-icon [sDefaultIcon]="iconListMenu[4]"></app-linkable-icon>
     </div>
   </div>
+
 </div>
+
+<mat-menu #menu="matMenu">
+  <button
+    *ngFor="let menu of navMenu"
+    mat-menu-item
+    [routerLink]="menu.link"
+    [disabled]="menu.disabled"
+  >
+    <mat-icon>{{ menu.icon }}</mat-icon>
+    <span>{{ menu.text | translate }}</span>
+  </button>
+</mat-menu>

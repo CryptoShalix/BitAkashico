@@ -1,8 +1,7 @@
 <div class="content">
 
   <div class="about">
-    Crypto Shalix pretende agrupar todo lo relacionado con criptomonedas en un solo lugar, desde el que
-    poder aprender, compartir, y tradear en este nuevo mundo que ha llegado a nosotros.
+    {{ 'PAGE_MAIN.about' | translate }}
   </div>
 
   <div class="cards">
@@ -18,7 +17,7 @@
       width="945px"
       height="600px"
       src="https://www.youtube.com/embed/videoseries?list=PLGE24dPKonPajeP0e-lJVkhoTXSYi0ZsP"
-      title="Revolución digital: Blockchain, criptomonedas, NFT y metaverso"
+      [title]="'PAGE_MAIN.videoTitle' | translate"
       frameborder="0"
       autohide="1"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
