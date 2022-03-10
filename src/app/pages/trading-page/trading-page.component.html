@@ -1,8 +1,5 @@
 <div class="content">
   This is the trading page
-  <div class="content-toolbar-options">
-
-  </div>
   <!-- <iframe
     src="https://bit2me.com/widget/chart/v1?currency=BTC&fiat=EUR&referral=RQB-RWI-ECZ"
     style="display:block;width:100%;height:400px;margin:0 auto;"
@@ -14,4 +11,42 @@
     style="display:block;width:100%;max-width:360px;height:530px;margin:0 auto;"
     frameborder="0"
   ></iframe>
+
+  <div class="content-bit2me-widget">
+
+    <mat-button-toggle-group
+      name="Buy & Sell"
+      aria-label="Buy & Sell"
+    >
+      <mat-button-toggle
+        [value]="isBuying"
+        (click)="isBuying=!isBuying"
+      >{{ 'PAGE_TRADING.buy' | translate }}
+      </mat-button-toggle>
+      <mat-button-toggle
+        [value]="!isBuying"
+        (click)="isBuying=!isBuying"
+      >{{ 'PAGE_TRADING.sell' | translate }}
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Favorite food</mat-label>
+      <mat-select>
+        <mat-option
+          *ngFor="let food of coins"
+          [value]="food"
+        >
+          {{food}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </div>
+
+  <!-- 
+https://wallet.bit2me.com/?r=RQB-RWI-ECZ&operation=buy&amount=100&currency=BTC&method=card
+https://wallet.bit2me.com/?r=RQB-RWI-ECZ&operation=sell&amount=0.002692&currency=BTC&method=euro-wallet
+
+   -->
 </div>

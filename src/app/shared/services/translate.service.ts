@@ -26,8 +26,8 @@ export class TranslateService {
 
   private getUserLanguage(): void {
     this.userLang = navigator.language || window.navigator.language;
-    this.userLang = this.userLang.split('-')[0];
-    console.log(`User language: ${this.userLang}`);
+    this.coreService.setUserLocale(this.userLang);
+    this.userLang = this.coreService.getUserLanguage();
   }
 
   /**

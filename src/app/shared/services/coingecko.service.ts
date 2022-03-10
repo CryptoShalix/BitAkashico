@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { first, map } from 'rxjs/operators';
-import { IValueText } from '../models/core';
+import { EDateFormat, IValueText } from '../models/core';
 
-import { Coin, ECurrency } from '../models/currency';
+import { Coin, CoinDefault, ECurrency } from '../models/currency';
+import { CoreService } from './core.service';
 
 /**
  * Coingecko documentation: https://www.coingecko.com/en/api/documentation
@@ -17,6 +18,7 @@ export class CoingeckoService {
 
   constructor(
     private http: HttpClient,
+    private coreService: CoreService
   ) { }
 
   getCoins(
@@ -55,4 +57,37 @@ export class CoingeckoService {
         });
     });
   }
+
+  getCoinByDate(
+    coin: string,
+    date: string,
+    currency: IValueText = ECurrency.USD,
+  ): Promise<CoinDefault[]> {
+    // Prepare params
+    const pDate = `?date=${this.coreService.formatDate(date)}`;
+
+    // Set params filter
+    const urlFilter = `${pDate}`;
+
+    // Set url
+    const path = `${this.cApiMainUrl}/coins/${coin.toLowerCase()}/history${urlFilter}`;
+
+    // Do the call
+    return new Promise<CoinDefault[]>((resolve, reject) => {
+      this.http.get<string>(path)
+        .pipe(first(),
+          map((data: any) => data.map((item: any) => new CoinDefault(currency, item)))
+        )
+        .subscribe({
+          next: (response: CoinDefault[]) => {
+            resolve(response);
+          },
+          error: (error) => {
+            // this.errorService.manageError(error);
+            reject(error);
+          },
+        });
+    });
+  }
+
 }

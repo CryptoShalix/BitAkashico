@@ -1,10 +1,10 @@
 <div class="content">
 
-  <div class="about">
+  <div class="content-about">
     {{ 'PAGE_MAIN.about' | translate }}
   </div>
 
-  <div class="cards">
+  <div class="content-cards">
     <app-linkable-icon
       *ngFor="let icon of iconListMedia"
       [sDefaultIcon]="icon"
@@ -12,7 +12,7 @@
     </app-linkable-icon>
   </div>
 
-  <div class="video-responsive">
+  <div class="content-video-responsive">
     <iframe
       width="945px"
       height="600px"

@@ -1,6 +1,7 @@
+import { formatDate } from '@angular/common';
 import { Injectable } from '@angular/core';
 
-import { IValueText } from '../models/core';
+import { EDateFormat, IValueText } from '../models/core';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,8 @@ export class CoreService {
 
   // Variables (private)
   private defaultCurrency: IValueText;
+  private userLocale: string;
+  private userLanguage: string;
 
   constructor() { }
 
@@ -22,6 +25,30 @@ export class CoreService {
 
   isNullOrEmpty(value: any): boolean {
     return value === null || value === undefined || value === '';
+  }
+
+  setUserLocale(userLocale: string): void {
+    this.userLocale = userLocale;
+    this.setUserLanguage(this.userLocale.split('-')[0]);
+    console.log(`User language: ${this.getUserLanguage()}`);
+  }
+
+  getUserLocale(): string {
+    return this.userLocale;
+  }
+
+  setUserLanguage(userLanguage: string): void {
+    this.userLanguage = userLanguage;
+  }
+
+  getUserLanguage(): string {
+    return this.userLanguage;
+  }
+
+  // DATES
+
+  formatDate(date: string, format: EDateFormat = EDateFormat.shortDash): string {
+    return formatDate(date, format, this.getUserLocale());
   }
 
   // CURRENCY
