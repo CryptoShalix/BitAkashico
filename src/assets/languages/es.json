@@ -17,5 +17,8 @@
   "PAGE_MAIN": {
     "about": "Crypto Shalix pretende agrupar todo lo relacionado con criptomonedas en un solo lugar, desde el que poder aprender, compartir, y tradear en este nuevo mundo que ha llegado a nosotros.",
     "videoTitle": "Revolución digital: Blockchain, criptomonedas, NFT y metaverso"
+  },
+  "PAGE_TOOLS": {
+    "about": "Aquí encontrarás todas las plataformas y herramientas necesarias para hacer análisis técnico y fundamental, y, por supuesto, invertir, ya sea de forma centralizada o descentralizada, y con todas las ventajas e inconvenientes de cada uno."
   }
 }]

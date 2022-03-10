@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IMAGES } from 'src/assets/images/images';
 
 import { CoreService } from './shared/services/core.service';
+import { TranslateService } from './shared/services/translate.service';
 
 import { ECurrency } from './shared/models/currency';
 import { INavMenu } from './shared/models/menu';
@@ -41,8 +42,15 @@ export class AppComponent implements OnInit {
   iconListMenu: LinkableIcon[] = [];
   navMenu: INavMenu[] = [];
 
+  icmIdHome = 'home';
+  icmIdAcademy = 'academy';
+  icmIdTools = 'tools';
+  icmIdTrading = 'trading';
+  icmIdPortfolio = 'portfolio';
+
   constructor(
     private coreService: CoreService,
+    private translateService: TranslateService,
   ) { }
 
   ngOnInit(): void {
@@ -59,13 +67,14 @@ export class AppComponent implements OnInit {
     this.navMenu.push({ text: 'MENU.games', link: '/', icon: 'sports_esports', disabled: true });
 
     this.iconListMenu = [];
-    this.iconListMenu.push(new LinkableIcon('home', {
+    this.iconListMenu.push(new LinkableIcon(this.icmIdHome, {
       title: 'MENU.home',
       iconPath: IMAGES.HOME_SVG,
       showText: false,
       type: ELinkableIconType.SVG
     }));
-    this.iconListMenu.push(new LinkableIcon('academy', {
+    this.iconListMenu.push(new LinkableIcon(this.icmIdAcademy, {
+      // routerLink: 'academy',
       routerLink: '/',
       title: 'MENU.academy',
       iconPath: 'school',
@@ -73,7 +82,8 @@ export class AppComponent implements OnInit {
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF
     }));
-    this.iconListMenu.push(new LinkableIcon('tools', {
+    this.iconListMenu.push(new LinkableIcon(this.icmIdTools, {
+      // routerLink: 'tools',
       routerLink: '/',
       title: 'MENU.tools',
       iconPath: 'construction',
@@ -81,7 +91,7 @@ export class AppComponent implements OnInit {
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF
     }));
-    this.iconListMenu.push(new LinkableIcon('trading', {
+    this.iconListMenu.push(new LinkableIcon(this.icmIdTrading, {
       // routerLink: 'trading',
       routerLink: '/',
       title: 'MENU.trading',
@@ -90,7 +100,8 @@ export class AppComponent implements OnInit {
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF
     }));
-    this.iconListMenu.push(new LinkableIcon('portfolio', {
+    this.iconListMenu.push(new LinkableIcon(this.icmIdPortfolio, {
+      // routerLink: 'portfolio',
       routerLink: '/',
       title: 'MENU.portfolio',
       iconPath: 'pie_chart',
@@ -114,5 +125,18 @@ export class AppComponent implements OnInit {
 
   private prepareData(): void {
     this.coreService.setDefaultCurrency(ECurrency.USD);
+  }
+
+  getIconListMenu(id: string): LinkableIcon {
+    const menu = this.iconListMenu.find((o) => o.id === id);
+    return menu ? menu : new LinkableIcon(id);
+  }
+
+  onChangeLanguage(): void {
+    this.translateService.toggleUserLanguage();
+  }
+
+  getTooltipLanguage(): string {
+    return `'LANGUAGE.${this.translateService.userLang}'`;
   }
 }

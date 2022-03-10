@@ -11,12 +11,14 @@ import { PipesModule } from './shared/pipes/pipes.module';
 
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
+import { ToolsPageComponent } from './pages/tools-page/tools-page.component';
 import { TradingPageComponent } from './pages/trading-page/trading-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
+    ToolsPageComponent,
     TradingPageComponent,
   ],
   imports: [

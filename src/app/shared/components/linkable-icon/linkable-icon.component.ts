@@ -28,4 +28,9 @@ export class LinkableIconComponent {
       }
     }
   }
+
+  isCurrentPage(href: string): boolean {
+    const currentFullPage = window.location.hash;
+    return currentFullPage.includes(`/${href}`);
+  }
 }

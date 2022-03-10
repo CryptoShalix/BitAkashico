@@ -16,7 +16,9 @@ export enum ELanguage {
   providedIn: 'root'
 })
 export class TranslateService {
-  private userLang: string;
+  private cUserLanguage = 'userLanguage';
+
+  userLang: string;
 
   constructor(
     private coreService: CoreService
@@ -25,9 +27,24 @@ export class TranslateService {
   }
 
   private getUserLanguage(): void {
-    this.userLang = navigator.language || window.navigator.language;
-    this.coreService.setUserLocale(this.userLang);
-    this.userLang = this.coreService.getUserLanguage();
+    const userLanguage = localStorage.getItem(this.cUserLanguage);
+    if (userLanguage) {
+      this.userLang = userLanguage;
+    } else {
+      this.userLang = navigator.language || window.navigator.language;
+      this.userLang = this.userLang.split('-')[0];
+    }
+    this.logger();
+  }
+
+  setUserLanguage(newLanguage: ELanguage): void {
+    this.userLang = newLanguage;
+    localStorage.setItem(this.cUserLanguage, this.userLang);
+    this.logger();
+  }
+
+  toggleUserLanguage(): void {
+    this.setUserLanguage(this.userLang === ELanguage.EN ? ELanguage.ES : ELanguage.EN);
   }
 
   /**
@@ -88,5 +105,9 @@ export class TranslateService {
       case ELanguage.EN:
       default: return (jsonEN as any).default;
     }
+  }
+
+  private logger(): void {
+    console.log(`User language: ${this.userLang}`);
   }
 }
