@@ -34,12 +34,14 @@ export class TranslateService {
       this.userLang = navigator.language || window.navigator.language;
       this.userLang = this.userLang.split('-')[0];
     }
+    this.coreService.setUserLanguage(this.userLang);
     this.logger();
   }
 
   setUserLanguage(newLanguage: ELanguage): void {
     this.userLang = newLanguage;
     localStorage.setItem(this.cUserLanguage, this.userLang);
+    this.coreService.setUserLanguage(this.userLang);
     this.logger();
   }
 

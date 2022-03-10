@@ -12,7 +12,6 @@ export class CoreService {
 
   // Variables (private)
   private defaultCurrency: IValueText;
-  private userLocale: string;
   private userLanguage: string;
 
   constructor() { }
@@ -21,34 +20,22 @@ export class CoreService {
 
   getAppTitle(): string { return this.appTitle; }
 
+  // LANGUAGE
+
+  setUserLanguage(userLang: string): void {
+    this.userLanguage = userLang;
+  }
+
   // TEXT AND ITEMS
 
   isNullOrEmpty(value: any): boolean {
     return value === null || value === undefined || value === '';
   }
 
-  setUserLocale(userLocale: string): void {
-    this.userLocale = userLocale;
-    this.setUserLanguage(this.userLocale.split('-')[0]);
-    console.log(`User language: ${this.getUserLanguage()}`);
-  }
-
-  getUserLocale(): string {
-    return this.userLocale;
-  }
-
-  setUserLanguage(userLanguage: string): void {
-    this.userLanguage = userLanguage;
-  }
-
-  getUserLanguage(): string {
-    return this.userLanguage;
-  }
-
   // DATES
 
   formatDate(date: string, format: EDateFormat = EDateFormat.shortDash): string {
-    return formatDate(date, format, this.getUserLocale());
+    return formatDate(date, format, this.userLanguage);
   }
 
   // CURRENCY
