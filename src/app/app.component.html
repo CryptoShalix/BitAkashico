@@ -26,11 +26,11 @@
   <div class="toolbar-bottom">
     <div class="menu-bottom">
 
-      <app-linkable-icon [sDefaultIcon]="iconListMenu[1]"></app-linkable-icon>
-      <app-linkable-icon [sDefaultIcon]="iconListMenu[2]"></app-linkable-icon>
+      <app-linkable-icon [sDefaultIcon]="getIconListMenu(icmIdAcademy)"></app-linkable-icon>
+      <app-linkable-icon [sDefaultIcon]="getIconListMenu(icmIdTools)"></app-linkable-icon>
       <app-linkable-icon
         *ngIf="!showTopNavMenu"
-        [sDefaultIcon]="iconListMenu[0]"
+        [sDefaultIcon]="getIconListMenu(icmIdHome)"
         [matMenuTriggerFor]="menu"
         class="nav-menu-link"
       ></app-linkable-icon>
@@ -42,9 +42,16 @@
       >
         <mat-icon>menu</mat-icon>
       </button>
-      <app-linkable-icon [sDefaultIcon]="iconListMenu[3]"></app-linkable-icon>
-      <app-linkable-icon [sDefaultIcon]="iconListMenu[4]"></app-linkable-icon>
+      <app-linkable-icon [sDefaultIcon]="getIconListMenu(icmIdTrading)"></app-linkable-icon>
+      <app-linkable-icon [sDefaultIcon]="getIconListMenu(icmIdPortfolio)"></app-linkable-icon>
     </div>
+
+    <mat-icon
+      class="material-icons language"
+      (click)="onChangeLanguage()"
+      [matTooltip]="getTooltipLanguage() | translate"
+    >translate</mat-icon>
+
   </div>
 
 </div>

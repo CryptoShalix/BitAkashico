@@ -2,13 +2,16 @@
   <a
     *ngIf="defaultIcon.routerLink !== ''"
     class="linkable-icon"
-    [ngClass]="{'card': defaultIcon.isCard, 'no-border': defaultIcon.isImage}"
+    [ngClass]="{
+      'card': defaultIcon.isCard,
+      'no-border': defaultIcon.isImage,
+      'router-link-active': isCurrentPage(defaultIcon.routerLink)
+    }"
     [attr.aria-valuenow]="defaultIcon.label | translate"
     [target]="defaultIcon.target"
     rel="noopener"
     [routerLink]="defaultIcon.routerLink"
-    routerLinkActive="router-link-active"
-    [href]="defaultIcon.href"
+    [href]="defaultIcon.routerLink"
     [title]="defaultIcon.title | translate"
     [attr.tooltip]="defaultIcon.tooltip | translate"
   >
@@ -18,7 +21,11 @@
   <a
     *ngIf="defaultIcon.href !== ''"
     class="linkable-icon"
-    [ngClass]="{'card': defaultIcon.isCard, 'no-border': defaultIcon.isImage}"
+    [ngClass]="{
+      'card': defaultIcon.isCard,
+      'no-border': defaultIcon.isImage,
+      'router-link-active': isCurrentPage(defaultIcon.href)
+    }"
     [attr.aria-valuenow]="defaultIcon.label | translate"
     [target]="defaultIcon.target"
     rel="noopener"
