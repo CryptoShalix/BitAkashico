@@ -35,7 +35,8 @@ import { ELinkableIcon, ELinkableIconType, ELinkableTarget, LinkableIcon } from 
 })
 export class AppComponent implements OnInit {
   title = ELinkableIcon.Home;
-  showTopNavMenu = false;
+
+  currency = ECurrency.USD;
 
   iconHome: LinkableIcon;
   iconListMedia: LinkableIcon[] = [];
@@ -134,9 +135,10 @@ export class AppComponent implements OnInit {
 
   onChangeLanguage(): void {
     this.translateService.toggleUserLanguage();
+    location.reload();
   }
 
   getTooltipLanguage(): string {
-    return `'LANGUAGE.${this.translateService.userLang}'`;
+    return `LANGUAGE.${this.translateService.userLang}`;
   }
 }

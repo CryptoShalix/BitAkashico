@@ -42,7 +42,7 @@
     [ngClass]="{'card': defaultIcon.isCard, 'no-border': defaultIcon.isImage}"
     [attr.aria-valuenow]="defaultIcon.label"
     [title]="defaultIcon.title"
-    [attr.tooltip]="defaultIcon.tooltip"
+    [attr.tooltip]="defaultIcon.tooltip | translate"
   >
     <ng-container *ngTemplateOutlet="linkContent"></ng-container>
   </span>

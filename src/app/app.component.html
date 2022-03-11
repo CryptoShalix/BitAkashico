@@ -26,31 +26,33 @@
   <div class="toolbar-bottom">
     <div class="menu-bottom">
 
+      <div class="material-icons-currency">
+        {{ currency.text| uppercase }}
+      </div>
+
+      <span class="spacer"></span>
+
       <app-linkable-icon [sDefaultIcon]="getIconListMenu(icmIdAcademy)"></app-linkable-icon>
       <app-linkable-icon [sDefaultIcon]="getIconListMenu(icmIdTools)"></app-linkable-icon>
       <app-linkable-icon
-        *ngIf="!showTopNavMenu"
         [sDefaultIcon]="getIconListMenu(icmIdHome)"
         [matMenuTriggerFor]="menu"
         class="nav-menu-link"
       ></app-linkable-icon>
-      <button
-        *ngIf="showTopNavMenu"
-        mat-icon-button
-        [matMenuTriggerFor]="menu"
-        aria-label="CryptoShalix menu"
-      >
-        <mat-icon>menu</mat-icon>
-      </button>
       <app-linkable-icon [sDefaultIcon]="getIconListMenu(icmIdTrading)"></app-linkable-icon>
       <app-linkable-icon [sDefaultIcon]="getIconListMenu(icmIdPortfolio)"></app-linkable-icon>
-    </div>
 
-    <mat-icon
-      class="material-icons language"
-      (click)="onChangeLanguage()"
-      [matTooltip]="getTooltipLanguage() | translate"
-    >translate</mat-icon>
+      <span class="spacer"></span>
+
+      <div class="material-icons-language">
+        <span class="language-tooltip">{{ getTooltipLanguage() | translate | uppercase }}</span>
+        <mat-icon
+          class="material-icons"
+          (click)="onChangeLanguage()"
+        >translate</mat-icon>
+      </div>
+
+    </div>
 
   </div>
 

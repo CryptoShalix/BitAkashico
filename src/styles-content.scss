@@ -58,6 +58,7 @@
     .menu-bottom {
       position: relative;
       display: flex;
+      width: calc(100% - 100px);
       min-width: 280px;
       margin: 2px auto;
       justify-content: center;
@@ -87,9 +88,15 @@
   .content {
     max-width: 75% !important;
   }
+
+  .menu-top,
+  .menu-bottom {
+    width: 100% !important;
+  }
 }
 
 @media screen and (max-width: 767px) {
+
   .main-container {
     min-width: 100%;
 
