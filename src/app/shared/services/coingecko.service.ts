@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { first, map } from 'rxjs/operators';
-import { EDateFormat, IValueText } from '../models/core';
+import { IValueText } from '../models/core';
 
-import { Coin, CoinDefault, ECurrency } from '../models/currency';
+import { Coin, ECurrency } from '../models/currency';
 import { CoreService } from './core.service';
 
 /**
@@ -62,7 +62,7 @@ export class CoingeckoService {
     coin: string,
     date: string,
     currency: IValueText = ECurrency.USD,
-  ): Promise<CoinDefault[]> {
+  ): Promise<Coin[]> {
     // Prepare params
     const pDate = `?date=${this.coreService.formatDate(date)}`;
 
@@ -73,13 +73,13 @@ export class CoingeckoService {
     const path = `${this.cApiMainUrl}/coins/${coin.toLowerCase()}/history${urlFilter}`;
 
     // Do the call
-    return new Promise<CoinDefault[]>((resolve, reject) => {
+    return new Promise<Coin[]>((resolve, reject) => {
       this.http.get<string>(path)
         .pipe(first(),
-          map((data: any) => data.map((item: any) => new CoinDefault(currency, item)))
+          map((data: any) => data.map((item: any) => new Coin(currency, item)))
         )
         .subscribe({
-          next: (response: CoinDefault[]) => {
+          next: (response: Coin[]) => {
             resolve(response);
           },
           error: (error) => {

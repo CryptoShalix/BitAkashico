@@ -70,8 +70,8 @@ export enum EBit2MeCoins {
   EWT = 'EWT'
 }
 
-export class CoinDefault {
-  protected static parameters = {
+export class Coin {
+  protected static paramsDefault = {
     id: 'id',
     symbol: 'symbol',
     name: 'name',
@@ -80,46 +80,11 @@ export class CoinDefault {
     imageThumb: 'thumb',
     imageSmall: 'small',
     marketData: 'market_data',
-    marketDataPrice: 'current_price',
     marketDataCap: 'market_cap',
     marketDataVolume: 'total_volume',
   };
 
-  id: string;
-  symbol: string;
-  name: string;
-  localization: string;
-  imageThumb: string;
-  imageSmall: string;
-  marketDataPrice: string;
-  marketDataCap: string;
-  marketDataVolume: string;
-
-  currency: IValueText;
-  url: string;
-
-  constructor(currency: IValueText, data?: any) {
-    if (data) {
-      this.id = data[CoinDefault.parameters.id];
-      this.symbol = data[CoinDefault.parameters.symbol];
-      this.name = data[CoinDefault.parameters.name];
-      this.localization = data[CoinDefault.parameters.localization];
-      const image = data[CoinDefault.parameters.image];
-      this.imageThumb = image[CoinDefault.parameters.imageThumb];
-      this.imageSmall = image[CoinDefault.parameters.imageSmall];
-      const marketData = data[CoinDefault.parameters.marketData];
-      this.marketDataPrice = marketData[CoinDefault.parameters.marketDataPrice][currency.value];
-      this.marketDataCap = marketData[CoinDefault.parameters.marketDataCap][currency.value];
-      this.marketDataVolume = marketData[CoinDefault.parameters.marketDataVolume][currency.value];
-    }
-
-    this.currency = currency;
-    this.url = `${URLS.COINGECKO}${this.id}`;
-  }
-}
-
-export class Coin extends CoinDefault {
-  protected static parametersExtended = {
+  protected static paramsExtended = {
     ath: 'ath',
     athChangePercentage: 'ath_change_percentage',
     athDate: 'ath_date',
@@ -148,6 +113,16 @@ export class Coin extends CoinDefault {
     totalVolume: 'total_volume',
   };
 
+  id: string;
+  symbol: string;
+  name: string;
+  localization: string;
+  imageThumb: string;
+  imageSmall: string;
+  marketDataPrice: string;
+  marketDataCap: string;
+  marketDataVolume: string;
+
   ath: number;
   athChangePercentage: number;
   athDate: Date;
@@ -172,32 +147,53 @@ export class Coin extends CoinDefault {
   totalSupply: number;
   totalVolume: number;
 
+  currency: IValueText;
+  url: string;
+
   constructor(currency: IValueText, data?: any) {
-    super(currency, data);
     if (data) {
-      this.ath = data[Coin.parametersExtended.ath];
-      this.athChangePercentage = data[Coin.parametersExtended.athChangePercentage];
-      this.athDate = data[Coin.parametersExtended.athDate];
-      this.atl = data[Coin.parametersExtended.atl];
-      this.atlChangePercentage = data[Coin.parametersExtended.atlChangePercentage];
-      this.atlDate = data[Coin.parametersExtended.atlDate];
-      this.circulatingSupply = data[Coin.parametersExtended.circulatingSupply];
-      this.currentPrice = data[Coin.parametersExtended.currentPrice];
-      this.fullyDilutedValuation = data[Coin.parametersExtended.fullyDilutedValuation];
-      this.high24h = data[Coin.parametersExtended.high24h];
-      this.image = data[Coin.parametersExtended.image];
-      this.lastUpdated = data[Coin.parametersExtended.lastUpdated];
-      this.low24h = data[Coin.parametersExtended.low24h];
-      this.marketCap = data[Coin.parametersExtended.marketCap];
-      this.marketCapChange24h = data[Coin.parametersExtended.marketCapChange24h];
-      this.marketCapChangePercentage24h = data[Coin.parametersExtended.marketCapChangePercentage24h];
-      this.marketCapRank = data[Coin.parametersExtended.marketCapRank];
-      this.maxSupply = data[Coin.parametersExtended.maxSupply];
-      this.priceChange24h = data[Coin.parametersExtended.priceChange24h];
-      this.priceChangePercentage24h = data[Coin.parametersExtended.priceChangePercentage24h];
-      this.roi = data[Coin.parametersExtended.roi];
-      this.totalSupply = data[Coin.parametersExtended.totalSupply];
-      this.totalVolume = data[Coin.parametersExtended.totalVolume];
+      this.id = data[Coin.paramsDefault.id];
+      this.symbol = data[Coin.paramsDefault.symbol];
+      this.name = data[Coin.paramsDefault.name];
+      this.localization = data[Coin.paramsDefault.localization];
+      const image = data[Coin.paramsDefault.image];
+      if (image) {
+        this.imageThumb = image[Coin.paramsDefault.imageThumb];
+        this.imageSmall = image[Coin.paramsDefault.imageSmall];
+      }
+      const marketData = data[Coin.paramsDefault.marketData];
+      if (marketData) {
+        this.marketDataPrice = marketData[Coin.paramsExtended.currentPrice][currency.value];
+        this.marketDataCap = marketData[Coin.paramsDefault.marketDataCap][currency.value];
+        this.marketDataVolume = marketData[Coin.paramsDefault.marketDataVolume][currency.value];
+      }
+
+      this.ath = data[Coin.paramsExtended.ath];
+      this.athChangePercentage = data[Coin.paramsExtended.athChangePercentage];
+      this.athDate = data[Coin.paramsExtended.athDate];
+      this.atl = data[Coin.paramsExtended.atl];
+      this.atlChangePercentage = data[Coin.paramsExtended.atlChangePercentage];
+      this.atlDate = data[Coin.paramsExtended.atlDate];
+      this.circulatingSupply = data[Coin.paramsExtended.circulatingSupply];
+      this.currentPrice = data[Coin.paramsExtended.currentPrice];
+      this.fullyDilutedValuation = data[Coin.paramsExtended.fullyDilutedValuation];
+      this.high24h = data[Coin.paramsExtended.high24h];
+      this.image = data[Coin.paramsExtended.image];
+      this.lastUpdated = data[Coin.paramsExtended.lastUpdated];
+      this.low24h = data[Coin.paramsExtended.low24h];
+      this.marketCap = data[Coin.paramsExtended.marketCap];
+      this.marketCapChange24h = data[Coin.paramsExtended.marketCapChange24h];
+      this.marketCapChangePercentage24h = data[Coin.paramsExtended.marketCapChangePercentage24h];
+      this.marketCapRank = data[Coin.paramsExtended.marketCapRank];
+      this.maxSupply = data[Coin.paramsExtended.maxSupply];
+      this.priceChange24h = data[Coin.paramsExtended.priceChange24h];
+      this.priceChangePercentage24h = data[Coin.paramsExtended.priceChangePercentage24h];
+      this.roi = data[Coin.paramsExtended.roi];
+      this.totalSupply = data[Coin.paramsExtended.totalSupply];
+      this.totalVolume = data[Coin.paramsExtended.totalVolume];
     }
+
+    this.currency = currency;
+    this.url = `${URLS.COINGECKO}${this.id}`;
   }
 }

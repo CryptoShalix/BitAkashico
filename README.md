@@ -1,3 +1,3 @@
 # CryptoShalix
 
-Crypto Shalix pretende agrupar todo lo relacionado con criptomonedas en un solo lugar, desde el que poder aprender, compartir, y tradear en este nuevo mundo que ha llegado a nosotros.
+Crypto Shalix aims to bring together everything related to cryptocurrencies in one place, from which to learn, share, and trade in this new world that has come to us.

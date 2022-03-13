@@ -17,7 +17,6 @@ export enum ELanguage {
 })
 export class TranslateService {
   private cUserLanguage = 'userLanguage';
-
   userLang: string;
 
   constructor(

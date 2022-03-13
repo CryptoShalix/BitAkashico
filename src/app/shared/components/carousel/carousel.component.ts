@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { map, Subscription, timer } from 'rxjs';
+import { interval, map, Subscription, timer } from 'rxjs';
 
 import { CoingeckoService } from '../../services/coingecko.service';
 
