@@ -42,3 +42,20 @@ export enum EDateFormat {
   longDash = 'dd-MM-yyyy HH:mm:ss',
   longSlash = 'dd/MM/yyyy HH:mm:ss',
 }
+
+export interface IAccordionItem {
+  text: string;
+  link: string;
+  description: string;
+  icon?: string;
+  image?: string;
+  rank?: number;
+}
+
+export interface IAccordion {
+  title: string;
+  items: IAccordionItem[];
+  description?: string;
+  icon?: string;
+  disabled?: boolean;
+}

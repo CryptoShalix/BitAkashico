@@ -1,7 +1,7 @@
 <div class="content">
 
   <div class="about">
-    {{ 'PAGE_TOOLS.about' | translate }}
+    {{ 'PAGES.TOOLS.about' | translate }}
   </div>
 
   <div class="cards">
@@ -10,70 +10,38 @@
       class="example-headers-align"
       multi
     >
-      <mat-expansion-panel>
+      <mat-expansion-panel
+        *ngFor="let toolCategory of this.toolsList"
+        [disabled]="toolCategory.disabled"
+      >
         <mat-expansion-panel-header>
-          <mat-panel-title>
-            Personal data
-          </mat-panel-title>
-          <mat-panel-description>
-            Type your name and age
-            <mat-icon>account_circle</mat-icon>
+          <mat-panel-title>{{ toolCategory.title }}</mat-panel-title>
+          <mat-panel-description>{{ toolCategory.description }}
+            <mat-icon *ngIf="toolCategory.icon">{{ toolCategory.icon }}</mat-icon>
           </mat-panel-description>
         </mat-expansion-panel-header>
 
-        <mat-form-field appearance="fill">
-          <mat-label>First name</mat-label>
-          <input matInput>
-        </mat-form-field>
+        <mat-card
+          *ngFor="let toolItem of toolCategory.items"
+          class="example-card"
+        >
+          <mat-card-title-group>
+            <mat-card-title>{{ toolItem.text }}</mat-card-title>
+            <mat-card-subtitle *ngIf="toolItem.rank">
 
-        <mat-form-field appearance="fill">
-          <mat-label>Age</mat-label>
-          <input
-            matInput
-            type="number"
-            min="1"
-          >
-        </mat-form-field>
+            </mat-card-subtitle>
+            <mat-icon *ngIf="toolItem.icon">{{ toolItem.icon }}</mat-icon>
+            <img
+              *ngIf="toolItem.image"
+              mat-card-sm-image
+              [src]="toolItem.image"
+            >
+          </mat-card-title-group>
+          <mat-card-content>
+            {{ toolItem.description }}
+          </mat-card-content>
+        </mat-card>
 
-      </mat-expansion-panel>
-      <mat-expansion-panel disabled>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Destination
-          </mat-panel-title>
-          <mat-panel-description>
-            Type the country name
-            <mat-icon>map</mat-icon>
-          </mat-panel-description>
-        </mat-expansion-panel-header>
-
-        <mat-form-field appearance="fill">
-          <mat-label>Country</mat-label>
-          <input matInput>
-        </mat-form-field>
-      </mat-expansion-panel>
-
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Day of the trip
-          </mat-panel-title>
-          <mat-panel-description>
-            Inform the date you wish to travel
-            <mat-icon>date_range</mat-icon>
-          </mat-panel-description>
-        </mat-expansion-panel-header>
-
-        <mat-form-field appearance="fill">
-          <mat-label>Date</mat-label>
-          <input
-            matInput
-            [matDatepicker]="picker"
-            (focus)="picker.open()"
-            readonly
-          >
-        </mat-form-field>
-        <mat-datepicker #picker></mat-datepicker>
       </mat-expansion-panel>
     </mat-accordion>
 
