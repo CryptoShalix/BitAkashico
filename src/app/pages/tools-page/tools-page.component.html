@@ -28,7 +28,7 @@
           <mat-card-title-group>
             <mat-card-title>{{ toolItem.text }}</mat-card-title>
             <mat-card-subtitle *ngIf="toolItem.rank">
-
+              <app-star-rank [setStars]="toolItem.rank"></app-star-rank>
             </mat-card-subtitle>
             <mat-icon *ngIf="toolItem.icon">{{ toolItem.icon }}</mat-icon>
             <img
