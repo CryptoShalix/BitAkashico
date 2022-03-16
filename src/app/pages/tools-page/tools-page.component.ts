@@ -32,8 +32,8 @@ export class ToolsPageComponent implements OnInit {
       disabled: false,
       icon: 'market',
       items: [
-        { text: 'CoinGecko', link: 'https://www.coingecko.com', description: 'PAGES.TOOLS.appCoinGecko', image: '', rank: 5 },
-        { text: 'CoinMarketCap', link: 'https://www.coinmarketcap.com/invite?ref=Z97Z1PVC', description: 'PAGES.TOOLS.appCoinMarketCap', image: '', rank: 4 },
+        { text: 'CoinGecko', link: 'https://www.coingecko.com', description: 'PAGES.TOOLS.appCoinGecko', image: '', rank: 5.5 },
+        { text: 'CoinMarketCap', link: 'https://www.coinmarketcap.com/invite?ref=Z97Z1PVC', description: 'PAGES.TOOLS.appCoinMarketCap', image: '', rank: 4.5 },
       ]
     });
   }

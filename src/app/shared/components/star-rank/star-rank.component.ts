@@ -16,6 +16,7 @@ export enum EStarRank {
 export class StarRankComponent {
   @Input() set setStars(stars: number) {
     this.stars = stars;
+    this.initialize();
   }
 
   maxStars = 5;
@@ -23,14 +24,19 @@ export class StarRankComponent {
 
   starsToPaint: string[];
 
-  constructor() {
+  constructor() { }
+
+  initialize(): void {
     this.starsToPaint = [];
-    console.log(this.stars);
     const stars = this.stars.toString().split('.');
-    console.log(stars);
-    const starsFull = parseInt(stars[0], 10);
-    const starsHalf = parseInt(stars[1], 10) === 0 ? 0 : 1;
-    const starsEmpty = this.maxStars - (starsFull + starsHalf);
+    let starsFull = parseInt(stars[0], 10);
+    let starsHalf = stars.length === 1 || parseInt(stars[1], 10) === 0 ? 0 : 1;
+    let starsEmpty = this.maxStars - (starsFull + starsHalf);
+    if (this.maxStars >= (starsFull + starsHalf)) {
+      starsFull = this.maxStars;
+      starsHalf = 0;
+      starsEmpty = 0;
+    }
     console.log(starsFull);
     console.log(starsHalf);
     console.log(starsEmpty);
