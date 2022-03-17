@@ -32,7 +32,10 @@ export class StarRankComponent {
     let starsFull = parseInt(stars[0], 10);
     let starsHalf = stars.length === 1 || parseInt(stars[1], 10) === 0 ? 0 : 1;
     let starsEmpty = this.maxStars - (starsFull + starsHalf);
-    if (this.maxStars >= (starsFull + starsHalf)) {
+    console.log(this.maxStars);
+    console.log(starsFull);
+    console.log(starsHalf);
+    if (this.maxStars > (starsFull + starsHalf)) {
       starsFull = this.maxStars;
       starsHalf = 0;
       starsEmpty = 0;
