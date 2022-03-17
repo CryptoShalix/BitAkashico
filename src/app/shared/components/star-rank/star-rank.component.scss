@@ -1,36 +1,6 @@
-:root {
-  --checkedColor: gold;
-  --unCheckedColor: gray;
-  --size: 24px;
-  --halfWidth: 10px;
-  --halfMargin: -20px;
-}
+@import '../../../../styles-colors.scss';
 
 .star {
+  color: $icon-star-color;
   cursor: pointer;
-  color: var(--unCheckedColor);
-  font-size: var(--size);
-  width: var(--size);
-  display: inline-block;
-}
-
-.star:last-child {
-  margin-right: 0;
-}
-
-.star:before {
-  content: '\2605';
-}
-
-.star.on {
-  color: var(--checkedColor);
-}
-
-.star.half:after {
-  content: '\2605';
-  color: var(--checkedColor);
-  position: absolute;
-  margin-left: var(--halfMargin);
-  width: var(--halfWidth);
-  overflow: hidden;
 }

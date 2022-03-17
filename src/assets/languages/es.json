@@ -21,8 +21,33 @@
     },
     "TOOLS": {
       "about": "Aquí encontrarás todas las plataformas y herramientas necesarias para hacer análisis técnico y fundamental, y, por supuesto, invertir, ya sea de forma centralizada o descentralizada, y con todas las ventajas e inconvenientes de cada uno.",
-      "appCoinGecko": "Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.",
-      "appCoinMarketCap": "Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías."
+      "GROUPS": {
+        "ANALYSIS_MARKET": {
+          "title": "Análisis de mercado",
+          "description": "",
+          "appCoinGecko": "Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.",
+          "appCoinMarketCap": "Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.",
+          "appLunarcrush": "Análisis social completo de criptomonedas, con noticias, comentarios de influencers y mucho más.",
+          "appGoogleTrends": "Para ver el número de búsquedas de una o varias palabras.",
+          "appDefiLlama": "Para analizar el mercado DeFi, además de las principales redes y exchanges DEX."
+        },
+        "ANALYSIS_TECH": {
+          "title": "Análisis técnico",
+          "description": ""
+        },
+        "ANALYSIS_PROJECTS": {
+          "title": "Análisis de proyectos",
+          "description": ""
+        },
+        "ANALYSIS_BITCOIN": {
+          "title": "Análisis de Bitcoin",
+          "description": ""
+        },
+        "OTHERS": {
+          "title": "Otras aplicaciones interesantes",
+          "description": ""
+        }
+      }
     }
   }
 }]

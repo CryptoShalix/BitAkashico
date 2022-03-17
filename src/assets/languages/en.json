@@ -20,7 +20,34 @@
       "videoTitle": "Digital revolution: Blockchain, cryptocurrencies, NFT and metaverse"
     },
     "TOOLS": {
-      "about": "Here you will find all the necessary platforms and tools to do technical and fundamental analysis, and, of course, invest, either centralized or decentralized, and with all the advantages and disadvantages of each."
+      "about": "Here you will find all the necessary platforms and tools to do technical and fundamental analysis, and, of course, invest, either centralized or decentralized, and with all the advantages and disadvantages of each.",
+      "GROUPS": {
+        "ANALYSIS_MARKET": {
+          "title": "Análisis de mercado",
+          "description": "",
+          "appCoinGecko": "Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.",
+          "appCoinMarketCap": "Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.",
+          "appLunarcrush": "Análisis social completo de criptomonedas, con noticias, comentarios de influencers y mucho más.",
+          "appGoogleTrends": "Para ver el número de búsquedas de una o varias palabras.",
+          "appDefiLlama": "Para analizar el mercado DeFi, además de las principales redes y exchanges DEX."
+        },
+        "ANALYSIS_TECH": {
+          "title": "Análisis técnico",
+          "description": ""
+        },
+        "ANALYSIS_PROJECTS": {
+          "title": "Análisis de proyectos",
+          "description": ""
+        },
+        "ANALYSIS_BITCOIN": {
+          "title": "Análisis de Bitcoin",
+          "description": ""
+        },
+        "OTHERS": {
+          "title": "Otras aplicaciones interesantes",
+          "description": ""
+        }
+      }
     }
   }
 }]

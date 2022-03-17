@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatAccordion } from '@angular/material/expansion';
 
 import { IAccordion } from 'src/app/shared/models/core';
+import { IAccordionItem, URLS } from '../../shared/models/core';
+import { CoreService } from '../../shared/services/core.service';
 
 @Component({
   selector: 'app-tools-page',
@@ -13,29 +15,55 @@ export class ToolsPageComponent implements OnInit {
 
   toolsList: IAccordion[] = [];
 
-  constructor() { }
+  constructor(private coreService: CoreService) { }
 
   ngOnInit(): void {
     this.initialize();
   }
 
   private initialize(): void {
-    if (this.accordion) { this.accordion.openAll(); }
     this.prepareToolsList();
+    if (this.accordion) { this.accordion.openAll(); }
   }
 
   private prepareToolsList(): void {
     this.toolsList = [];
-    this.toolsList.push({
-      title: 'Análisis de mercado',
-      description: '',
-      disabled: false,
-      icon: 'market',
-      items: [
-        { text: 'CoinGecko', link: 'https://www.coingecko.com', description: 'PAGES.TOOLS.appCoinGecko', image: '', rank: 5.5 },
-        { text: 'CoinMarketCap', link: 'https://www.coinmarketcap.com/invite?ref=Z97Z1PVC', description: 'PAGES.TOOLS.appCoinMarketCap', image: '', rank: 4.5 },
-      ]
-    });
+    this.toolsList.push(this.createToolsGroup(
+      'ANALYSIS_MARKET',
+      [
+        this.createToolItem('CoinGecko', URLS.REF_CoinGecko, 4.5),
+        this.createToolItem('CoinMarketCap', URLS.REF_CoinMarketCap, 4),
+        this.createToolItem('Lunarcrush', URLS.REF_Lunarcrush, 3.5),
+        this.createToolItem('DefiLlama', URLS.REF_DefiLlama, 3.5),
+        this.createToolItem('Google Trends', URLS.REF_GoogleTrends, 1.5),
+      ],
+      'market'
+    ));
+    console.log(this.toolsList);
+  }
+
+  private createToolsGroup(groupName: string, items: IAccordionItem[], icon?: string, disabled?: boolean): IAccordion {
+    return {
+      title: `PAGES.TOOLS.GROUPS.${groupName}.title`,
+      description: `PAGES.TOOLS.GROUPS.${groupName}.description`,
+      disabled,
+      icon,
+      items
+    };
+  }
+
+  private createToolItem(name: string, link: string, rank: number): IAccordionItem {
+    return {
+      text: name,
+      link,
+      description: `PAGES.TOOLS.app${name.replace(' ', '')}`,
+      image: '',
+      rank
+    };
+  }
+
+  isNullOrEmpty(value: any): boolean {
+    return this.coreService.isNullOrEmpty(value);
   }
 
   /**
@@ -43,7 +71,7 @@ export class ToolsPageComponent implements OnInit {
    * Análisis de mercado
     - CoinGecko: https://www.coingecko.com. Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.
     - CoinMarketCap: https://coinmarketcap.com/invite?ref=Z97Z1PVC. Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.
-    - Lunarcrush: https://lunarcrush.com. Análisis completo de criptomonedas, noticias, comentarios de influencers y mucho más.
+    - Lunarcrush: https://lunarcrush.com. Análisis social completo de criptomonedas, con noticias, comentarios de influencers y mucho más.
     - Google Trends: https://trends.google.es/trends/explore. Para ver el número de búsquedas de una o varias palabras.
     - DefiLlama: https://defillama.com. Para analizar el mercado DeFi, además de las principales redes y exchanges DEX.
 

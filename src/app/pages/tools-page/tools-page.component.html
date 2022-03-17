@@ -15,8 +15,8 @@
         [disabled]="toolCategory.disabled"
       >
         <mat-expansion-panel-header>
-          <mat-panel-title>{{ toolCategory.title }}</mat-panel-title>
-          <mat-panel-description>{{ toolCategory.description }}
+          <mat-panel-title>{{ toolCategory.title | translate }}</mat-panel-title>
+          <mat-panel-description>{{ toolCategory.description | translate }}
             <mat-icon *ngIf="toolCategory.icon">{{ toolCategory.icon }}</mat-icon>
           </mat-panel-description>
         </mat-expansion-panel-header>
@@ -26,7 +26,7 @@
           class="example-card"
         >
           <mat-card-title-group>
-            <mat-card-title>{{ toolItem.text }}</mat-card-title>
+            <mat-card-title>{{ toolItem.text | translate }}</mat-card-title>
             <mat-card-subtitle *ngIf="toolItem.rank">
               <app-star-rank [setStars]="toolItem.rank"></app-star-rank>
             </mat-card-subtitle>
@@ -38,7 +38,7 @@
             >
           </mat-card-title-group>
           <mat-card-content>
-            {{ toolItem.description }}
+            {{ toolItem.description | translate }}
           </mat-card-content>
         </mat-card>
 
