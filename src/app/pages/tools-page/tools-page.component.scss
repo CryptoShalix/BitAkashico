@@ -1,6 +1,6 @@
 @import '../../../styles-colors.scss';
 
-.container {
+.content {
   display: block;
   max-width: 50%;
   margin: 0 auto;
@@ -10,7 +10,7 @@
   letter-spacing: 1px;
 
   .about,
-  .content {
+  .content-tools {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,13 +18,18 @@
     margin: 0;
   }
 
-  .content {
+  .content-tools {
     .accordion {
       width: 100%;
 
       .mat-expansion-panel {
         background: $body-background;
         color: $body-text;
+        margin: 10px auto;
+
+        .mat-expansion-panel-header {
+          border-left: 2px solid $card-text-hover;
+        }
 
         .mat-expansion-panel-header-title,
         .mat-expansion-panel-header-description {
@@ -38,15 +43,16 @@
           text-transform: uppercase;
         }
 
-        .mat-expansion-panel-header-description,
-        .mat-expansion-indicator,
-        .mat-expansion-indicator::after {
-          color: $body-text;
-        }
-
         .mat-icon {
+          display: inline-block;
+          margin-right: 15px;
           padding: 5px;
           color: $card-text-hover;
+
+          &.bitcoin-icon {
+            line-height: 10px;
+            font-size: 30px;
+          }
         }
 
         .mat-expansion-panel-content {
@@ -91,12 +97,6 @@
               margin: 0;
               font-size: 12px;
               color: $body-text;
-
-              .mat-icon.star {
-                font-size: 12px;
-                width: 20px;
-                height: 20px;
-              }
             }
 
             .mat-card-title:not(:first-child),
@@ -108,6 +108,7 @@
           .mat-card-content {
             margin: 0;
             padding: 15px;
+            text-align: left;
           }
         }
       }

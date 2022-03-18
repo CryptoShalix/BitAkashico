@@ -1,6 +1,18 @@
 @import '../../../../styles-colors.scss';
 
-.star {
-  color: $icon-star-color;
-  cursor: pointer;
+.star-container {
+  position: relative;
+  display: flex;
+  text-align: left;
+  align-items: center;
+  justify-content: flex-start;
+
+  .star {
+    display: flex;
+    color: $icon-star-color;
+    font-size: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
 }

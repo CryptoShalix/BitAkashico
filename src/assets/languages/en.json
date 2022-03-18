@@ -23,29 +23,33 @@
       "about": "Here you will find all the necessary platforms and tools to do technical and fundamental analysis, and, of course, invest, either centralized or decentralized, and with all the advantages and disadvantages of each.",
       "GROUPS": {
         "ANALYSIS_MARKET": {
-          "title": "Análisis de mercado",
+          "title": "Market analysis",
           "description": " ",
-          "appCoinGecko": "Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.",
-          "appCoinMarketCap": "Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.",
-          "appLunarcrush": "Análisis social completo de criptomonedas, con noticias, comentarios de influencers y mucho más.",
-          "appGoogleTrends": "Para ver el número de búsquedas de una o varias palabras.",
-          "appDefiLlama": "Para analizar el mercado DeFi, además de las principales redes y exchanges DEX."
+          "appCoinGecko": "See the main market, exchange, and portfolio construction data, as well as basic news and guides.",
+          "appCoinMarketCap": "See the main market, exchange, and portfolio construction data, as well as basic news and guides.",
+          "appLunarcrush": "Complete social analysis of cryptocurrencies, with news, comments from influencers and much more.",
+          "appGoogleTrends": "To see the number of searches for one or more words.",
+          "appDefiLlama": "To analyze the DeFi market, in addition to the main DEX networks and exchanges."
         },
         "ANALYSIS_TECH": {
-          "title": "Análisis técnico",
-          "description": ""
+          "title": "Technical analysis",
+          "description": " ",
+          "appTradingView": "To do technical analysis at the highest level. Totally free up to 4 indicators. For all functions you must pay. It has a web, mobile and desktop (PC) version."
         },
         "ANALYSIS_PROJECTS": {
-          "title": "Análisis de proyectos",
-          "description": ""
+          "title": "Project analysis",
+          "description": " ",
+          "appCoinMarketCal": "News and project updates"
         },
         "ANALYSIS_BITCOIN": {
-          "title": "Análisis de Bitcoin",
-          "description": ""
+          "title": "₿itcoin analysis",
+          "description": " ",
+          "appBitcoinRainbowChart": "Lets see if we are closer to altseason or BTC pump."
         },
         "OTHERS": {
-          "title": "Otras aplicaciones interesantes",
-          "description": ""
+          "title": "Other interesting applications",
+          "description": " ",
+          "appChainlist": "It allows you to add new networks to your wallet on EVM (Ethereum Virtual Machine), be it this BraveWallet, Metamask or any other that uses this Ethereum virtual machine."
         }
       }
     }

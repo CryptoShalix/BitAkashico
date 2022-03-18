@@ -1,9 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatAccordion } from '@angular/material/expansion';
 
+import { CoreService } from '../../shared/services/core.service';
+
 import { IAccordion } from 'src/app/shared/models/core';
 import { IAccordionItem, URLS } from '../../shared/models/core';
-import { CoreService } from '../../shared/services/core.service';
+import { ECurrency } from '../../shared/models/currency';
 
 @Component({
   selector: 'app-tools-page',
@@ -13,6 +15,8 @@ import { CoreService } from '../../shared/services/core.service';
 export class ToolsPageComponent implements OnInit {
   @ViewChild(MatAccordion) accordion: MatAccordion;
 
+  showExpanded = false;
+  bitcoinText = ECurrency.BTC.text;
   toolsList: IAccordion[] = [];
 
   constructor(private coreService: CoreService) { }
@@ -28,18 +32,76 @@ export class ToolsPageComponent implements OnInit {
 
   private prepareToolsList(): void {
     this.toolsList = [];
-    this.toolsList.push(this.createToolsGroup(
-      'ANALYSIS_MARKET',
+    this.toolsList.push(this.prepareToolsAnalysisMarket());
+    this.toolsList.push(this.prepareToolsAnalysisTechnical());
+    this.toolsList.push(this.prepareToolsAnalysisProjects());
+    this.toolsList.push(this.prepareToolsAnalysisBitcoin());
+    this.toolsList.push(this.prepareToolsAnalysisOthers());
+    console.log(this.toolsList);
+  }
+
+  private prepareToolsAnalysisMarket(): IAccordion {
+    const groupName = 'ANALYSIS_MARKET';
+    const accordion = this.createToolsGroup(
+      groupName,
       [
-        this.createToolItem('CoinGecko', URLS.REF_CoinGecko, 4.5),
-        this.createToolItem('CoinMarketCap', URLS.REF_CoinMarketCap, 4),
-        this.createToolItem('Lunarcrush', URLS.REF_Lunarcrush, 3.5),
-        this.createToolItem('DefiLlama', URLS.REF_DefiLlama, 3.5),
-        this.createToolItem('Google Trends', URLS.REF_GoogleTrends, 1.5),
+        this.createToolItem(groupName, 'CoinGecko', URLS.REF_CoinGecko, 4.5),
+        this.createToolItem(groupName, 'CoinMarketCap', URLS.REF_CoinMarketCap, 4),
+        this.createToolItem(groupName, 'Lunarcrush', URLS.REF_Lunarcrush, 3.5),
+        this.createToolItem(groupName, 'DefiLlama', URLS.REF_DefiLlama, 3.5),
+        this.createToolItem(groupName, 'Google Trends', URLS.REF_GoogleTrends, 1.5),
       ],
       'multiline_chart'
-    ));
-    console.log(this.toolsList);
+    );
+    return accordion;
+  }
+
+  private prepareToolsAnalysisTechnical(): IAccordion {
+    const groupName = 'ANALYSIS_TECH';
+    const accordion = this.createToolsGroup(
+      groupName,
+      [
+        this.createToolItem(groupName, 'TradingView', URLS.REF_TradingView, 4.5),
+      ],
+      'insert_chart_outlined'
+    );
+    return accordion;
+  }
+
+  private prepareToolsAnalysisProjects(): IAccordion {
+    const groupName = 'ANALYSIS_PROJECTS';
+    const accordion = this.createToolsGroup(
+      groupName,
+      [
+        this.createToolItem(groupName, 'CoinMarketCal', URLS.REF_CoinMarketCal, 4.5),
+      ],
+      'assignment icon'
+    );
+    return accordion;
+  }
+
+  private prepareToolsAnalysisBitcoin(): IAccordion {
+    const groupName = 'ANALYSIS_BITCOIN';
+    const accordion = this.createToolsGroup(
+      groupName,
+      [
+        this.createToolItem(groupName, 'Bitcoin rainbow chart', URLS.REF_BitcoinRainbowChart, 4.5),
+      ],
+      'bitcoin'
+    );
+    return accordion;
+  }
+
+  private prepareToolsAnalysisOthers(): IAccordion {
+    const groupName = 'OTHERS';
+    const accordion = this.createToolsGroup(
+      groupName,
+      [
+        this.createToolItem(groupName, 'Chainlist', URLS.REF_Chainlist, 4.5),
+      ],
+      'important_devices'
+    );
+    return accordion;
   }
 
   private createToolsGroup(groupName: string, items: IAccordionItem[], icon?: string, disabled?: boolean): IAccordion {
@@ -52,41 +114,18 @@ export class ToolsPageComponent implements OnInit {
     };
   }
 
-  private createToolItem(name: string, link: string, rank: number): IAccordionItem {
+  private createToolItem(groupName: string, name: string, link: string, rank: number): IAccordionItem {
     return {
       text: name,
       link,
-      description: `PAGES.TOOLS.app${name.replace(' ', '')}`,
+      description: `PAGES.TOOLS.GROUPS.${groupName}.app${name.replace(' ', '')}`,
       image: '',
       rank
     };
   }
 
-  isNullOrEmpty(value: any): boolean {
-    return this.coreService.isNullOrEmpty(value);
-  }
-
   /**
    *
-   * Análisis de mercado
-    - CoinGecko: https://www.coingecko.com. Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.
-    - CoinMarketCap: https://coinmarketcap.com/invite?ref=Z97Z1PVC. Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.
-    - Lunarcrush: https://lunarcrush.com. Análisis social completo de criptomonedas, con noticias, comentarios de influencers y mucho más.
-    - Google Trends: https://trends.google.es/trends/explore. Para ver el número de búsquedas de una o varias palabras.
-    - DefiLlama: https://defillama.com. Para analizar el mercado DeFi, además de las principales redes y exchanges DEX.
-
-    Análisis técnico
-    - TradingView: https://www.tradingview.com. Para hacer análisis técnico al más alto nivel.
-
-    Noticias de proyectos
-    - CoinMarketCal: https://coinmarketcal.com. Noticias y actualizaciones de proyectos.
-
-    Análisis de Bitcoin
-    - Bitcoin rainbow chart: https://www.blockchaincenter.net/bitcoin-rainbow-chart. Permite ver si estamos más cerca de altseason o de BTC pump.
-
-    Otros
-    - Chainlist: https://chainlist.org. Permite añadir nuevas redes a tu wallet sobre EVM (Ethereum Virtual Machine).
-
     Apps de MercatorCrypto
     - PooCoin: poocoin.app. Comprar, vender, ver gráficas, liquidez, etc
     - StaySafu: app.staysafu.org. Análisis automático del token desde scan token. Muy util para tener un primer resumen.

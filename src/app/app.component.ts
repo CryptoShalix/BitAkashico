@@ -84,8 +84,7 @@ export class AppComponent implements OnInit {
       target: ELinkableTarget.SELF
     }));
     this.iconListMenu.push(new LinkableIcon(this.icmIdTools, {
-      // routerLink: 'tools',
-      routerLink: '/',
+      routerLink: 'tools',
       title: 'MENU.tools',
       iconPath: 'construction',
       color: '#fff',

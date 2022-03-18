@@ -24,7 +24,7 @@
       "GROUPS": {
         "ANALYSIS_MARKET": {
           "title": "Análisis de mercado",
-          "description": "",
+          "description": " ",
           "appCoinGecko": "Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.",
           "appCoinMarketCap": "Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.",
           "appLunarcrush": "Análisis social completo de criptomonedas, con noticias, comentarios de influencers y mucho más.",
@@ -33,19 +33,23 @@
         },
         "ANALYSIS_TECH": {
           "title": "Análisis técnico",
-          "description": ""
+          "description": " ",
+          "appTradingView": "Para hacer análisis técnico al más alto nivel. Totalmente gratuito hasta 4 indicadores. Para todas las funciones se debe pagar. Dispone de versión web, móvil y escritorio (PC)."
         },
         "ANALYSIS_PROJECTS": {
           "title": "Análisis de proyectos",
-          "description": ""
+          "description": " ",
+          "appCoinMarketCal": "Noticias y actualizaciones de proyectos"
         },
         "ANALYSIS_BITCOIN": {
-          "title": "Análisis de Bitcoin",
-          "description": ""
+          "title": "Análisis de ₿itcoin",
+          "description": " ",
+          "appBitcoinRainbowChart": "Permite ver si estamos más cerca de altseason o de BTC pump."
         },
         "OTHERS": {
           "title": "Otras aplicaciones interesantes",
-          "description": ""
+          "description": " ",
+          "appChainlist": "Permite añadir nuevas redes a tu wallet sobre EVM (Ethereum Virtual Machine), ya sea este BraveWallet, Metamask o cualquier otro que utilice esta máquina virtual de Ethereum."
         }
       }
     }

@@ -266,6 +266,10 @@ label {
   font-size: inherit;
 }
 
+.mat-expansion-indicator::after {
+  color: $body-text !important;
+}
+
 .spacer {
   flex: 1 1 auto;
 }

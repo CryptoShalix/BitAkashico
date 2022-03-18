@@ -1,4 +1,7 @@
-<div *ngIf="maxStars > 0">
+<div
+  *ngIf="maxStars > 0"
+  class="star-container"
+>
   <mat-icon
     class="star"
     *ngFor="let star of this.starsToPaint"
