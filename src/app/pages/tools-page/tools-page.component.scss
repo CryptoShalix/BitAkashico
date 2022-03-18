@@ -1,6 +1,6 @@
 @import '../../../styles-colors.scss';
 
-.content {
+.container {
   display: block;
   max-width: 50%;
   margin: 0 auto;
@@ -10,7 +10,7 @@
   letter-spacing: 1px;
 
   .about,
-  .cards {
+  .content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,23 +18,99 @@
     margin: 0;
   }
 
-  .cards {
-    .example-action-buttons {
-      padding-bottom: 20px;
-    }
+  .content {
+    .accordion {
+      width: 100%;
 
-    .example-headers-align .mat-expansion-panel-header-title,
-    .example-headers-align .mat-expansion-panel-header-description {
-      flex-basis: 0;
-    }
+      .mat-expansion-panel {
+        background: $body-background;
+        color: $body-text;
 
-    .example-headers-align .mat-expansion-panel-header-description {
-      justify-content: space-between;
-      align-items: center;
-    }
+        .mat-expansion-panel-header-title,
+        .mat-expansion-panel-header-description {
+          display: flex;
+          align-items: center;
+          color: $body-text;
+        }
 
-    .example-headers-align .mat-form-field+.mat-form-field {
-      margin-left: 8px;
+        .mat-expansion-panel-header-title {
+          color: $body-text;
+          text-transform: uppercase;
+        }
+
+        .mat-expansion-panel-header-description,
+        .mat-expansion-indicator,
+        .mat-expansion-indicator::after {
+          color: $body-text;
+        }
+
+        .mat-icon {
+          padding: 5px;
+          color: $card-text-hover;
+        }
+
+        .mat-expansion-panel-content {
+          overflow: visible;
+          max-height: 240px;
+          overflow-y: auto;
+        }
+
+        .mat-card {
+          position: relative;
+          display: flex;
+          align-items: center;
+          margin: 5px auto;
+          padding: 0;
+          background: transparent;
+          color: $body-text;
+          border: 2px solid transparent;
+          cursor: pointer;
+
+          &:hover {
+            border-color: $card-text-hover;
+          }
+
+          .mat-card-title-group {
+            display: flex;
+            width: 100%;
+            max-width: 200px;
+            margin: 0;
+            padding: 5px;
+            align-items: center;
+            text-align: left;
+
+            .mat-card-title {
+              display: block;
+              width: 100%;
+              margin: 0;
+              padding: 5px;
+              font-size: 20px;
+            }
+
+            .mat-card-subtitle {
+              margin: 0;
+              font-size: 12px;
+              color: $body-text;
+
+              .mat-icon.star {
+                font-size: 12px;
+                width: 20px;
+                height: 20px;
+              }
+            }
+
+            .mat-card-title:not(:first-child),
+            .mat-card-subtitle:not(:first-child) {
+              margin: 0;
+            }
+          }
+
+          .mat-card-content {
+            margin: 0;
+            padding: 15px;
+          }
+        }
+      }
     }
   }
 }

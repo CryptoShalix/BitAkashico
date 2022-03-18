@@ -1,41 +1,45 @@
-<div class="content">
+<div class="container">
 
   <div class="about">
     {{ 'PAGES.TOOLS.about' | translate }}
   </div>
 
-  <div class="cards">
+  <div class="content">
 
     <mat-accordion
-      class="example-headers-align"
+      class="accordion"
+      displayMode="flat"
       multi
     >
       <mat-expansion-panel
+        expanded="true"
         *ngFor="let toolCategory of this.toolsList"
-        [disabled]="toolCategory.disabled"
+        [disabled]="toolCategory.disabled || toolCategory.items.length === 0"
       >
         <mat-expansion-panel-header>
-          <mat-panel-title>{{ toolCategory.title | translate }}</mat-panel-title>
-          <mat-panel-description>{{ toolCategory.description | translate }}
+          <mat-panel-title>
             <mat-icon *ngIf="toolCategory.icon">{{ toolCategory.icon }}</mat-icon>
+            {{ toolCategory.title | translate }}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{ toolCategory.description | translate }}
           </mat-panel-description>
         </mat-expansion-panel-header>
 
-        <mat-card
-          *ngFor="let toolItem of toolCategory.items"
-          class="example-card"
-        >
+        <mat-card *ngFor="let toolItem of toolCategory.items">
           <mat-card-title-group>
-            <mat-card-title>{{ toolItem.text | translate }}</mat-card-title>
+            <mat-card-title>
+              <mat-icon *ngIf="toolItem.icon">{{ toolItem.icon }}</mat-icon>
+              <img
+                *ngIf="toolItem.image"
+                mat-card-sm-image
+                [src]="toolItem.image"
+              >
+              {{ toolItem.text | translate }}
+            </mat-card-title>
             <mat-card-subtitle *ngIf="toolItem.rank">
               <app-star-rank [setStars]="toolItem.rank"></app-star-rank>
             </mat-card-subtitle>
-            <mat-icon *ngIf="toolItem.icon">{{ toolItem.icon }}</mat-icon>
-            <img
-              *ngIf="toolItem.image"
-              mat-card-sm-image
-              [src]="toolItem.image"
-            >
           </mat-card-title-group>
           <mat-card-content>
             {{ toolItem.description | translate }}

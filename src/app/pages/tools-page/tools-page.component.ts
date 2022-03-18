@@ -37,7 +37,7 @@ export class ToolsPageComponent implements OnInit {
         this.createToolItem('DefiLlama', URLS.REF_DefiLlama, 3.5),
         this.createToolItem('Google Trends', URLS.REF_GoogleTrends, 1.5),
       ],
-      'market'
+      'multiline_chart'
     ));
     console.log(this.toolsList);
   }
@@ -100,6 +100,8 @@ export class ToolsPageComponent implements OnInit {
     - RugDoc: rugdoc.io. Herramienta similar a las anteriores, aunque tiene muchos tokens de otras redes distintas de la BSC.
     - Mudra: mudra.website. Herramienta en que se puede ver la liquidez bloqueada de muchos tokens. Especialmente interesante porque se ven los últimos tokens que la han bloqueado aquí.
     - BoggedFinance: bogged.finance. Herramientas automatizadas para trading en la BSC. Puedes poner órdenes de compra y venta. No es la más útil ya que se desbloquean ciertas funciones si holdeas su token.
+    - StackerNews: stacker.news. Permite publicar posts y que te remuneren en BTC LN, a la par que tu debes también valorar al resto con tus satoshis. Haces un ingreso de 1000 satoshis, y por cada publicación que te guste, donas unos pocos sats, pero si publicas posts, y la gente da like, recuperas esos sats. Mercado cíclico.
+    - KYCP: kycp.org. Para saber si tu Bitcoin son tan privados como esperas. Nivel avanzado. Muy útil para ver cómo han implementado los diferentes wallets la privacidad (Wasabi, JoinMarket, Whirlpool, etc).
    *
    */
 }
