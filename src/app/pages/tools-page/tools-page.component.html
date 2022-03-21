@@ -26,10 +26,11 @@
             </mat-icon>
             {{ toolCategory.title | translate }}
           </mat-panel-title>
-          <mat-panel-description>
-            {{ toolCategory.description | translate }}
-          </mat-panel-description>
         </mat-expansion-panel-header>
+
+        <mat-panel-description *ngIf="!isNullOrEmpty(toolCategory.description)">
+          {{ toolCategory.description | translate }}
+        </mat-panel-description>
 
         <a
           *ngFor="let toolItem of toolCategory.items"

@@ -13,28 +13,59 @@ export enum URLS {
   COINGECKO = 'https://www.coingecko.com/en/coins/',
   BIT2ME_BUY = 'https://bit2me.com/buy-',
 
-  // REFERRALS
+  // REFERRALS: ANALYSIS MARKET
   REF_CoinGecko = 'https://www.coingecko.com',
   REF_CoinMarketCap = 'https://www.coinmarketcap.com/invite?ref=Z97Z1PVC',
-  REF_Lunarcrush = 'https://www.lunarcrush.com',
-  REF_GoogleTrends = 'https://trends.google.es/trends/explore',
-  REF_DefiLlama = 'https://defillama.com',
-  REF_TradingView = 'https://www.tradingview.com',
   REF_CoinMarketCal = 'https://coinmarketcal.com',
+  REF_DefiLlama = 'https://defillama.com',
+  REF_GoogleTrends = 'https://trends.google.es/trends/explore',
+  REF_Lunarcrush = 'https://www.lunarcrush.com',
+
+  // REFERRALS: ANALYSIS TECHNICAL
+  REF_TradingView = 'https://www.tradingview.com',
+
+  // REFERRALS: BITCOIN TOOLS
   REF_BitcoinRainbowChart = 'https://www.blockchaincenter.net/bitcoin-rainbow-chart',
+
+  // REFERRALS: BITCOIN WALLETS
+  REF_BlueWallet = 'https://bluewallet.io',
+  REF_MuunWallet = 'https://muun.com',
+  REF_SamouraiWallet = 'https://samouraiwallet.com',
+  REF_SparrowWallet = 'https://sparrowwallet.com',
+  REF_WalletOfSatoshi = 'https://walletofsatoshi.com',
+  REF_Zap = 'https://zaphq.io',
+  REF_Zebedee = 'https://zebedee.io',
+
+  // REFERRALS: EXCHANGES CEX
+  REF_Binance = 'https://www.binance.com/en/register?ref=EEICFSED',
+  REF_Bit2Me = 'https://bit2me.com/es/registro?r=RQB-RWI-ECZ',
+  REF_CryptoCom = 'https://crypto.com/exch/fjfnrhzmm7',
+  REF_FTX = 'https://ftx.com/#a=Shalix',
+  REF_KuCoin = 'https://www.kucoin.com/ucenter/signup?rcode=rJ59448',
+  REF_Wirex = 'https://wirexapp.com/r/CryptoShalix',
+
+  // REFERRALS: EXCHANGES DEX
+  REF_BoggedFinance = 'https://bogged.finance',
+  REF_DexGuru = 'https://dex.guru',
+  REF_DexTools = 'https://dextools.io/app',
+  REF_PooCoin = 'https://poocoin.app',
+
+  // REFERRALS: WALLETS
+  REF_BraveWallet = '',
+  REF_Metamask = '',
+  REF_Safepal = '',
+  REF_TrustWallet = '',
+
+  // REFERRALS: OTHERS
+  REF_BSCheck = 'https://bscheck.eu',
   REF_Chainlist = 'https://chainlist.org',
-  REF_PooCoin = 'poocoin.app',
-  REF_StaySafu = 'app.staysafu.org',
-  REF_BSCheck = 'bscheck.eu',
-  REF_Justbuitffs = 'apps.justbuitffs.com',
-  REF_DexTools = 'dextools.io/app',
-  REF_MoonArch = 'moonarch.app',
-  REF_Honeypot = 'honeypot.is',
-  REF_RugPullDetector = 'rugpulldetector.com',
-  REF_DexGuru = 'dex.guru',
-  REF_RugDoc = 'rugdoc.io',
-  REF_Mudra = 'mudra.website',
-  REF_BoggedFinance = 'bogged.finance',
+  REF_Honeypot = 'https://honeypot.is',
+  REF_Justbuitffs = 'https://apps.justbuitffs.com',
+  REF_MoonArch = 'https://moonarch.app',
+  REF_Mudra = 'https://mudra.website',
+  REF_RugDoc = 'https://rugdoc.io',
+  REF_RugPullDetector = 'https://rugpulldetector.com',
+  REF_StaySafu = 'https://app.staysafu.org',
 }
 
 export interface IValueText {

@@ -24,7 +24,7 @@
       "GROUPS": {
         "ANALYSIS_MARKET": {
           "title": "Market analysis",
-          "description": " ",
+          "description": "Portfolio management tools, fundamental analysis and monitoring of projects and financial assets",
           "appCoinGecko": "See the main market, exchange, and portfolio construction data, as well as basic news and guides.",
           "appCoinMarketCap": "See the main market, exchange, and portfolio construction data, as well as basic news and guides.",
           "appLunarcrush": "Complete social analysis of cryptocurrencies, with news, comments from influencers and much more.",
@@ -33,7 +33,7 @@
         },
         "ANALYSIS_TECH": {
           "title": "Technical analysis",
-          "description": " ",
+          "description": "Tools for the technical study of financial assets",
           "appTradingView": "To do technical analysis at the highest level. Totally free up to 4 indicators. For all functions you must pay. It has a web, mobile and desktop (PC) version."
         },
         "ANALYSIS_PROJECTS": {
@@ -44,7 +44,25 @@
         "ANALYSIS_BITCOIN": {
           "title": "₿itcoin analysis",
           "description": " ",
-          "appBitcoinRainbowChart": "Lets see if we are closer to altseason or BTC pump."
+          "appBitcoinRainbowChart": "This cute rainbow will show you if we are closer to altseason (altcoin pump) or ₿TC pump."
+        },
+        "EXCHANGES_CEX": {
+          "title": "Exchanges. Centralized (CEN)",
+          "description": " ",
+          "appBinance": " ",
+          "appBit2Me": " ",
+          "appCrypto.com": " ",
+          "appFTX": " ",
+          "appKuCoin": " ",
+          "appWirex": " "
+        },
+        "EXCHANGES_DEX": {
+          "title": "Exchanges. Decentralized (DEX)",
+          "description": " ",
+          "appBoggedFinance": "Herramientas automatizadas para trading en la BSC. Puedes poner órdenes de compra y venta. No es la más útil ya que se desbloquean ciertas funciones si holdeas su token.",
+          "appDexGuru": "Herramienta muy completa para ver el gráfico, liquidez, listado comercial, etc.",
+          "appDexTools": "Herramienta de trading con muchos datos. Muy buena.",
+          "appPoocoin": "Comprar, vender, ver gráficas, liquidez, etc."
         },
         "OTHERS": {
           "title": "Other interesting applications",

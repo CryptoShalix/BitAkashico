@@ -31,16 +31,24 @@
           border-left: 2px solid $card-text-hover;
         }
 
-        .mat-expansion-panel-header-title,
-        .mat-expansion-panel-header-description {
+        .mat-expansion-panel-header-title {
           display: flex;
           align-items: center;
           color: $body-text;
+          text-transform: uppercase;
         }
 
-        .mat-expansion-panel-header-title {
-          color: $body-text;
+        .mat-expansion-panel-header-description {
+          display: flex;
+          margin: 0 auto;
+          padding: 5px;
+          font-size: 12px;
+          letter-spacing: 1px;
           text-transform: uppercase;
+          align-items: center;
+          justify-content: center;
+          color: $body-text;
+          border-bottom: 1px solid $card-text-hover;
         }
 
         .mat-icon {
