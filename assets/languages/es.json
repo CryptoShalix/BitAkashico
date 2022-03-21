@@ -24,27 +24,61 @@
       "GROUPS": {
         "ANALYSIS_MARKET": {
           "title": "Análisis de mercado",
-          "description": " ",
+          "description": "Herramientas de gestión de portfolio, análisis fundamental, seguimiento de proyectos y activos financieros",
           "appCoinGecko": "Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.",
           "appCoinMarketCap": "Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.",
+          "appCoinMarketCal": "Noticias y actualizaciones de proyectos",
           "appLunarcrush": "Análisis social completo de criptomonedas, con noticias, comentarios de influencers y mucho más.",
           "appGoogleTrends": "Para ver el número de búsquedas de una o varias palabras.",
           "appDefiLlama": "Para analizar el mercado DeFi, además de las principales redes y exchanges DEX."
         },
         "ANALYSIS_TECH": {
           "title": "Análisis técnico",
-          "description": " ",
+          "description": "Herramientas de estudio técnico de activos financieros",
           "appTradingView": "Para hacer análisis técnico al más alto nivel. Totalmente gratuito hasta 4 indicadores. Para todas las funciones se debe pagar. Dispone de versión web, móvil y escritorio (PC)."
         },
-        "ANALYSIS_PROJECTS": {
-          "title": "Análisis de proyectos",
+        "BITCOIN_TOOLS": {
+          "title": "₿itcoin: herramientas",
           "description": " ",
-          "appCoinMarketCal": "Noticias y actualizaciones de proyectos"
+          "appBitcoinRainbowChart": "Este lindo arcoíris te mostrará si estamos más cerca de una altseason (pump de altcoins) o del pump a ₿TC."
         },
-        "ANALYSIS_BITCOIN": {
-          "title": "Análisis de ₿itcoin",
-          "description": " ",
-          "appBitcoinRainbowChart": "Permite ver si estamos más cerca de altseason o de BTC pump."
+        "BITCOIN_WALLETS": {
+          "title": "₿itcoin: wallets",
+          "description": "Mejores monederos de criptomonedas para Bitcoin (on-chain, LN, etc)",
+          "appBlueWallet": "Wallet de Bitcoin semi-custodial. Se pueden conectar nodos privados o crear wallets custodial tanto para Bitcoin on-chain como LN. Sencillo de usar tanto para on-chain como Lightning Network (LN).",
+          "appMuunWallet": "Wallet de Bitcoin no-custodial, sencillo de usar tanto para on-chain como Lightning Network (LN). Solo se puede enviar y recibir, y su forma de guardar las claves es peculiar.",
+          "appSamouraiWallet": "Wallet de Bitcoin no-custodial, que permite conectar tus propios nodos y ofrece cientos de funciones de seguridad y privacidad. Complejo, pero de lo mejor para gestionar tus BTC en el móvil.",
+          "appSparrowWallet": "Wallet de Bitcoin no-custodial, que permite conectar tus propios nodos y ofrece cientos de funciones de seguridad y privacidad. Complejo, pero de lo mejor para gestionar tus BTC en el ordenador.",
+          "appWalletOfSatoshi": "Wallet de Bitcoin custodial, muy sencillo de usar tanto para on-chain como Lightning Network (LN). La cuenta funciona con un email. Con LNURL, una especie de email que permite recibir BTC por LN de forma más cómoda.",
+          "appZap": "Wallet de Bitcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN).",
+          "appZebedee": "Wallet de Bitcoin custodial, ideal para juegos y con bots para usar desde Discord o Telegram. Con LNURL, una especie de email que permite recibir BTC por LN de forma más cómoda. Sencillo de usar tanto para on-chain como Lightning Network (LN).",
+          "appZeus": "Wallet de Bitcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN)."
+        },
+        "EXCHANGES_CEX": {
+          "title": "Exchanges. Centralizados (CEN)",
+          "description": "Exchanges centralizados con las mejores comisiones y servicios",
+          "appBinance": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Binance.",
+          "appBit2Me": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Bit2Me.",
+          "appCryptocom": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Crypto.com.",
+          "appFTX": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de FTX.",
+          "appKuCoin": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de KuCoin.",
+          "appWirex": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Wirex."
+        },
+        "EXCHANGES_DEX": {
+          "title": "Exchanges. Descentralizados (DEX)",
+          "description": "Exchanges descentralizados con herramientas útiles, variedad, liquidez y mayor tiempo en el mercado",
+          "appBoggedFinance": "Herramientas automatizadas para trading en la BSC. Puedes poner órdenes de compra y venta. No es la más útil ya que se desbloquean ciertas funciones si holdeas su token.",
+          "appDexGuru": "Herramienta muy completa para ver el gráfico, liquidez, listado comercial, etc.",
+          "appDexTools": "Herramienta de trading con muchos datos. Muy buena.",
+          "appPoocoin": "Comprar, vender, ver gráficas, liquidez, etc."
+        },
+        "WALLETS": {
+          "title": "Wallets: altcoins",
+          "description": "Mejores monederos de criptomonedas para Bitcoin y altcoins.",
+          "appBraveWallet": "Requiere tener instalado el navegador Brave (ya sea PC o móvil), el cual te pagará por ver publicidad (si lo deseas) además de ofrecerte privacidad, navegación más rápida, y compatibilidad con todo lo que usa Chrome. El wallet va integrado, y permite hacer swap, comprar activos y conectarse a cualquier sitio admitido, directamente.",
+          "appMetamask": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Seguro parcialmente. Lo mejor es combinarlo con un Hardware Wallet (HW) como Trezor o Ledger. Funciona con cualquier red de Ethereum (ERC20), y se pueden añadir otras.",
+          "appSafepal": "Es una billetera fría y una aplicación que permite generar o importar cualquier billetera. Es seguro, fácil de usar y tiene múltiples funciones como su exchange interno montado sobre Binance, además de su sección de dApps, servicio earn y su propio token para reducir comisiones en las operaciones. Su única desventaja es: código cerrado.",
+          "appTrustWallet": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Seguro parcialmente. Lo mejor es combinarlo con un Hardware Wallet (HW) como Trezor o Ledger. Funciona con +160 criptomonedas diferentes (BTC, ETH, etc)."
         },
         "OTHERS": {
           "title": "Otras aplicaciones interesantes",
