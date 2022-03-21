@@ -5,7 +5,7 @@
   display: inline-flex;
   width: 100%;
   height: 100%;
-  min-height: 35px;
+  min-height: 30px;
   max-height: 50px;
   align-items: center;
 
@@ -16,10 +16,10 @@
 
   .coin-item-image {
     display: block;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     padding: 2px;
-    font-size: 25px;
+    font-size: 20px;
     margin-right: 5px;
     border-radius: 50%;
     background: rgba(255, 255, 255, .75);
@@ -28,7 +28,7 @@
   .coin-item-label {
     position: relative;
     display: flex;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 1px;
     align-items: center;
     justify-content: center;
@@ -47,7 +47,7 @@
         display: inline-flex;
         padding: 0 2px;
         text-align: center;
-        font-size: 15px;
+        font-size: 12px;
       }
     }
 
@@ -56,7 +56,7 @@
       padding: 2px 8px;
       text-align: center;
       color: $body-text;
-      font-size: 12px;
+      font-size: 10px;
       font-weight: normal;
       border-radius: 25px;
 

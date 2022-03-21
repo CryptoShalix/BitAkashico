@@ -6,6 +6,11 @@ export enum EStarRank {
   STAR_HALF = 'star_half',
 }
 
+export interface IStar {
+  starsToPaint: string[];
+  numOfStars: number;
+}
+
 @Component({
   selector: 'app-star-rank',
   templateUrl: './star-rank.component.html',
@@ -24,6 +29,7 @@ export class StarRankComponent {
   maxStars = 5;
   stars = 0;
 
+  starToPaint: IStar;
   starsToPaint: string[];
 
   constructor() { }
@@ -48,6 +54,11 @@ export class StarRankComponent {
     this.addStarToList(starsFull, EStarRank.STAR);
     this.addStarToList(starsHalf, EStarRank.STAR_HALF);
     this.addStarToList(starsEmpty, EStarRank.STAR_EMPTY);
+    console.log(this.starToPaint);
+    this.starToPaint = {
+      numOfStars: this.stars,
+      starsToPaint: this.starsToPaint
+    };
   }
 
   private addStarToList(numOfStars: number, starType: EStarRank): void {

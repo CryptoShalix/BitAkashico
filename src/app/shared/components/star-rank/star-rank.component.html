@@ -3,7 +3,8 @@
   class="star-container"
 >
   <mat-icon
+    *ngFor="let star of starToPaint.starsToPaint"
     class="star"
-    *ngFor="let star of this.starsToPaint"
   >{{ star }}</mat-icon>
+  {{ starToPaint.numOfStars | number : '1.2-2' }} | {{ maxStars }}
 </div>

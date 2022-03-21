@@ -40,8 +40,8 @@
     *ngIf="defaultIcon.href === '' && defaultIcon.routerLink === ''"
     class="linkable-icon"
     [ngClass]="{'card': defaultIcon.isCard, 'no-border': defaultIcon.isImage}"
-    [attr.aria-valuenow]="defaultIcon.label"
-    [title]="defaultIcon.title"
+    [attr.aria-valuenow]="defaultIcon.label | translate"
+    [title]="defaultIcon.title | translate"
     [attr.tooltip]="defaultIcon.tooltip | translate"
   >
     <ng-container *ngTemplateOutlet="linkContent"></ng-container>

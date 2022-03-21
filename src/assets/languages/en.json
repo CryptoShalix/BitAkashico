@@ -27,6 +27,7 @@
           "description": "Portfolio management tools, fundamental analysis and monitoring of projects and financial assets",
           "appCoinGecko": "See the main market, exchange, and portfolio construction data, as well as basic news and guides.",
           "appCoinMarketCap": "See the main market, exchange, and portfolio construction data, as well as basic news and guides.",
+          "appCoinMarketCal": "News and project updates",
           "appLunarcrush": "Complete social analysis of cryptocurrencies, with news, comments from influencers and much more.",
           "appGoogleTrends": "To see the number of searches for one or more words.",
           "appDefiLlama": "To analyze the DeFi market, in addition to the main DEX networks and exchanges."
@@ -36,33 +37,48 @@
           "description": "Tools for the technical study of financial assets",
           "appTradingView": "To do technical analysis at the highest level. Totally free up to 4 indicators. For all functions you must pay. It has a web, mobile and desktop (PC) version."
         },
-        "ANALYSIS_PROJECTS": {
-          "title": "Project analysis",
+        "BITCOIN_TOOLS": {
+          "title": "₿itcoin: herramientas",
           "description": " ",
-          "appCoinMarketCal": "News and project updates"
+          "appBitcoinRainbowChart": "This cute rainbow will show you if we are closer to an altseason (altcoin pump) or the ₿TC pump."
         },
-        "ANALYSIS_BITCOIN": {
-          "title": "₿itcoin analysis",
+        "BITCOIN_WALLETS": {
+          "title": "₿itcoin: wallets",
           "description": " ",
-          "appBitcoinRainbowChart": "This cute rainbow will show you if we are closer to altseason (altcoin pump) or ₿TC pump."
+          "appBlueWallet": "Semi-custodial Bitcoin wallet. Private nodes can be connected or custodial wallets created for both Bitcoin on-chain and LN. Simple to use for both on-chain and Lightning Network (LN).",
+          "appMuunWallet": "Non-custodial Bitcoin wallet, easy to use for both on-chain and Lightning Network (LN). It can only be sent and received, and its way of saving the keys is peculiar.",
+          "appSamouraiWallet": "Non-custodial Bitcoin wallet, which allows you to connect your own nodes and offers hundreds of security and privacy features. Complex, but the best to manage your BTC on mobile.",
+          "appSparrowWallet": "Non-custodial Bitcoin wallet, which allows you to connect your own nodes and offers hundreds of security and privacy features. Complex, but the best to manage your BTC on the computer.",
+          "appWalletOfSatoshi": "Custodial Bitcoin wallet, very easy to use for both on-chain and Lightning Network (LN). The account works with an email. With LNURL, a kind of email that allows you to receive BTC by LN in a more comfortable way.",
+          "appZap": "Non-custodial Bitcoin wallet, which allows you to connect your own nodes, easy to use for both on-chain and Lightning Network (LN).",
+          "appZebedee": "Custodial Bitcoin wallet, ideal for games and with bots to use from Discord or Telegram. With LNURL, a kind of email that allows you to receive BTC by LN in a more comfortable way. Simple to use for both on-chain and Lightning Network (LN).",
+          "appZeus": "Non-custodial Bitcoin wallet, which allows you to connect your own nodes, easy to use for both on-chain and Lightning Network (LN)."
         },
         "EXCHANGES_CEX": {
           "title": "Exchanges. Centralized (CEN)",
-          "description": " ",
-          "appBinance": " ",
-          "appBit2Me": " ",
-          "appCrypto.com": " ",
-          "appFTX": " ",
-          "appKuCoin": " ",
-          "appWirex": " "
+          "description": "Centralized exchanges with the best commissions and services",
+          "appBinance": "Click to see a review with all the advantages and disadvantages, user guides and tips to get more out of your capital within the Binance platform.",
+          "appBit2Me": "Click to see a review with all the advantages and disadvantages, user guides and tips to get more out of your capital within the Bit2Me platform.",
+          "appCryptocom": "Click to see a review with all the advantages and disadvantages, user guides and tips to get more out of your capital within the Crypto.com platform.",
+          "appFTX": "Click to see a review with all the advantages and disadvantages, user guides and tips to get more out of your capital within the FTX platform.",
+          "appKuCoin": "Click to see a review with all the advantages and disadvantages, user guides and tips to get more out of your capital within the KuCoin platform.",
+          "appWirex": "Click to see a review with all the advantages and disadvantages, user guides and tips to get more out of your capital within the Wirex platform."
         },
         "EXCHANGES_DEX": {
           "title": "Exchanges. Decentralized (DEX)",
-          "description": " ",
-          "appBoggedFinance": "Herramientas automatizadas para trading en la BSC. Puedes poner órdenes de compra y venta. No es la más útil ya que se desbloquean ciertas funciones si holdeas su token.",
-          "appDexGuru": "Herramienta muy completa para ver el gráfico, liquidez, listado comercial, etc.",
-          "appDexTools": "Herramienta de trading con muchos datos. Muy buena.",
-          "appPoocoin": "Comprar, vender, ver gráficas, liquidez, etc."
+          "description": "Decentralized exchanges with useful tools, variety, liquidity and more time in the market",
+          "appBoggedFinance": "Automated tools for trading in the BSC. You can place buy and sell orders. Not the most useful as certain features are unlocked if you hold its token.",
+          "appDexGuru": "Very complete tool to see the graph, liquidity, commercial list, etc..",
+          "appDexTools": "Data rich trading tool. Very good.",
+          "appPoocoin": "Buy, sell, see graphs, liquidity, etc."
+        },
+        "WALLETS": {
+          "title": "Wallets: altcoins",
+          "description": "Best cryptocurrency wallets for Bitcoin and altcoins.",
+          "appBraveWallet": "It requires having the Brave browser installed (either PC or mobile), which will pay you to see ads (if you want) in addition to offering you privacy, faster browsing, and compatibility with everything that uses Chrome. The wallet is integrated, and allows you to swap, buy assets and connect to any supported site, directly.",
+          "appMetamask": "Software wallet. Easy to use, configure and connect anywhere. Partially safe. It is best to combine it with a Hardware Wallet (HW) like Trezor or Ledger. It works with any Ethereum network (ERC20), and others can be added.",
+          "appSafepal": "It is both cold wallet and app, that allows you to generate or import any wallet. It's secure, easy to use, and has multiple functions such as its internal exchange over Binance, in addition to its section of dApps, earn and its own token to reduce fees in operations. It's only handicap is: closed source.",
+          "appTrustWallet": "Software wallet. Easy to use, configure and connect anywhere. Partially safe. It is best to combine it with a Hardware Wallet (HW) like Trezor or Ledger. It works with +160 different cryptocurrencies (BTC, ETH, etc)."
         },
         "OTHERS": {
           "title": "Other interesting applications",

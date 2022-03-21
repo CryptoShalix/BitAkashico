@@ -70,9 +70,9 @@ export class AppComponent implements OnInit {
     this.iconListMenu = [];
     this.iconListMenu.push(new LinkableIcon(this.icmIdHome, {
       title: 'MENU.home',
-      iconPath: IMAGES.HOME_SVG,
+      iconPath: IMAGES.HOME_IMG,
       showText: false,
-      type: ELinkableIconType.SVG
+      type: ELinkableIconType.IMAGE
     }));
     this.iconListMenu.push(new LinkableIcon(this.icmIdAcademy, {
       // routerLink: 'academy',
