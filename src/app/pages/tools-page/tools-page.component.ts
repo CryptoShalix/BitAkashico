@@ -81,6 +81,8 @@ export class ToolsPageComponent implements OnInit {
       groupName,
       [
         this.createToolItem(groupName, 'Bitcoin Rainbow Chart', URLS.REF_BitcoinRainbowChart, 5),
+        this.createToolItem(groupName, 'KYCP', URLS.REF_KYCP, 4),
+        this.createToolItem(groupName, 'StackerNews', URLS.REF_StackerNews, 4),
       ],
       'bitcoin'
     );
@@ -92,10 +94,11 @@ export class ToolsPageComponent implements OnInit {
     const accordion = this.createToolsGroup(
       groupName,
       [
-        this.createToolItem(groupName, 'Blue Wallet', URLS.REF_BlueWallet, 4),
-        this.createToolItem(groupName, 'Muun Wallet', URLS.REF_MuunWallet, 4),
+        this.createToolItem(groupName, 'Blue Wallet', URLS.REF_BlueWallet, 4.2),
+        this.createToolItem(groupName, 'Muun Wallet', URLS.REF_MuunWallet, 4.3),
         this.createToolItem(groupName, 'Samourai Wallet', URLS.REF_SamouraiWallet, 5),
         this.createToolItem(groupName, 'Sparrow Wallet', URLS.REF_SparrowWallet, 5),
+        this.createToolItem(groupName, 'Specter Wallet', URLS.REF_SpecterWallet, 4.5),
         this.createToolItem(groupName, 'Wallet Of Satoshi', URLS.REF_WalletOfSatoshi, 4),
         this.createToolItem(groupName, 'Zap', URLS.REF_Zap, 3.5),
         this.createToolItem(groupName, 'Zebedee', URLS.REF_Zebedee, 3),
@@ -127,8 +130,9 @@ export class ToolsPageComponent implements OnInit {
     const accordion = this.createToolsGroup(
       groupName,
       [
-        // this.createToolItem(groupName, 'PooCoin', URLS.REF_BoggedFinance, 0),
-        // this.createToolItem(groupName, 'PooCoin', URLS.REF_DexGuru, 0),
+        this.createToolItem(groupName, 'PancakeSwap', URLS.REF_PancakeSwap, 5),
+        // this.createToolItem(groupName, 'BoggedFinance', URLS.REF_BoggedFinance, 0),
+        // this.createToolItem(groupName, 'DexGuru', URLS.REF_DexGuru, 0),
         // this.createToolItem(groupName, 'DexTools', URLS.REF_DexTools, 0),
         // this.createToolItem(groupName, 'PooCoin', URLS.REF_PooCoin, 0),
       ],
@@ -193,11 +197,6 @@ export class ToolsPageComponent implements OnInit {
   /**
    *
     Apps de MercatorCrypto
-    - BoggedFinance: bogged.finance. Herramientas automatizadas para trading en la BSC. Puedes poner órdenes de compra y venta. No es la más útil ya que se desbloquean ciertas funciones si holdeas su token.
-    - DexGuru: dex.guru. Herramienta muy completa para ver el gráfico, liquidez, listado comercial, etc.
-    - DexTools: dextools.io/app. Herramienta de trading con muchos datos. Muy buena.
-    - PooCoin: poocoin.app. Comprar, vender, ver gráficas, liquidez, etc
-
     - StaySafu: app.staysafu.org. Análisis automático del token desde scan token. Muy util para tener un primer resumen.
     - BSCheck: bscheck.eu. Estupenda herramienta para análisis automático de tokens.
     - Justbuitffs: apps.justbuitffs.com. Otor escáner de tokens.
@@ -206,8 +205,6 @@ export class ToolsPageComponent implements OnInit {
     - RugPullDetector: rugpulldetector.com. Estupenda herramienta para detectar si en el contrato está activada esa opción. Un poco coñazo porque hay que copiar el contrato del token. Pero se puede hacer desde Coingecko o Coinmarketcap sin problemas.
     - RugDoc: rugdoc.io. Herramienta similar a las anteriores, aunque tiene muchos tokens de otras redes distintas de la BSC.
     - Mudra: mudra.website. Herramienta en que se puede ver la liquidez bloqueada de muchos tokens. Especialmente interesante porque se ven los últimos tokens que la han bloqueado aquí.
-    - StackerNews: stacker.news. Permite publicar posts y que te remuneren en BTC LN, a la par que tu debes también valorar al resto con tus satoshis. Haces un ingreso de 1000 satoshis, y por cada publicación que te guste, donas unos pocos sats, pero si publicas posts, y la gente da like, recuperas esos sats. Mercado cíclico.
-    - KYCP: kycp.org. Para saber si tu Bitcoin son tan privados como esperas. Nivel avanzado. Muy útil para ver cómo han implementado los diferentes wallets la privacidad (Wasabi, JoinMarket, Whirlpool, etc).
    *
    */
 }

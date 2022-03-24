@@ -34,7 +34,7 @@
     position: relative;
     display: block;
     width: 100%;
-    height: calc(100% - 215px);
+    height: calc(100% - 210px);
     top: 85px;
     bottom: 85px;
     margin: 0 auto;
@@ -99,6 +99,7 @@
 
   .main-container {
     min-width: 100%;
+    height: calc(100% - 190px) !important;
 
     .content {
       max-width: 100% !important;

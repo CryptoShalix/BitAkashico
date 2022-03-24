@@ -40,22 +40,25 @@
         "BITCOIN_TOOLS": {
           "title": "₿itcoin: herramientas",
           "description": " ",
-          "appBitcoinRainbowChart": "Este lindo arcoíris te mostrará si estamos más cerca de una altseason (pump de altcoins) o del pump a ₿TC."
+          "appBitcoinRainbowChart": "Este lindo arcoíris te mostrará si estamos más cerca de una altseason (pump de altcoins) o del pump a ₿TC.",
+          "appKYCP": "Para saber si tu Bitcoin son tan privados como esperas. Nivel avanzado. Muy útil para ver cómo han implementado los diferentes wallets la privacidad (Wasabi, JoinMarket, Whirlpool, etc).",
+          "appStackerNews": "Permite publicar posts y que te remuneren en BTC LN, a la par que tú puedes también valorar al resto de usuarios con tus satoshis. Haces un ingreso de 1000 satoshis, y por cada publicación que te guste, donas unos pocos sats, pero si publicas posts, y la gente da like, recuperas esos sats. Mercado cíclico."
         },
         "BITCOIN_WALLETS": {
           "title": "₿itcoin: wallets",
           "description": "Mejores monederos de criptomonedas para Bitcoin (on-chain, LN, etc)",
-          "appBlueWallet": "Wallet de Bitcoin semi-custodial. Se pueden conectar nodos privados o crear wallets custodial tanto para Bitcoin on-chain como LN. Sencillo de usar tanto para on-chain como Lightning Network (LN).",
+          "appBlueWallet": "Wallet de Bitcoin <i>semi-custodial</i>. Se pueden conectar nodos privados o crear wallets custodial tanto para Bitcoin on-chain como LN. Sencillo de usar tanto para on-chain como Lightning Network (LN).",
           "appMuunWallet": "Wallet de Bitcoin no-custodial, sencillo de usar tanto para on-chain como Lightning Network (LN). Solo se puede enviar y recibir, y su forma de guardar las claves es peculiar.",
           "appSamouraiWallet": "Wallet de Bitcoin no-custodial, que permite conectar tus propios nodos y ofrece cientos de funciones de seguridad y privacidad. Complejo, pero de lo mejor para gestionar tus BTC en el móvil.",
           "appSparrowWallet": "Wallet de Bitcoin no-custodial, que permite conectar tus propios nodos y ofrece cientos de funciones de seguridad y privacidad. Complejo, pero de lo mejor para gestionar tus BTC en el ordenador.",
+          "appSpecterWallet": "Wallet de Bitcoin no-custodial, que permite conectar tus propios nodos y crear uno con 'Bitcoin Core'. Ofrece bastantes funciones de seguridad y privacidad. Complejo, pero de lo mejor para gestionar tus BTC en el ordenador.",
           "appWalletOfSatoshi": "Wallet de Bitcoin custodial, muy sencillo de usar tanto para on-chain como Lightning Network (LN). La cuenta funciona con un email. Con LNURL, una especie de email que permite recibir BTC por LN de forma más cómoda.",
           "appZap": "Wallet de Bitcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN).",
           "appZebedee": "Wallet de Bitcoin custodial, ideal para juegos y con bots para usar desde Discord o Telegram. Con LNURL, una especie de email que permite recibir BTC por LN de forma más cómoda. Sencillo de usar tanto para on-chain como Lightning Network (LN).",
           "appZeus": "Wallet de Bitcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN)."
         },
         "EXCHANGES_CEX": {
-          "title": "Exchanges. Centralizados (CEN)",
+          "title": "Exchanges.<br>(CEN) Centralizados",
           "description": "Exchanges centralizados con las mejores comisiones y servicios",
           "appBinance": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Binance.",
           "appBit2Me": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Bit2Me.",
@@ -65,8 +68,9 @@
           "appWirex": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Wirex."
         },
         "EXCHANGES_DEX": {
-          "title": "Exchanges. Descentralizados (DEX)",
+          "title": "Exchanges.<br>(DEX) Descentralizados",
           "description": "Exchanges descentralizados con herramientas útiles, variedad, liquidez y mayor tiempo en el mercado",
+          "appPancakeSwap": "El exchange DeFi por excelencia sobre la Binance Smart Chain (BSC). Swap, Farms, Pools, Lottery, y mucho más.",
           "appBoggedFinance": "Herramientas automatizadas para trading en la BSC. Puedes poner órdenes de compra y venta. No es la más útil ya que se desbloquean ciertas funciones si holdeas su token.",
           "appDexGuru": "Herramienta muy completa para ver el gráfico, liquidez, listado comercial, etc.",
           "appDexTools": "Herramienta de trading con muchos datos. Muy buena.",

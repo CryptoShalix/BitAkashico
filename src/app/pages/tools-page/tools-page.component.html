@@ -24,12 +24,12 @@
             >
               {{ toolCategory.icon === 'bitcoin' ? bitcoinText : toolCategory.icon }}
             </mat-icon>
-            {{ toolCategory.title | translate }}
+            <div [innerHTML]="(toolCategory.title | translate) | safe:'html'"></div>
           </mat-panel-title>
         </mat-expansion-panel-header>
 
         <mat-panel-description *ngIf="!isNullOrEmpty(toolCategory.description)">
-          {{ toolCategory.description | translate }}
+          <div [innerHTML]="(toolCategory.description | translate) | safe:'html'"></div>
         </mat-panel-description>
 
         <a
@@ -46,14 +46,14 @@
                   mat-card-sm-image
                   [src]="toolItem.image"
                 >
-                {{ toolItem.text | translate }}
+                <div [innerHTML]="(toolItem.text | translate) | safe:'html'"></div>
               </mat-card-title>
               <mat-card-subtitle *ngIf="toolItem.rank">
                 <app-star-rank [setStars]="toolItem.rank"></app-star-rank>
               </mat-card-subtitle>
             </mat-card-title-group>
             <mat-card-content>
-              {{ toolItem.description | translate }}
+              <div [innerHTML]="(toolItem.description | translate) | safe:'html'"></div>
             </mat-card-content>
           </mat-card>
         </a>

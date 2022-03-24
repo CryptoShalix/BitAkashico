@@ -26,12 +26,15 @@ export enum URLS {
 
   // REFERRALS: BITCOIN TOOLS
   REF_BitcoinRainbowChart = 'https://www.blockchaincenter.net/bitcoin-rainbow-chart',
+  REF_KYCP = 'https://kycp.org',
+  REF_StackerNews = 'https://stacker.news',
 
   // REFERRALS: BITCOIN WALLETS
   REF_BlueWallet = 'https://bluewallet.io',
   REF_MuunWallet = 'https://muun.com',
   REF_SamouraiWallet = 'https://samouraiwallet.com',
   REF_SparrowWallet = 'https://sparrowwallet.com',
+  REF_SpecterWallet = 'https://specter.solutions',
   REF_WalletOfSatoshi = 'https://walletofsatoshi.com',
   REF_Zap = 'https://zaphq.io',
   REF_Zebedee = 'https://zebedee.io',
@@ -45,6 +48,7 @@ export enum URLS {
   REF_Wirex = 'https://wirexapp.com/r/CryptoShalix',
 
   // REFERRALS: EXCHANGES DEX
+  REF_PancakeSwap = 'https://pancakeswap.finance',
   REF_BoggedFinance = 'https://bogged.finance',
   REF_DexGuru = 'https://dex.guru',
   REF_DexTools = 'https://dextools.io/app',
