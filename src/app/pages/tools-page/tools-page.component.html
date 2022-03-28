@@ -1,7 +1,20 @@
 <div class="content">
 
   <div class="about">
-    {{ 'PAGES.TOOLS.about' | translate }}
+    <span>{{ ('PAGES.TOOLS.about' | translate) | safe:'html' }}</span>
+
+    <div class="custom-tools">
+      <span>{{ ('PAGES.TOOLS.aboutCustomTools' | translate) | safe:'html' }}</span>
+
+      <div class="custom-tool-items">
+        <app-linkable-icon
+          class="custom-tool-item"
+          *ngFor="let customTool of customToolsList"
+          [sDefaultIcon]="customTool"
+        ></app-linkable-icon>
+      </div>
+
+    </div>
   </div>
 
   <div class="content-tools">

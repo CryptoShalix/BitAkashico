@@ -3,10 +3,16 @@ import { MatAccordion } from '@angular/material/expansion';
 
 import { CoreService } from '../../shared/services/core.service';
 
+import {
+  ELinkableIconType,
+  ELinkableTarget,
+  LinkableIcon
+} from 'src/app/shared/components/linkable-icon/linkable-icon';
 import { IAccordion } from 'src/app/shared/models/core';
 import { IAccordionItem, URLS } from '../../shared/models/core';
 import { ECurrency } from '../../shared/models/currency';
 import { TranslateService } from '../../shared/services/translate.service';
+import { IMAGES } from 'src/assets/images/images';
 
 @Component({
   selector: 'app-tools-page',
@@ -18,7 +24,13 @@ export class ToolsPageComponent implements OnInit {
 
   showExpanded = false;
   bitcoinText = ECurrency.BTC.text;
+
   toolsList: IAccordion[] = [];
+  customToolsList: LinkableIcon[] = [];
+
+  private ctlCalculator = 'ctlCalculator';
+  private ctlWhenToSell = 'ctlWhenToSell';
+  private ctlBenefits = 'ctlBenefits';
 
   constructor(
     private coreService: CoreService,
@@ -30,8 +42,49 @@ export class ToolsPageComponent implements OnInit {
   }
 
   private initialize(): void {
+    this.prepareCustomTools();
     this.prepareToolsList();
     if (this.accordion) { this.accordion.openAll(); }
+  }
+
+  private prepareCustomTools(): void {
+    this.customToolsList = [];
+    this.customToolsList.push(new LinkableIcon(this.ctlCalculator, {
+      routerLink: 'calculator',
+      title: 'PAGES.TOOLS.CUSTOM.calculator',
+      tooltip: 'PAGES.TOOLS.CUSTOM.calculatorTooltip',
+      // iconPath: 'money',
+      iconPath: IMAGES.IconCalculator,
+      color: '#fff',
+      type: ELinkableIconType.SVG,
+      target: ELinkableTarget.SELF,
+      showText: true,
+      isCard: true
+    }));
+    this.customToolsList.push(new LinkableIcon(this.ctlWhenToSell, {
+      routerLink: 'when-to-sell',
+      title: 'PAGES.TOOLS.CUSTOM.whenToSell',
+      tooltip: 'PAGES.TOOLS.CUSTOM.whenToSellTooltip',
+      iconPath: 'score',
+      // iconPath: 'event_note',
+      color: '#fff',
+      type: ELinkableIconType.ICON,
+      target: ELinkableTarget.SELF,
+      showText: true,
+      isCard: true
+    }));
+    this.customToolsList.push(new LinkableIcon(this.ctlBenefits, {
+      routerLink: 'calculator-benefits',
+      title: 'PAGES.TOOLS.CUSTOM.benefits',
+      tooltip: 'PAGES.TOOLS.CUSTOM.benefitsTooltip',
+      // iconPath: 'timer',
+      iconPath: 'poll',
+      color: '#fff',
+      type: ELinkableIconType.ICON,
+      target: ELinkableTarget.SELF,
+      showText: true,
+      isCard: true
+    }));
   }
 
   private prepareToolsList(): void {

@@ -63,24 +63,29 @@ svg.material-icons:not(:last-child) {
 
   &.card {
     position: relative;
-    display: block;
+    display: flex;
     border-radius: 4px;
     border: 1px solid #eee;
-    min-height: 40px;
-    max-width: 200px;
+    width: 100%;
+    min-width: 150px;
+    max-width: 150px;
+    height: 100%;
+    min-height: 150px;
+    max-height: 150px;
     margin: 15px;
-    padding: 15px;
-    flex-direction: row;
+    padding: 0;
+    flex-direction: column;
+    text-align: center;
     justify-content: center;
     align-items: center;
     line-height: 24px;
+    color: $card-text;
     background-color: $card-background;
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     transition: all 0.2s ease-in-out;
     cursor: pointer;
 
     &:hover {
-      background-color: $card-background-hover;
       box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
 
       .material-icons path {
@@ -96,21 +101,36 @@ svg.material-icons:not(:last-child) {
       }
     }
 
-    .material-icons {
-      position: absolute;
+    .mat-icon.material-icons {
+      position: relative;
       display: block;
-      width: 30px;
-      height: 30px;
+      width: 100%;
+      min-width: 50px;
+      max-width: 50px;
+      height: 100%;
+      min-height: 50px;
+      max-height: 50px;
+      margin: 0 auto;
+      font-size: 50px;
+      text-align: center;
       align-items: center;
       justify-content: center;
-      text-align: left;
     }
 
     span {
+      display: flex;
+      height: 60px;
+      margin: 0 auto;
+      padding: 5px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
       color: $card-text;
     }
 
-    svg.material-icons path {
+    svg.material-icons path,
+    svg.material-icons g {
       fill: $card-text;
     }
   }

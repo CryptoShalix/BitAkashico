@@ -18,6 +18,32 @@
     margin: 0;
   }
 
+  .about {
+    display: block;
+
+    .custom-tools {
+      display: block;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        display: block;
+      }
+
+      .custom-tool-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .custom-tool-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
   .content-tools {
     .accordion {
       width: 100%;
