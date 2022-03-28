@@ -9,6 +9,10 @@ export enum URLS {
   TELEGRAM = 'https://t.me/CryptoShalixES',
   YOUTUBE = 'https://www.youtube.com/channel/UCde7n5s8Ed1OAlq46k_MBVA',
 
+  // WALLETS
+  ZEBEDEE_LNTAG = 'cryptoshalix@zbd.gg',
+  ZEBEDEE_LNURL = 'lnurl1dp68gurn8ghj7ctsdyh85etzv4jx2efwd9hj7a3s9aex2ut4v4ehgttnw3shg6tr943ksctjvajhxtm98q6kvefkxccz6vp4xyuz6dp3xenz6wfjvguz6vmxvverzwp5v5ux2vmph0ayvm',
+
   // PLATFORMS
   COINGECKO = 'https://www.coingecko.com/en/coins/',
   BIT2ME_BUY = 'https://bit2me.com/buy-',

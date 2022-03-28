@@ -8,6 +8,7 @@ import { ECurrency } from './shared/models/currency';
 import { INavMenu } from './shared/models/menu';
 
 import { ELinkableIcon, ELinkableIconType, ELinkableTarget, LinkableIcon } from './shared/components/linkable-icon/linkable-icon';
+import { URLS } from './shared/models/core';
 
 // Angular Material Icons: https://fonts.google.com/icons
 // Angular translate: https://medium.com/angular-chile/aplicaciones-multilenguaje-en-angular-7-con-ngx-translate-db8d1e7b380c
@@ -37,6 +38,9 @@ export class AppComponent implements OnInit {
   title = ELinkableIcon.Home;
 
   currency = ECurrency.USD;
+
+  walletBTCLNZebedeeTag = URLS.ZEBEDEE_LNTAG;
+  walletBTCLNZebedeeUrl = `lightning:${URLS.ZEBEDEE_LNURL}`;
 
   iconHome: LinkableIcon;
   iconListMedia: LinkableIcon[] = [];

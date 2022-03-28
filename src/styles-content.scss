@@ -38,7 +38,7 @@
     top: 85px;
     bottom: 85px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 25px 10px;
     overflow: auto;
   }
 
@@ -64,6 +64,25 @@
       justify-content: center;
       align-items: center;
     }
+
+    .menu-donations {
+      position: absolute;
+      display: flex;
+      left: 1%;
+      top: -35%;
+      padding: 10px;
+      align-items: center;
+      justify-content: flex-start;
+      background: $toolbar-background;
+      border: 1px solid $toolbar-border-color;
+      border-radius: 5px;
+      z-index: 1;
+      cursor: pointer;
+
+      &:hover {
+        color: $toolbar-border-color;
+      }
+    }
   }
 
   .toolbar-top {
@@ -83,6 +102,33 @@
   background-color: $toolbar-background !important;
 }
 
+.menu-donations-container {
+  position: fixed;
+  display: block;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $toolbar-background;
+  border: 1px solid $toolbar-border-color;
+  border-radius: 5px;
+  z-index: 1;
+
+  .menu-donations-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      display: block;
+      width: 100%;
+      padding: 5px;
+    }
+  }
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 1256px) {
   .content {
@@ -92,6 +138,12 @@
   .menu-top,
   .menu-bottom {
     width: 100% !important;
+  }
+
+  .menu-donations {
+    left: 1% !important;
+    top: -25% !important;
+    padding: 5px !important;
   }
 }
 

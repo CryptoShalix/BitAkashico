@@ -24,6 +24,11 @@
   </div>
 
   <div class="toolbar-bottom">
+
+    <div class="menu-donations">
+      <mat-icon>alternate_email</mat-icon>
+    </div>
+
     <div class="menu-bottom">
 
       <div class="material-icons-currency">
@@ -69,3 +74,12 @@
     <span>{{ menu.text | translate }}</span>
   </button>
 </mat-menu>
+
+<div class="menu-donations-container">
+  <div class="menu-donations-content">
+    <a [href]="'lightning:'+walletBTCLNZebedeeUrl">
+      <mat-icon>offline_bolt</mat-icon>
+      {{ walletBTCLNZebedeeTag }}
+    </a>
+  </div>
+</div>
