@@ -54,7 +54,7 @@ export class StarRankComponent {
     this.addStarToList(starsFull, EStarRank.STAR);
     this.addStarToList(starsHalf, EStarRank.STAR_HALF);
     this.addStarToList(starsEmpty, EStarRank.STAR_EMPTY);
-    console.log(this.starToPaint);
+
     this.starToPaint = {
       numOfStars: this.stars,
       starsToPaint: this.starsToPaint

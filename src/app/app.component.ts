@@ -38,6 +38,7 @@ export class AppComponent implements OnInit {
   title = ELinkableIcon.Home;
 
   currency = ECurrency.USD;
+  showContainerDonations = false;
 
   walletBTCLNZebedeeTag = URLS.ZEBEDEE_LNTAG;
   walletBTCLNZebedeeUrl = `lightning:${URLS.ZEBEDEE_LNURL}`;

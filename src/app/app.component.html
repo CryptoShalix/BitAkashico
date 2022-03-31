@@ -26,7 +26,7 @@
   <div class="toolbar-bottom">
 
     <div class="menu-donations">
-      <mat-icon>alternate_email</mat-icon>
+      <mat-icon (click)="showContainerDonations = true">alternate_email</mat-icon>
     </div>
 
     <div class="menu-bottom">
@@ -75,11 +75,22 @@
   </button>
 </mat-menu>
 
-<div class="menu-donations-container">
+<div
+  class="menu-donations-container"
+  [ngClass]="{'visible': showContainerDonations}"
+>
   <div class="menu-donations-content">
-    <a [href]="'lightning:'+walletBTCLNZebedeeUrl">
-      <mat-icon>offline_bolt</mat-icon>
-      {{ walletBTCLNZebedeeTag }}
-    </a>
+    <div class="menu-donations-toolbar">
+      <mat-icon
+        class="close-button"
+        (click)="showContainerDonations = false"
+      >close</mat-icon>
+    </div>
+    <div class="menu-donations-wallets">
+      <a [href]="'lightning:'+walletBTCLNZebedeeUrl">
+        <mat-icon>offline_bolt</mat-icon>
+        {{ walletBTCLNZebedeeTag }}
+      </a>
+    </div>
   </div>
 </div>
