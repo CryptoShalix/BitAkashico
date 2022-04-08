@@ -119,18 +119,15 @@
     visibility: visible;
   }
 
-  .menu-donations-content {
+  .menu-donations-container-fix {
     position: relative;
     display: flex;
+    flex-direction: column;
     width: 50%;
     height: 50%;
     background: $toolbar-background;
     border: 1px solid $toolbar-border-color;
     border-radius: 5px;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    z-index: 1;
 
     .menu-donations-toolbar {
       position: absolute;
@@ -143,24 +140,48 @@
       justify-content: flex-end;
       border-bottom: 1px solid $toolbar-border-color;
 
-      .close-button{
+      .close-button {
         width: 30px;
         height: 30px;
         font-size: 30px;
         cursor: pointer;
 
-        &:hover{
+        &:hover {
           color: $toolbar-border-color;
         }
       }
     }
 
-    .menu-donations-wallets {
+    .menu-donations-content {
+      position: relative;
+      display: flex;
+      top: 40px;
+      padding: 15px;
+      flex-direction: column;
+      text-align: justify;
+      opacity: 1;
+      z-index: 1;
 
-      a {
-        display: block;
-        width: 100%;
-        padding: 5px;
+      .menu-donations-wallets {
+
+        a {
+          display: flex;
+          width: 100%;
+          max-width: 250px;
+          padding: 5px;
+          font-size: 16px;
+          align-items: center;
+          border: 1px dotted transparent;
+          border-radius: 5px;
+
+          &:hover {
+            border-color: $toolbar-border-color;
+          }
+
+          .mat-icon {
+            margin: 0 5px;
+          }
+        }
       }
     }
   }

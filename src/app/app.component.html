@@ -79,18 +79,23 @@
   class="menu-donations-container"
   [ngClass]="{'visible': showContainerDonations}"
 >
-  <div class="menu-donations-content">
+  <div class="menu-donations-container-fix">
+
     <div class="menu-donations-toolbar">
       <mat-icon
         class="close-button"
         (click)="showContainerDonations = false"
       >close</mat-icon>
     </div>
-    <div class="menu-donations-wallets">
-      <a [href]="'lightning:'+walletBTCLNZebedeeUrl">
-        <mat-icon>offline_bolt</mat-icon>
-        {{ walletBTCLNZebedeeTag }}
-      </a>
+
+    <div class="menu-donations-content">
+      <div class="menu-donations-wallets">
+        <a [href]="'lightning:'+walletBTCLNZebedeeUrl">
+          <mat-icon>offline_bolt</mat-icon>
+          {{ walletBTCLNZebedeeTag }}
+        </a>
+      </div>
     </div>
+
   </div>
 </div>
