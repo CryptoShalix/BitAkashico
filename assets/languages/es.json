@@ -21,6 +21,15 @@
     },
     "TOOLS": {
       "about": "Aquí encontrarás todas las plataformas y herramientas necesarias para hacer análisis técnico y fundamental, y, por supuesto, invertir, ya sea de forma centralizada o descentralizada, y con todas las ventajas e inconvenientes de cada uno.",
+      "aboutCustomTools": "Si lo que buscas es calcular ciertos datos, como el <i>beneficio de un trade con puntos de venta en DCA</i>, o el <i>precio de un activo en una fecha concreta</i>, o incluso <i>saber qué criptomoneda es la que mayores rendimientos dará desde el precio actual hasta su ATH</i>, mira aquí:",
+      "CUSTOM": {
+        "calculator": "Calculadora",
+        "calculatorTooltip": " ",
+        "whenToSell": "¿Cuándo debería vender...?",
+        "whenToSellTooltip": " ",
+        "benefits": "Calculadora de beneficios",
+        "benefitsTooltip": " "
+      },
       "GROUPS": {
         "ANALYSIS_MARKET": {
           "title": "Análisis de mercado",
@@ -62,8 +71,11 @@
           "description": "Exchanges centralizados con las mejores comisiones y servicios",
           "appBinance": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Binance.",
           "appBit2Me": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Bit2Me.",
+          "appBingX": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de BingX.",
           "appCryptocom": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Crypto.com.",
           "appFTX": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de FTX.",
+          "appGemini": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Gemini.",
+          "appNexo": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Nexo.",
           "appKuCoin": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de KuCoin.",
           "appWirex": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Wirex."
         },

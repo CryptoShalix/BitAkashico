@@ -21,6 +21,15 @@
     },
     "TOOLS": {
       "about": "Here you will find all the necessary platforms and tools to do technical and fundamental analysis, and, of course, invest, either centralized or decentralized, and with all the advantages and disadvantages of each.",
+      "aboutCustomTools": "If what you are looking for is to calculate certain data, such as the <i>profit of a trade with DCA points of sale</i>, or the <i>price of an asset on a specific date</i>, or even <i>to know which cryptocurrency is the one that will give the highest returns from the current price to its ATH</i>, look here:",
+      "CUSTOM": {
+        "calculator": "Calculator",
+        "calculatorTooltip": " ",
+        "whenToSell": "When should I sell...?",
+        "whenToSellTooltip": " ",
+        "benefits": "Benefits calculator",
+        "benefitsTooltip": " "
+      },
       "GROUPS": {
         "ANALYSIS_MARKET": {
           "title": "Market analysis",
