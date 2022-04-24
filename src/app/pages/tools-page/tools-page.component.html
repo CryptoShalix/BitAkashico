@@ -1,10 +1,10 @@
 <div class="content">
 
   <div class="about">
-    <span>{{ ('PAGES.TOOLS.about' | translate) | safe:'html' }}</span>
+    <span [innerHTML]="('PAGES.TOOLS.about' | translate) | safe:'html'"></span>
 
     <div class="custom-tools">
-      <span>{{ ('PAGES.TOOLS.aboutCustomTools' | translate) | safe:'html' }}</span>
+      <span [innerHTML]="('PAGES.TOOLS.aboutCustomTools' | translate) | safe:'html'"></span>
 
       <div class="custom-tool-items">
         <app-linkable-icon

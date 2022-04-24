@@ -40,8 +40,11 @@ export class AppComponent implements OnInit {
   currency = ECurrency.USD;
   showContainerDonations = false;
 
+  // Copy text: https://www.geeksforgeeks.org/how-to-create-copy-to-clipboard-button/
   walletBTCLNZebedeeTag = URLS.ZEBEDEE_LNTAG;
-  walletBTCLNZebedeeUrl = `lightning:${URLS.ZEBEDEE_LNURL}`;
+  walletBTCLNZebedeeUrl = `${URLS.ZEBEDEE_LNURL}`;
+  walletBTCLNMuunUrl = `${URLS.MUUN_LNURL}`;
+  walletBTCLNMuunQR = `${IMAGES.WALLET_LN_MUUN}`;
 
   iconHome: LinkableIcon;
   iconListMedia: LinkableIcon[] = [];
@@ -77,7 +80,7 @@ export class AppComponent implements OnInit {
       title: 'MENU.home',
       iconPath: IMAGES.HOME_IMG,
       showText: false,
-      type: ELinkableIconType.IMAGE
+      type: ELinkableIconType.IMAGE,
     }));
     this.iconListMenu.push(new LinkableIcon(this.icmIdAcademy, {
       // routerLink: 'academy',

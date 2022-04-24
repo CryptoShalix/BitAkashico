@@ -23,6 +23,7 @@
 
     .custom-tools {
       display: block;
+      margin: 1em auto 0;
       justify-content: center;
       align-items: center;
 
@@ -185,10 +186,14 @@
 
     .mat-card-content {
       margin: 0 !important;
-      font-size: 14px !important;
+      font-size: 10px !important;
       padding: 10px !important;
       text-align: center !important;
       letter-spacing: 1.2px !important;
     }
+  }
+
+  .custom-tool-items {
+    flex-direction: column;
   }
 }

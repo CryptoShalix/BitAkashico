@@ -15,7 +15,7 @@
     </div>
   </div>
 
-  <div class="bit2me-carousel">
+  <div class="coins-carousel">
     <app-carousel></app-carousel>
   </div>
 
@@ -90,9 +90,13 @@
 
     <div class="menu-donations-content">
       <div class="menu-donations-wallets">
-        <a [href]="'lightning:'+walletBTCLNZebedeeUrl">
+        <a>
           <mat-icon>offline_bolt</mat-icon>
           {{ walletBTCLNZebedeeTag }}
+        </a>
+
+        <a>
+          <img [src]="walletBTCLNMuunQR">
         </a>
       </div>
     </div>

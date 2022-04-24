@@ -65,7 +65,7 @@ svg.material-icons:not(:last-child) {
     position: relative;
     display: flex;
     border-radius: 4px;
-    border: 1px solid #eee;
+    border: 1px solid $card-border-light;
     width: 100%;
     min-width: 150px;
     max-width: 150px;
@@ -192,12 +192,30 @@ svg.material-icons:not(:last-child) {
   max-height: 50px;
 }
 
-.toolbar-top .menu-top .linkable-icon span {
-  font-size: 25px;
-  font-weight: bold;
-  font-family: 'rowdies-bold';
-  color: $toolbar-border-color;
-  letter-spacing: 1px;
+.toolbar-top .menu-top .linkable-icon {
+  img {
+    width: 100%;
+    height: 100%;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    margin: 50px 10px 0;
+    border: 1px solid $toolbar-border-color;
+    transition: all 1s ease-in-out;
+
+    &:hover {
+      transition: all 1s ease-in-out;
+      animation: pop 1s infinite linear;
+    }
+  }
+
+  span {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'rowdies-bold';
+    color: $toolbar-border-color;
+    letter-spacing: 1px;
+  }
 }
 
 .material-icons-currency,
@@ -261,19 +279,48 @@ svg.material-icons:not(:last-child) {
   }
 }
 
+/* Animations */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pop {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  33% {
+    transform: scale(1.05);
+  }
+
+  66% {
+    transform: scale(.90);
+  }
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
 
-  .logo {
-    margin: 0 5px 0 0;
+  .logo .linkable-icon img {
+    max-width: 90px !important;
+    max-height: 90px !important;
+    margin: 45px 5px 0 !important;
   }
 
   .linkable-icon {
     max-height: 60px;
 
     img {
-      max-width: 50px;
-      max-height: 50px;
+      max-width: 65px;
+      max-height: 65px;
       margin: 0 5px;
     }
 

@@ -50,19 +50,19 @@ export class ToolsPageComponent implements OnInit {
   private prepareCustomTools(): void {
     this.customToolsList = [];
     this.customToolsList.push(new LinkableIcon(this.ctlCalculator, {
-      routerLink: 'calculator',
+      // routerLink: 'calculator',
       title: 'PAGES.TOOLS.CUSTOM.calculator',
       tooltip: 'PAGES.TOOLS.CUSTOM.calculatorTooltip',
-      // iconPath: 'money',
-      iconPath: IMAGES.IconCalculator,
+      iconPath: 'dialpad',
+      // iconPath: IMAGES.IconCalculator,
       color: '#fff',
-      type: ELinkableIconType.SVG,
+      type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF,
       showText: true,
       isCard: true
     }));
     this.customToolsList.push(new LinkableIcon(this.ctlWhenToSell, {
-      routerLink: 'when-to-sell',
+      // routerLink: 'when-to-sell',
       title: 'PAGES.TOOLS.CUSTOM.whenToSell',
       tooltip: 'PAGES.TOOLS.CUSTOM.whenToSellTooltip',
       iconPath: 'score',
@@ -74,7 +74,7 @@ export class ToolsPageComponent implements OnInit {
       isCard: true
     }));
     this.customToolsList.push(new LinkableIcon(this.ctlBenefits, {
-      routerLink: 'calculator-benefits',
+      // routerLink: 'calculator-benefits',
       title: 'PAGES.TOOLS.CUSTOM.benefits',
       tooltip: 'PAGES.TOOLS.CUSTOM.benefitsTooltip',
       // iconPath: 'timer',
@@ -166,12 +166,15 @@ export class ToolsPageComponent implements OnInit {
     const accordion = this.createToolsGroup(
       groupName,
       [
-        this.createToolItem(groupName, 'Binance', URLS.REF_Binance, 5),
+        this.createToolItem(groupName, 'Binance', URLS.REF_Binance, 4.5),
         this.createToolItem(groupName, 'Bit2Me', URLS.REF_Bit2Me, 3),
+        this.createToolItem(groupName, 'BingX', URLS.REF_BingX, 4.2),
         this.createToolItem(groupName, 'Cryptocom', URLS.REF_CryptoCom, 3),
-        this.createToolItem(groupName, 'FTX', URLS.REF_FTX, 4),
+        this.createToolItem(groupName, 'FTX', URLS.REF_FTX, 4.3),
+        this.createToolItem(groupName, 'Gemini', URLS.REF_Gemini, 2.5),
         this.createToolItem(groupName, 'KuCoin', URLS.REF_KuCoin, 4.5),
-        this.createToolItem(groupName, 'Wirex', URLS.REF_Wirex, 4.5),
+        this.createToolItem(groupName, 'Nexo', URLS.REF_Nexo, 4.1),
+        this.createToolItem(groupName, 'Wirex', URLS.REF_Wirex, 4.6),
       ],
       'account_balance'
     );
