@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from './material.module';
 import { PipesModule } from './shared/pipes/pipes.module';
 
+import { AccordionComponent } from './shared/components/accordion/accordion.component';
 import { CarouselComponent } from './shared/components/carousel/carousel.component';
 import { CoinComponent } from './shared/components/coin-info/coin-info.component';
 import { LinkableIconComponent } from './shared/components/linkable-icon/linkable-icon.component';
@@ -11,6 +12,7 @@ import { StarRankComponent } from './shared/components/star-rank/star-rank.compo
 
 @NgModule({
   declarations: [
+    AccordionComponent,
     CarouselComponent,
     CoinComponent,
     LinkableIconComponent,
@@ -24,6 +26,7 @@ import { StarRankComponent } from './shared/components/star-rank/star-rank.compo
   ],
   exports: [
     PipesModule,
+    AccordionComponent,
     CarouselComponent,
     CoinComponent,
     LinkableIconComponent,

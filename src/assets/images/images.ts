@@ -668,6 +668,20 @@ export class IMAGES {
 
   static WALLET_LN_MUUN = `./assets/images/wallet_ln_muun.jpg`;
 
+  static APP_STORE_APPLE = `./assets/images/app_store_apple.svg`;
+  static APP_STORE_GOOGLE = `./assets/images/app_store_google.svg`;
+
+  static GAMES_THNDR_BAY_LARGE = `./assets/images/games/game_thndr_bay_large.jpg`;
+  static GAMES_THNDR_BAY_SMALL = `./assets/images/games/game_thndr_bay_small.png`;
+  static GAMES_THNDR_BOUNCE_LARGE = `./assets/images/games/game_thndr_bounce_large.png`;
+  static GAMES_THNDR_BOUNCE_SMALL = `./assets/images/games/game_thndr_bounce_small.png`;
+  static GAMES_THNDR_SATSSS_LARGE = `./assets/images/games/game_thndr_satsss_large.jpeg`;
+  static GAMES_THNDR_SATSSS_SMALL = `./assets/images/games/game_thndr_satsss_small.jpg`;
+  static GAMES_THNDR_TURBO84_LARGE = `./assets/images/games/game_thndr_turbo84_large.png`;
+  static GAMES_THNDR_TURBO84_SMALL = `./assets/images/games/game_thndr_turbo84_small.png`;
+  static GAMES_BITCOIN_MINER_LARGE = `./assets/images/games/game_bitcoin_miner_large.png`;
+  static GAMES_BITCOIN_MINER_SMALL = `./assets/images/games/game_bitcoin_miner_small.png`;
+
   // Twitter: https://friconix.com/icon/fi-xnsuxl-twitter-solid/?sid=342104&iid=2859
   static Twitter = 'M 342 828C 252 828 163 802 88 754C 175 764 265 739 333 685C 266 685 203 640 181 577C 188 566 232 579 253 568C 178 554 119 482 121 406C 140 412 170 426 196 424C 124 379 100 276 144 204C 227 306 354 371 485 376C 474 330 484 278 513 240C 564 169 672 152 741 204C 774 247 827 205 865 189C 873 206 830 262 799 277C 829 274 859 266 888 254C 886 271 839 317 811 337C 816 452 777 568 705 658C 619 768 480 830 342 828';
 

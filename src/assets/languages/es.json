@@ -1,4 +1,12 @@
 [{
+  "BUTTONS": {
+    "accept": "Aceptar",
+    "cancel": "Cancelar"
+  },
+  "DONATIONS": {
+    "title": "Dóname unos sats",
+    "message": "Cualquier cantidad de satoshis es bien recibida. Me motivarán y ayudarán a hacer crecer más los contenidos.<br/>Envía ₿itcoin por lightning network, así apenas tendrás comisiones. Recuerda que tienes los wallets recomendados de Bitcoin en <a href='/#/tools'>herramientas</a>."
+  },
   "LANGUAGE": {
     "en": "Inglés",
     "es": "Español"
@@ -13,14 +21,17 @@
     "tools": "Herramientas",
     "trading": "Trading"
   },
-  "MSG": {},
+  "MSG": {
+    "copyToClipboard": "¡Se ha copiado al portapapeles!",
+    "clickToCopy": "Haga clic en el texto o imagen para copiar al portapapeles"
+  },
   "PAGES": {
     "MAIN": {
       "about": "Crypto Shalix pretende agrupar todo lo relacionado con criptomonedas en un solo lugar, desde el que poder aprender, compartir, y tradear en este nuevo mundo que ha llegado a nosotros.",
       "videoTitle": "Revolución digital: Blockchain, criptomonedas, NFT y metaverso"
     },
     "TOOLS": {
-      "about": "Aquí encontrarás todas las plataformas y herramientas necesarias para hacer análisis técnico y fundamental, y, por supuesto, invertir, ya sea de forma centralizada o descentralizada, y con todas las ventajas e inconvenientes de cada uno.",
+      "about": "Aquí encontrarás todas las plataformas y herramientas necesarias para hacer análisis técnico y fundamental, y, por supuesto, invertir, ya sea de forma centralizada o descentralizada, y con todas las ventajas e inconvenientes de cada uno. Además de wallets para Bitcoin y/o altcoins, incluso para Lightning Network (LN⚡).<br/>Para Lightning Network recomiendo visitar la página y elegir desde ahí el wallet deseado para Bitcoin: <a href='https://lightningaddress.com'>lightningaddress.com</a>.",
       "aboutCustomTools": "Si lo que buscas es calcular ciertos datos, como el <i>beneficio de un trade con puntos de venta en DCA</i>, o el <i>precio de un activo en una fecha concreta</i>, o incluso <i>saber qué criptomoneda es la que mayores rendimientos dará desde el precio actual hasta su ATH</i>, mira aquí:",
       "CUSTOM": {
         "calculator": "Calculadora",
@@ -50,21 +61,26 @@
           "title": "₿itcoin: herramientas",
           "description": " ",
           "appBitcoinRainbowChart": "Este lindo arcoíris te mostrará si estamos más cerca de una altseason (pump de altcoins) o del pump a ₿TC.",
-          "appKYCP": "Para saber si tu Bitcoin son tan privados como esperas. Nivel avanzado. Muy útil para ver cómo han implementado los diferentes wallets la privacidad (Wasabi, JoinMarket, Whirlpool, etc).",
-          "appStackerNews": "Permite publicar posts y que te remuneren en BTC LN, a la par que tú puedes también valorar al resto de usuarios con tus satoshis. Haces un ingreso de 1000 satoshis, y por cada publicación que te guste, donas unos pocos sats, pero si publicas posts, y la gente da like, recuperas esos sats. Mercado cíclico."
+          "appKYCP": "Para saber si tu ₿itcoin son tan privados como esperas. Nivel avanzado. Muy útil para ver cómo han implementado los diferentes wallets la privacidad (Wasabi, JoinMarket, Whirlpool, etc).",
+          "appStackerNews": "Permite publicar posts y que te remuneren en BTC LN⚡, a la par que tú puedes también valorar al resto de usuarios con tus satoshis. Haces un ingreso de 1000 satoshis, y por cada publicación que te guste, donas unos pocos sats, pero si publicas posts, y la gente da like, recuperas esos sats. Mercado cíclico."
         },
         "BITCOIN_WALLETS": {
           "title": "₿itcoin: wallets",
-          "description": "Mejores monederos de criptomonedas para Bitcoin (on-chain, LN, etc)",
-          "appBlueWallet": "Wallet de Bitcoin <i>semi-custodial</i>. Se pueden conectar nodos privados o crear wallets custodial tanto para Bitcoin on-chain como LN. Sencillo de usar tanto para on-chain como Lightning Network (LN).",
-          "appMuunWallet": "Wallet de Bitcoin no-custodial, sencillo de usar tanto para on-chain como Lightning Network (LN). Solo se puede enviar y recibir, y su forma de guardar las claves es peculiar.",
-          "appSamouraiWallet": "Wallet de Bitcoin no-custodial, que permite conectar tus propios nodos y ofrece cientos de funciones de seguridad y privacidad. Complejo, pero de lo mejor para gestionar tus BTC en el móvil.",
-          "appSparrowWallet": "Wallet de Bitcoin no-custodial, que permite conectar tus propios nodos y ofrece cientos de funciones de seguridad y privacidad. Complejo, pero de lo mejor para gestionar tus BTC en el ordenador.",
-          "appSpecterWallet": "Wallet de Bitcoin no-custodial, que permite conectar tus propios nodos y crear uno con 'Bitcoin Core'. Ofrece bastantes funciones de seguridad y privacidad. Complejo, pero de lo mejor para gestionar tus BTC en el ordenador.",
-          "appWalletOfSatoshi": "Wallet de Bitcoin custodial, muy sencillo de usar tanto para on-chain como Lightning Network (LN). La cuenta funciona con un email. Con LNURL, una especie de email que permite recibir BTC por LN de forma más cómoda.",
-          "appZap": "Wallet de Bitcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN).",
-          "appZebedee": "Wallet de Bitcoin custodial, ideal para juegos y con bots para usar desde Discord o Telegram. Con LNURL, una especie de email que permite recibir BTC por LN de forma más cómoda. Sencillo de usar tanto para on-chain como Lightning Network (LN).",
-          "appZeus": "Wallet de Bitcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN)."
+          "titleLN": "⚡₿itcoin: wallets LN⚡",
+          "description": "Mejores monederos para ₿itcoin (on-chain, LN⚡, etc)",
+          "appBlixt": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN⚡). Tiene muchas herramientas muy útiles para aumentar la privacidad, seguridad y control de tus fondos.",
+          "appBlueWallet": "Wallet de ₿itcoin <i>semi-custodial</i>. Se pueden conectar nodos privados o crear wallets custodial tanto para ₿itcoin on-chain como LN⚡. Sencillo de usar tanto para on-chain como Lightning Network (LN⚡).",
+          "appBreez": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar en Lightning Network (LN⚡), con punto de venta (ideal para comercios), podcasts, recargas con tarjeta y mucho más.",
+          "appMuunWallet": "Wallet de ₿itcoin no-custodial, sencillo de usar tanto para on-chain como Lightning Network (LN⚡). Solo se puede enviar y recibir, y su forma de guardar las claves es peculiar.",
+          "appPhoenix": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN⚡). Comisiones algo elevadas, pero genial incluso para nuevos usuarios por la pulida interfaz.",
+          "appSamouraiWallet": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos y ofrece cientos de funciones de seguridad y privacidad. Complejo, pero de lo mejor para gestionar tus BTC en el móvil.",
+          "appSimpleBitcoinWallet(SBW)": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN⚡).",
+          "appSparrowWallet": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos y ofrece cientos de funciones de seguridad y privacidad. Complejo, pero de lo mejor para gestionar tus BTC en el ordenador.",
+          "appSpecterWallet": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos y crear uno con '₿itcoin Core'. Ofrece bastantes funciones de seguridad y privacidad. Complejo, pero de lo mejor para gestionar tus BTC en el ordenador.",
+          "appWalletOfSatoshi": "Wallet de ₿itcoin custodial, muy sencillo de usar tanto para on-chain como Lightning Network (LN⚡). La cuenta funciona con un email. Con LNURL, una especie de email que permite recibir BTC por LN⚡ de forma más cómoda.",
+          "appZap": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN⚡).",
+          "appZebedee": "Wallet de ₿itcoin custodial, ideal para juegos y con bots para usar desde Discord o Telegram. Con LNURL, una especie de email que permite recibir BTC por LN⚡ de forma más cómoda. Sencillo de usar tanto para on-chain como Lightning Network (LN⚡).",
+          "appZeus": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN⚡)."
         },
         "EXCHANGES_CEX": {
           "title": "Exchanges.<br>(CEN) Centralizados",
@@ -90,7 +106,7 @@
         },
         "WALLETS": {
           "title": "Wallets: altcoins",
-          "description": "Mejores monederos de criptomonedas para Bitcoin y altcoins.",
+          "description": "Mejores monederos de criptomonedas para ₿itcoin y altcoins.",
           "appBraveWallet": "Requiere tener instalado el navegador Brave (ya sea PC o móvil), el cual te pagará por ver publicidad (si lo deseas) además de ofrecerte privacidad, navegación más rápida, y compatibilidad con todo lo que usa Chrome. El wallet va integrado, y permite hacer swap, comprar activos y conectarse a cualquier sitio admitido, directamente.",
           "appMetamask": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Seguro parcialmente. Lo mejor es combinarlo con un Hardware Wallet (HW) como Trezor o Ledger. Funciona con cualquier red de Ethereum (ERC20), y se pueden añadir otras.",
           "appSafepal": "Es una billetera fría y una aplicación que permite generar o importar cualquier billetera. Es seguro, fácil de usar y tiene múltiples funciones como su exchange interno montado sobre Binance, además de su sección de dApps, servicio earn y su propio token para reducir comisiones en las operaciones. Su única desventaja es: código cerrado.",
@@ -99,9 +115,33 @@
         "OTHERS": {
           "title": "Otras aplicaciones interesantes",
           "description": " ",
-          "appChainlist": "Permite añadir nuevas redes a tu wallet sobre EVM (Ethereum Virtual Machine), ya sea este BraveWallet, Metamask o cualquier otro que utilice esta máquina virtual de Ethereum."
+          "appBSCheck": "Estupenda herramienta para análisis automático de tokens en varias redes blockchain: Binance, Ethereum y Polygon.",
+          "appChainlist": "Permite añadir nuevas redes a tu wallet sobre EVM (Ethereum Virtual Machine), ya sea este BraveWallet, Metamask o cualquier otro que utilice esta máquina virtual de Ethereum.",
+          "appHoneyPot": "Estupenda herramienta para detectar si estamos ante un honeypot, es decir, un token que puedes comprar, pero no vender. O, en otras palabras, un scam.",
+          "appRugDoc": "Herramienta que permite hacer análisis y detectar el nivel de riesgo de tokens, NFT, farms de liquidez y exchanges descentralizados (DEX) sobre varias redes blockchain.",
+          "appMudra": "Herramienta que permite: hacer un análisis de tokens nuevos, crear tus propios tokens, y bloquear liquidez desde la propia página, con una interfaz bonita y sencilla, y planes premium (de pago)."
         }
       }
+    },
+    "GAMES": {
+      "about": "<i>¿Te imaginas generar ingresos jugando videojuegos?</i><br/><i>¿Te imaginas recibir esos ingresos en ₿itcoin?</i><br/><br/>Te traigo varios juegos que apenas ocupan espacio en tu móvil, puedes jugarlos cuando y cuanto quieras, y que te enviarán unos satoshis <i>(unidad mínima de bitcoin)</i> con un par de clics. Te indico también los <b>wallets</b> de bitcoin recomendados para estos juegos.",
+      "aboutGames": "Juegos Play&Earn (P&E), ya que siempre vas a ganar, aunque sea unos sats. Debemos agradecer a <a href='https://www.thndr.games/bitcoin-games' target='_blank'>thndr.games</a> y a <a href='https://zebedee.io' target='_blank'>zebedee.io</a> por ofrecernos estas maravillas de juegos.<br/><i style='font-size:12px;font-weight:bold;'>Nótese que hay muchos más, pero estos son los que se han probado y funcionan genial.</i>",
+      "gameSatsssName": "Satsss",
+      "gameSatsssTitle": "¡La serpiente de siempre, ahora con ₿itcoin!",
+      "gameSatsssDescription": "¿Serpiente + ₿itcoin? ¡Por qué no! Uno de los juegos móviles más conocidos y populares del mundo ahora te da sats por comer tickets.",
+      "gameTurbo84Name": "Turbo84",
+      "gameTurbo84Title": "¿Puedes llegar a 100mph?",
+      "gameTurbo84Description": "Conduce lo más rápido que puedas esquivando obstáculos y recogiendo tickets en este loco juego.",
+      "gameBounceName": "₿itcoin Bounce",
+      "gameBounceTitle": "¡Rebota en la cadena de bloques!",
+      "gameBounceDescription": "El objetivo del juego es simple: ver hasta dónde puedes rebotar a lo largo de la cadena de bloques.",
+      "gameBayName": "THNDR Bay",
+      "gameBayTitle": "Shooter de burbujas de ₿itcoin",
+      "gameBayDescription": "¡Gana ₿itcoin simplemente jugando un Bubble Shooter relajante junto al mar! ¡Únete a Spark en un viaje tropical!",
+      "gameBitcoinMinerName": "₿itcoin Miner",
+      "gameBitcoinMinerTitle": "¡Un idle game que te paga!",
+      "gameBitcoinMinerDescription": "Construye tu propia fábrica minera de ₿itcoin y otras criptomonedas, y recibe sats por hacerla crecer y evolucionar."
     }
-  }
+  },
+  "STRINGS": {}
 }]

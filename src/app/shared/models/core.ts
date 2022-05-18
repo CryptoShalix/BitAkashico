@@ -35,14 +35,19 @@ export enum URLS {
   REF_StackerNews = 'https://stacker.news',
 
   // REFERRALS: BITCOIN WALLETS
+  REF_Blixt = 'https://blixtwallet.github.io',
   REF_BlueWallet = 'https://bluewallet.io',
+  REF_Breez = 'https://breez.technology',
   REF_MuunWallet = 'https://muun.com',
+  REF_Phoenix = 'https://phoenix.acinq.co',
   REF_SamouraiWallet = 'https://samouraiwallet.com',
+  REF_SimpleBitcoinWallet = 'https://sbw.app',
   REF_SparrowWallet = 'https://sparrowwallet.com',
   REF_SpecterWallet = 'https://specter.solutions',
   REF_WalletOfSatoshi = 'https://walletofsatoshi.com',
   REF_Zap = 'https://zaphq.io',
   REF_Zebedee = 'https://zebedee.io',
+  REF_Zeus = 'https://zeusln.app',
 
   // REFERRALS: EXCHANGES CEX
   REF_Binance = 'https://www.binance.com/en/register?ref=EEICFSED',
@@ -72,12 +77,13 @@ export enum URLS {
   REF_BSCheck = 'https://bscheck.eu',
   REF_Chainlist = 'https://chainlist.org',
   REF_Honeypot = 'https://honeypot.is',
-  REF_Justbuitffs = 'https://apps.justbuitffs.com',
-  REF_MoonArch = 'https://moonarch.app',
   REF_Mudra = 'https://mudra.website',
   REF_RugDoc = 'https://rugdoc.io',
-  REF_RugPullDetector = 'https://rugpulldetector.com',
-  REF_StaySafu = 'https://app.staysafu.org',
+}
+
+export enum BUTTONS {
+  dialogAccept = 'BUTTONS.accept',
+  dialogCancel = 'BUTTONS.cancel'
 }
 
 export interface IValueText {

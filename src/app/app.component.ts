@@ -40,6 +40,8 @@ export class AppComponent implements OnInit {
   currency = ECurrency.USD;
   showContainerDonations = false;
 
+  hasBeenCopied = false;
+
   // Copy text: https://www.geeksforgeeks.org/how-to-create-copy-to-clipboard-button/
   walletBTCLNZebedeeTag = URLS.ZEBEDEE_LNTAG;
   walletBTCLNZebedeeUrl = `${URLS.ZEBEDEE_LNURL}`;
@@ -73,7 +75,7 @@ export class AppComponent implements OnInit {
     this.navMenu = [];
     this.navMenu.push({ text: 'MENU.security', link: '/', icon: 'security', disabled: true });
     this.navMenu.push({ text: 'MENU.books', link: '/', icon: 'menu_book', disabled: true });
-    this.navMenu.push({ text: 'MENU.games', link: '/', icon: 'sports_esports', disabled: true });
+    this.navMenu.push({ text: 'MENU.games', link: 'games', icon: 'sports_esports', disabled: false });
 
     this.iconListMenu = [];
     this.iconListMenu.push(new LinkableIcon(this.icmIdHome, {
@@ -147,5 +149,13 @@ export class AppComponent implements OnInit {
 
   getTooltipLanguage(): string {
     return `LANGUAGE.${this.translateService.userLang}`;
+  }
+
+  onClickCopyToClipboard(): void {
+    this.hasBeenCopied = true;
+    const interval = setInterval(() => {
+      this.hasBeenCopied = false;
+      clearInterval(interval);
+    }, 5000);
   }
 }

@@ -20,6 +20,16 @@ export enum ELinkableTarget {
   BLANK = '_blank',
 }
 
+export interface ICardGame {
+  name: string;
+  imgLarge?: string;
+  imgSmall?: string;
+  title?: string;
+  description?: string;
+  linkApple?: string;
+  linkGoogle?: string;
+}
+
 export interface ILinkableIcon {
   title?: string;
   href?: string;

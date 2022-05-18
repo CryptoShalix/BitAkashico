@@ -91,6 +91,7 @@
   padding: 0;
   font-family: inherit;
   outline: none;
+  letter-spacing: 0.8px;
 }
 
 *,
@@ -266,8 +267,42 @@ label {
   font-size: inherit;
 }
 
+.bitcoin {
+  color: $bitcoin-color;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.blinkMessage {
+  visibility: hidden;
+  display: flex;
+  width: 100%;
+  padding: 5px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &.visible {
+    visibility: visible;
+    animation: makeInvisible 0s ease-in 5s forwards;
+  }
+
+  .mat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+  }
+}
+
 .mat-expansion-indicator::after {
-  color: $body-text !important;
+  color: $body-text  !important;
 }
 
 .spacer {
@@ -307,4 +342,14 @@ pre ::selection {
 ::-webkit-scrollbar-track {
   border-radius: 0px;
   background-color: #eef0f2;
+}
+
+@keyframes makeInvisible {
+  from {
+    visibility: visible;
+  }
+
+  to {
+    visibility: hidden;
+  }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatAccordion } from '@angular/material/expansion';
 
 import { CoreService } from '../../shared/services/core.service';
+import { TranslateService } from '../../shared/services/translate.service';
 
 import {
   ELinkableIconType,
@@ -11,8 +12,6 @@ import {
 import { IAccordion } from 'src/app/shared/models/core';
 import { IAccordionItem, URLS } from '../../shared/models/core';
 import { ECurrency } from '../../shared/models/currency';
-import { TranslateService } from '../../shared/services/translate.service';
-import { IMAGES } from 'src/assets/images/images';
 
 @Component({
   selector: 'app-tools-page',
@@ -54,7 +53,6 @@ export class ToolsPageComponent implements OnInit {
       title: 'PAGES.TOOLS.CUSTOM.calculator',
       tooltip: 'PAGES.TOOLS.CUSTOM.calculatorTooltip',
       iconPath: 'dialpad',
-      // iconPath: IMAGES.IconCalculator,
       color: '#fff',
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF,
@@ -66,7 +64,6 @@ export class ToolsPageComponent implements OnInit {
       title: 'PAGES.TOOLS.CUSTOM.whenToSell',
       tooltip: 'PAGES.TOOLS.CUSTOM.whenToSellTooltip',
       iconPath: 'score',
-      // iconPath: 'event_note',
       color: '#fff',
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF,
@@ -77,7 +74,6 @@ export class ToolsPageComponent implements OnInit {
       // routerLink: 'calculator-benefits',
       title: 'PAGES.TOOLS.CUSTOM.benefits',
       tooltip: 'PAGES.TOOLS.CUSTOM.benefitsTooltip',
-      // iconPath: 'timer',
       iconPath: 'poll',
       color: '#fff',
       type: ELinkableIconType.ICON,
@@ -143,22 +139,7 @@ export class ToolsPageComponent implements OnInit {
   }
 
   private prepareBitcoinWallets(): IAccordion {
-    const groupName = 'BITCOIN_WALLETS';
-    const accordion = this.createToolsGroup(
-      groupName,
-      [
-        this.createToolItem(groupName, 'Blue Wallet', URLS.REF_BlueWallet, 4.2),
-        this.createToolItem(groupName, 'Muun Wallet', URLS.REF_MuunWallet, 4.3),
-        this.createToolItem(groupName, 'Samourai Wallet', URLS.REF_SamouraiWallet, 5),
-        this.createToolItem(groupName, 'Sparrow Wallet', URLS.REF_SparrowWallet, 5),
-        this.createToolItem(groupName, 'Specter Wallet', URLS.REF_SpecterWallet, 4.5),
-        this.createToolItem(groupName, 'Wallet Of Satoshi', URLS.REF_WalletOfSatoshi, 4),
-        this.createToolItem(groupName, 'Zap', URLS.REF_Zap, 3.5),
-        this.createToolItem(groupName, 'Zebedee', URLS.REF_Zebedee, 3),
-      ],
-      'bitcoin'
-    );
-    return accordion;
+    return this.coreService.prepareBitcoinWallets();
   }
 
   private prepareToolsExchangeCEX(): IAccordion {
@@ -217,7 +198,11 @@ export class ToolsPageComponent implements OnInit {
     const accordion = this.createToolsGroup(
       groupName,
       [
+        this.createToolItem(groupName, 'BSCheck', URLS.REF_BSCheck, 2),
         this.createToolItem(groupName, 'Chainlist', URLS.REF_Chainlist, 4.5),
+        this.createToolItem(groupName, 'HoneyPot', URLS.REF_Honeypot, 3.5),
+        this.createToolItem(groupName, 'Mudra', URLS.REF_Mudra, 4),
+        this.createToolItem(groupName, 'RugDoc', URLS.REF_RugDoc, 4),
       ],
       'important_devices'
     );
@@ -225,42 +210,15 @@ export class ToolsPageComponent implements OnInit {
   }
 
   private createToolsGroup(groupName: string, items: IAccordionItem[], icon?: string, disabled?: boolean): IAccordion {
-    items = (this.coreService.sorter(items, '-rank'));
-    return {
-      title: `PAGES.TOOLS.GROUPS.${groupName}.title`,
-      description: `PAGES.TOOLS.GROUPS.${groupName}.description`,
-      disabled,
-      icon,
-      items
-    };
+    return this.coreService.createToolsGroup(groupName, items, icon, disabled);
   }
 
   private createToolItem(groupName: string, name: string, link: string, rank: number): IAccordionItem {
-    return {
-      text: name,
-      link,
-      description: `PAGES.TOOLS.GROUPS.${groupName}.app${name.replace(/\s/g, '')}`,
-      image: '',
-      rank
-    };
+    return this.coreService.createToolItem(groupName, name, link, rank);
   }
 
   isNullOrEmpty(val: string): boolean {
     val = this.translateService.instant(val);
     return this.coreService.isNullOrEmpty(val.trim());
   }
-
-  /**
-   *
-    Apps de MercatorCrypto
-    - StaySafu: app.staysafu.org. Análisis automático del token desde scan token. Muy util para tener un primer resumen.
-    - BSCheck: bscheck.eu. Estupenda herramienta para análisis automático de tokens.
-    - Justbuitffs: apps.justbuitffs.com. Otor escáner de tokens.
-    - MoonArch: moonarch.app. Algunos datos sobre los tokens aunque bastante incompleta, pero muy visual.
-    - Honeypot: honeypot.is. Estupenda herramienta para detectar si estamos ante un tarro de miel, token en el que puedes comprar, pero no vender.
-    - RugPullDetector: rugpulldetector.com. Estupenda herramienta para detectar si en el contrato está activada esa opción. Un poco coñazo porque hay que copiar el contrato del token. Pero se puede hacer desde Coingecko o Coinmarketcap sin problemas.
-    - RugDoc: rugdoc.io. Herramienta similar a las anteriores, aunque tiene muchos tokens de otras redes distintas de la BSC.
-    - Mudra: mudra.website. Herramienta en que se puede ver la liquidez bloqueada de muchos tokens. Especialmente interesante porque se ven los últimos tokens que la han bloqueado aquí.
-   *
-   */
 }

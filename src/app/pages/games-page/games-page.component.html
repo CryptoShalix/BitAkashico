@@ -1,0 +1,67 @@
+<div class="content">
+
+  <div class="about">
+    <span [innerHTML]="('PAGES.GAMES.about' | translate) | safe:'html'"></span>
+
+    <div class="content-games">
+      <span [innerHTML]="('PAGES.GAMES.aboutGames' | translate) | safe:'html'"></span>
+
+      <div class="content-games-items">
+        <div
+          class="content-games-item"
+          *ngFor="let game of gamesList"
+        >
+          <img
+            *ngIf="game.imgLarge"
+            class="large"
+            [src]="game.imgLarge"
+          >
+
+          <div class="item-container">
+            <div class="item-name">
+              <img
+                *ngIf="game.imgSmall"
+                class="small"
+                [src]="game.imgSmall"
+              >
+              <div class="box-name">
+                <span
+                  *ngIf="game.name"
+                  class="name"
+                >{{ stringsPrefix + game.name | translate }}</span>
+                <span
+                  *ngIf="game.title"
+                  class="title"
+                >{{ stringsPrefix + game.title | translate  }}</span>
+              </div>
+            </div>
+
+            <span
+              *ngIf="game.description"
+              class="description"
+            >{{ stringsPrefix + game.description | translate  }}</span>
+          </div>
+
+          <div class="buttons">
+            <a
+              *ngIf="game.linkApple"
+              [href]="game.linkApple"
+              target="_blank"
+            ><img [src]="imgAppStoreApple"></a>
+            <a
+              *ngIf="game.linkGoogle"
+              [href]="game.linkGoogle"
+              target="_blank"
+            ><img [src]="imgAppStoreGoogle"></a>
+          </div>
+        </div>
+      </div>
+
+      <app-accordion
+        [setAccordionList]="walletsList"
+        [showExpanded]="true"
+      ></app-accordion>
+    </div>
+  </div>
+
+</div>
