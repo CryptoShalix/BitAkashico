@@ -92,6 +92,8 @@ export class ToolsPageComponent implements OnInit {
     this.toolsList.push(this.prepareToolsExchangeCEX());
     this.toolsList.push(this.prepareToolsExchangeDEX());
     this.toolsList.push(this.prepareToolsWallets());
+    this.toolsList.push(this.prepareToolsPortfolioTrackers());
+    this.toolsList.push(this.prepareToolsScamDetector());
     this.toolsList.push(this.prepareToolsOthers());
   }
 
@@ -193,16 +195,50 @@ export class ToolsPageComponent implements OnInit {
     return accordion;
   }
 
+  private prepareToolsPortfolioTrackers(): IAccordion {
+    const groupName = 'PORTFOLIO-TRACKERS';
+    const accordion = this.createToolsGroup(
+      groupName,
+      [
+        this.createToolItem(groupName, 'ApeBoard', URLS.REF_ApeBoard, 4.2),
+        this.createToolItem(groupName, 'DappRadar', URLS.REF_DappRadar, 4),
+        this.createToolItem(groupName, 'DeBank', URLS.REF_DeBank, 4.1),
+        this.createToolItem(groupName, 'DefiSaver', URLS.REF_DefiSaver, 4),
+        this.createToolItem(groupName, 'DefiYield', URLS.REF_DefiYield, 4),
+        this.createToolItem(groupName, 'Zapper', URLS.REF_Zapper, 4),
+        this.createToolItem(groupName, 'Zerion', URLS.REF_Zerion, 4),
+      ],
+      'pie_chart'
+    );
+    return accordion;
+  }
+
+  private prepareToolsScamDetector(): IAccordion {
+    const groupName = 'SCAM-DETECTOR';
+    const accordion = this.createToolsGroup(
+      groupName,
+      [
+        this.createToolItem(groupName, 'BSCheck', URLS.REF_BSCheck, 3),
+        this.createToolItem(groupName, 'TokenSniffer', URLS.REF_TokenSniffer, 3),
+        this.createToolItem(groupName, 'HoneyPot', URLS.REF_Honeypot, 3.5),
+        this.createToolItem(groupName, 'Certik', URLS.REF_Certik, 4.2),
+        this.createToolItem(groupName, 'GemProtocol', URLS.REF_GemProtocol, 4),
+        this.createToolItem(groupName, 'RugDoc', URLS.REF_RugDoc, 4),
+        this.createToolItem(groupName, 'ScamAlert', URLS.REF_ScamAlert, 3),
+        this.createToolItem(groupName, 'ScamDoc', URLS.REF_ScamDoc, 2.5),
+        this.createToolItem(groupName, 'TokenFomo', URLS.REF_TokenFomo, 2),
+      ],
+      'bug_report'
+    );
+    return accordion;
+  }
+
   private prepareToolsOthers(): IAccordion {
     const groupName = 'OTHERS';
     const accordion = this.createToolsGroup(
       groupName,
       [
-        this.createToolItem(groupName, 'BSCheck', URLS.REF_BSCheck, 2),
         this.createToolItem(groupName, 'Chainlist', URLS.REF_Chainlist, 4.5),
-        this.createToolItem(groupName, 'HoneyPot', URLS.REF_Honeypot, 3.5),
-        this.createToolItem(groupName, 'Mudra', URLS.REF_Mudra, 4),
-        this.createToolItem(groupName, 'RugDoc', URLS.REF_RugDoc, 4),
       ],
       'important_devices'
     );

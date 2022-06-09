@@ -5,7 +5,8 @@
     [ngClass]="{
       'card': defaultIcon.isCard,
       'no-border': defaultIcon.isImage,
-      'router-link-active': isCurrentPage(defaultIcon.routerLink)
+      'router-link-active': isCurrentPage(defaultIcon.routerLink),
+      'menu-button': defaultIcon.isMenu
     }"
     [attr.aria-valuenow]="defaultIcon.label | translate"
     [target]="defaultIcon.target"
@@ -24,7 +25,8 @@
     [ngClass]="{
       'card': defaultIcon.isCard,
       'no-border': defaultIcon.isImage,
-      'router-link-active': isCurrentPage(defaultIcon.href)
+      'router-link-active': isCurrentPage(defaultIcon.href),
+      'menu-button': defaultIcon.isMenu
     }"
     [attr.aria-valuenow]="defaultIcon.label | translate"
     [target]="defaultIcon.target"
@@ -41,8 +43,8 @@
     class="linkable-icon"
     [ngClass]="{
       'card': defaultIcon.isCard,
-    'no-border': defaultIcon.isImage
-  }"
+      'no-border': defaultIcon.isImage
+    }"
     [attr.aria-valuenow]="defaultIcon.label | translate"
     [title]="defaultIcon.title | translate"
     [attr.tooltip]="defaultIcon.tooltip | translate"

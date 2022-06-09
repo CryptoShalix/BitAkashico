@@ -73,12 +73,28 @@ export enum URLS {
   REF_Safepal = '',
   REF_TrustWallet = '',
 
-  // REFERRALS: OTHERS
+  // REFERRALS: PORTFOLIO TRACKERS
+  REF_ApeBoard = 'https://apeboard.finance/dashboard',
+  REF_DappRadar = 'https://dappradar.com',
+  REF_DeBank = 'https://debank.com',
+  REF_DefiSaver = 'https://defisaver.com',
+  REF_DefiYield = 'https://defiyield.app',
+  REF_Zapper = 'https://zapper.fi',
+  REF_Zerion = 'https://zerion.io',
+
+  // REFERRALS: SCAM DETECTORS
   REF_BSCheck = 'https://bscheck.eu',
-  REF_Chainlist = 'https://chainlist.org',
+  REF_Certik = 'https://www.certik.com',
+  REF_GemProtocol = 'https://gemprotocol.io/rug-checker',
   REF_Honeypot = 'https://honeypot.is',
-  REF_Mudra = 'https://mudra.website',
   REF_RugDoc = 'https://rugdoc.io',
+  REF_ScamAlert = 'https://scam-alert.io',
+  REF_ScamDoc = 'https://www.scamdoc.com/es',
+  REF_TokenFomo = 'https://tokenfomo.io',
+  REF_TokenSniffer = 'https://tokensniffer.com',
+
+  // REFERRALS: OTHERS
+  REF_Chainlist = 'https://chainlist.org',
 }
 
 export enum BUTTONS {

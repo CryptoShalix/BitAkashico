@@ -40,6 +40,7 @@ export interface ILinkableIcon {
   target?: string;
   showText?: boolean;
   isCard?: boolean;
+  isMenu?: boolean;
   type?: ELinkableIconType;
 }
 
@@ -56,6 +57,7 @@ export class LinkableIcon {
   public isSVG: boolean;
   public isImage: boolean;
   public showText: boolean;
+  public isMenu: boolean;
   public target: string;
 
   constructor(
@@ -71,6 +73,7 @@ export class LinkableIcon {
     let target = linkableIcon?.target;
     let showText = linkableIcon && linkableIcon.showText ? true : false;
     this.isCard = linkableIcon && linkableIcon.isCard ? true : false;
+    this.isMenu = linkableIcon && linkableIcon.isMenu ? true : false;
     this.isImage = false;
     this.isSVG = false;
     this.routerLink = '';
@@ -96,7 +99,7 @@ export class LinkableIcon {
         this.isSVG = false;
         this.isImage = true;
         target = ELinkableTarget.SELF;
-        showText = linkableIcon && linkableIcon.showText !== undefined ? linkableIcon.showText : true;
+        showText = linkableIcon && linkableIcon.showText !== undefined ? linkableIcon.showText : false;
         break;
       case ELinkableIcon.Twitter:
         this.id = ELinkableIcon.Twitter.toLowerCase();

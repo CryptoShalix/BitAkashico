@@ -73,9 +73,13 @@ export class AppComponent implements OnInit {
 
   private prepareMenu(): void {
     this.navMenu = [];
+    this.navMenu.push({ text: 'MENU.academy', link: '/', icon: 'school', disabled: false });
+    this.navMenu.push({ text: 'MENU.tools', link: 'tools', icon: 'construction', disabled: false });
     this.navMenu.push({ text: 'MENU.security', link: '/', icon: 'security', disabled: true });
     this.navMenu.push({ text: 'MENU.books', link: '/', icon: 'menu_book', disabled: true });
+    this.navMenu.push({ text: 'MENU.portfolio', link: '/', icon: 'pie_chart', disabled: true });
     this.navMenu.push({ text: 'MENU.games', link: 'games', icon: 'sports_esports', disabled: false });
+    this.navMenu.push({ text: 'MENU.trading', link: '/', icon: 'groups', disabled: true });
 
     this.iconListMenu = [];
     this.iconListMenu.push(new LinkableIcon(this.icmIdHome, {
@@ -91,7 +95,9 @@ export class AppComponent implements OnInit {
       iconPath: 'school',
       color: '#fff',
       type: ELinkableIconType.ICON,
-      target: ELinkableTarget.SELF
+      target: ELinkableTarget.SELF,
+      showText: true,
+      isMenu: true
     }));
     this.iconListMenu.push(new LinkableIcon(this.icmIdTools, {
       routerLink: 'tools',
@@ -99,7 +105,9 @@ export class AppComponent implements OnInit {
       iconPath: 'construction',
       color: '#fff',
       type: ELinkableIconType.ICON,
-      target: ELinkableTarget.SELF
+      target: ELinkableTarget.SELF,
+      showText: true,
+      isMenu: true
     }));
     this.iconListMenu.push(new LinkableIcon(this.icmIdTrading, {
       // routerLink: 'trading',
@@ -108,7 +116,9 @@ export class AppComponent implements OnInit {
       iconPath: 'groups',
       color: '#fff',
       type: ELinkableIconType.ICON,
-      target: ELinkableTarget.SELF
+      target: ELinkableTarget.SELF,
+      showText: true,
+      isMenu: true
     }));
     this.iconListMenu.push(new LinkableIcon(this.icmIdPortfolio, {
       // routerLink: 'portfolio',
@@ -117,7 +127,9 @@ export class AppComponent implements OnInit {
       iconPath: 'pie_chart',
       color: '#fff',
       type: ELinkableIconType.ICON,
-      target: ELinkableTarget.SELF
+      target: ELinkableTarget.SELF,
+      showText: true,
+      isMenu: true
     }));
   }
 

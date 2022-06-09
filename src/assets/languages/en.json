@@ -27,7 +27,7 @@
   },
   "PAGES": {
     "MAIN": {
-      "about": "Crypto Shalix aims to bring together everything related to cryptocurrencies in one place, from which to learn, share, and trade in this new world that has come to us.",
+      "about": "Crypto Shalix aims to bring together everything related to cryptocurrencies in one place, from which to learn, share, and trade.",
       "videoTitle": "Digital revolution: Blockchain, cryptocurrencies, NFT and metaverse"
     },
     "TOOLS": {
@@ -108,14 +108,34 @@
           "appSafepal": "It is both cold wallet and app, that allows you to generate or import any wallet. It's secure, easy to use, and has multiple functions such as its internal exchange over Binance, in addition to its section of dApps, earn and its own token to reduce fees in operations. It's only handicap is: closed source.",
           "appTrustWallet": "Software wallet. Easy to use, configure and connect anywhere. Partially safe. It is best to combine it with a Hardware Wallet (HW) like Trezor or Ledger. It works with +160 different cryptocurrencies (BTC, ETH, etc)."
         },
+        "PORTFOLIO-TRACKERS": {
+          "title": "Portfolio trackers",
+          "description": "Protocolos para monitorizar tu portfolio e inversiones en el ecosistema DeFi.",
+          "appApeBoard": "",
+          "appDappRadar": "All you need. All in one place. Dapps, NFT's, Tokens, last DeFi projects, airdrops, swaps, portfolio tracker, and more...",
+          "appDeBank": "It allows you to see your wallets and control your finances in DeFi, you can even revoke contracts directly without having to enter said blockchain. You have all the information at your fingertips, although, yes, only web version.",
+          "appDefiSaver": "It allows you to control your DeFi portfolio even by connecting your cold wallet (Ledger, Trezor, etc), or use the simulation version to see how the funds are managed in this app.",
+          "appDefiYield": "Multichain, reads NFT's, transactions, allows you to revoke contracts, has an impermanent loss calculator and a scanner soon. Very complete. They have a newsletter subscription with daily information for the best pairs in profitability.",
+          "appZapper": "It has 15 blockchain networks to connect, from which you can control your portfolio and, in addition, receive price alerts, see your order history, and farm, swaps, bridges, etc. Is very complete.",
+          "appZerion": "Very easy to use, with its optimized interface, and being multichain, you will be able to see everything, even the LP's. You can create a wallet or import another hot wallet you have. Totally free and available for web and mobile (Android and iOS)."
+        },
+        "SCAM-DETECTOR": {
+          "title": "Scam detectors",
+          "description": "Useful websites to spot scams, honeypots, rug-pulls, etc.",
+          "appBSCheck": "Great tool for automatic analysis of tokens in various blockchain networks: Binance, Ethereum and Polygon.",
+          "appTokenSniffer": "Tool to detect if a token is a scam, rugpull or any type of scam.",
+          "appHoneyPot": "Great tool to detect if we are facing a honeypot, that is, a token that you can buy, but not sell. Or, in other words, a scam.",
+          "appCertik": "Founded in 2018 by professors of Columbia and Yale, CertiK is a pioneer in blockchain security, utilizing best-in-class Formal Verification and AI technology to secure and monitor blockchains, smart contracts, and Web3 apps.",
+          "appScamAlert": "Report scams, thefts and fraudulent websites involving any blockchain or cryptocurrency and help us fight crypto crime!",
+          "appScamDoc": "It allows to evaluate the confidence of a digital identity (email address or website).",
+          "appGemProtocol": "Free tool that will help you to identify possible rugpulls hidden in the smart contract, honeypots and important informations about the liquidity of the project.",
+          "appRugDoc": "Tool that allows analysis and detection of the risk level of tokens, NFTs, liquidity farms and decentralized exchanges (DEX) on various blockchain networks.",
+          "appTokenFomo": "Every token deployed in the last 24 hours. Take care, almost all of them are scams."
+        },
         "OTHERS": {
           "title": "Other interesting applications",
           "description": " ",
-          "appBSCheck": "Great tool for automatic analysis of tokens in various blockchain networks: Binance, Ethereum and Polygon.",
-          "appChainlist": "It allows you to add new networks to your wallet on EVM (Ethereum Virtual Machine), be it this BraveWallet, Metamask or any other that uses this Ethereum virtual machine.",
-          "appHoneyPot": "Great tool to detect if we are facing a honeypot, that is, a token that you can buy, but not sell. Or, in other words, a scam.",
-          "appRugDoc": "Tool that allows analysis and detection of the risk level of tokens, NFTs, liquidity farms and decentralized exchanges (DEX) on various blockchain networks.",
-          "appMudra": "Tool that allows: to analyze new tokens, create your own tokens, and block liquidity from the page itself, with a nice and simple interface, and premium (paid) plans."
+          "appChainlist": "It allows you to add new networks to your wallet on EVM (Ethereum Virtual Machine), be it this BraveWallet, Metamask or any other that uses this Ethereum virtual machine."
         }
       }
     },

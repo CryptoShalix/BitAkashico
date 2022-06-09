@@ -1,9 +1,9 @@
 @import './styles-colors.scss';
 
 .cdk-overlay-connected-position-bounding-box {
-  top: 100% !important;
+  top: 0 !important;
   left: 0 !important;
-  bottom: 0 !important;
+  bottom: 100% !important;
   height: 0 !important;
   width: 100% !important;
   align-items: flex-start !important;
@@ -15,6 +15,13 @@
   outline: none;
 }
 
+.nav-menu-link {
+  height: 30px;
+  width: 30px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 .mat-menu-panel {
   position: absolute;
   width: 100%;
@@ -22,7 +29,7 @@
   max-width: 300px !important;
   min-height: 65px !important;
   left: 50%;
-  bottom: 80px;
+  top: 105px;
   transform: translate(-50%, 0);
 
   .mat-menu-item:hover:not([disabled]),
