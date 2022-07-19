@@ -10,17 +10,21 @@
   justify-content: flex-end !important;
 }
 
-.nav-menu-link .linkable-icon {
-  border: none;
-  outline: none;
-  bottom: 5px;
-}
-
 .nav-menu-link {
   width: 100px;
   height: 60px;
   font-size: 30px;
   cursor: pointer;
+
+  .linkable-icon {
+    border: none;
+    outline: none;
+    bottom: 5px;
+  }
+
+  .linkable-icon.router-link-active:before {
+    border-bottom-color: transparent;
+  }
 }
 
 .mat-menu-panel {
@@ -89,5 +93,9 @@
     min-width: 100% !important;
     max-width: 100% !important;
     max-height: calc(100% - 110px) !important;
+  }
+
+  .nav-menu-link .linkable-icon {
+    bottom: 0;
   }
 }

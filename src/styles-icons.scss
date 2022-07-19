@@ -246,7 +246,8 @@ svg.material-icons:not(:last-child) {
     position: absolute;
     display: flex;
     visibility: hidden;
-    top: -45px;
+    // top: -45px;
+    top: -50px;
     left: -55px;
     width: 150px;
     height: 35px;
@@ -361,7 +362,8 @@ svg.material-icons:not(:last-child) {
 
   .language-tooltip {
     position: fixed !important;
-    top: calc(100% - 90px) !important;
+    // top: calc(100% - 90px) !important;
+    top: calc(100% - 100px) !important;
     bottom: 85px !important;
     left: 0 !important;
     width: 100% !important;

@@ -9,8 +9,8 @@
   margin: 0 auto;
   align-items: center;
   overflow: hidden;
-  background: $toolbar-background;
-  border-bottom: 1px solid $toolbar-border-color;
+  background: $carousel-background;
+  border-bottom: 1px solid $carousel-border-color;
 }
 
 .carousel>* {
@@ -39,10 +39,10 @@
     border-radius: 5px;
 
     &:hover {
-      color: $toolbar-background;
-      background: $toolbar-border-color;
+      color: $carousel-item-hover-text;
+      background: $carousel-item-hover-background;
       font-weight: bold;
-      border-color: $toolbar-background;
+      border-color: $carousel-item-hover-border;
     }
 
   }

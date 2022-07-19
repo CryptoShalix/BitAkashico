@@ -21,7 +21,8 @@
     display: block;
     width: 100%;
     height: auto;
-    top: 54px;
+    // top: 54px;
+    top: 0;
 
     .coins-carousel-component {
       display: block;
@@ -34,8 +35,10 @@
     position: relative;
     display: block;
     width: 100%;
-    height: calc(100% - 155px);
-    top: 55px;
+    // height: calc(100% - 155px);
+    height: calc(100% - 105px);
+    // top: 55px;
+    top: 0;
     bottom: 60px;
     margin: 0 auto;
     padding: 25px 10px;
@@ -59,7 +62,8 @@
       position: relative;
       display: flex;
       width: calc(100% - 150px);
-      min-width: 280px;
+      // min-width: 280px;
+      min-width: 340px;
       margin: 2px auto;
       justify-content: center;
       align-items: center;
@@ -70,7 +74,6 @@
       display: flex;
       left: 1%;
       top: -35%;
-      padding: 10px;
       align-items: center;
       justify-content: flex-start;
       background: $toolbar-background;
@@ -81,6 +84,12 @@
 
       &:hover {
         color: $toolbar-border-color;
+      }
+
+      .mat-icon {
+        padding: 20px;
+        display: flex;
+        align-self: center;
       }
     }
   }
@@ -93,7 +102,8 @@
   }
 
   .toolbar-bottom {
-    height: 55px;
+    // height: 55px;
+    height: 65px;
     bottom: 0;
     padding: 5px;
     border-top: 1px solid $toolbar-border-color;
@@ -259,8 +269,9 @@
 
   .menu-donations {
     left: 1% !important;
-    top: -25% !important;
-    padding: 5px !important;
+    // top: -25% !important;
+    top: -40% !important;
+    // padding: 5px !important;
   }
 
   .menu-donations-container-fix {
@@ -272,7 +283,8 @@
 
   .main-container {
     min-width: 100%;
-    height: calc(100% - 155px) !important;
+    // height: calc(100% - 155px) !important;
+    height: calc(100% - 105px) !important;
 
     .content {
       max-width: 100% !important;

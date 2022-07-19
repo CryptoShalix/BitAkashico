@@ -79,6 +79,7 @@
           display: flex;
           width: 100%;
           max-width: 200px;
+          min-width: 200px;
           margin: 0;
           padding: 5px;
           align-items: center;
@@ -112,6 +113,17 @@
           letter-spacing: 1px;
         }
       }
+    }
+  }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1256px) {
+  .mat-card {
+    flex-direction: column;
+
+    .mat-card-title-group {
+      min-width: 100% !important;
     }
   }
 }

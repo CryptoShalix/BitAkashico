@@ -1,9 +1,9 @@
 <div class="body">
-  <div id="stars"></div>
+  <!-- <div id="stars"></div>
   <div id="stars2"></div>
-  <div id="stars3"></div>
+  <div id="stars3"></div> -->
 
-  <div class="toolbar-top">
+  <!-- <div class="toolbar-top">
     <div class="menu-top">
       <app-linkable-icon
         class="logo"
@@ -22,7 +22,7 @@
         [sDefaultIcon]="icon"
       ></app-linkable-icon>
     </div>
-  </div>
+  </div> -->
 
   <div class="coins-carousel">
     <app-carousel></app-carousel>
@@ -49,10 +49,14 @@
       <app-linkable-icon [sDefaultIcon]="getIconListMenu(icmIdAcademy)"></app-linkable-icon>
       <app-linkable-icon [sDefaultIcon]="getIconListMenu(icmIdTools)"></app-linkable-icon>
       <app-linkable-icon
+        class="nav-menu-link"
+        [sDefaultIcon]="iconHome"
+      ></app-linkable-icon>
+      <!-- <app-linkable-icon
         [sDefaultIcon]="getIconListMenu(icmIdHome)"
         [matMenuTriggerFor]="menu"
         class="nav-menu-link"
-      ></app-linkable-icon>
+      ></app-linkable-icon> -->
       <app-linkable-icon [sDefaultIcon]="getIconListMenu(icmIdTrading)"></app-linkable-icon>
       <app-linkable-icon [sDefaultIcon]="getIconListMenu(icmIdPortfolio)"></app-linkable-icon>
 
@@ -72,7 +76,7 @@
 
 </div>
 
-<mat-menu #menu="matMenu">
+<!-- <mat-menu #menu="matMenu">
   <button
     *ngFor="let menu of navMenu"
     mat-menu-item
@@ -82,7 +86,7 @@
     <mat-icon>{{ menu.icon }}</mat-icon>
     <span>{{ menu.text | translate }}</span>
   </button>
-</mat-menu>
+</mat-menu> -->
 
 <div
   class="menu-donations-container"

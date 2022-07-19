@@ -31,7 +31,7 @@
       "videoTitle": "Revolución digital: Blockchain, criptomonedas, NFT y metaverso"
     },
     "TOOLS": {
-      "about": "Aquí encontrarás todas las plataformas y herramientas necesarias para hacer análisis técnico y fundamental, y, por supuesto, invertir, ya sea de forma centralizada o descentralizada, y con todas las ventajas e inconvenientes de cada uno. Además de wallets para Bitcoin y/o altcoins, incluso para Lightning Network (LN⚡).<br/>Para Lightning Network recomiendo visitar la página y elegir desde ahí el wallet deseado para Bitcoin: <a href='https://lightningaddress.com'>lightningaddress.com</a>.",
+      "about": "Aquí encontrarás todas las plataformas y herramientas necesarias para hacer análisis técnico y fundamental, y, por supuesto, invertir, ya sea de forma centralizada o descentralizada, y con todas las ventajas e inconvenientes de cada uno. Además de wallets para Bitcoin y/o altcoins, incluso para Lightning Network (LN⚡).<br/><br/>Para Lightning Network recomiendo visitar la página y elegir desde ahí el wallet deseado para Bitcoin: <a href='https://lightningaddress.com'>lightningaddress.com</a>.",
       "aboutCustomTools": "Si lo que buscas es calcular ciertos datos, como el <i>beneficio de un trade con puntos de venta en DCA</i>, o el <i>precio de un activo en una fecha concreta</i>, o incluso <i>saber qué criptomoneda es la que mayores rendimientos dará desde el precio actual hasta su ATH</i>, mira aquí:",
       "CUSTOM": {
         "calculator": "Calculadora",

@@ -149,15 +149,15 @@ export class ToolsPageComponent implements OnInit {
     const accordion = this.createToolsGroup(
       groupName,
       [
-        this.createToolItem(groupName, 'Binance', URLS.REF_Binance, 4.5),
-        this.createToolItem(groupName, 'Bit2Me', URLS.REF_Bit2Me, 3),
-        this.createToolItem(groupName, 'BingX', URLS.REF_BingX, 4.2),
+        this.createToolItem(groupName, 'Binance', URLS.REF_Binance, 4.4),
+        this.createToolItem(groupName, 'Bit2Me', URLS.REF_Bit2Me, 4.5),
+        this.createToolItem(groupName, 'BingX', URLS.REF_BingX, 4.3),
         this.createToolItem(groupName, 'Cryptocom', URLS.REF_CryptoCom, 3),
         this.createToolItem(groupName, 'FTX', URLS.REF_FTX, 4.3),
         this.createToolItem(groupName, 'Gemini', URLS.REF_Gemini, 2.5),
-        this.createToolItem(groupName, 'KuCoin', URLS.REF_KuCoin, 4.5),
-        this.createToolItem(groupName, 'Nexo', URLS.REF_Nexo, 4.1),
-        this.createToolItem(groupName, 'Wirex', URLS.REF_Wirex, 4.6),
+        this.createToolItem(groupName, 'KuCoin', URLS.REF_KuCoin, 4.2),
+        this.createToolItem(groupName, 'Nexo', URLS.REF_Nexo, 4),
+        this.createToolItem(groupName, 'Wirex', URLS.REF_Wirex, 4.5),
       ],
       'account_balance'
     );
