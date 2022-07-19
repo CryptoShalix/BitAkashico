@@ -21,7 +21,7 @@ svg.material-icons:not(:last-child) {
   position: relative;
   display: flex;
   width: 100%;
-  max-height: 60px;
+  max-height: 50px;
   padding: 0 5px;
   margin: 0;
   justify-content: center;
@@ -148,12 +148,11 @@ svg.material-icons:not(:last-child) {
   .svgControl {
     width: 100%;
     height: 100%;
-    max-width: 35px;
-    max-height: 35px;
-    // min-width: 25px;
-    // min-height: 25px;
-    margin: 5px;
-    // opacity: 0.5;
+    max-width: 30px;
+    max-height: 30px;
+    min-width: 25px;
+    min-height: 25px;
+    margin: 2px;
 
     &.home {
       max-width: 65px;
@@ -178,10 +177,10 @@ svg.material-icons:not(:last-child) {
   img {
     width: 100%;
     height: 100%;
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 70px;
+    max-height: 70px;
     border-radius: 50%;
-    margin: 0 10px;
+    margin: 0 2px;
   }
 
   span {
@@ -193,7 +192,7 @@ svg.material-icons:not(:last-child) {
   }
 
   .mat-icon {
-    font-size: 35px;
+    font-size: 30px;
   }
 }
 
@@ -328,6 +327,12 @@ svg.material-icons:not(:last-child) {
   .linkable-icon {
     max-height: 60px;
 
+    &.menu-button {
+      flex-direction: column;
+      min-width: 40px;
+      max-width: 40px;
+    }
+
     img {
       max-width: 65px;
       max-height: 65px;
@@ -335,7 +340,7 @@ svg.material-icons:not(:last-child) {
     }
 
     span {
-      font-size: 12px !important;
+      font-size: 10px !important;
     }
 
     span,
@@ -345,12 +350,12 @@ svg.material-icons:not(:last-child) {
     }
 
     .svgControl {
-      max-width: 30px;
-      max-height: 30px;
+      max-width: 25px;
+      max-height: 25px;
     }
 
     .mat-icon {
-      font-size: 30px;
+      font-size: 25px;
     }
   }
 

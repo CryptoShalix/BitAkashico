@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { IMAGES } from 'src/assets/images/images';
 
 import { CoreService } from './shared/services/core.service';
@@ -42,6 +42,9 @@ export class AppComponent implements OnInit {
 
   hasBeenCopied = false;
 
+  private maxScreenWidth = 800;
+  private isBelowResolution = false;
+
   // Copy text: https://www.geeksforgeeks.org/how-to-create-copy-to-clipboard-button/
   walletBTCLNZebedeeTag = URLS.ZEBEDEE_LNTAG;
   walletBTCLNZebedeeUrl = `${URLS.ZEBEDEE_LNURL}`;
@@ -65,10 +68,21 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.prepareMenu();
+    this.getCurrentScreenResolution();
     this.prepareLogo();
     this.prepareIconListMedia();
     this.prepareData();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any): void {
+    this.getCurrentScreenResolution();
+  }
+
+  private getCurrentScreenResolution(): void {
+    this.isBelowResolution = window.innerWidth <= this.maxScreenWidth;
+    console.log(this.isBelowResolution);
+    this.prepareMenu();
   }
 
   private prepareMenu(): void {
@@ -96,7 +110,7 @@ export class AppComponent implements OnInit {
       color: '#fff',
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF,
-      showText: true,
+      showText: !this.isBelowResolution,
       isMenu: true
     }));
     this.iconListMenu.push(new LinkableIcon(this.icmIdTools, {
@@ -106,29 +120,28 @@ export class AppComponent implements OnInit {
       color: '#fff',
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF,
-      showText: true,
+      showText: !this.isBelowResolution,
       isMenu: true
     }));
     this.iconListMenu.push(new LinkableIcon(this.icmIdTrading, {
-      // routerLink: 'trading',
+      // routerLink: 'books',
       routerLink: '/',
-      title: 'MENU.trading',
-      iconPath: 'groups',
+      title: 'MENU.books',
+      iconPath: 'menu_book',
       color: '#fff',
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF,
-      showText: true,
+      showText: !this.isBelowResolution,
       isMenu: true
     }));
     this.iconListMenu.push(new LinkableIcon(this.icmIdPortfolio, {
-      // routerLink: 'portfolio',
-      routerLink: '/',
-      title: 'MENU.portfolio',
-      iconPath: 'pie_chart',
+      routerLink: 'games',
+      title: 'MENU.games',
+      iconPath: 'sports_esports',
       color: '#fff',
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF,
-      showText: true,
+      showText: !this.isBelowResolution,
       isMenu: true
     }));
   }
