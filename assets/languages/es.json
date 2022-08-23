@@ -145,7 +145,7 @@
     },
     "GAMES": {
       "about": "<i>¿Te imaginas generar ingresos jugando videojuegos?</i><br/><i>¿Te imaginas recibir esos ingresos en ₿itcoin?</i><br/><br/>Te traigo varios juegos que apenas ocupan espacio en tu móvil, puedes jugarlos cuando y cuanto quieras, y que te enviarán unos satoshis <i>(unidad mínima de bitcoin)</i> con un par de clics. Te indico también los <b>wallets</b> de bitcoin recomendados para estos juegos.",
-      "aboutGames": "Juegos Play&Earn (P&E), ya que siempre vas a ganar, aunque sea unos sats. Debemos agradecer a <a href='https://www.thndr.games/bitcoin-games' target='_blank'>thndr.games</a> y a <a href='https://zebedee.io' target='_blank'>zebedee.io</a> por ofrecernos estas maravillas de juegos.<br/><i style='font-size:12px;font-weight:bold;'>Nótese que hay muchos más, pero estos son los que se han probado y funcionan genial.</i>",
+      "aboutGames": "Juegos Play&Earn (P&E), ya que siempre vas a ganar, aunque sea unos sats. Debemos agradecer a <a class='selected' href='https://www.thndr.games/bitcoin-games' target='_blank'>thndr.games</a> y a <a class='selected' href='https://zebedee.io' target='_blank'>zebedee.io</a> por ofrecernos estas maravillas de juegos.<br/><i style='font-size:12px;font-weight:bold;'>Nótese que hay muchos más, pero estos son los que se han probado y funcionan genial.</i>",
       "gameSatsssName": "Satsss",
       "gameSatsssTitle": "¡La serpiente de siempre, ahora con ₿itcoin!",
       "gameSatsssDescription": "¿Serpiente + ₿itcoin? ¡Por qué no! Uno de los juegos móviles más conocidos y populares del mundo ahora te da sats por comer tickets.",
