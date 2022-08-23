@@ -18,23 +18,28 @@
           >
 
           <div class="item-container">
-            <div class="item-name">
-              <img
-                *ngIf="game.imgSmall"
-                class="small"
-                [src]="game.imgSmall"
-              >
-              <div class="box-name">
-                <span
-                  *ngIf="game.name"
-                  class="name"
-                >{{ stringsPrefix + game.name | translate }}</span>
-                <span
-                  *ngIf="game.title"
-                  class="title"
-                >{{ stringsPrefix + game.title | translate  }}</span>
+            <a
+              [href]="game.linkMain"
+              target="_blank"
+            >
+              <div class="item-name">
+                <img
+                  *ngIf="game.imgSmall"
+                  class="small"
+                  [src]="game.imgSmall"
+                >
+                <div class="box-name">
+                  <span
+                    *ngIf="game.name"
+                    class="name"
+                  >{{ stringsPrefix + game.name | translate }}</span>
+                  <span
+                    *ngIf="game.title"
+                    class="title"
+                  >{{ stringsPrefix + game.title | translate  }}</span>
+                </div>
               </div>
-            </div>
+            </a>
 
             <span
               *ngIf="game.description"

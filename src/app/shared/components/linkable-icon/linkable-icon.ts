@@ -28,6 +28,7 @@ export interface ICardGame {
   description?: string;
   linkApple?: string;
   linkGoogle?: string;
+  linkMain?: string;
 }
 
 export interface ILinkableIcon {

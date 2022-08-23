@@ -9,6 +9,15 @@ a {
   }
 }
 
+a.selected {
+  color: $global-link-color-hover;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .circle-link {
   height: 40px;
   width: 40px;
