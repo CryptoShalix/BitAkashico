@@ -48,8 +48,8 @@ export class AppComponent implements OnInit {
   // Copy text: https://www.geeksforgeeks.org/how-to-create-copy-to-clipboard-button/
   walletBTCLNZebedeeTag = URLS.ZEBEDEE_LNTAG;
   walletBTCLNZebedeeUrl = `${URLS.ZEBEDEE_LNURL}`;
-  walletBTCLNMuunUrl = `${URLS.MUUN_LNURL}`;
-  walletBTCLNMuunQR = `${IMAGES.WALLET_LN_MUUN}`;
+  walletBTCPaynymTag = `${URLS.PAYNYM}`;
+  walletBTCPaynymText = `Paynym: ${this.walletBTCPaynymTag}`;
 
   iconHome: LinkableIcon;
   iconListMedia: LinkableIcon[] = [];

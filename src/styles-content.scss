@@ -217,13 +217,13 @@
           &.show-as-row {
             flex-direction: row;
             align-items: center;
-            justify-content: center;
+            justify-content: left;
           }
 
           &.show-as-column {
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: left;
           }
 
           &:hover {

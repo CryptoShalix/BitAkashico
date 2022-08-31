@@ -121,11 +121,12 @@
         </a>
 
         <a
-          class="show-as-column"
+          class="show-as-row"
           (click)="onClickCopyToClipboard()"
-          [cdkCopyToClipboard]="walletBTCLNMuunUrl"
+          [cdkCopyToClipboard]="walletBTCPaynymTag"
         >
-          <img [src]="walletBTCLNMuunQR">
+          <mat-icon>polymer</mat-icon>
+          {{walletBTCPaynymText}}
         </a>
 
         <span

@@ -12,7 +12,7 @@ export enum URLS {
   // WALLETS
   ZEBEDEE_LNTAG = 'cryptoshalix@zbd.gg',
   ZEBEDEE_LNURL = 'lnurl1dp68gurn8ghj7ctsdyh85etzv4jx2efwd9hj7a3s9aex2ut4v4ehgttnw3shg6tr943ksctjvajhxtm98q6kvefkxccz6vp4xyuz6dp3xenz6wfjvguz6vmxvverzwp5v5ux2vmph0ayvm',
-  MUUN_LNURL = 'lnbc1p3xtxdwpp58kprr74p9kwqszkrglv7glaqgdgez5lhaljpvrl9m3lnutzudtfsdqqcqzzgxqyz5vqrzjqw8c7yfutqqy3kz8662fxutjvef7q2ujsxtt45csu0k688lkzu3ldyxj5syt2ry8avqqqqryqqqqthqqpysp5uk36axz40yd572eh82wrwan6mnk8nf7tnz4ggpssj64e9gzkz4nq9qypqsq9fwwdn22d33txk2ftt6ufe7ucv0ufpsf0e4zyp3qleutztr0acs960qdte4vdvvqvtp4yauear9zfcvlhspr9j9243dkwtv9dghyp6cq4qr3de',
+  PAYNYM = '+shinysalad643',
 
   // PLATFORMS
   COINGECKO = 'https://www.coingecko.com/en/coins/',
