@@ -5,7 +5,7 @@
   },
   "DONATIONS": {
     "title": "Donate some sats",
-    "message": "Any amount of satoshi is welcome. They will motivate me and help me grow the content more.<br/>Send ₿itcoin through the lightning network, so you will hardly have commissions."
+    "message": "Any amount of satoshi is welcome. They will motivate me and help me grow the content more.<br/>Send ₿itcoin through the lightning network, so you will hardly have commissions. Remember that you have the recommended ₿itcoin wallets in <a href='/#/tools'>tools</a>."
   },
   "LANGUAGE": {
     "en": "English",
@@ -31,7 +31,7 @@
       "videoTitle": "Digital revolution: Blockchain, cryptocurrencies, NFT and metaverse"
     },
     "TOOLS": {
-      "about": "Here you will find all the necessary platforms and tools to do technical and fundamental analysis, and, of course, invest, either centralized or decentralized, and with all the advantages and disadvantages of each. Besides to wallets for Bitcoin and/or altcoins, even for the Lightning Network (LN⚡).<br/><br/>For the Lightning Network I recommend visiting the next page and choosing from there the desired wallet for Bitcoin: <a href='https://lightningaddress.com'>lightningaddress.com</a>.",
+      "about": "Here you will find all the necessary platforms and tools to do technical and fundamental analysis, and, of course, invest, either centralized or decentralized, and with all the advantages and disadvantages of each. Besides to wallets for ₿itcoin and/or altcoins, even for the Lightning Network (LN⚡).<br/><br/>For the Lightning Network I recommend visiting the next page and choosing from there the desired wallet for ₿itcoin: <a href='https://lightningaddress.com'>lightningaddress.com</a>.",
       "aboutCustomTools": "If what you are looking for is to calculate certain data, such as the <i>profit of a trade with DCA points of sale</i>, or the <i>price of an asset on a specific date</i>, or even <i>to know which cryptocurrency is the one that will give the highest returns from the current price to its ATH</i>, look here:",
       "CUSTOM": {
         "calculator": "Calculator",

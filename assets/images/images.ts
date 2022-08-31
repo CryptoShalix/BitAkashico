@@ -666,8 +666,6 @@ export class IMAGES {
   static HOME_IMG_V3 = `./assets/images/logo_v3.png`;
   static HOME_IMG = IMAGES.HOME_IMG_V3;
 
-  static WALLET_LN_MUUN = `./assets/images/wallet_ln_muun.jpg`;
-
   static APP_STORE_APPLE = `./assets/images/app_store_apple.svg`;
   static APP_STORE_GOOGLE = `./assets/images/app_store_google.svg`;
 
