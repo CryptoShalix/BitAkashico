@@ -1,0 +1,20 @@
+<div class="content">
+
+  <div class="content-about">
+    <span [innerHTML]="('PAGES.BOOKS.about' | translate) | safe:'html'"></span>
+  </div>
+
+  <div class="content-books">
+    <div
+      class="book-container"
+      *ngFor="let book of books"
+    >
+      <a
+        [href]="book.url"
+        target="_blank"
+      >
+        <mat-icon>download</mat-icon><span class="book-title">{{book.name}}</span>
+      </a>
+    </div>
+  </div>
+</div>

@@ -12,6 +12,7 @@ import { URLS } from './shared/models/core';
 
 // Angular Material Icons: https://fonts.google.com/icons
 // Angular translate: https://medium.com/angular-chile/aplicaciones-multilenguaje-en-angular-7-con-ngx-translate-db8d1e7b380c
+// Lightning widget (donations): https://github.com/reneaaron/lightning-widget
 
 /**
  * To publish this app on Github Pages
@@ -54,7 +55,7 @@ export class AppComponent implements OnInit {
   iconHome: LinkableIcon;
   iconListMedia: LinkableIcon[] = [];
   iconListMenu: LinkableIcon[] = [];
-  navMenu: INavMenu[] = [];
+  // navMenu: INavMenu[] = [];
 
   icmIdHome = 'home';
   icmIdAcademy = 'academy';
@@ -81,19 +82,18 @@ export class AppComponent implements OnInit {
 
   private getCurrentScreenResolution(): void {
     this.isBelowResolution = window.innerWidth <= this.maxScreenWidth;
-    console.log(this.isBelowResolution);
     this.prepareMenu();
   }
 
   private prepareMenu(): void {
-    this.navMenu = [];
-    this.navMenu.push({ text: 'MENU.academy', link: '/', icon: 'school', disabled: false });
-    this.navMenu.push({ text: 'MENU.tools', link: 'tools', icon: 'construction', disabled: false });
-    this.navMenu.push({ text: 'MENU.security', link: '/', icon: 'security', disabled: true });
-    this.navMenu.push({ text: 'MENU.books', link: '/', icon: 'menu_book', disabled: true });
-    this.navMenu.push({ text: 'MENU.portfolio', link: '/', icon: 'pie_chart', disabled: true });
-    this.navMenu.push({ text: 'MENU.games', link: 'games', icon: 'sports_esports', disabled: false });
-    this.navMenu.push({ text: 'MENU.trading', link: '/', icon: 'groups', disabled: true });
+    // this.navMenu = [];
+    // this.navMenu.push({ text: 'MENU.academy', link: '/', icon: 'school', disabled: false });
+    // this.navMenu.push({ text: 'MENU.tools', link: 'tools', icon: 'construction', disabled: false });
+    // this.navMenu.push({ text: 'MENU.security', link: '/', icon: 'security', disabled: true });
+    // this.navMenu.push({ text: 'MENU.books', link: '/', icon: 'menu_book', disabled: true });
+    // this.navMenu.push({ text: 'MENU.portfolio', link: '/', icon: 'pie_chart', disabled: true });
+    // this.navMenu.push({ text: 'MENU.games', link: 'games', icon: 'sports_esports', disabled: false });
+    // this.navMenu.push({ text: 'MENU.trading', link: '/', icon: 'groups', disabled: true });
 
     this.iconListMenu = [];
     this.iconListMenu.push(new LinkableIcon(this.icmIdHome, {
@@ -124,8 +124,7 @@ export class AppComponent implements OnInit {
       isMenu: true
     }));
     this.iconListMenu.push(new LinkableIcon(this.icmIdTrading, {
-      // routerLink: 'books',
-      routerLink: '/',
+      routerLink: 'books',
       title: 'MENU.books',
       iconPath: 'menu_book',
       color: '#fff',

@@ -115,6 +115,41 @@ export enum URLS {
   REF_Chainlist = 'https://chainlist.org',
 }
 
+export interface IBOOK {
+  name: string;
+  url: string;
+}
+
+export class BOOKS {
+  private static list: IBOOK[] = [];
+
+  static get(): IBOOK[] {
+    this.AddBook('Andreas M. Antonopoulos - Mastering Bitcoin'
+      , 'https://mega.nz/file/slhASYSZ#f8nCtECHZi5Hxwt-2HdS30lQe791vFWF4txxkh7xUko');
+    this.AddBook('Andreas M. Antonopoulos, Rene Pickhardt - Mastering the lightning network'
+      , 'https://mega.nz/file/k8h1TSLS#Ds_5qtU4SV3s55o2LT_uz7LfceO0yJU5ezBHxsXzupA');
+    this.AddBook('Andreas M. Antonopoulos - Dominando Bitcoin'
+      , 'https://mega.nz/file/0lYxXB7B#6kByHHcVy8BjEWq3VUhVXjFSncIZycluhdMfSsWOay0');
+    this.AddBook('Andreas M. Antonopoulos - Internet del dinero'
+      , 'https://mega.nz/file/ZkIzwBRS#pUGSe-HSr1JoEMUXdpz9ZslkzTZFrmGOYudVXpoNi3Y');
+    this.AddBook('Amalia Guerrero - Cuentos y juegos para entender el dinero'
+      , 'https://mega.nz/file/45RzGaLK#xMxTh8e3QNVqE0JXDoL90gQkGo5My6RHPqDUBRiS9kc');
+    this.AddBook('Bitcoin. Un sistema de efectivo electrónico usuario a usuario'
+      , 'https://mega.nz/file/ltA2ya4D#w1td92QbssTSRL8-U7-9AqL8C16TBFQuT_VKX_lfHgg');
+    this.AddBook('Daniel Kahneman - Pensar rápido, pensar despacio'
+      , 'https://mega.nz/file/NsJSBTzC#fDjaB7TT5BwhQ6NOSyqRHr_E_-2EJ1P9nabqTZhHJKE');
+    this.AddBook('Sun Tzu - El arte de la guerra'
+      , 'https://mega.nz/file/Eth30ZaS#7udTq8Uk2Wj4sZeJmXZilIq4dRTVPHZvNuzC1bz9FMU');
+    this.AddBook('Phil Champagne - El libro de Satoshi'
+      , 'https://mega.nz/file/Vs4m2b6K#Mw_9iSwl0NHtdR6R0bA4bFe0lQj0ffiNUNuC5I9QSHE');
+    return this.list;
+  }
+
+  static AddBook(name: string, url: string): void {
+    this.list.push({ name, url });
+  }
+}
+
 export enum BUTTONS {
   dialogAccept = 'BUTTONS.accept',
   dialogCancel = 'BUTTONS.cancel'

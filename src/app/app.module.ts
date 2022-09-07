@@ -10,6 +10,7 @@ import { SharedModule } from './shared.module';
 import { PipesModule } from './shared/pipes/pipes.module';
 
 import { AppComponent } from './app.component';
+import { BooksPageComponent } from './pages/books-page/books-page.component';
 import { GamesPageComponent } from './pages/games-page/games-page.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { ToolsPageComponent } from './pages/tools-page/tools-page.component';
@@ -22,6 +23,7 @@ import { TradingPageComponent } from './pages/trading-page/trading-page.componen
     ToolsPageComponent,
     TradingPageComponent,
     GamesPageComponent,
+    BooksPageComponent,
   ],
   imports: [
     CommonModule,

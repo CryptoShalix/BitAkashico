@@ -1,0 +1,44 @@
+@import '../../../styles-colors.scss';
+
+.content {
+  display: block;
+  max-width: 50%;
+  margin: 0 auto;
+  font-size: 16px;
+  text-align: center;
+  line-height: 30px;
+  letter-spacing: 1px;
+
+  .content-books {
+    padding: 5px;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+
+    .book-container {
+      background: $card-background;
+      border-radius: 10px;
+
+      a {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        margin: 3px auto;
+        border: 1px solid $content-border-color;
+        border-radius: 10px;
+
+        .mat-icon {
+          display: flex;
+          width: 30px;
+          height: 30px;
+        }
+
+        span {
+          text-overflow: ellipsis;
+          overflow-wrap: normal;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
