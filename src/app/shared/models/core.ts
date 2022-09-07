@@ -124,6 +124,7 @@ export class BOOKS {
   private static list: IBOOK[] = [];
 
   static get(): IBOOK[] {
+    this.list = [];
     this.AddBook('Andreas M. Antonopoulos - Mastering Bitcoin'
       , 'https://mega.nz/file/slhASYSZ#f8nCtECHZi5Hxwt-2HdS30lQe791vFWF4txxkh7xUko');
     this.AddBook('Andreas M. Antonopoulos, Rene Pickhardt - Mastering the lightning network'
