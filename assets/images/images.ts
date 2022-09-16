@@ -666,6 +666,8 @@ export class IMAGES {
   static HOME_IMG_V3 = `./assets/images/logo_v3.png`;
   static HOME_IMG = IMAGES.HOME_IMG_V3;
 
+  static NO_IMAGE = `./assets/images/no_image.png`;
+
   static APP_STORE_APPLE = `./assets/images/app_store_apple.svg`;
   static APP_STORE_GOOGLE = `./assets/images/app_store_google.svg`;
 
@@ -677,6 +679,8 @@ export class IMAGES {
   static GAMES_THNDR_SATSSS_SMALL = `./assets/images/games/game_thndr_satsss_small.jpg`;
   static GAMES_THNDR_TURBO84_LARGE = `./assets/images/games/game_thndr_turbo84_large.png`;
   static GAMES_THNDR_TURBO84_SMALL = `./assets/images/games/game_thndr_turbo84_small.png`;
+  static GAMES_THNDR_SOLITAIRE_LARGE = `./assets/images/games/game_thndr_solitaire_large.jpg`;
+  static GAMES_THNDR_SOLITAIRE_SMALL = `./assets/images/games/game_thndr_solitaire_small.jpg`;
   static GAMES_BITCOIN_MINER_LARGE = `./assets/images/games/game_bitcoin_miner_large.png`;
   static GAMES_BITCOIN_MINER_SMALL = `./assets/images/games/game_bitcoin_miner_small.png`;
 
