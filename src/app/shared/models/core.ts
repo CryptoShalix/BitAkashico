@@ -23,17 +23,21 @@ export enum URLS {
   REF_GAME_TURBO84 = 'https://turbo84.thndr.games/r/shalix',
   REF_GAME_SNAKE = 'https://bitcoinsnake.thndr.games/r/shalix',
   REF_GAME_BAY = 'https://bitcoinbay.thndr.games/r/shalix',
+  REF_GAME_SOLITAIRE = 'https://solitaire.thndr.games/r/KPoa',
+  REF_GAME_MINER = 'https://zebedee.io/app',
 
   REF_GAME_AND_BOUNCE = 'https://bitcoin-bounce.sng.link/Ddomi/mvbj/n2fl',
   REF_GAME_AND_TURBO84 = 'https://turbo84.sng.link/Dbgmr/9tud9/9wff',
   REF_GAME_AND_SNAKE = 'https://bitcoin-snake.sng.link/Diskp/geum/3abn',
   REF_GAME_AND_BAY = 'https://thndr-bay.sng.link/Dk8fg/s8iy/vbo5',
+  REF_GAME_AND_SOLITAIRE = 'https://solitaire.thndr.games/r/KPoa',
   REF_GAME_AND_MINER = 'https://play.google.com/store/apps/details?id=com.fumbgames.bitcoinminor',
 
   REF_GAME_IOS_BOUNCE = 'https://bitcoin-bounce.sng.link/Ddomi/01rz/u50x',
   REF_GAME_IOS_TURBO84 = 'https://turbo84.sng.link/Dbgmr/b7kl/8vys',
   REF_GAME_IOS_SNAKE = 'https://bitcoin-snake.sng.link/Diskp/q2fr/u2ex',
   REF_GAME_IOS_BAY = 'https://thndr-bay.sng.link/Dk8fg/5lrf/d0c9',
+  REF_GAME_IOS_SOLITAIRE = 'https://solitaire.thndr.games/r/KPoa',
   REF_GAME_IOS_MINER = 'https://apps.apple.com/us/app/bitcoin-miner-idle-tycoon/id1413770650',
 
   // REFERRALS: ANALYSIS MARKET
@@ -118,36 +122,49 @@ export enum URLS {
 export interface IBOOK {
   name: string;
   url: string;
+  image: string;
 }
 
 export class BOOKS {
   private static list: IBOOK[] = [];
+  private static booksPath = '../assets/images/books/';
 
   static get(): IBOOK[] {
     this.list = [];
+
     this.AddBook('Andreas M. Antonopoulos - Mastering Bitcoin'
       , 'https://mega.nz/file/slhASYSZ#f8nCtECHZi5Hxwt-2HdS30lQe791vFWF4txxkh7xUko');
+
     this.AddBook('Andreas M. Antonopoulos, Rene Pickhardt - Mastering the lightning network'
       , 'https://mega.nz/file/k8h1TSLS#Ds_5qtU4SV3s55o2LT_uz7LfceO0yJU5ezBHxsXzupA');
+
     this.AddBook('Andreas M. Antonopoulos - Dominando Bitcoin'
       , 'https://mega.nz/file/0lYxXB7B#6kByHHcVy8BjEWq3VUhVXjFSncIZycluhdMfSsWOay0');
+
     this.AddBook('Andreas M. Antonopoulos - Internet del dinero'
       , 'https://mega.nz/file/ZkIzwBRS#pUGSe-HSr1JoEMUXdpz9ZslkzTZFrmGOYudVXpoNi3Y');
+
     this.AddBook('Amalia Guerrero - Cuentos y juegos para entender el dinero'
       , 'https://mega.nz/file/45RzGaLK#xMxTh8e3QNVqE0JXDoL90gQkGo5My6RHPqDUBRiS9kc');
+
     this.AddBook('Bitcoin. Un sistema de efectivo electrónico usuario a usuario'
       , 'https://mega.nz/file/ltA2ya4D#w1td92QbssTSRL8-U7-9AqL8C16TBFQuT_VKX_lfHgg');
+
     this.AddBook('Daniel Kahneman - Pensar rápido, pensar despacio'
       , 'https://mega.nz/file/NsJSBTzC#fDjaB7TT5BwhQ6NOSyqRHr_E_-2EJ1P9nabqTZhHJKE');
+
     this.AddBook('Sun Tzu - El arte de la guerra'
       , 'https://mega.nz/file/Eth30ZaS#7udTq8Uk2Wj4sZeJmXZilIq4dRTVPHZvNuzC1bz9FMU');
+
     this.AddBook('Phil Champagne - El libro de Satoshi'
       , 'https://mega.nz/file/Vs4m2b6K#Mw_9iSwl0NHtdR6R0bA4bFe0lQj0ffiNUNuC5I9QSHE');
+
     return this.list;
   }
 
   static AddBook(name: string, url: string): void {
-    this.list.push({ name, url });
+    const image = `${this.booksPath}${name.toLowerCase()}.png`;
+    this.list.push({ name, url, image });
   }
 }
 

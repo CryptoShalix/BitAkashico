@@ -7,6 +7,7 @@ import { PipesModule } from './shared/pipes/pipes.module';
 import { AccordionComponent } from './shared/components/accordion/accordion.component';
 import { CarouselComponent } from './shared/components/carousel/carousel.component';
 import { CoinComponent } from './shared/components/coin-info/coin-info.component';
+import { CustomImageComponent } from './shared/components/custom-image/custom-image.component';
 import { LinkableIconComponent } from './shared/components/linkable-icon/linkable-icon.component';
 import { StarRankComponent } from './shared/components/star-rank/star-rank.component';
 
@@ -17,6 +18,7 @@ import { StarRankComponent } from './shared/components/star-rank/star-rank.compo
     CoinComponent,
     LinkableIconComponent,
     StarRankComponent,
+    CustomImageComponent,
   ],
   imports: [
     CommonModule,
@@ -31,6 +33,7 @@ import { StarRankComponent } from './shared/components/star-rank/star-rank.compo
     CoinComponent,
     LinkableIconComponent,
     StarRankComponent,
+    CustomImageComponent,
   ]
 })
 export class SharedModule { }

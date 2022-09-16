@@ -11,11 +11,11 @@
           class="content-games-item"
           *ngFor="let game of gamesList"
         >
-          <img
-            *ngIf="game.imgLarge"
-            class="large"
-            [src]="game.imgLarge"
-          >
+          <app-custom-image
+            id="large"
+            [sClass]="'large'"
+            [sImgSRC]="game.imgLarge"
+          ></app-custom-image>
 
           <div class="item-container">
             <a
@@ -23,11 +23,12 @@
               target="_blank"
             >
               <div class="item-name">
-                <img
-                  *ngIf="game.imgSmall"
-                  class="small"
-                  [src]="game.imgSmall"
-                >
+                <app-custom-image
+                  id="small"
+                  [sClass]="'small'"
+                  [sImgSRC]="game.imgSmall"
+                ></app-custom-image>
+
                 <div class="box-name">
                   <span
                     *ngIf="game.name"
@@ -44,7 +45,8 @@
             <span
               *ngIf="game.description"
               class="description"
-            >{{ stringsPrefix + game.description | translate  }}</span>
+              [innerHTML]="(stringsPrefix + game.description | translate) | safe:'html'"
+            ></span>
           </div>
 
           <div class="buttons">

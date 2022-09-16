@@ -10,33 +10,68 @@
   letter-spacing: 1px;
 
   .content-books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 5px;
     scroll-behavior: smooth;
     overflow-y: auto;
+    overflow-x: hidden;
 
     .book-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 200px;
+      height: 250px;
+      padding: 0;
+      margin: 3px auto;
       background: $card-background;
+      border-radius: 10px;
+      border: 2px solid $content-border-color;
       border-radius: 10px;
 
       a {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        padding: 5px;
-        margin: 3px auto;
-        border: 1px solid $content-border-color;
-        border-radius: 10px;
+        width: 200px;
+        height: 250px;
 
-        .mat-icon {
-          display: flex;
-          width: 30px;
-          height: 30px;
+        .mat-icon.book-cover {
+          position: absolute;
+          font-size: 100px;
+          width: 100px;
+          height: 100px;
+          top: 50%;
+          transform: translate(0%, -75%);
         }
 
-        span {
+        span.book-title {
+          position: absolute;
+          display: flex;
+          height: 75px;
+          margin: 2px;
+          padding: 5px;
+          bottom: 2px;
+          align-items: center;
+          text-align: center;
+          flex-direction: row;
           text-overflow: ellipsis;
           overflow-wrap: normal;
-          white-space: nowrap;
+          line-height: 15px;
+          font-size: 10px;
+          background: rgba(0, 0, 0, .75);
+          border-radius: 0 0 10px 10px;
           overflow: hidden;
+
+          .mat-icon {
+            display: flex;
+            font-size: 20px;
+            width: 20px;
+            height: 20px;
+          }
         }
       }
     }

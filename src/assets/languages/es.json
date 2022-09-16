@@ -161,10 +161,15 @@
       "gameBayName": "THNDR Bay",
       "gameBayTitle": "Shooter de burbujas de ₿itcoin",
       "gameBayDescription": "¡Gana ₿itcoin simplemente jugando un Bubble Shooter relajante junto al mar! ¡Únete a Spark en un viaje tropical!",
+      "gameSolitaireName": "Club ₿itcoin",
+      "gameSolitaireTitle": "El solitario que te da ₿itcoin",
+      "gameSolitaireDescription": "¡Gana ₿itcoin jugando al clásico Solitario de cartas pero con colores THNDR!",
       "gameBitcoinMinerName": "₿itcoin Miner",
       "gameBitcoinMinerTitle": "¡Un idle game que te paga!",
-      "gameBitcoinMinerDescription": "Construye tu propia fábrica minera de ₿itcoin y otras criptomonedas, y recibe sats por hacerla crecer y evolucionar."
+      "gameBitcoinMinerDescription": "Construye tu propia fábrica minera de ₿itcoin y otras criptomonedas, y recibe sats por hacerla crecer y evolucionar.<br/><center><b>¡RECOMPENSAS GRATIS!</b></center>Usa este referido en amigos: RYXADE"
     }
   },
-  "STRINGS": {}
+  "STRINGS": {
+    "noImage": "No hay imagen"
+  }
 }]

@@ -5,7 +5,8 @@ import { IMAGES } from 'src/assets/images/images';
 
 import { CoreService } from '../../shared/services/core.service';
 
-import { IAccordion, IAccordionItem, URLS } from 'src/app/shared/models/core';
+import { Platform } from '@angular/cdk/platform';
+import { IAccordion, URLS } from 'src/app/shared/models/core';
 
 @Component({
   selector: 'app-games-page',
@@ -21,8 +22,11 @@ export class GamesPageComponent implements OnInit {
 
   stringsPrefix = 'PAGES.GAMES.';
 
+  noImage = IMAGES.NO_IMAGE;
+
   constructor(
-    private coreService: CoreService
+    private coreService: CoreService,
+    private platform: Platform
   ) { }
 
   ngOnInit(): void {
@@ -31,6 +35,7 @@ export class GamesPageComponent implements OnInit {
   }
 
   private prepareGames(): void {
+    const linkBitcoinMinerGame = this.platform.ANDROID ? URLS.REF_GAME_AND_MINER : this.platform.IOS ? URLS.REF_GAME_IOS_MINER : URLS.REF_GAME_MINER;
     this.gamesList = [];
 
     this.gamesList.push({
@@ -78,11 +83,23 @@ export class GamesPageComponent implements OnInit {
     });
 
     this.gamesList.push({
+      imgLarge: IMAGES.GAMES_THNDR_SOLITAIRE_LARGE,
+      imgSmall: IMAGES.GAMES_THNDR_SOLITAIRE_SMALL,
+      name: 'gameSolitaireName',
+      title: 'gameSolitaireTitle',
+      description: 'gameSolitaireDescription',
+      linkMain: URLS.REF_GAME_SOLITAIRE,
+      linkApple: URLS.REF_GAME_IOS_SOLITAIRE,
+      linkGoogle: URLS.REF_GAME_AND_SOLITAIRE
+    });
+
+    this.gamesList.push({
       imgLarge: IMAGES.GAMES_BITCOIN_MINER_LARGE,
       imgSmall: IMAGES.GAMES_BITCOIN_MINER_SMALL,
       name: 'gameBitcoinMinerName',
       title: 'gameBitcoinMinerTitle',
       description: 'gameBitcoinMinerDescription',
+      linkMain: linkBitcoinMinerGame,
       linkApple: URLS.REF_GAME_IOS_MINER,
       linkGoogle: URLS.REF_GAME_AND_MINER
     });

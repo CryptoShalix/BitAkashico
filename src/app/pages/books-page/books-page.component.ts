@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import { BOOKS, IBOOK } from 'src/app/shared/models/core';
+
 import { CoreService } from '../../shared/services/core.service';
 
 @Component({
@@ -14,5 +16,9 @@ export class BooksPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.books = this.coreService.sorter(BOOKS.get(), 'name');
+  }
+
+  isNullOrEmpty(text: string): boolean {
+    return this.coreService.isNullOrEmpty(text);
   }
 }
