@@ -127,7 +127,7 @@ export interface IBOOK {
 
 export class BOOKS {
   private static list: IBOOK[] = [];
-  private static booksPath = '../assets/images/books/';
+  private static booksPath = './assets/images/books/';
 
   static get(): IBOOK[] {
     this.list = [];
