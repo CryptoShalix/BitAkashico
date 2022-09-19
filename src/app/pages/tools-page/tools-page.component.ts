@@ -188,7 +188,8 @@ export class ToolsPageComponent implements OnInit {
       [
         this.createToolItem(groupName, 'Brave Wallet', URLS.REF_BraveWallet, 4.2),
         this.createToolItem(groupName, 'Metamask', URLS.REF_Metamask, 3.8),
-        this.createToolItem(groupName, 'Safepal', URLS.REF_Safepal, 4),
+        this.createToolItem(groupName, 'Safepal', URLS.REF_Safepal, 3.6),
+        this.createToolItem(groupName, 'Status', URLS.REF_Status, 4.1),
         this.createToolItem(groupName, 'TrustWallet', URLS.REF_TrustWallet, 3.5),
       ],
       'account_balance_wallet'

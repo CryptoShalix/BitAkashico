@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { AcademyPageComponent } from './pages/academy-page/academy-page.component';
 import { BooksPageComponent } from './pages/books-page/books-page.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { GamesPageComponent } from './pages/games-page/games-page.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'trading', component: TradingPageComponent, pathMatch: 'full' },
   { path: 'games', component: GamesPageComponent, pathMatch: 'full' },
   { path: 'books', component: BooksPageComponent, pathMatch: 'full' },
+  { path: 'academy', component: AcademyPageComponent, pathMatch: 'full' },
   { path: '**', component: ErrorPageComponent }
 ];
 

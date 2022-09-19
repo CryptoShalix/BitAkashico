@@ -103,8 +103,7 @@ export class AppComponent implements OnInit {
       type: ELinkableIconType.IMAGE,
     }));
     this.iconListMenu.push(new LinkableIcon(this.icmIdAcademy, {
-      // routerLink: 'academy',
-      routerLink: '/',
+      routerLink: 'academy',
       title: 'MENU.academy',
       iconPath: 'school',
       color: '#fff',

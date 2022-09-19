@@ -1,7 +1,7 @@
 <div class="content">
 
   <div class="content-about">
-    {{ 'PAGES.MAIN.about' | translate }}
+    <span [innerHTML]="('PAGES.MAIN.about' | translate) | safe:'html'"></span>
   </div>
 
   <div class="content-cards">

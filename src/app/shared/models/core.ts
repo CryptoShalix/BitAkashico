@@ -91,10 +91,11 @@ export enum URLS {
   REF_PooCoin = 'https://poocoin.app',
 
   // REFERRALS: WALLETS
-  REF_BraveWallet = '',
-  REF_Metamask = '',
-  REF_Safepal = '',
-  REF_TrustWallet = '',
+  REF_BraveWallet = 'https://brave.com/es/wallet/',
+  REF_Metamask = 'https://metamask.io',
+  REF_Safepal = 'https://www.safepal.com',
+  REF_Status = 'https://status.im',
+  REF_TrustWallet = 'https://trustwallet.com/es/',
 
   // REFERRALS: PORTFOLIO TRACKERS
   REF_ApeBoard = 'https://apeboard.finance/dashboard',
