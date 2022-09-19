@@ -30,6 +30,9 @@
       "about": "Crypto Shalix pretende agrupar todo lo relacionado con criptomonedas en un solo lugar, desde el que poder aprender, compartir, y comerciar.",
       "videoTitle": "Revolución digital: Blockchain, criptomonedas, NFT y metaverso"
     },
+    "ACADEMY": {
+      "about": "Página en desarrollo.<br/>Próximamente vendrán contenidos interesantes.<br/>Se comunicará en <a class='selected' target='_blank' href='https://twitter.com/CryptoShalix'>Twitter</a> cuando haya novedades."
+    },
     "BOOKS": {
       "about": "El conocimiento al alcance de un clic.<br/><br/>Esta es tu <i>'bitblioteca'</i>, donde encontrarás los libros más interesantes con contenido sobre ₿itcoin, blockchain, smart contracts, finanzas y gestión del dinero, trading, desarrollo de aplicaciones y servicios relacionados con todo lo anterior... y mucho más.<br/><br/>Los libros se han recogido de diferentes fuentes por todo internet, y se almacenan en una cuenta de <a class='selected' href='https://mega.nz/aff=YvakZRq8M2Q' target='_blank'>Mega</a>, desde la que podrás visualizar y/o descargar los libros.<br/><br/><i>Si tras leerlos te han gustado, por favor, compra y mueve la economía aportando en aquello que para ti es de valor.</i>"
     },
@@ -111,8 +114,9 @@
         "WALLETS": {
           "title": "Wallets: altcoins",
           "description": "Mejores monederos de criptomonedas para ₿itcoin y altcoins.",
-          "appBraveWallet": "Requiere tener instalado el navegador Brave (ya sea PC o móvil), el cual te pagará por ver publicidad (si lo deseas) además de ofrecerte privacidad, navegación más rápida, y compatibilidad con todo lo que usa Chrome. El wallet va integrado, y permite hacer swap, comprar activos y conectarse a cualquier sitio admitido, directamente.",
+          "appBraveWallet": "Requiere tener instalado el navegador Brave (ya sea PC o móvil), el cual te pagará por ver publicidad (si lo deseas) además de ofrecerte privacidad, navegación más rápida, bloqueo de anuncios y rastreadores, y compatibilidad con todo lo que usa Chrome. El wallet va integrado, y permite hacer swap, comprar activos y conectarse a cualquier sitio admitido, directamente.",
           "appMetamask": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Seguro parcialmente. Lo mejor es combinarlo con un Hardware Wallet (HW) como Trezor o Ledger. Funciona con cualquier red de Ethereum (ERC20), y se pueden añadir otras.",
+          "appStatus": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra navegador y chat punto a punto, cifrado, y 'descentralizado'. Funciona con cualquier red de Ethereum (ERC20), y se pueden añadir otras. Incluye además un dominio propio con Unstoppable Domains si dispones de su token SNT.",
           "appSafepal": "Es una billetera fría y una aplicación que permite generar o importar cualquier billetera. Es seguro, fácil de usar y tiene múltiples funciones como su exchange interno montado sobre Binance, además de su sección de dApps, servicio earn y su propio token para reducir comisiones en las operaciones. Su única desventaja es: código cerrado.",
           "appTrustWallet": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Seguro parcialmente. Lo mejor es combinarlo con un Hardware Wallet (HW) como Trezor o Ledger. Funciona con +160 criptomonedas diferentes (BTC, ETH, etc)."
         },

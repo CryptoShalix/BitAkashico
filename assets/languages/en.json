@@ -30,6 +30,9 @@
       "about": "Crypto Shalix aims to bring together everything related to cryptocurrencies in one place, from which to learn, share, and trade.",
       "videoTitle": "Digital revolution: Blockchain, cryptocurrencies, NFT and metaverse"
     },
+    "ACADEMY": {
+      "about": "Page under development.<br/>Interesting content will come soon.<br/>Will be communicated at <a class='selected' target='_blank' href='https://twitter.com/CryptoShalix'>Twitter</a> when there is news."
+    },
     "BOOKS": {
       "about": "Knowledge at the reach of a click.<br/><br/>This is your <i>'₿it-library'</i>, where you will find the most interesting books with content on ₿itcoin, blockchain, smart contracts, finance and management of money, trading, application and services development related to all of the above... and much more.<br/><br/>The books have been collected from different sources all over the internet, and are stored in a <a class='selected' href='https://mega.nz/aff=YvakZRq8M2Q' target='_blank'>Mega</a>, from which you can view and/or download the books.<br/><br/><i>If you liked after reading them, please buy and move the economy by contributing to what is of value to you.</i>"
     },
@@ -51,6 +54,7 @@
           "appCoinGecko": "See the main market, exchange, and portfolio construction data, as well as basic news and guides.",
           "appCoinMarketCap": "See the main market, exchange, and portfolio construction data, as well as basic news and guides.",
           "appCoinMarketCal": "News and project updates",
+          "appSennet": "Sennet is a recommendation system that uses your investment history to help you find your next investment. Analyze the market and allow you to invest without much noise.",
           "appLunarcrush": "Complete social analysis of cryptocurrencies, with news, comments from influencers and much more.",
           "appGoogleTrends": "To see the number of searches for one or more words.",
           "appDefiLlama": "To analyze the DeFi market, in addition to the main DEX networks and exchanges."
@@ -108,6 +112,7 @@
           "description": "Best cryptocurrency wallets for ₿itcoin and altcoins.",
           "appBraveWallet": "It requires having the Brave browser installed (either PC or mobile), which will pay you to see ads (if you want) in addition to offering you privacy, faster browsing, and compatibility with everything that uses Chrome. The wallet is integrated, and allows you to swap, buy assets and connect to any supported site, directly.",
           "appMetamask": "Software wallet. Easy to use, configure and connect anywhere. Partially safe. It is best to combine it with a Hardware Wallet (HW) like Trezor or Ledger. It works with any Ethereum network (ERC20), and others can be added.",
+          "appStatus": "Software wallet. Easy to use, configure and connect anywhere. Integrated browser and peer-to-peer chat, with encryption, and 'decentralized'. It works with any Ethereum network (ERC20), and others can be added. It also includes your own domain with Unstoppable Domains if you have some SNT tokens.",
           "appSafepal": "It is both cold wallet and app, that allows you to generate or import any wallet. It's secure, easy to use, and has multiple functions such as its internal exchange over Binance, in addition to its section of dApps, earn and its own token to reduce fees in operations. It's only handicap is: closed source.",
           "appTrustWallet": "Software wallet. Easy to use, configure and connect anywhere. Partially safe. It is best to combine it with a Hardware Wallet (HW) like Trezor or Ledger. It works with +160 different cryptocurrencies (BTC, ETH, etc)."
         },
@@ -162,7 +167,7 @@
       "gameSolitaireDescription": "Earn ₿itcoin playing the classic card Solitaire but with THNDR colors!",
       "gameBitcoinMinerName": "₿itcoin Miner",
       "gameBitcoinMinerTitle": "An idle game that pays you!",
-      "gameBitcoinMinerDescription": "Build your own mining factory for ₿itcoin and other cryptocurrencies, and receive sats for making it grow and evolve.<br/><center><b>¡FREE REWARDS!</b></center>Use this referral in friends tab: RYXADE"
+      "gameBitcoinMinerDescription": "Build your own mining factory, and receive sats for making it grow and evolve.<br/><center><b>¡FREE REWARDS!</b></center>Use this referral in friends tab: RYXADE"
     }
   },
   "STRINGS": {}
