@@ -105,6 +105,7 @@ export class ToolsPageComponent implements OnInit {
         this.createToolItem(groupName, 'CoinGecko', URLS.REF_CoinGecko, 4.5),
         this.createToolItem(groupName, 'CoinMarketCap', URLS.REF_CoinMarketCap, 4),
         this.createToolItem(groupName, 'CoinMarketCal', URLS.REF_CoinMarketCal, 4.5),
+        this.createToolItem(groupName, 'Sennet', URLS.REF_Sennet, 4.5),
         this.createToolItem(groupName, 'Lunarcrush', URLS.REF_Lunarcrush, 3.5),
         this.createToolItem(groupName, 'DefiLlama', URLS.REF_DefiLlama, 3.5),
         this.createToolItem(groupName, 'Google Trends', URLS.REF_GoogleTrends, 1.5),

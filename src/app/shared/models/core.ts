@@ -44,6 +44,7 @@ export enum URLS {
   REF_CoinGecko = 'https://www.coingecko.com',
   REF_CoinMarketCap = 'https://www.coinmarketcap.com/invite?ref=Z97Z1PVC',
   REF_CoinMarketCal = 'https://coinmarketcal.com',
+  REF_Sennet = 'https://sennet.ai/es/?via=shalix',
   REF_DefiLlama = 'https://defillama.com',
   REF_GoogleTrends = 'https://trends.google.es/trends/explore',
   REF_Lunarcrush = 'https://www.lunarcrush.com',
