@@ -28,7 +28,8 @@
   "PAGES": {
     "MAIN": {
       "about": "Crypto Shalix pretende agrupar todo lo relacionado con criptomonedas en un solo lugar, desde el que poder aprender, compartir, y comerciar.",
-      "videoTitle": "Revolución digital: Blockchain, criptomonedas, NFT y metaverso"
+      "videoTitle": "Revolución digital: Blockchain, criptomonedas, NFT y metaverso",
+      "topAppsTitle": "⭐ TOP APPS DEL MOMENTO ⭐"
     },
     "ACADEMY": {
       "about": "Página en desarrollo.<br/>Próximamente vendrán contenidos interesantes.<br/>Se comunicará en <a class='selected' target='_blank' href='https://twitter.com/CryptoShalix'>Twitter</a> cuando haya novedades."
@@ -78,6 +79,8 @@
           "appBlixt": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN⚡). Tiene muchas herramientas muy útiles para aumentar la privacidad, seguridad y control de tus fondos.",
           "appBlueWallet": "Wallet de ₿itcoin <i>semi-custodial</i>. Se pueden conectar nodos privados o crear wallets custodial tanto para ₿itcoin on-chain como LN⚡. Sencillo de usar tanto para on-chain como Lightning Network (LN⚡).",
           "appBreez": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar en Lightning Network (LN⚡), con punto de venta (ideal para comercios), podcasts, recargas con tarjeta y mucho más.",
+          "appDefiant": "Wallet de ₿itcoin no-custodial. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra monedero NFT, navegador de Dapps, la red RSK para usar tropykus con más facilidad, y comercio P2P, además de la posibilidad de comprar mediante terceros (KYC).",
+          "appLiquality": "Wallet de ₿itcoin no-custodial. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra monedero NFT, swap con múltiples blockchain, y la red RSK para usar tropykus con más facilidad.",
           "appMuunWallet": "Wallet de ₿itcoin no-custodial, sencillo de usar tanto para on-chain como Lightning Network (LN⚡). Solo se puede enviar y recibir, y su forma de guardar las claves es peculiar.",
           "appPhoenix": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN⚡). Comisiones algo elevadas, pero genial incluso para nuevos usuarios por la pulida interfaz.",
           "appSamouraiWallet": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos y ofrece cientos de funciones de seguridad y privacidad. Complejo, pero de lo mejor para gestionar tus BTC en el móvil.",
@@ -113,9 +116,15 @@
         },
         "WALLETS": {
           "title": "Wallets: altcoins",
-          "description": "Mejores monederos de criptomonedas para ₿itcoin y altcoins.",
+          "description": "Mejores monederos de criptomonedas para ₿itcoin y altcoins. Todos self-custodial.",
           "appBraveWallet": "Requiere tener instalado el navegador Brave (ya sea PC o móvil), el cual te pagará por ver publicidad (si lo deseas) además de ofrecerte privacidad, navegación más rápida, bloqueo de anuncios y rastreadores, y compatibilidad con todo lo que usa Chrome. El wallet va integrado, y permite hacer swap, comprar activos y conectarse a cualquier sitio admitido, directamente.",
+          "appCryptoDeFiWallet": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra monedero NFT, navegador de Dapps, swap con múltiples blockchain, además de la posibilidad de comprar y vender mediante terceros (KYC) y servicio earn con algunas altcoins.",
+          "appDefiant": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra monedero NFT, navegador de Dapps, la red RSK para usar tropykus con más facilidad, y comercio P2P, además de la posibilidad de comprar mediante terceros (KYC).",
+          "appEdgeWallet": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra swap con múltiples blockchain además de la posibilidad de comprar y vender mediante terceros (KYC).",
+          "appExodus": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra swap con múltiples blockchain además de la posibilidad de comprar y vender mediante terceros (KYC) y servicio earn con algunas altcoins. Se integra perfectamente con el hardware wallet Trezor.",
+          "appLiquality": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra monedero NFT, swap con múltiples blockchain, y la red RSK para usar tropykus con más facilidad.",
           "appMetamask": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Seguro parcialmente. Lo mejor es combinarlo con un Hardware Wallet (HW) como Trezor o Ledger. Funciona con cualquier red de Ethereum (ERC20), y se pueden añadir otras.",
+          "appRabby": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra monedero NFT, navegador de Dapps, swap con múltiples blockchain, además de la posibilidad de comprar y vender mediante terceros (KYC) y servicio earn con algunas altcoins.",
           "appStatus": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra navegador y chat punto a punto, cifrado, y 'descentralizado'. Funciona con cualquier red de Ethereum (ERC20), y se pueden añadir otras. Incluye además un dominio propio con Unstoppable Domains si dispones de su token SNT.",
           "appSafepal": "Es una billetera fría y una aplicación que permite generar o importar cualquier billetera. Es seguro, fácil de usar y tiene múltiples funciones como su exchange interno montado sobre Binance, además de su sección de dApps, servicio earn y su propio token para reducir comisiones en las operaciones. Su única desventaja es: código cerrado.",
           "appTrustWallet": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Seguro parcialmente. Lo mejor es combinarlo con un Hardware Wallet (HW) como Trezor o Ledger. Funciona con +160 criptomonedas diferentes (BTC, ETH, etc)."
@@ -147,7 +156,8 @@
         "OTHERS": {
           "title": "Otras aplicaciones interesantes",
           "description": " ",
-          "appChainlist": "Permite añadir nuevas redes a tu wallet sobre EVM (Ethereum Virtual Machine), ya sea este BraveWallet, Metamask o cualquier otro que utilice esta máquina virtual de Ethereum."
+          "appChainlist": "Permite añadir nuevas redes a tu wallet sobre EVM (Ethereum Virtual Machine), ya sea este BraveWallet, Metamask o cualquier otro que utilice esta máquina virtual de Ethereum.",
+          "appSlice": "Con este plugin de navegador recibirás sats por ver anuncios mientras navegas por internet. Si deseas recibir 100 slice más, totalmente gratis, solo debes instalar con mi enlace y usar la herramienta de Slice durante 30 dias. ¡Listo! Obtén tus sats, envíalos directamente a tu Zebedee wallet (LN⚡) cuando tú desees y sin costes."
         }
       }
     },

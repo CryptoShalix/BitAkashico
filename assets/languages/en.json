@@ -28,7 +28,8 @@
   "PAGES": {
     "MAIN": {
       "about": "Crypto Shalix aims to bring together everything related to cryptocurrencies in one place, from which to learn, share, and trade.",
-      "videoTitle": "Digital revolution: Blockchain, cryptocurrencies, NFT and metaverse"
+      "videoTitle": "Digital revolution: Blockchain, cryptocurrencies, NFT and metaverse",
+      "topAppsTitle": "⭐ TOP APPS OF THE MOMENT ⭐"
     },
     "ACADEMY": {
       "about": "Page under development.<br/>Interesting content will come soon.<br/>Will be communicated at <a class='selected' target='_blank' href='https://twitter.com/CryptoShalix'>Twitter</a> when there is news."
@@ -78,6 +79,8 @@
           "appBlixt": "Non-custodial ₿itcoin wallet, which allows you to connect your own nodes, easy to use for both on-chain and Lightning Network (LN⚡). It has many very useful tools to increase the privacy, security and control of your funds.",
           "appBlueWallet": "Semi-custodial ₿itcoin wallet. Private nodes can be connected or custodial wallets created for both ₿itcoin on-chain and LN⚡. Simple to use for both on-chain and Lightning Network (LN⚡).",
           "appBreez": "Non-custodial ₿itcoin wallet, which allows you to connect your own nodes, easy to use on the Lightning Network (LN⚡), with a point of sale (ideal for businesses), podcasts, card top-ups and much more.",
+          "appDefiant": "Non-custodial ₿itcoin wallet. Easy to use, configure and connect anywhere. It integrates NFT wallet, Dapps browser, the RSK network to use tropykus more easily, and P2P commerce, in addition to the possibility of buying through third parties (KYC).",
+          "appLiquality": "Non-custodial ₿itcoin wallet. Easy to use, configure and connect anywhere. It integrates NFT wallet, swap with multiple blockchains, and the RSK network to use tropykus more easily.",
           "appMuunWallet": "Non-custodial ₿itcoin wallet, easy to use for both on-chain and Lightning Network (LN⚡). It can only be sent and received, and its way of saving the keys is peculiar.",
           "appPhoenix": "Non-custodial ₿itcoin wallet, which allows you to connect your own nodes, easy to use for both on-chain and Lightning Network (LN⚡). Somewhat high fees, but great even for new users because of the polished interface.",
           "appSamouraiWallet": "Non-custodial ₿itcoin wallet, which allows you to connect your own nodes and offers hundreds of security and privacy features. Complex, but the best to manage your BTC on mobile.",
@@ -111,7 +114,13 @@
           "title": "Wallets: altcoins",
           "description": "Best cryptocurrency wallets for ₿itcoin and altcoins.",
           "appBraveWallet": "It requires having the Brave browser installed (either PC or mobile), which will pay you to see ads (if you want) in addition to offering you privacy, faster browsing, and compatibility with everything that uses Chrome. The wallet is integrated, and allows you to swap, buy assets and connect to any supported site, directly.",
+          "appCryptoDeFiWallet": "Software wallet. Easy to use, configure and connect anywhere. It integrates NFT wallet, Dapps browser, swap with multiple blockchains, in addition to the possibility of buying and selling through third parties (KYC) and earn service with some altcoins.",
+          "appDefiant": "Software wallet. Easy to use, configure and connect anywhere. It integrates NFT wallet, Dapps browser, the RSK network to use tropykus more easily, and P2P commerce, in addition to the possibility of buying through third parties (KYC).",
+          "appEdgeWallet": "Software wallet. Easy to use, configure and connect anywhere. Integrates swap with multiple blockchains in addition to the possibility of buying and selling through third parties (KYC).",
+          "appExodus": "Software wallet. Easy to use, configure and connect anywhere. It integrates swap with multiple blockchains in addition to the possibility of buying and selling through third parties (KYC) and earn service with some altcoins. It integrates perfectly with the Trezor wallet hardware.",
+          "appLiquality": "Software wallet. Easy to use, configure and connect anywhere. It integrates NFT wallet, swap with multiple blockchains, and the RSK network to use tropykus more easily.",
           "appMetamask": "Software wallet. Easy to use, configure and connect anywhere. Partially safe. It is best to combine it with a Hardware Wallet (HW) like Trezor or Ledger. It works with any Ethereum network (ERC20), and others can be added.",
+          "appRabby": "Software wallet. Easy to use, configure and connect anywhere. It integrates NFT wallet, Dapps browser, swap with multiple blockchains, in addition to the possibility of buying and selling through third parties (KYC) and earn service with some altcoins.",
           "appStatus": "Software wallet. Easy to use, configure and connect anywhere. Integrated browser and peer-to-peer chat, with encryption, and 'decentralized'. It works with any Ethereum network (ERC20), and others can be added. It also includes your own domain with Unstoppable Domains if you have some SNT tokens.",
           "appSafepal": "It is both cold wallet and app, that allows you to generate or import any wallet. It's secure, easy to use, and has multiple functions such as its internal exchange over Binance, in addition to its section of dApps, earn and its own token to reduce fees in operations. It's only handicap is: closed source.",
           "appTrustWallet": "Software wallet. Easy to use, configure and connect anywhere. Partially safe. It is best to combine it with a Hardware Wallet (HW) like Trezor or Ledger. It works with +160 different cryptocurrencies (BTC, ETH, etc)."
@@ -143,7 +152,8 @@
         "OTHERS": {
           "title": "Other interesting applications",
           "description": " ",
-          "appChainlist": "It allows you to add new networks to your wallet on EVM (Ethereum Virtual Machine), be it this BraveWallet, Metamask or any other that uses this Ethereum virtual machine."
+          "appChainlist": "It allows you to add new networks to your wallet on EVM (Ethereum Virtual Machine), be it this BraveWallet, Metamask or any other that uses this Ethereum virtual machine.",
+          "appSlice": "With this browser plugin you will receive sats for viewing ads while browsing the internet. If you want to receive 100 more slices, totally free, you just have to install with my link and use the Slice tool for 30 days. Clever! Get your sats, send them directly to your Zebedee wallet (LN⚡) whenever you want and without costs."
         }
       }
     },
