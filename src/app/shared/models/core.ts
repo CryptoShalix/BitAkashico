@@ -96,6 +96,12 @@ export enum URLS {
   REF_Safepal = 'https://www.safepal.com',
   REF_Status = 'https://status.im',
   REF_TrustWallet = 'https://trustwallet.com/es/',
+  REF_Defiant = 'https://www.defiantapp.tech/es',
+  REF_Liquality = 'https://liquality.io',
+  REF_Exodus = 'https://www.exodus.com',
+  REF_EdgeWallet = 'https://edge.app',
+  REF_CryptoDeFi = 'https://crypto.com/eea/defi-wallet',
+  REF_Rabby = 'https://rabby.io',
 
   // REFERRALS: PORTFOLIO TRACKERS
   REF_ApeBoard = 'https://apeboard.finance/dashboard',
@@ -119,6 +125,7 @@ export enum URLS {
 
   // REFERRALS: OTHERS
   REF_Chainlist = 'https://chainlist.org',
+  REF_Slice = 'https://addslice.com/?crew=6Drqk',
 }
 
 export interface IBOOK {

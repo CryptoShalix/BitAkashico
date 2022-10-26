@@ -24,20 +24,22 @@
       flex-direction: column;
       align-items: center;
       width: 200px;
-      height: 250px;
+      height: 340px;
       padding: 0;
-      margin: 3px auto;
-      background: $card-background;
-      border-radius: 10px;
-      border: 2px solid $content-border-color;
-      border-radius: 10px;
+      margin: 5px 20px;
 
       a {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 200px;
-        height: 250px;
+        height: 100%;
+
+        &:hover span.book-title {
+          background: $card-background-hover;
+          color: $card-background;
+          border-radius: 0 0 10px 10px;
+        }
 
         .mat-icon.book-cover {
           position: absolute;
@@ -49,28 +51,41 @@
         }
 
         span.book-title {
-          position: absolute;
           display: flex;
-          height: 75px;
-          margin: 2px;
-          padding: 5px;
-          bottom: 2px;
+          width: 100%;
+          height: 70px;
+          margin: 0;
+          padding: 0;
+          bottom: 0;
           align-items: center;
-          text-align: center;
-          flex-direction: row;
-          text-overflow: ellipsis;
-          overflow-wrap: normal;
-          line-height: 15px;
-          font-size: 10px;
-          background: rgba(0, 0, 0, .75);
-          border-radius: 0 0 10px 10px;
           overflow: hidden;
+
 
           .mat-icon {
             display: flex;
             font-size: 20px;
             width: 20px;
             height: 20px;
+          }
+
+          p {
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            bottom: 0;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: row;
+            white-space: break-spaces;
+            text-overflow: ellipsis;
+            overflow-wrap: normal;
+            line-height: 15px;
+            font-size: 12px;
+            font-weight: 500;
           }
         }
       }

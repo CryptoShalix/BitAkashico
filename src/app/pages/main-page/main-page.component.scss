@@ -16,6 +16,30 @@
     align-items: center;
     padding: 5px 0;
     margin: 10px auto;
+
+    &.top-apps {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: space-around;
+      align-items: center;
+      justify-content: space-evenly;
+      color: $card-text-hover;
+      border-radius: 10px;
+
+      .title-top-apps {
+        font-weight: bold;
+      }
+
+      .container-top-apps {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-around;
+        align-items: center;
+        justify-content: space-around;
+      }
+    }
   }
 
   .content-video-responsive {

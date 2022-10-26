@@ -33,8 +33,10 @@ export class CoreService {
     items.push(this.createToolItem(groupName, 'Simple Bitcoin Wallet (SBW)', URLS.REF_SimpleBitcoinWallet, 4.8, true));
     if (!lnOnly) { items.push(this.createToolItem(groupName, 'Sparrow Wallet', URLS.REF_SparrowWallet, 5)); }
     if (!lnOnly) { items.push(this.createToolItem(groupName, 'Specter Wallet', URLS.REF_SpecterWallet, 4.5)); }
+    if (!lnOnly) { items.push(this.createToolItem(groupName, 'Defiant', URLS.REF_Defiant, 4)); }
+    if (!lnOnly) { items.push(this.createToolItem(groupName, 'Liquality', URLS.REF_Liquality, 3.8)); }
     items.push(this.createToolItem(groupName, 'Wallet Of Satoshi', URLS.REF_WalletOfSatoshi, 3.8, true));
-    items.push(this.createToolItem(groupName, 'Zap', URLS.REF_Zap, 3.9, true));
+    items.push(this.createToolItem(groupName, 'Zap', URLS.REF_Zap, 4, true));
     items.push(this.createToolItem(groupName, 'Zebedee', URLS.REF_Zebedee, 3.8, true));
     items.push(this.createToolItem(groupName, 'Zeus', URLS.REF_Zeus, 4.1, true));
 

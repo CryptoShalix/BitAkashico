@@ -150,15 +150,15 @@ export class ToolsPageComponent implements OnInit {
     const accordion = this.createToolsGroup(
       groupName,
       [
-        this.createToolItem(groupName, 'Binance', URLS.REF_Binance, 4.4),
-        this.createToolItem(groupName, 'Bit2Me', URLS.REF_Bit2Me, 4.5),
-        this.createToolItem(groupName, 'BingX', URLS.REF_BingX, 4.3),
-        this.createToolItem(groupName, 'Cryptocom', URLS.REF_CryptoCom, 3),
-        this.createToolItem(groupName, 'FTX', URLS.REF_FTX, 4.3),
+        this.createToolItem(groupName, 'Binance', URLS.REF_Binance, 4.1),
+        this.createToolItem(groupName, 'Bit2Me', URLS.REF_Bit2Me, 4.2),
+        this.createToolItem(groupName, 'BingX', URLS.REF_BingX, 4.5),
+        this.createToolItem(groupName, 'Cryptocom', URLS.REF_CryptoCom, 3.5),
+        this.createToolItem(groupName, 'FTX', URLS.REF_FTX, 4),
         this.createToolItem(groupName, 'Gemini', URLS.REF_Gemini, 2.5),
-        this.createToolItem(groupName, 'KuCoin', URLS.REF_KuCoin, 4.2),
-        this.createToolItem(groupName, 'Nexo', URLS.REF_Nexo, 4),
-        this.createToolItem(groupName, 'Wirex', URLS.REF_Wirex, 4.5),
+        this.createToolItem(groupName, 'KuCoin', URLS.REF_KuCoin, 4),
+        this.createToolItem(groupName, 'Nexo', URLS.REF_Nexo, 3.8),
+        this.createToolItem(groupName, 'Wirex', URLS.REF_Wirex, 4),
       ],
       'account_balance'
     );
@@ -186,11 +186,17 @@ export class ToolsPageComponent implements OnInit {
     const accordion = this.createToolsGroup(
       groupName,
       [
-        this.createToolItem(groupName, 'Brave Wallet', URLS.REF_BraveWallet, 4.2),
-        this.createToolItem(groupName, 'Metamask', URLS.REF_Metamask, 3.8),
-        this.createToolItem(groupName, 'Safepal', URLS.REF_Safepal, 3.6),
+        this.createToolItem(groupName, 'Brave Wallet', URLS.REF_BraveWallet, 4),
+        this.createToolItem(groupName, 'Metamask', URLS.REF_Metamask, 4),
+        this.createToolItem(groupName, 'Safepal', URLS.REF_Safepal, 3.5),
         this.createToolItem(groupName, 'Status', URLS.REF_Status, 4.1),
-        this.createToolItem(groupName, 'TrustWallet', URLS.REF_TrustWallet, 3.5),
+        this.createToolItem(groupName, 'TrustWallet', URLS.REF_TrustWallet, 3.4),
+        this.createToolItem(groupName, 'Defiant', URLS.REF_Defiant, 4.5),
+        this.createToolItem(groupName, 'Liquality', URLS.REF_Liquality, 4.2),
+        this.createToolItem(groupName, 'Exodus', URLS.REF_Exodus, 3.8),
+        this.createToolItem(groupName, 'Edge Wallet', URLS.REF_EdgeWallet, 3.9),
+        this.createToolItem(groupName, 'Crypto DeFi Wallet', URLS.REF_CryptoDeFi, 3.5),
+        this.createToolItem(groupName, 'Rabby', URLS.REF_Rabby, 3.8),
       ],
       'account_balance_wallet'
     );
@@ -241,6 +247,7 @@ export class ToolsPageComponent implements OnInit {
       groupName,
       [
         this.createToolItem(groupName, 'Chainlist', URLS.REF_Chainlist, 4.5),
+        this.createToolItem(groupName, 'Slice', URLS.REF_Slice, 4.8),
       ],
       'important_devices'
     );

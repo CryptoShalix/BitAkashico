@@ -24,4 +24,16 @@
       allowfullscreen
     ></iframe>
   </div>
+
+  <div class="content-cards top-apps">
+    <span class="title-top-apps">{{ 'PAGES.MAIN.topAppsTitle' | translate }}</span>
+    <div class="container-top-apps">
+      <app-linkable-icon
+        class="small"
+        *ngFor="let icon of iconListTopApps"
+        [sDefaultIcon]="icon"
+      >
+      </app-linkable-icon>
+    </div>
+  </div>
 </div>

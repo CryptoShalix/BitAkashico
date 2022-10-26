@@ -26,11 +26,11 @@ app-custom-image#large {
 app-custom-image#book-cover {
   position: relative;
   display: flex;
-  max-width: calc(100% - 4px);
-  max-height: calc(100% - 4px);
-  border-radius: 10px;
+  max-width: calc(100% - 0px);
+  max-height: calc(100% - 50px);
 
   img {
-    border-radius: 10px;
+    width: 200px;
+    height: 270px;
   }
 }

@@ -664,12 +664,15 @@ export class IMAGES {
   static HOME_IMG_V1 = `./assets/images/logo_v1.png`;
   static HOME_IMG_V2 = `./assets/images/logo_v2.png`;
   static HOME_IMG_V3 = `./assets/images/logo_v3.png`;
-  static HOME_IMG = IMAGES.HOME_IMG_V3;
+  static HOME_IMG = IMAGES.HOME_IMG_V1;
 
   static NO_IMAGE = `./assets/images/no_image.png`;
 
   static APP_STORE_APPLE = `./assets/images/app_store_apple.svg`;
   static APP_STORE_GOOGLE = `./assets/images/app_store_google.svg`;
+
+  static LOGO_SENNET = `./assets/images/logo_app_sennet.png`;
+  static LOGO_SLICE = `./assets/images/logo_app_slice.svg`;
 
   static GAMES_THNDR_BAY_LARGE = `./assets/images/games/game_thndr_bay_large.jpg`;
   static GAMES_THNDR_BAY_SMALL = `./assets/images/games/game_thndr_bay_small.png`;

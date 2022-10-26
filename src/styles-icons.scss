@@ -227,6 +227,19 @@ svg.material-icons:not(:last-child) {
   }
 }
 
+.small a.linkable-icon.card {
+  min-height: 50px;
+  max-height: 50px;
+  margin: 5px 15px;
+  background: $card-background-hover;
+  border: 5px solid $card-text-hover;
+
+  &:hover {
+    background: $card-text-hover;
+    color: $card-background-hover;
+  }
+}
+
 .material-icons-currency,
 .material-icons-language {
   position: relative;
