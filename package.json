@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "publish-generate": "ng build --configuration production --base-href https://adlrg.github.io/CryptoShalix/",
+    "publish-generate": "ng build --configuration production --base-href https://adlrg.github.io/CryptoShalix",
     "publish-upload": "ngh -d dist/CryptoShalix"
   },
   "private": false,
