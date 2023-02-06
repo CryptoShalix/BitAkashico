@@ -10,12 +10,14 @@ import { CoreService } from '../../shared/services/core.service';
   styleUrls: ['./books-page.component.scss']
 })
 export class BooksPageComponent implements OnInit {
-  books: IBOOK[] = [];
+  booksBit: IBOOK[] = [];
+  booksAkashico: IBOOK[] = [];
 
   constructor(private coreService: CoreService) { }
 
   ngOnInit(): void {
-    this.books = this.coreService.sorter(BOOKS.get(), 'name');
+    this.booksBit = this.coreService.sorter(BOOKS.getBit(), 'name');
+    this.booksAkashico = this.coreService.sorter(BOOKS.getAkashico(), 'name');
   }
 
   isNullOrEmpty(text: string): boolean {

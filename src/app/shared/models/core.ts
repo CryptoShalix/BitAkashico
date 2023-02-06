@@ -6,8 +6,8 @@ export enum URLS {
   // SOCIAL MEDIA
   TWITTER = 'https://twitter.com/CryptoShalix',
   DISCORD = 'https://discord.gg/9QQhZhn3Gc',
-  TELEGRAM = 'https://t.me/CryptoShalixES',
-  YOUTUBE = 'https://www.youtube.com/channel/UCde7n5s8Ed1OAlq46k_MBVA',
+  TELEGRAM = 'https://t.me/BitAkashico',
+  YOUTUBE = 'https://www.youtube.com/@BitAkashico',
 
   // WALLETS
   ZEBEDEE_LNTAG = 'cryptoshalix@zbd.gg',
@@ -50,7 +50,7 @@ export enum URLS {
   REF_Lunarcrush = 'https://www.lunarcrush.com',
 
   // REFERRALS: ANALYSIS TECHNICAL
-  REF_TradingView = 'https://www.tradingview.com',
+  REF_TradingView = 'https://es.tradingview.com/gopro/?share_your_love=CryptoShalix',
 
   // REFERRALS: BITCOIN TOOLS
   REF_BitcoinRainbowChart = 'https://www.blockchaincenter.net/bitcoin-rainbow-chart',
@@ -76,9 +76,6 @@ export enum URLS {
   REF_Binance = 'https://www.binance.com/en/register?ref=EEICFSED',
   REF_Bit2Me = 'https://bit2me.com/es/registro?r=RQB-RWI-ECZ',
   REF_BingX = 'https://bingx.com/invite/HWIXFQKZ',
-  REF_CryptoCom = 'https://crypto.com/exch/fjfnrhzmm7',
-  REF_FTX = 'https://ftx.com/#a=Shalix',
-  REF_Gemini = 'https://gemini.com/share/vgwvknzt8',
   REF_KuCoin = 'https://www.kucoin.com/ucenter/signup?rcode=rJ59448',
   REF_Nexo = 'https://nexo.io/ref/mdqndmt0yw',
   REF_Wirex = 'https://wirexapp.com/r/CryptoShalix',
@@ -126,6 +123,7 @@ export enum URLS {
   // REFERRALS: OTHERS
   REF_Chainlist = 'https://chainlist.org',
   REF_Slice = 'https://addslice.com/?crew=6Drqk',
+  REF_Satsback = 'https://satsback.com/register/m6041W511MWJBwXv',
 }
 
 export interface IBOOK {
@@ -137,9 +135,13 @@ export interface IBOOK {
 export class BOOKS {
   private static list: IBOOK[] = [];
   private static booksPath = './assets/images/books/';
+  private static booksPathBase = './assets/images/books/';
+  private static booksPathBit = this.booksPathBase + 'bit/';
+  private static booksPathAkashico = this.booksPathBase + 'akashico/';
 
-  static get(): IBOOK[] {
+  static getBit(): IBOOK[] {
     this.list = [];
+    this.booksPath = this.booksPathBit;
 
     this.AddBook('Andreas M. Antonopoulos - Mastering Bitcoin'
       , 'https://mega.nz/file/slhASYSZ#f8nCtECHZi5Hxwt-2HdS30lQe791vFWF4txxkh7xUko');
@@ -167,6 +169,16 @@ export class BOOKS {
 
     this.AddBook('Phil Champagne - El libro de Satoshi'
       , 'https://mega.nz/file/Vs4m2b6K#Mw_9iSwl0NHtdR6R0bA4bFe0lQj0ffiNUNuC5I9QSHE');
+
+    return this.list;
+  }
+
+  static getAkashico(): IBOOK[] {
+    this.list = [];
+    this.booksPath = this.booksPathAkashico;
+
+    this.AddBook('Rebecca Campbell - Mensajes para una semilla estelar'
+      , 'https://mega.nz/file/cgpWST4a#OVtTPFO8faDgOpZDq2AiJ_Y8PIrFG3Yrv1x1AAh8n00');
 
     return this.list;
   }

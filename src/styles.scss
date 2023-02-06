@@ -5,8 +5,8 @@
 @import './styles-table.scss';
 @import './styles-inputs.scss';
 @import './styles-content.scss';
+@import './styles-tab.scss';
 @import './styles-custom-image.scss';
-@import './styles-background-animated.scss';
 
 @font-face {
   font-family: 'rowdies-regular';
@@ -304,8 +304,43 @@ label {
 }
 
 .mat-expansion-indicator::after {
-  color: $body-text  !important;
+  color: $body-text !important;
 }
+
+// RADIO
+
+.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-thumb {
+  background-color: $radio-color-thumb;
+}
+
+.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-bar {
+  background-color: $radio-color-bar;
+}
+
+// STEPPER
+
+.mat-stepper-horizontal,
+.mat-stepper-vertical {
+  background-color: transparent;
+
+  .mat-step-header {
+    border-radius: 10px;
+    font-weight: bold;
+    opacity: 1;
+
+    &:hover {
+      .mat-step-label {
+        color: $stepper-tab-font-hover;
+      }
+    }
+
+    .mat-step-label {
+      color: $stepper-tab-font;
+    }
+  }
+}
+
+// OTHERS
 
 .spacer {
   flex: 1 1 auto;
@@ -316,6 +351,7 @@ label {
   visibility: hidden;
 }
 
+// SELECTION
 ::selection {
   background: var(--accent-color-03);
 }

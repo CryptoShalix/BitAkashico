@@ -4,6 +4,35 @@
     <span [innerHTML]="('PAGES.BOOKS.about' | translate) | safe:'html'"></span>
   </div>
 
+  <mat-tab-group
+    mat-align-tabs="center"
+    animationDuration="0ms"
+  >
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon class="tab-icon">₿</mat-icon>
+        <span>BIT</span>
+      </ng-template>
+      <ng-container *ngTemplateOutlet="bookshelf; context: {books: booksBit}"></ng-container>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <img
+          class="tab-icon"
+          src="../../../assets/images/img_tree_of_life.png"
+        >
+        <span>AKASHICO</span>
+      </ng-template>
+      <ng-container *ngTemplateOutlet="bookshelf; context: {books: booksAkashico}"></ng-container>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+<ng-template
+  #bookshelf
+  let-books="books"
+>
   <div class="content-books">
     <div
       class="book-container"
@@ -26,4 +55,4 @@
       </a>
     </div>
   </div>
-</div>
+</ng-template>
