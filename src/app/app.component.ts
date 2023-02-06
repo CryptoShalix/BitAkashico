@@ -53,9 +53,8 @@ export class AppComponent implements OnInit {
   walletBTCPaynymText = `Paynym: ${this.walletBTCPaynymTag}`;
 
   iconHome: LinkableIcon;
-  iconListMedia: LinkableIcon[] = [];
+  iconContact: LinkableIcon;
   iconListMenu: LinkableIcon[] = [];
-  // navMenu: INavMenu[] = [];
 
   icmIdHome = 'home';
   icmIdAcademy = 'academy';
@@ -71,7 +70,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.getCurrentScreenResolution();
     this.prepareLogo();
-    this.prepareIconListMedia();
     this.prepareData();
   }
 
@@ -86,15 +84,6 @@ export class AppComponent implements OnInit {
   }
 
   private prepareMenu(): void {
-    // this.navMenu = [];
-    // this.navMenu.push({ text: 'MENU.academy', link: '/', icon: 'school', disabled: false });
-    // this.navMenu.push({ text: 'MENU.tools', link: 'tools', icon: 'construction', disabled: false });
-    // this.navMenu.push({ text: 'MENU.security', link: '/', icon: 'security', disabled: true });
-    // this.navMenu.push({ text: 'MENU.books', link: '/', icon: 'menu_book', disabled: true });
-    // this.navMenu.push({ text: 'MENU.portfolio', link: '/', icon: 'pie_chart', disabled: true });
-    // this.navMenu.push({ text: 'MENU.games', link: 'games', icon: 'sports_esports', disabled: false });
-    // this.navMenu.push({ text: 'MENU.trading', link: '/', icon: 'groups', disabled: true });
-
     this.iconListMenu = [];
     this.iconListMenu.push(new LinkableIcon(this.icmIdHome, {
       title: 'MENU.home',
@@ -142,18 +131,21 @@ export class AppComponent implements OnInit {
       showText: !this.isBelowResolution,
       isMenu: true
     }));
+
+    this.iconContact = new LinkableIcon(this.icmIdPortfolio, {
+      routerLink: 'contact',
+      title: 'MENU.contact',
+      iconPath: 'alternate_email',
+      color: '#fff',
+      type: ELinkableIconType.ICON,
+      target: ELinkableTarget.SELF,
+      showText: false,
+      isMenu: false,
+    });
   }
 
   private prepareLogo(): void {
     this.iconHome = new LinkableIcon(ELinkableIcon.Home);
-  }
-
-  private prepareIconListMedia(): void {
-    this.iconListMedia = [];
-    this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Twitter));
-    this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Discord));
-    this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Telegram));
-    this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Youtube));
   }
 
   private prepareData(): void {

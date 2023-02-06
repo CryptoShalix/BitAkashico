@@ -4,8 +4,8 @@
     "cancel": "Cancelar"
   },
   "DONATIONS": {
-    "title": "Dóname unos sats",
-    "message": "Cualquier cantidad de satoshis es bien recibida. Me motivarán y ayudarán a hacer crecer más los contenidos.<br/>Envía ₿itcoin por lightning network, así apenas tendrás comisiones. Recuerda que tienes los wallets recomendados de ₿itcoin en <a class='selected' href='/#/tools'>herramientas</a>."
+    "title": "Dona unos sats",
+    "message": "Cualquier cantidad de satoshis es bien recibida. Nos motivarán y ayudarán a hacer crecer más los contenidos.<br/>Envía ₿itcoin por lightning network, así apenas tendrás comisiones.<br/>Recuerda que tienes los wallets recomendados de ₿itcoin en <a class='selected' href='/#/tools'>herramientas</a>."
   },
   "LANGUAGE": {
     "en": "Inglés",
@@ -14,6 +14,7 @@
   "MENU": {
     "academy": "Academia",
     "books": "Libros",
+    "contact": "Contacto",
     "games": "Juegos",
     "home": "Home",
     "portfolio": "Portfolio",
@@ -27,18 +28,37 @@
   },
   "PAGES": {
     "MAIN": {
-      "about": "Crypto Shalix pretende agrupar todo lo relacionado con criptomonedas en un solo lugar, desde el que poder aprender, compartir, y comerciar.",
-      "videoTitle": "Revolución digital: Blockchain, criptomonedas, NFT y metaverso",
+      "about": "BitAkashico se presenta como el proyecto principal de <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Diferenciando la parte <b>material</b>, que pretende apoyar en la educación financiera (₿itcoin, criptomonedas, etc) e informática; de la parte <b>espiritual</b>, que busca recordarte a tí como alma que transita este mundo, quién eres, o a qué pruebas te enfrentas ahora, mediante la lectura de tus chakras o un registro akáshico.<br/><br/>Para empezar, revisa la <a class='selected' target='_self' href='#academy'>Academia</a> o la sección de <a class='selected' target='_self' href='#books'>Libros</a>.<br/><br/>Si lo deseas, ponte en contacto con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> y resuelve las dudas mediante una sesión individual y totalmente personalizada.",
       "topAppsTitle": "⭐ TOP APPS DEL MOMENTO ⭐"
     },
     "ACADEMY": {
-      "about": "Página en desarrollo.<br/>Próximamente vendrán contenidos interesantes.<br/>Se comunicará en <a class='selected' target='_blank' href='https://twitter.com/CryptoShalix'>Twitter</a> cuando haya novedades."
+      "BIT": {
+        "about": "A través de nuestra mente, y enfocándonos en el mundo material, podemos aprender (juntos) sobre informática, finanzas o criptomonedas.<br/><br/>Tienes a tu disposición la consultoría privada uno a uno y totalmente personalizada con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a>, además de videos formativos explicando todo lo relacionado con ₿itcoin y otras criptomonedas en el canal de <a class='selected' target='_blank' href='https://www.youtube.com/@BitAkashico'>Youtube</a>.<br/><br/>Aquí puedes ver los niveles de aprendizaje que recomendamos para caer en la madriguera de ₿itcoin y las criptomonedas como es debido.<br/>",
+        "STEP_1": {
+          "title": "NIVEL: BÁSICO",
+          "description": "Revolución digital: Blockchain, criptomonedas, NFT y metaverso"
+        },
+        "STEP_2": {
+          "title": "NIVEL: INTERMEDIO",
+          "description": "Educación: ₿itcoin, privacidad y criptomonedas"
+        },
+        "STEP_3": {
+          "title": "NECESITO MÁS...",
+          "description": "Si aún tienes dudas o no has entendido algo, recuerda solicitar una sesión con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> para una clase individual totalmente personalizada."
+        }
+      },
+      "AKASHICO": {
+        "about": "A través de nuestro corazón, nos conectamos y descubrimos nuestro ser interior, con sus miedos, inquietudes y anhelos.<br/>Mediante una sesión individual (en una videollamada o de forma presencial) podremos ver nuestro mundo interior (Akasha) o descubrir el estado actual de nuestros chakras.<br/><br/>Solicita una sesión con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> y pregunta sin miedo."
+      }
     },
     "BOOKS": {
-      "about": "El conocimiento al alcance de un clic.<br/><br/>Esta es tu <i>'bitblioteca'</i>, donde encontrarás los libros más interesantes con contenido sobre ₿itcoin, blockchain, smart contracts, finanzas y gestión del dinero, trading, desarrollo de aplicaciones y servicios relacionados con todo lo anterior... y mucho más.<br/><br/>Los libros se han recogido de diferentes fuentes por todo internet, y se almacenan en una cuenta de <a class='selected' href='https://mega.nz/aff=YvakZRq8M2Q' target='_blank'>Mega</a>, desde la que podrás visualizar y/o descargar los libros.<br/><br/><i>Si tras leerlos te han gustado, por favor, compra y mueve la economía aportando en aquello que para ti es de valor.</i>"
+      "about": "El conocimiento al alcance de un clic.<br/><br/>Esta es tu <i>'biblioteca'</i>, donde encontrarás los libros más interesantes con contenido sobre ₿itcoin, blockchain, smart contracts, finanzas y gestión del dinero, trading, desarrollo de aplicaciones y servicios relacionados con todo lo anterior... además de libros de espiritualidad, psicología, prácticas saludables, y mucho más.<br/><br/>Los libros se han recogido de diferentes fuentes por todo internet, y se almacenan en una cuenta de <a class='selected' href='https://mega.nz/aff=YvakZRq8M2Q' target='_blank'>Mega</a>, desde la que podrás visualizar y/o descargar los libros.<br/><br/><i>Si tras leerlos te han gustado, por favor, compra y mueve la economía aportando en aquello que para ti es de valor.</i>"
+    },
+    "CONTACT": {
+      "about": "Ponte en contacto con @CryptoShalix en las redes sociales o con el siguiente formulario de contacto y resuelve tus dudas o problemas relacionados con finanzas, criptomonedas, ₿itcoin, informática, etc, o pregunta por una sesión de chakras o un registro akáshico, todo de forma individual y totalmente personalizado."
     },
     "TOOLS": {
-      "about": "Aquí encontrarás todas las plataformas y herramientas necesarias para hacer análisis técnico y fundamental, y, por supuesto, invertir, ya sea de forma centralizada o descentralizada, y con todas las ventajas e inconvenientes de cada uno. Además de wallets para ₿itcoin y/o altcoins, incluso para Lightning Network (LN⚡).<br/><br/>Para Lightning Network recomiendo visitar la página y elegir desde ahí el wallet deseado para ₿itcoin: <a class='selected' href='https://lightningaddress.com'>lightningaddress.com</a>.",
+      "about": "Aquí encontrarás todas las plataformas y herramientas necesarias para hacer análisis técnico y fundamental, y, por supuesto, invertir, ya sea de forma centralizada o descentralizada, y con todas las ventajas e inconvenientes de cada uno. Además de wallets para ₿itcoin y/o altcoins, incluso para Lightning Network (LN⚡).<br/><br/>Para Lightning Network se recomienda visitar la página <a class='selected' href='https://lightningaddress.com'>lightningaddress.com</a> y elegir desde ahí el wallet deseado para ₿itcoin.",
       "aboutCustomTools": "Si lo que buscas es calcular ciertos datos, como el <i>beneficio de un trade con puntos de venta en DCA</i>, o el <i>precio de un activo en una fecha concreta</i>, o incluso <i>saber qué criptomoneda es la que mayores rendimientos dará desde el precio actual hasta su ATH</i>, mira aquí:",
       "CUSTOM": {
         "calculator": "Calculadora",
@@ -98,11 +118,6 @@
           "appBinance": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Binance.",
           "appBit2Me": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Bit2Me.",
           "appBingX": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de BingX.",
-          "appCryptocom": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Crypto.com.",
-          "appFTX": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de FTX.",
-          "appGemini": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Gemini.",
-          "appNexo": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Nexo.",
-          "appKuCoin": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de KuCoin.",
           "appWirex": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Wirex."
         },
         "EXCHANGES_DEX": {
@@ -156,13 +171,14 @@
         "OTHERS": {
           "title": "Otras aplicaciones interesantes",
           "description": " ",
-          "appChainlist": "Permite añadir nuevas redes a tu wallet sobre EVM (Ethereum Virtual Machine), ya sea este BraveWallet, Metamask o cualquier otro que utilice esta máquina virtual de Ethereum.",
-          "appSlice": "Con este plugin de navegador recibirás sats por ver anuncios mientras navegas por internet. Si deseas recibir 100 slice más, totalmente gratis, solo debes instalar con mi enlace y usar la herramienta de Slice durante 30 dias. ¡Listo! Obtén tus sats, envíalos directamente a tu Zebedee wallet (LN⚡) cuando tú desees y sin costes."
+          "appChainlist": "Permite añadir nuevas redes a tu wallet sobre EVM (Ethereum Virtual Machine), ya sea BraveWallet, Metamask o cualquier otro que utilice esta máquina virtual de Ethereum.",
+          "appSlice": "Con este plugin de navegador recibirás sats por ver anuncios mientras navegas por internet. Si deseas recibir 100 slice más, totalmente gratis, solo debes instalar con el enlace y usar la herramienta de Slice durante 30 dias. ¡Listo! Obtén tus sats, envíalos directamente a tu Zebedee wallet (LN⚡) cuando tú desees y sin costes.",
+          "appSatsback": "Con este plugin de navegador se mostrará una ventana en ciertas tiendas online donde, una vez activado y en el carrito, se aplicará una devolución en ₿itcoin al comprar."
         }
       }
     },
     "GAMES": {
-      "about": "<i>¿Te imaginas generar ingresos jugando videojuegos?</i><br/><i>¿Te imaginas recibir esos ingresos en ₿itcoin?</i><br/><br/>Te traigo varios juegos que apenas ocupan espacio en tu móvil, puedes jugarlos cuando y cuanto quieras, y que te enviarán unos satoshis <i>(unidad mínima de bitcoin)</i> con un par de clics. Te indico también los <b>wallets</b> de bitcoin recomendados para estos juegos.",
+      "about": "<i>¿Te imaginas generar ingresos jugando videojuegos?</i><br/><i>¿Te imaginas recibir esos ingresos en ₿itcoin?</i><br/><br/>Aquí traemos varios juegos que apenas ocupan espacio en tu móvil, puedes jugarlos cuando y cuanto quieras, y que te enviarán unos satoshis <i>(unidad mínima de bitcoin)</i> con un par de clics. Se indica también los <b>wallets</b> de bitcoin recomendados para estos juegos.",
       "aboutGames": "Juegos Play&Earn (P&E), ya que siempre vas a ganar, aunque sea unos sats. Debemos agradecer a <a class='selected' href='https://www.thndr.games/bitcoin-games' target='_blank'>thndr.games</a> y a <a class='selected' href='https://zebedee.io' target='_blank'>zebedee.io</a> por ofrecernos estas maravillas de juegos.<br/><i style='font-size:12px;font-weight:bold;'>Nótese que hay muchos más, pero estos son los que se han probado y funcionan genial.</i>",
       "gameSatsssName": "Satsss",
       "gameSatsssTitle": "¡La serpiente de siempre, ahora con ₿itcoin!",

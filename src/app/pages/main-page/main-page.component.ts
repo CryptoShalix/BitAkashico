@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ELinkableIcon, ELinkableIconType, ELinkableTarget, LinkableIcon } from 'src/app/shared/components/linkable-icon/linkable-icon';
-import { URLS } from '../../shared/models/core';
+
 import { IMAGES } from '../../../assets/images/images';
+import { URLS } from '../../shared/models/core';
 
 @Component({
   selector: 'app-main-page',

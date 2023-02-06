@@ -1,29 +1,4 @@
 <div class="body">
-  <!-- <div id="stars"></div>
-  <div id="stars2"></div>
-  <div id="stars3"></div> -->
-
-  <!-- <div class="toolbar-top">
-    <div class="menu-top">
-      <app-linkable-icon
-        class="logo"
-        [sDefaultIcon]="iconHome"
-      ></app-linkable-icon>
-
-      <mat-icon
-        [matMenuTriggerFor]="menu"
-        class="nav-menu-link"
-      >apps</mat-icon>
-
-      <span class="spacer"></span>
-
-      <app-linkable-icon
-        *ngFor="let icon of iconListMedia"
-        [sDefaultIcon]="icon"
-      ></app-linkable-icon>
-    </div>
-  </div> -->
-
   <div class="coins-carousel">
     <app-carousel></app-carousel>
   </div>
@@ -35,13 +10,13 @@
   <div class="toolbar-bottom">
 
     <div class="menu-donations">
-      <mat-icon (click)="showContainerDonations = true">alternate_email</mat-icon>
+      <mat-icon (click)="showContainerDonations = true">₿</mat-icon>
     </div>
 
     <div class="menu-bottom">
 
-      <div class="material-icons-currency">
-        {{ currency.text| uppercase }}
+      <div class="material-icons">
+        <app-linkable-icon [sDefaultIcon]="iconContact"></app-linkable-icon>
       </div>
 
       <span class="spacer"></span>
@@ -52,11 +27,6 @@
         class="nav-menu-link"
         [sDefaultIcon]="iconHome"
       ></app-linkable-icon>
-      <!-- <app-linkable-icon
-        [sDefaultIcon]="getIconListMenu(icmIdHome)"
-        [matMenuTriggerFor]="menu"
-        class="nav-menu-link"
-      ></app-linkable-icon> -->
       <app-linkable-icon [sDefaultIcon]="getIconListMenu(icmIdTrading)"></app-linkable-icon>
       <app-linkable-icon [sDefaultIcon]="getIconListMenu(icmIdPortfolio)"></app-linkable-icon>
 
@@ -75,18 +45,6 @@
   </div>
 
 </div>
-
-<!-- <mat-menu #menu="matMenu">
-  <button
-    *ngFor="let menu of navMenu"
-    mat-menu-item
-    [routerLink]="menu.link"
-    [disabled]="menu.disabled"
-  >
-    <mat-icon>{{ menu.icon }}</mat-icon>
-    <span>{{ menu.text | translate }}</span>
-  </button>
-</mat-menu> -->
 
 <div
   class="menu-donations-container"

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AcademyPageComponent } from './pages/academy-page/academy-page.component';
 import { BooksPageComponent } from './pages/books-page/books-page.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { GamesPageComponent } from './pages/games-page/games-page.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
@@ -12,11 +13,12 @@ import { TradingPageComponent } from './pages/trading-page/trading-page.componen
 const routes: Routes = [
   { path: '', component: MainPageComponent },
   { path: 'home', component: MainPageComponent, pathMatch: 'full' },
+  { path: 'academy', component: AcademyPageComponent, pathMatch: 'full' },
+  { path: 'books', component: BooksPageComponent, pathMatch: 'full' },
+  { path: 'contact', component: ContactPageComponent, pathMatch: 'full' },
+  { path: 'games', component: GamesPageComponent, pathMatch: 'full' },
   { path: 'tools', component: ToolsPageComponent, pathMatch: 'full' },
   { path: 'trading', component: TradingPageComponent, pathMatch: 'full' },
-  { path: 'games', component: GamesPageComponent, pathMatch: 'full' },
-  { path: 'books', component: BooksPageComponent, pathMatch: 'full' },
-  { path: 'academy', component: AcademyPageComponent, pathMatch: 'full' },
   { path: '**', component: ErrorPageComponent }
 ];
 

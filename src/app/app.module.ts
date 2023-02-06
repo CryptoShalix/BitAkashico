@@ -9,9 +9,11 @@ import { MaterialModule } from './material.module';
 import { SharedModule } from './shared.module';
 import { PipesModule } from './shared/pipes/pipes.module';
 
+import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { AppComponent } from './app.component';
 import { AcademyPageComponent } from './pages/academy-page/academy-page.component';
 import { BooksPageComponent } from './pages/books-page/books-page.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { GamesPageComponent } from './pages/games-page/games-page.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { ToolsPageComponent } from './pages/tools-page/tools-page.component';
@@ -26,6 +28,7 @@ import { TradingPageComponent } from './pages/trading-page/trading-page.componen
     GamesPageComponent,
     BooksPageComponent,
     AcademyPageComponent,
+    ContactPageComponent,
   ],
   imports: [
     CommonModule,
@@ -41,6 +44,10 @@ import { TradingPageComponent } from './pages/trading-page/trading-page.componen
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy
+    },
+    {
+      provide: STEPPER_GLOBAL_OPTIONS,
+      useValue: { displayDefaultIndicatorType: false }
     }
   ],
   bootstrap: [AppComponent]
