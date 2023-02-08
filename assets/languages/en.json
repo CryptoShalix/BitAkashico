@@ -5,7 +5,7 @@
   },
   "DONATIONS": {
     "title": "Donate some sats",
-    "message": "Any amount of satoshi is welcome. They will motivate me and help me grow the content more.<br/>Send ₿itcoin through the lightning network, so you will hardly have commissions. Remember that you have the recommended ₿itcoin wallets in <a class='selected' href='/#/tools'>tools</a>."
+    "message": "Any amount of satoshi is welcome. They will motivate us and help us grow the content more.<br/>Send ₿itcoin through the lightning network, so you will hardly have commissions.<br/>Remember that you have the recommended ₿itcoin wallets in <a class='selected' href='/#/tools'>tools</a>."
   },
   "LANGUAGE": {
     "en": "English",
@@ -14,6 +14,7 @@
   "MENU": {
     "academy": "Academy",
     "books": "Books",
+    "contact": "Contact",
     "games": "Games",
     "home": "Home",
     "portfolio": "Portfolio",
@@ -27,18 +28,37 @@
   },
   "PAGES": {
     "MAIN": {
-      "about": "Crypto Shalix aims to bring together everything related to cryptocurrencies in one place, from which to learn, share, and trade.",
-      "videoTitle": "Digital revolution: Blockchain, cryptocurrencies, NFT and metaverse",
+      "about": "BitAkashico is presented as the parent project of <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Differentiating the <b>material</b> part, which is intended to support financial education (₿itcoin, cryptocurrencies, etc.) and information technology; from the <b>spiritual</b> part, which seeks to remind you as a soul that transits this world, who you are, or what tests you are facing now, by reading your chakras or an akashic record.<br/><br/>To get started, check out the <a class='selected' target='_self' href='#academy'>Academy</a> or the <a class='selected' target='_self' href='#books'>Books</a> section.<br/><br/>If you wish, contact @CryptoShalix through the <a class='selected' target='_self' href='#contact'>contact form</a> and resolve any doubts through an individual and fully personalized session.",
       "topAppsTitle": "⭐ TOP APPS OF THE MOMENT ⭐"
     },
     "ACADEMY": {
-      "about": "Page under development.<br/>Interesting content will come soon.<br/>Will be communicated at <a class='selected' target='_blank' href='https://twitter.com/CryptoShalix'>Twitter</a> when there is news."
+      "BIT": {
+        "about": "Through our mind, and focusing on the material world, we can learn (together) about computers, finances or cryptocurrencies.<br/><br/>You have at your disposal a private one-on-one and fully personalized consultancy with @CryptoShalix through the <a class='selected' target='_self' href='#contact'>contact form</a>, as well as training videos explaining everything related to ₿itcoin and other cryptocurrencies on the <a class='selected' target='_blank' href='https://www.youtube.com/@BitAkashico'>Youtube</a> channel.<br/><br/>Here you can see the learning levels we recommend to fall into the ₿itcoin rabbit hole and the cryptocurrencies as it should.<br/>",
+        "STEP_1": {
+          "title": "LEVEL: BASIC",
+          "description": "[ES] Revolución digital: Blockchain, criptomonedas, NFT y metaverso"
+        },
+        "STEP_2": {
+          "title": "LEVEL: INTERMEDIATE",
+          "description": "[ES] Educación: ₿itcoin, privacidad y criptomonedas"
+        },
+        "STEP_3": {
+          "title": "NEED MORE...",
+          "description": "If you still have questions or don't understand something, remember to request a session with @CryptoShalix using the <a class='selected' target='_self' href='#contact'>contact form</a> for an individual class totally personalized."
+        }
+      },
+      "AKASHICO": {
+        "about": "Through our hearts, we connect and discover our inner being, with its fears, concerns and desires.<br/>Through an individual session (in a video call or in person) we will be able to see our inner world (Akasha) or discover the current state of our chakras.<br/><br/>Request a session with @CryptoShalix using the <a class='selected' target='_self' href='#contact'>contact form</a> and ask without fear."
+      }
     },
     "BOOKS": {
-      "about": "Knowledge at the reach of a click.<br/><br/>This is your <i>'₿it-library'</i>, where you will find the most interesting books with content on ₿itcoin, blockchain, smart contracts, finance and management of money, trading, application and services development related to all of the above... and much more.<br/><br/>The books have been collected from different sources all over the internet, and are stored in a <a class='selected' href='https://mega.nz/aff=YvakZRq8M2Q' target='_blank'>Mega</a>, from which you can view and/or download the books.<br/><br/><i>If you liked after reading them, please buy and move the economy by contributing to what is of value to you.</i>"
+      "about": "Knowledge at the reach of a click.<br/><br/>This is your <i>'library'</i>, where you will find the most interesting books with content on ₿itcoin, blockchain, smart contracts, finance and management of money, trading, application and services development related to all of the above... in addition to books on spirituality, psychology, healthy practices, and much more.<br/><br/>The books have been collected from different sources all over the internet, and are stored in a <a class='selected' href='https://mega.nz/aff=YvakZRq8M2Q' target='_blank'>Mega</a>, from which you can view and/or download the books.<br/><br/><i>If you liked after reading them, please buy and move the economy by contributing to what is of value to you.</i>"
+    },
+    "CONTACT": {
+      "about": "Get in touch with @CryptoShalix on social networks or with the following contact form and solve your doubts or problems related to finances, cryptocurrencies, ₿itcoin, computing, etc, or ask for a chakra session or an akashic record, all individually and totally personalized."
     },
     "TOOLS": {
-      "about": "Here you will find all the necessary platforms and tools to do technical and fundamental analysis, and, of course, invest, either centralized or decentralized, and with all the advantages and disadvantages of each. Besides to wallets for ₿itcoin and/or altcoins, even for the Lightning Network (LN⚡).<br/><br/>For the Lightning Network I recommend visiting the next page and choosing from there the desired wallet for ₿itcoin: <a class='selected' href='https://lightningaddress.com'>lightningaddress.com</a>.",
+      "about": "Here you will find all the necessary platforms and tools to do technical and fundamental analysis, and, of course, invest, either centralized or decentralized, and with all the advantages and disadvantages of each. Besides to wallets for ₿itcoin and/or altcoins, even for the Lightning Network (LN⚡).<br/><br/>For the Lightning Network, it is recommended to visit the page <a class='selected' href='https://lightningaddress.com'>lightningaddress.com</a> and choose from there the desired wallet for ₿itcoin.",
       "aboutCustomTools": "If what you are looking for is to calculate certain data, such as the <i>profit of a trade with DCA points of sale</i>, or the <i>price of an asset on a specific date</i>, or even <i>to know which cryptocurrency is the one that will give the highest returns from the current price to its ATH</i>, look here:",
       "CUSTOM": {
         "calculator": "Calculator",
@@ -153,7 +173,8 @@
           "title": "Other interesting applications",
           "description": " ",
           "appChainlist": "It allows you to add new networks to your wallet on EVM (Ethereum Virtual Machine), be it this BraveWallet, Metamask or any other that uses this Ethereum virtual machine.",
-          "appSlice": "With this browser plugin you will receive sats for viewing ads while browsing the internet. If you want to receive 100 more slices, totally free, you just have to install with my link and use the Slice tool for 30 days. Clever! Get your sats, send them directly to your Zebedee wallet (LN⚡) whenever you want and without costs."
+          "appSlice": "With this browser plugin you will receive sats for viewing ads while browsing the internet. If you want to receive 100 more slices, totally free, you just have to install with my link and use the Slice tool for 30 days. Clever! Get your sats, send them directly to your Zebedee wallet (LN⚡) whenever you want and without costs.",
+          "appSatsback": "With this browser plugin, a window will be displayed in certain online stores where, once activated and in the cart, a refund in ₿itcoin will be applied when purchasing."
         }
       }
     },
