@@ -24,13 +24,13 @@ export class CoreService {
     const groupName = 'BITCOIN_WALLETS';
 
     const items: IAccordionItem[] = [];
-    items.push(this.createToolItem(groupName, 'Blixt', URLS.REF_Blixt, 4.8, true));
+    items.push(this.createToolItem(groupName, 'Blixt', URLS.REF_Blixt, 4.2, true));
     items.push(this.createToolItem(groupName, 'Blue Wallet', URLS.REF_BlueWallet, 4, true));
     items.push(this.createToolItem(groupName, 'Breez', URLS.REF_Breez, 4, true));
-    items.push(this.createToolItem(groupName, 'Muun Wallet', URLS.REF_MuunWallet, 4.3, true));
-    items.push(this.createToolItem(groupName, 'Phoenix', URLS.REF_Phoenix, 4.3, true));
+    items.push(this.createToolItem(groupName, 'Muun Wallet', URLS.REF_MuunWallet, 4.5, true));
+    items.push(this.createToolItem(groupName, 'Phoenix', URLS.REF_Phoenix, 4.5, true));
     if (!lnOnly) { items.push(this.createToolItem(groupName, 'Samourai Wallet', URLS.REF_SamouraiWallet, 5)); }
-    items.push(this.createToolItem(groupName, 'Simple Bitcoin Wallet (SBW)', URLS.REF_SimpleBitcoinWallet, 4.8, true));
+    items.push(this.createToolItem(groupName, 'Simple Bitcoin Wallet (SBW)', URLS.REF_SimpleBitcoinWallet, 4.2, true));
     if (!lnOnly) { items.push(this.createToolItem(groupName, 'Sparrow Wallet', URLS.REF_SparrowWallet, 5)); }
     if (!lnOnly) { items.push(this.createToolItem(groupName, 'Specter Wallet', URLS.REF_SpecterWallet, 4.5)); }
     if (!lnOnly) { items.push(this.createToolItem(groupName, 'Defiant', URLS.REF_Defiant, 4)); }

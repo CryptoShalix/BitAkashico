@@ -2,7 +2,7 @@ import { IMAGES } from 'src/assets/images/images';
 import { URLS } from '../../models/core';
 
 export enum ELinkableIcon {
-  Home = 'Crypto Shalix',
+  Home = 'BitAkashico',
   Twitter = 'Twitter',
   Discord = 'Discord',
   Telegram = 'Telegram',

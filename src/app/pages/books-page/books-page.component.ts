@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { BOOKS, IBOOK } from 'src/app/shared/models/core';
+import { IMAGES } from 'src/assets/images/images';
 
 import { CoreService } from '../../shared/services/core.service';
 
@@ -10,6 +11,7 @@ import { CoreService } from '../../shared/services/core.service';
   styleUrls: ['./books-page.component.scss']
 })
 export class BooksPageComponent implements OnInit {
+  LOGO_AKASHICO = IMAGES.LOGO_AKASHICO;
   booksBit: IBOOK[] = [];
   booksAkashico: IBOOK[] = [];
 

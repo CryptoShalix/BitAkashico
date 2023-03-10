@@ -25,7 +25,8 @@ export class CoingeckoService {
     currency: IValueText = ECurrency.USD,
     itemsPerPage: number = 10,
     currentPage: number = 1,
-    sparkline: boolean = false
+    sparkline: boolean = false,
+    allowClick: boolean = true,
   ): Promise<Coin[]> {
     // Prepare params
     const pCurrency = `?vs_currency=${currency.value}`;
@@ -44,7 +45,7 @@ export class CoingeckoService {
     return new Promise<Coin[]>((resolve, reject) => {
       this.http.get<string>(path)
         .pipe(first(),
-          map((data: any) => data.map((item: any) => new Coin(currency, item)))
+          map((data: any) => data.map((item: any) => new Coin(currency, item, allowClick)))
         )
         .subscribe({
           next: (response: Coin[]) => {

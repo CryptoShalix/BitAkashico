@@ -6,7 +6,8 @@
       'card': defaultIcon.isCard,
       'no-border': defaultIcon.isImage,
       'router-link-active': isCurrentPage(defaultIcon.routerLink),
-      'menu-button': defaultIcon.isMenu
+      'menu-button': defaultIcon.isMenu,
+      'nav-menu-link': defaultIcon.id === 'home'
     }"
     [attr.aria-valuenow]="defaultIcon.label | translate"
     [target]="defaultIcon.target"
@@ -26,7 +27,8 @@
       'card': defaultIcon.isCard,
       'no-border': defaultIcon.isImage,
       'router-link-active': isCurrentPage(defaultIcon.href),
-      'menu-button': defaultIcon.isMenu
+      'menu-button': defaultIcon.isMenu,
+      'nav-menu-link': defaultIcon.id === 'home'
     }"
     [attr.aria-valuenow]="defaultIcon.label | translate"
     [target]="defaultIcon.target"

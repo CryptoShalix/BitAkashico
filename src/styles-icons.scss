@@ -240,18 +240,17 @@ svg.material-icons:not(:last-child) {
   }
 }
 
-.material-icons-currency,
+.material-icons-donations,
 .material-icons-language {
   position: relative;
   display: flex;
   width: 40px;
   height: 40px;
   padding: 0;
-  margin: 0 auto;
+  margin: 0 5px;
   justify-content: center;
   align-items: center;
   border: 1px solid transparent;
-  border-radius: 50%;
   font-size: 20px;
   cursor: pointer;
 
@@ -259,9 +258,8 @@ svg.material-icons:not(:last-child) {
     position: absolute;
     display: flex;
     visibility: hidden;
-    // top: -45px;
-    top: -50px;
-    left: -55px;
+    top: 0;
+    left: 40px;
     width: 150px;
     height: 35px;
     padding: 0;
@@ -278,17 +276,17 @@ svg.material-icons:not(:last-child) {
     color: $global-link-color-hover;
     border-color: $global-link-color-hover;
 
-    &:before {
-      content: ' ';
-      position: absolute;
-      width: 0;
-      height: 0;
-      top: calc(100% - 3px);
-      left: calc(50% - 6px);
-      border: 6px solid transparent;
-      border-bottom-color: $global-link-color-hover;
-      z-index: 2;
-    }
+    // &:before {
+    //   content: ' ';
+    //   position: absolute;
+    //   width: 0;
+    //   height: 0;
+    //   top: calc(100% - 3px);
+    //   left: calc(50% - 6px);
+    //   border: 6px solid transparent;
+    //   border-bottom-color: $global-link-color-hover;
+    //   z-index: 2;
+    // }
 
     .language-tooltip {
       visibility: visible;
@@ -361,11 +359,6 @@ svg.material-icons:not(:last-child) {
     .svgControl {
       opacity: 1;
       color: $global-link-color;
-    }
-
-    .svgControl {
-      max-width: 25px;
-      max-height: 25px;
     }
 
     .mat-icon {

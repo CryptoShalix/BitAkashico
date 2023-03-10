@@ -1,15 +1,5 @@
 @import './styles-colors.scss';
 
-.cdk-overlay-connected-position-bounding-box {
-  top: 0 !important;
-  left: 0 !important;
-  bottom: 100% !important;
-  height: 0 !important;
-  width: 100% !important;
-  align-items: flex-start !important;
-  justify-content: flex-end !important;
-}
-
 .nav-menu-link {
   width: 100px;
   height: 60px;
@@ -19,7 +9,7 @@
   .linkable-icon {
     border: none;
     outline: none;
-    bottom: 5px;
+    top: 10px;
   }
 
   .linkable-icon.router-link-active:before {
@@ -27,73 +17,8 @@
   }
 }
 
-.mat-menu-panel {
-  position: fixed;
-  width: 100%;
-  min-width: 50% !important;
-  max-width: 50% !important;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: $menu-background-color;
-  // position: absolute;
-  // width: 100%;
-  // min-width: 200px !important;
-  // max-width: 300px !important;
-  // min-height: 65px !important;
-  // left: 50%;
-  // top: 105px;
-  // transform: translate(-50%, 0);
-
-  .mat-menu-content {
-    padding: 20px 10px !important;
-    column-count: 3;
-    column-width: 200px;
-    column-gap: 1em;
-    text-align: center;
-    // top: 50%;
-    // position: absolute;
-    // transform: translate(0, -50%);
-
-    .mat-menu-item {
-      display: inline-flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100px;
-      max-width: 200px;
-      margin: 10px;
-      line-height: 48px;
-      border-radius: 5px;
-      color: $menu-font-color;
-      background: $menu-item-background-color;
-
-      .mat-icon {
-        margin: 0;
-        padding: 10px 0;
-        color: $menu-font-color;
-      }
-    }
-  }
-
-  .mat-menu-item:hover:not([disabled]),
-  .mat-menu-item.cdk-program-focused:not([disabled]),
-  .mat-menu-item.cdk-keyboard-focused:not([disabled]),
-  .mat-menu-item-highlighted:not([disabled]) {
-    background: $toolbar-border-color;
-  }
-}
-
 /* Responsive Styles */
 @media screen and (max-width: 1256px) {
-
-  .mat-menu-panel {
-    position: fixed;
-    width: 100%;
-    min-width: 100% !important;
-    max-width: 100% !important;
-    max-height: calc(100% - 110px) !important;
-  }
 
   .nav-menu-link .linkable-icon {
     bottom: 0;

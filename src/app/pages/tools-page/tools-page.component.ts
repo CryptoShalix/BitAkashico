@@ -152,9 +152,7 @@ export class ToolsPageComponent implements OnInit {
       [
         this.createToolItem(groupName, 'Binance', URLS.REF_Binance, 4.1),
         this.createToolItem(groupName, 'Bit2Me', URLS.REF_Bit2Me, 4.2),
-        this.createToolItem(groupName, 'BingX', URLS.REF_BingX, 4.5),
-        this.createToolItem(groupName, 'KuCoin', URLS.REF_KuCoin, 4),
-        this.createToolItem(groupName, 'Nexo', URLS.REF_Nexo, 3.8),
+        this.createToolItem(groupName, 'BingX', URLS.REF_BingX, 4),
         this.createToolItem(groupName, 'Wirex', URLS.REF_Wirex, 4),
       ],
       'account_balance'

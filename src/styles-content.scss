@@ -42,13 +42,11 @@
     position: relative;
     display: block;
     width: 100%;
-    // height: calc(100% - 155px);
     height: calc(100% - 105px);
-    // top: 55px;
-    top: 0;
-    bottom: 60px;
+    top: 105px;
+    bottom: 0;
     margin: 0 auto;
-    padding: 25px 10px;
+    padding: 10px;
     overflow: auto;
   }
 
@@ -64,29 +62,45 @@
     background-color: $toolbar-background;
     z-index: 1;
 
-    .menu-top,
+    .menu-top {
+      position: fixed;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 30px;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 0 50px;
+      border-bottom: 1px solid $toolbar-border-color;
+    }
+
     .menu-bottom {
       position: relative;
       display: flex;
-      width: calc(100% - 150px);
-      // min-width: 280px;
+      width: 100%;
+      height: 65px;
+      top: 20px;
       min-width: 340px;
-      margin: 2px auto;
+      margin: 0;
       justify-content: center;
       align-items: center;
     }
 
-    .menu-donations {
-      position: absolute;
+    .menu-actions {
       display: flex;
-      left: 1%;
-      top: -35%;
       align-items: center;
       justify-content: flex-start;
-      background: $toolbar-background;
-      border: 1px solid $toolbar-border-color;
-      border-radius: 5px;
-      z-index: 1;
+      margin-right: 100px;
+    }
+
+    .menu-currency {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-left: 100px;
       cursor: pointer;
 
       &:hover {
@@ -94,24 +108,26 @@
       }
 
       .mat-icon {
-        padding: 20px 20px 25px 20px;
         display: flex;
         align-self: center;
+        width: 40px;
+        height: 45px;
+        margin-top: -5px;
+        padding: 0;
       }
     }
   }
 
   .toolbar-top {
     top: 0;
-    height: 60px;
+    height: 105px;
     padding: 5px 10px;
     border-bottom: 1px solid $toolbar-border-color;
   }
 
   .toolbar-bottom {
-    // height: 55px;
-    height: 65px;
     bottom: 0;
+    height: 65px;
     padding: 5px;
     border-top: 1px solid $toolbar-border-color;
   }
@@ -260,25 +276,26 @@
   }
 }
 
-/* Responsive Styles */
+// STEPPER
+.mat-stepper-label-position-bottom .mat-horizontal-stepper-header,
+.mat-vertical-stepper-header {
+  padding: 15px 10px !important;
+}
+
+.mat-horizontal-content-container,
+.mat-vertical-content-container {
+  margin-left: 0 !important;
+}
+
+.mat-horizontal-content,
+.mat-vertical-content {
+  padding: 0 !important;
+}
+
+/* RESPONSIVE STYLES */
 @media screen and (max-width: 1256px) {
   .content {
     max-width: 90% !important;
-  }
-
-  .menu-top {
-    width: 100% !important;
-  }
-
-  .menu-bottom {
-    width: calc(100% - 100px) !important;
-  }
-
-  .menu-donations {
-    left: 1% !important;
-    // top: -25% !important;
-    top: -40% !important;
-    // padding: 5px !important;
   }
 
   .menu-donations-container-fix {
@@ -290,8 +307,6 @@
 
   .main-container {
     min-width: 100%;
-    // height: calc(100% - 155px) !important;
-    height: calc(100% - 105px) !important;
 
     .content {
       max-width: 100% !important;

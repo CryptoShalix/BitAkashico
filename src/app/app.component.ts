@@ -1,14 +1,15 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { IMAGES } from 'src/assets/images/images';
 
 import { CoreService } from './shared/services/core.service';
 import { TranslateService } from './shared/services/translate.service';
 
-import { ECurrency } from './shared/models/currency';
-import { INavMenu } from './shared/models/menu';
+import { map, Subscription, timer } from 'rxjs';
+import { Coin, ECoinFormat, ECurrency } from './shared/models/currency';
 
 import { ELinkableIcon, ELinkableIconType, ELinkableTarget, LinkableIcon } from './shared/components/linkable-icon/linkable-icon';
 import { URLS } from './shared/models/core';
+import { CoingeckoService } from './shared/services/coingecko.service';
 
 // Angular Material Icons: https://fonts.google.com/icons
 // Angular translate: https://medium.com/angular-chile/aplicaciones-multilenguaje-en-angular-7-con-ngx-translate-db8d1e7b380c
@@ -19,10 +20,10 @@ import { URLS } from './shared/models/core';
  * Source: https://medium.com/tech-insights/how-to-deploy-angular-apps-to-github-pages-gh-pages-896c4e10f9b4
  *
  * 1. Install: npm i angular-cli-ghpages - save-dev
- * 2. ng build --configuration production --base-href "https://adlrg.github.io/CryptoShalix/"
+ * 2. ng build --configuration production --base-href "https://cryptoshalix.github.io/BitAkashico/"
  * 3. ngh -d dist/CryptoShalix || npx angular-cli-ghpages - dir=dist/CryptoShalix
  *
- * Sum up: ng build --configuration production --base-href "https://adlrg.github.io/CryptoShalix/" && ngh -d dist/CryptoShalix
+ * Sum up: ng build --configuration production --base-href "https://cryptoshalix.github.io/BitAkashico/" && ngh -d dist/CryptoShalix
  *
  * OR
  * 1. npm run publish-generate
@@ -35,10 +36,15 @@ import { URLS } from './shared/models/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   title = ELinkableIcon.Home;
 
-  currency = ECurrency.USD;
+  private timerSubscription: Subscription;
+  private callTiming = 60;
+  coinFormat = ECoinFormat.INFO;
+  coinBitcoin: Coin;
+
+  currency = ECurrency.EUR;
   showContainerDonations = false;
 
   hasBeenCopied = false;
@@ -52,30 +58,35 @@ export class AppComponent implements OnInit {
   walletBTCPaynymTag = `${URLS.PAYNYM}`;
   walletBTCPaynymText = `Paynym: ${this.walletBTCPaynymTag}`;
 
-  iconHome: LinkableIcon;
-  iconContact: LinkableIcon;
   iconListMenu: LinkableIcon[] = [];
 
-  icmIdHome = 'home';
   icmIdAcademy = 'academy';
   icmIdTools = 'tools';
-  icmIdTrading = 'trading';
-  icmIdPortfolio = 'portfolio';
+  icmIdCalc = 'calc';
+  icmIdHome = 'home';
+  icmIdBooks = 'books';
+  icmIdGames = 'games';
+  icmIdContact = 'contact';
 
   constructor(
     private coreService: CoreService,
     private translateService: TranslateService,
+    private coingeckoService: CoingeckoService,
   ) { }
 
   ngOnInit(): void {
     this.getCurrentScreenResolution();
-    this.prepareLogo();
     this.prepareData();
+    this.getCoinData();
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any): void {
     this.getCurrentScreenResolution();
+  }
+
+  ngOnDestroy(): void {
+    this.timerSubscription.unsubscribe();
   }
 
   private getCurrentScreenResolution(): void {
@@ -85,12 +96,7 @@ export class AppComponent implements OnInit {
 
   private prepareMenu(): void {
     this.iconListMenu = [];
-    this.iconListMenu.push(new LinkableIcon(this.icmIdHome, {
-      title: 'MENU.home',
-      iconPath: IMAGES.HOME_IMG,
-      showText: false,
-      type: ELinkableIconType.IMAGE,
-    }));
+
     this.iconListMenu.push(new LinkableIcon(this.icmIdAcademy, {
       routerLink: 'academy',
       title: 'MENU.academy',
@@ -111,7 +117,20 @@ export class AppComponent implements OnInit {
       showText: !this.isBelowResolution,
       isMenu: true
     }));
-    this.iconListMenu.push(new LinkableIcon(this.icmIdTrading, {
+    this.iconListMenu.push(new LinkableIcon(this.icmIdCalc, {
+      routerLink: 'trading',
+      title: 'MENU.trading',
+      iconPath: 'assessment',
+      color: '#fff',
+      type: ELinkableIconType.ICON,
+      target: ELinkableTarget.SELF,
+      showText: !this.isBelowResolution,
+      isMenu: true
+    }));
+
+    this.iconListMenu.push(new LinkableIcon(ELinkableIcon.Home));
+
+    this.iconListMenu.push(new LinkableIcon(this.icmIdBooks, {
       routerLink: 'books',
       title: 'MENU.books',
       iconPath: 'menu_book',
@@ -121,7 +140,7 @@ export class AppComponent implements OnInit {
       showText: !this.isBelowResolution,
       isMenu: true
     }));
-    this.iconListMenu.push(new LinkableIcon(this.icmIdPortfolio, {
+    this.iconListMenu.push(new LinkableIcon(this.icmIdGames, {
       routerLink: 'games',
       title: 'MENU.games',
       iconPath: 'sports_esports',
@@ -131,30 +150,27 @@ export class AppComponent implements OnInit {
       showText: !this.isBelowResolution,
       isMenu: true
     }));
-
-    this.iconContact = new LinkableIcon(this.icmIdPortfolio, {
+    this.iconListMenu.push(new LinkableIcon(this.icmIdContact, {
       routerLink: 'contact',
       title: 'MENU.contact',
       iconPath: 'alternate_email',
       color: '#fff',
       type: ELinkableIconType.ICON,
       target: ELinkableTarget.SELF,
-      showText: false,
-      isMenu: false,
-    });
-  }
-
-  private prepareLogo(): void {
-    this.iconHome = new LinkableIcon(ELinkableIcon.Home);
+      showText: !this.isBelowResolution,
+      isMenu: true
+    }));
   }
 
   private prepareData(): void {
     this.coreService.setDefaultCurrency(ECurrency.USD);
   }
 
-  getIconListMenu(id: string): LinkableIcon {
-    const menu = this.iconListMenu.find((o) => o.id === id);
-    return menu ? menu : new LinkableIcon(id);
+  private async getCoinData(): Promise<void> {
+    this.timerSubscription = timer(0, this.callTiming * 1000).pipe(map(async () => {
+      const coins = await this.coingeckoService.getCoins(this.currency, 1, 1, false, false);
+      this.coinBitcoin = coins[0];
+    })).subscribe();
   }
 
   onChangeLanguage(): void {

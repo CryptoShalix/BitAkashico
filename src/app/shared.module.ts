@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from './material.module';
 import { PipesModule } from './shared/pipes/pipes.module';
@@ -27,6 +28,7 @@ import { StarRankComponent } from './shared/components/star-rank/star-rank.compo
     PipesModule,
     MaterialModule,
     RouterModule,
+    ReactiveFormsModule,
   ],
   exports: [
     PipesModule,

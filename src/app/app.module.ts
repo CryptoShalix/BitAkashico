@@ -1,6 +1,7 @@
 import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -34,6 +35,7 @@ import { TradingPageComponent } from './pages/trading-page/trading-page.componen
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
     MaterialModule,

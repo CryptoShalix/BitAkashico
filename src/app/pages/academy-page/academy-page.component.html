@@ -2,6 +2,7 @@
 
   <div class="content-chooser">
     <mat-tab-group
+      preserveContent
       mat-align-tabs="center"
       animationDuration="0ms"
     >
@@ -14,8 +15,9 @@
           <span [innerHTML]="('PAGES.ACADEMY.BIT.about' | translate) | safe:'html'"></span>
         </div>
 
-        <mat-horizontal-stepper
-          [linear]="false"
+        <mat-vertical-stepper
+          [linear]="true"
+          [selectedIndex]="0"
           #stepper
         >
           <ng-template matStepperIcon="school">
@@ -67,14 +69,14 @@
               <span [innerHTML]="('PAGES.ACADEMY.BIT.STEP_3.description' | translate) | safe:'html'"></span>
             </div>
           </mat-step>
-        </mat-horizontal-stepper>
+        </mat-vertical-stepper>
 
       </mat-tab>
       <mat-tab>
         <ng-template mat-tab-label>
           <img
             class="tab-icon"
-            src="../../../assets/images/img_tree_of_life.png"
+            [src]="LOGO_AKASHICO"
           >
           <span>AKASHICO</span>
         </ng-template>

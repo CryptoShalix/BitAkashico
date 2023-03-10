@@ -1,3 +1,5 @@
+@import './styles-colors.scss';
+
 input:not([type='color']),
 textarea,
 select {
@@ -8,4 +10,66 @@ select {
   display: block;
   width: 100%;
   font-size: inherit;
+}
+
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: flex-end;
+  min-width: 50px;
+  min-height: 25px;
+  color: $btn-text;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: $btn-background;
+  border: 2px solid $btn-border;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &.btn-submit {
+    width: 100%;
+    max-width: 25%;
+    height: 40px;
+
+    .mat-icon {
+      position: absolute;
+      left: 0;
+      display: flex;
+      width: 35px;
+      height: 35px;
+      margin: 0;
+      font-size: 35px;
+    }
+
+    span {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &:disabled {
+    background: $btn-background-disabled;
+    color: $btn-text-disabled;
+    border-color: $btn-border-disabled;
+  }
+
+  &:hover:not(:disabled) {
+    background: $btn-background-hover;
+    color: $btn-text-hover;
+    border-color: $btn-border-hover;
+  }
+}
+
+/* RESPONSIVE STYLES */
+@media screen and (max-width: 1256px) {
+  .btn-submit {
+    max-width: 100% !important;
+  }
 }

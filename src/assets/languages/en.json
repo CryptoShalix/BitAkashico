@@ -55,7 +55,14 @@
       "about": "Knowledge at the reach of a click.<br/><br/>This is your <i>'library'</i>, where you will find the most interesting books with content on ₿itcoin, blockchain, smart contracts, finance and management of money, trading, application and services development related to all of the above... in addition to books on spirituality, psychology, healthy practices, and much more.<br/><br/>The books have been collected from different sources all over the internet, and are stored in a <a class='selected' href='https://mega.nz/aff=YvakZRq8M2Q' target='_blank'>Mega</a>, from which you can view and/or download the books.<br/><br/><i>If you liked after reading them, please buy and move the economy by contributing to what is of value to you.</i>"
     },
     "CONTACT": {
-      "about": "Get in touch with @CryptoShalix on social networks or with the following contact form and solve your doubts or problems related to finances, cryptocurrencies, ₿itcoin, computing, etc, or ask for a chakra session or an akashic record, all individually and totally personalized."
+      "about": "Get in touch with @CryptoShalix on social networks or with the following contact form and solve your doubts or problems related to finances, cryptocurrencies, ₿itcoin, computing, etc, or ask for a chakra session or an akashic record, all individually and totally personalized.",
+      "email": "Email",
+      "emailHelp": "The indicated contact details will NOT be shared or stored.",
+      "nickname": "Name/Nickname",
+      "phone": "Phone/Telegram Id",
+      "message": "Message",
+      "messageHint": "Doubts, suggestions, problems...",
+      "submit": "Send"
     },
     "TOOLS": {
       "about": "Here you will find all the necessary platforms and tools to do technical and fundamental analysis, and, of course, invest, either centralized or decentralized, and with all the advantages and disadvantages of each. Besides to wallets for ₿itcoin and/or altcoins, even for the Lightning Network (LN⚡).<br/><br/>For the Lightning Network, it is recommended to visit the page <a class='selected' href='https://lightningaddress.com'>lightningaddress.com</a> and choose from there the desired wallet for ₿itcoin.",

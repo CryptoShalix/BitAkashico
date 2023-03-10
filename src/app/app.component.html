@@ -1,44 +1,52 @@
 <div class="body">
-  <div class="coins-carousel">
+  <!-- <div class="coins-carousel">
     <app-carousel></app-carousel>
-  </div>
+  </div> -->
 
   <div class="main-container">
     <router-outlet></router-outlet>
   </div>
 
-  <div class="toolbar-bottom">
+  <div class="toolbar-top">
 
-    <div class="menu-donations">
-      <mat-icon (click)="showContainerDonations = true">₿</mat-icon>
+    <div class="menu-top">
+
+      <div class="menu-currency">
+        <mat-icon (click)="showContainerDonations">₿</mat-icon>
+        <app-coin-info
+          class="coin-ticker"
+          [sCoinItem]="coinBitcoin"
+          [type]="coinFormat"
+        ></app-coin-info>
+      </div>
+
+      <span class="spacer"></span>
+
+      <div class="menu-actions">
+        <div
+          class="material-icons-donations"
+          (click)="showContainerDonations = true"
+        >
+          <mat-icon>coffee</mat-icon>
+        </div>
+
+        <div class="material-icons-language">
+          <span class="language-tooltip">{{ getTooltipLanguage() | translate | uppercase }}</span>
+          <mat-icon
+            class="material-icons"
+            (click)="onChangeLanguage()"
+          >translate</mat-icon>
+        </div>
+      </div>
+
     </div>
 
     <div class="menu-bottom">
 
-      <div class="material-icons">
-        <app-linkable-icon [sDefaultIcon]="iconContact"></app-linkable-icon>
-      </div>
-
-      <span class="spacer"></span>
-
-      <app-linkable-icon [sDefaultIcon]="getIconListMenu(icmIdAcademy)"></app-linkable-icon>
-      <app-linkable-icon [sDefaultIcon]="getIconListMenu(icmIdTools)"></app-linkable-icon>
       <app-linkable-icon
-        class="nav-menu-link"
-        [sDefaultIcon]="iconHome"
+        *ngFor="let iconMenu of iconListMenu"
+        [sDefaultIcon]="iconMenu"
       ></app-linkable-icon>
-      <app-linkable-icon [sDefaultIcon]="getIconListMenu(icmIdTrading)"></app-linkable-icon>
-      <app-linkable-icon [sDefaultIcon]="getIconListMenu(icmIdPortfolio)"></app-linkable-icon>
-
-      <span class="spacer"></span>
-
-      <div class="material-icons-language">
-        <span class="language-tooltip">{{ getTooltipLanguage() | translate | uppercase }}</span>
-        <mat-icon
-          class="material-icons"
-          (click)="onChangeLanguage()"
-        >translate</mat-icon>
-      </div>
 
     </div>
 

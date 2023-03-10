@@ -149,8 +149,9 @@ export class Coin {
 
   currency: IValueText;
   url: string;
+  allowClick: boolean;
 
-  constructor(currency: IValueText, data?: any) {
+  constructor(currency: IValueText, data?: any, allowClick: boolean = true) {
     if (data) {
       this.id = data[Coin.paramsDefault.id];
       this.symbol = data[Coin.paramsDefault.symbol];
@@ -195,5 +196,6 @@ export class Coin {
 
     this.currency = currency;
     this.url = `${URLS.COINGECKO}${this.id}`;
+    this.allowClick = allowClick;
   }
 }

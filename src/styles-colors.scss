@@ -16,6 +16,7 @@ $carousel-item-hover-border: #2c2f33;
 // BODY
 $body-background: #2c2f33;
 $body-text: #ffffff;
+$body-text-muted: #dddddd;
 
 // CONTENT
 $content-background: #dddddd;
@@ -28,6 +29,17 @@ $content-border-color: #edc16c;
 $menu-background-color: rgba(255, 255, 255, .75);
 $menu-item-background-color: rgba(64, 64, 64, .75);
 $menu-font-color: rgba(255, 255, 255, 1);
+
+// BUTTON
+$btn-background: #ffffff;
+$btn-background-hover: #edc16c;
+$btn-background-disabled: #cacaca;
+$btn-border: #ffffff;
+$btn-border-hover: #edc16c;
+$btn-border-disabled: #cacaca;
+$btn-text: #2c2f33;
+$btn-text-hover: #2c2f33;
+$btn-text-disabled: #dddddd;
 
 // CARD
 $card-background: #2c2f33;

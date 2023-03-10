@@ -21,6 +21,8 @@ export class CoinComponent {
   ) { }
 
   onItemClick(): void {
-    this.coreService.navigateTo(this.coinItem.url);
+    if (this.coinItem.allowClick) {
+      this.coreService.navigateTo(this.coinItem.url);
+    }
   }
 }
