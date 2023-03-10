@@ -55,7 +55,14 @@
       "about": "El conocimiento al alcance de un clic.<br/><br/>Esta es tu <i>'biblioteca'</i>, donde encontrarás los libros más interesantes con contenido sobre ₿itcoin, blockchain, smart contracts, finanzas y gestión del dinero, trading, desarrollo de aplicaciones y servicios relacionados con todo lo anterior... además de libros de espiritualidad, psicología, prácticas saludables, y mucho más.<br/><br/>Los libros se han recogido de diferentes fuentes por todo internet, y se almacenan en una cuenta de <a class='selected' href='https://mega.nz/aff=YvakZRq8M2Q' target='_blank'>Mega</a>, desde la que podrás visualizar y/o descargar los libros.<br/><br/><i>Si tras leerlos te han gustado, por favor, compra y mueve la economía aportando en aquello que para ti es de valor.</i>"
     },
     "CONTACT": {
-      "about": "Ponte en contacto con @CryptoShalix en las redes sociales o con el siguiente formulario de contacto y resuelve tus dudas o problemas relacionados con finanzas, criptomonedas, ₿itcoin, informática, etc, o pregunta por una sesión de chakras o un registro akáshico, todo de forma individual y totalmente personalizado."
+      "about": "Ponte en contacto con @CryptoShalix en las redes sociales o con el siguiente formulario de contacto y resuelve tus dudas o problemas relacionados con finanzas, criptomonedas, ₿itcoin, informática, etc, o pregunta por una sesión de chakras o un registro akáshico, todo de forma individual y totalmente personalizado.",
+      "email": "Email",
+      "emailHelp": "Los datos de contacto indicados NO serán compartidos ni almacenados.",
+      "nickname": "Nombre/Apodo",
+      "phone": "Teléfono/Id de Telegram",
+      "message": "Mensaje",
+      "messageHint": "Dudas, sugerencias, problemas...",
+      "submit": "Enviar"
     },
     "TOOLS": {
       "about": "Aquí encontrarás todas las plataformas y herramientas necesarias para hacer análisis técnico y fundamental, y, por supuesto, invertir, ya sea de forma centralizada o descentralizada, y con todas las ventajas e inconvenientes de cada uno. Además de wallets para ₿itcoin y/o altcoins, incluso para Lightning Network (LN⚡).<br/><br/>Para Lightning Network se recomienda visitar la página <a class='selected' href='https://lightningaddress.com'>lightningaddress.com</a> y elegir desde ahí el wallet deseado para ₿itcoin.",
