@@ -55,6 +55,7 @@ export class AppComponent implements OnInit, OnDestroy {
   // Copy text: https://www.geeksforgeeks.org/how-to-create-copy-to-clipboard-button/
   walletBTCLNZebedeeTag = URLS.ZEBEDEE_LNTAG;
   walletBTCLNZebedeeUrl = `${URLS.ZEBEDEE_LNURL}`;
+  walletBTCLNZebedeeQR = `${URLS.ZEBEDEE_LNQR}`;
   walletBTCPaynymTag = `${URLS.PAYNYM}`;
   walletBTCPaynymText = `Paynym: ${this.walletBTCPaynymTag}`;
 

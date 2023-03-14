@@ -73,8 +73,18 @@
       top: 0;
       left: 0;
       right: 0;
-      padding: 0 50px;
+      padding: 0 15px;
       border-bottom: 1px solid $toolbar-border-color;
+
+      .menu-top-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 50%;
+        margin: 0 auto;
+      }
     }
 
     .menu-bottom {
@@ -93,14 +103,14 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      margin-right: 100px;
+      margin: 0;
     }
 
     .menu-currency {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      margin-left: 100px;
+      margin: 0;
       cursor: pointer;
 
       &:hover {
@@ -190,7 +200,7 @@
       .menu-donations-toolbar-title {
         display: block;
         width: 100%;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: bold;
         letter-spacing: 0.8px;
         text-transform: uppercase;
@@ -214,9 +224,9 @@
       .menu-donations-toolbar-message {
         display: block;
         width: 100%;
-        font-size: 12px;
+        font-size: 14px;
         letter-spacing: 0.8px;
-        text-align: center;
+        text-align: justify;
         padding: 5px;
 
         &.italic {
@@ -294,6 +304,10 @@
 
 /* RESPONSIVE STYLES */
 @media screen and (max-width: 1256px) {
+  .menu-top-container {
+    max-width: 100% !important;
+  }
+
   .content {
     max-width: 90% !important;
   }

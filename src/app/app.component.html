@@ -10,35 +10,36 @@
   <div class="toolbar-top">
 
     <div class="menu-top">
+      <div class="menu-top-container">
 
-      <div class="menu-currency">
-        <mat-icon (click)="showContainerDonations">₿</mat-icon>
-        <app-coin-info
-          class="coin-ticker"
-          [sCoinItem]="coinBitcoin"
-          [type]="coinFormat"
-        ></app-coin-info>
-      </div>
-
-      <span class="spacer"></span>
-
-      <div class="menu-actions">
-        <div
-          class="material-icons-donations"
-          (click)="showContainerDonations = true"
-        >
-          <mat-icon>coffee</mat-icon>
+        <div class="menu-currency">
+          <app-coin-info
+            class="coin-ticker"
+            [sCoinItem]="coinBitcoin"
+            [type]="coinFormat"
+          ></app-coin-info>
         </div>
 
-        <div class="material-icons-language">
-          <span class="language-tooltip">{{ getTooltipLanguage() | translate | uppercase }}</span>
-          <mat-icon
-            class="material-icons"
-            (click)="onChangeLanguage()"
-          >translate</mat-icon>
-        </div>
-      </div>
+        <span class="spacer"></span>
 
+        <div class="menu-actions">
+          <div
+            class="material-icons-donations"
+            (click)="showContainerDonations = true"
+          >
+            <mat-icon>coffee</mat-icon>
+          </div>
+
+          <div class="material-icons-language">
+            <span class="language-tooltip">{{ getTooltipLanguage() | translate | uppercase }}</span>
+            <mat-icon
+              class="material-icons"
+              (click)="onChangeLanguage()"
+            >translate</mat-icon>
+          </div>
+        </div>
+
+      </div>
     </div>
 
     <div class="menu-bottom">
@@ -93,6 +94,14 @@
         >
           <mat-icon>polymer</mat-icon>
           {{walletBTCPaynymText}}
+        </a>
+
+        <a
+          class="show-as-row"
+          (click)="onClickCopyToClipboard()"
+          [cdkCopyToClipboard]="walletBTCLNZebedeeUrl"
+        >
+          <img [src]="walletBTCLNZebedeeQR">
         </a>
 
         <span

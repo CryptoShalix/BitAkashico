@@ -5,7 +5,7 @@
   },
   "DONATIONS": {
     "title": "Dona unos sats",
-    "message": "Cualquier cantidad de satoshis es bien recibida. Nos motivarán y ayudarán a hacer crecer más los contenidos.<br/>Envía ₿itcoin por lightning network, así apenas tendrás comisiones.<br/>Recuerda que tienes los wallets recomendados de ₿itcoin en <a class='selected' href='/#/tools'>herramientas</a>."
+    "message": "Cualquier cantidad de satoshis es bien recibida. Nos motivarán y ayudarán a hacer crecer más los contenidos.<br/><br/>Envía ₿itcoin por lightning network, y así apenas tendrás comisiones. Recuerda que tienes los wallets recomendados de ₿itcoin en <a class='selected' href='/#/tools'>herramientas</a>."
   },
   "LANGUAGE": {
     "en": "Inglés",
