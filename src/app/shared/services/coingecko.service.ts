@@ -21,6 +21,60 @@ export class CoingeckoService {
     private coreService: CoreService
   ) { }
 
+  getCoinsBase(currency: IValueText = ECurrency.USD): Promise<Coin[]> {
+    // Set url
+    const path = `${this.cApiMainUrl}/coins/list`;
+
+    // Do the call
+    return new Promise<Coin[]>((resolve, reject) => {
+      this.http.get<string>(path)
+        .pipe(first(),
+          map((data: any) => data.map((item: any) => new Coin(currency, item)))
+        )
+        .subscribe({
+          next: (response: Coin[]) => {
+            resolve(response);
+          },
+          error: (error) => {
+            // this.errorService.manageError(error);
+            reject(error);
+          },
+        });
+    });
+  }
+
+  getSupportedCurrencies(): Promise<Coin[]> {
+    // Set url
+    const path = `${this.cApiMainUrl}/simple/supported_vs_currencies`;
+
+    // Do the call
+    return new Promise<Coin[]>((resolve, reject) => {
+      this.http.get<string[]>(path)
+        .pipe(first(),
+          map((data: any) => data)
+        )
+        .subscribe({
+          next: async (response: string[]) => {
+            // Add each supported currency to the ECurrency class
+            // response.map(coin => ECurrency.addCoin(coin));
+            // // Get full list of coins base data
+            // const listCoinsBase = await this.getCoinsBase();
+            // // Get these supported currencies base data
+            const listResult: Coin[] = [];
+            // ECurrency.getList().forEach(cur => {
+            //   let item = listCoinsBase.find(cb => cb.symbol.toLowerCase() === cur.value);
+            //   if (item != null) listResult.push(item);
+            // });
+            resolve(listResult);
+          },
+          error: (error) => {
+            // this.errorService.manageError(error);
+            reject(error);
+          },
+        });
+    });
+  }
+
   getCoins(
     currency: IValueText = ECurrency.USD,
     itemsPerPage: number = 10,

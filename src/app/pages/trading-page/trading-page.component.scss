@@ -8,4 +8,89 @@
   text-align: center;
   line-height: 30px;
   letter-spacing: 1px;
+
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: space-around;
+      align-items: center;
+
+      .form-control {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        align-content: space-between;
+        max-width: 200px;
+        min-width: 150px;
+        margin: 0 10px;
+
+        .inputSearch {
+          text-align: left;
+          border-radius: 5px;
+          background: transparent;
+          color: $btn-background;
+          border: none;
+          text-transform: capitalize;
+          border-bottom: 2px solid $btn-border;
+
+          &:hover {
+            border-color: $btn-border-hover;
+          }
+        }
+
+        input {
+          text-align: right;
+          border-radius: 5px;
+        }
+
+        label {
+          width: 100%;
+          text-align: start;
+          cursor: default;
+
+          &:hover {
+            color: $global-link-color-hover;
+          }
+        }
+      }
+
+      .trading-button {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: space-around;
+        align-items: stretch;
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        font-weight: bold;
+        color: $btn-text;
+        background: $btn-background;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+          color: $btn-text-hover;
+          background: $btn-background-hover;
+        }
+      }
+
+      &.buttons .trading-button {
+        width: 100px;
+      }
+    }
+  }
 }

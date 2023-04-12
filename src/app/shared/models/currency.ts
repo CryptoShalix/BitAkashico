@@ -6,7 +6,75 @@ export class ECurrency {
   static GBP: IValueText = { value: 'gbp', text: '£' };
   static YEN: IValueText = { value: 'yen', text: '¥' };
   static BTC: IValueText = { value: 'btc', text: '₿' };
-  static BTC_ALT: IValueText = { value: 'btc_alt', text: '฿' };
+
+  private static list: Coin[] = [];
+  static getList() {
+    if (this.list.length === 0) {
+      const cur = ECurrency.USD;
+      this.list.push(new Coin(cur, { id: 'bitcoin', name: 'Bitcoin', symbol: 'btc' }));
+      this.list.push(new Coin(cur, { id: 'ethereum', name: 'Ether', symbol: 'eth' }));
+      this.list.push(new Coin(cur, { id: 'litecoin', name: 'Litecoin', symbol: 'ltc' }));
+      this.list.push(new Coin(cur, { id: 'bitcoin-cash', name: 'Bitcoin Cash', symbol: 'bch' }));
+      this.list.push(new Coin(cur, { id: '', name: 'Binance Coin', symbol: 'bnb' }));
+      this.list.push(new Coin(cur, { id: '', name: 'EOS', symbol: 'eos' }));
+      this.list.push(new Coin(cur, { id: 'ripple', name: 'XRP', symbol: 'xrp' }));
+      this.list.push(new Coin(cur, { id: '', name: 'Lumens', symbol: 'xlm' }));
+      this.list.push(new Coin(cur, { id: '', name: 'Chainlink', symbol: 'link' }));
+      this.list.push(new Coin(cur, { id: '', name: 'Polkadot', symbol: 'dot' }));
+      this.list.push(new Coin(cur, { id: '', name: 'Yearn.Finance', symbol: 'yfi' }));
+      this.list.push(new Coin(cur, { id: '', name: 'US dollar', symbol: 'usd' }));
+      this.list.push(new Coin(cur, { id: '', name: 'United Arab Emirates Dirhams', symbol: 'aed' }));
+      this.list.push(new Coin(cur, { id: '', name: 'Argentine peso', symbol: 'ars' }));
+      this.list.push(new Coin(cur, { id: '', name: 'Australian dollar', symbol: 'aud' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'bdt' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'bhd' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'bmd' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'brl' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'cad' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'chf' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'clp' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'cny' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'czk' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'dkk' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'eur' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'gbp' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'hkd' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'huf' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'idr' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'ils' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'inr' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'jpy' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'krw' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'kwd' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'lkr' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'mmk' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'mxn' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'myr' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'ngn' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'nok' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'nzd' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'php' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'pkr' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'pln' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'rub' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'sar' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'sek' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'sgd' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'thb' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'try' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'twd' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'uah' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'vef' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'vnd' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'zar' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'xdr' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'xag' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'xau' }));
+      this.list.push(new Coin(cur, { id: '', name: '', symbol: 'bits' }));
+      this.list.push(new Coin(cur, { id: '', name: 'Satoshi', symbol: 'sats' }));
+    }
+    return this.list;
+  };
 
   constructor() { }
 }
@@ -15,59 +83,6 @@ export enum ECoinFormat {
   CARD = 'card',
   FULL = 'full',
   INFO = 'info',
-}
-
-export enum EBit2MeCoins {
-  B2M = 'B2M',
-  BTC = 'BTC',
-  ETH = 'ETH',
-  BCH = 'BCH',
-  LTC = 'LTC',
-  DASH = 'DASH',
-  XRP = 'XRP',
-  ADA = 'ADA',
-  LINK = 'LINK',
-  COMP = 'COMP',
-  ATOM = 'ATOM',
-  DAI = 'DAI',
-  XMR = 'XMR',
-  OMG = 'OMG',
-  DOT = 'DOT',
-  SC = 'SC',
-  XLM = 'XLM',
-  USDT = 'USDT',
-  USDC = 'USDC',
-  ZEC = 'ZEC',
-  XTZ = 'XTZ',
-  UNI = 'UNI',
-  AAVE = 'AAVE',
-  ANT = 'ANT',
-  BAT = 'BAT',
-  BAL = 'BAL',
-  FIL = 'FIL',
-  WAVES = 'WAVES',
-  KSM = 'KSM',
-  YFI = 'YFI',
-  CRV = 'CRV',
-  NANO = 'NANO',
-  TRX = 'TRX',
-  FLOW = 'FLOW',
-  ICX = 'ICX',
-  KNC = 'KNC',
-  SNX = 'SNX',
-  QTUM = 'QTUM',
-  KAVA = 'KAVA',
-  MANA = 'MANA',
-  ALGO = 'ALGO',
-  MLN = 'MLN',
-  ETC = 'ETC',
-  GNO = 'GNO',
-  KEEP = 'KEEP',
-  LSK = 'LSK',
-  OCEAN = 'OCEAN',
-  OXT = 'OXT',
-  GRT = 'GRT',
-  EWT = 'EWT'
 }
 
 export class Coin {

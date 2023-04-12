@@ -1,7 +1,7 @@
 import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -38,6 +38,7 @@ import { TradingPageComponent } from './pages/trading-page/trading-page.componen
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
     MaterialModule,
     SharedModule,
     PipesModule,

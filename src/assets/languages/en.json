@@ -185,6 +185,9 @@
         }
       }
     },
+    "TRADING": {
+      "searchInput": "Filter coin..."
+    },
     "GAMES": {
       "about": "<i>Can you imagine generating income playing video games?</i><br/><i>Can you imagine receiving that income in ₿itcoin?</i><br/><br/>I bring you several games that barely take up space on your mobile, you can play them whenever and as much as you want, and get some satoshis <i>(minimum unit of bitcoin)</i> with a couple of clicks. It also tells you the recommended bitcoin <b>wallets</b> for these games.",
       "aboutGames": "Play&Earn (P&E) games, since you will always win, even if it is a few sats. We should appreciate <a class='selected' href='https://www.thndr.games/bitcoin-games' target='_blank'>thndr.games</a> and <a class='selected' href='https://zebedee.io' target ='_blank'>zebedee.io</a> for bringing us these wonderful games.<br/><i style='font-size:12px;font-weight:bold;'>Note that there are many more, but these are the ones that have been tested and work great.</i>",

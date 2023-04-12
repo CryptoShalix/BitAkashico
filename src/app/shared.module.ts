@@ -10,6 +10,7 @@ import { CarouselComponent } from './shared/components/carousel/carousel.compone
 import { CoinComponent } from './shared/components/coin-info/coin-info.component';
 import { ContactFormComponent } from './shared/components/contact-form/contact-form.component';
 import { CustomImageComponent } from './shared/components/custom-image/custom-image.component';
+import { HistoryMoneyComponent } from './shared/components/history-money/history-money.component';
 import { LinkableIconComponent } from './shared/components/linkable-icon/linkable-icon.component';
 import { StarRankComponent } from './shared/components/star-rank/star-rank.component';
 
@@ -22,6 +23,7 @@ import { StarRankComponent } from './shared/components/star-rank/star-rank.compo
     StarRankComponent,
     CustomImageComponent,
     ContactFormComponent,
+    HistoryMoneyComponent,
   ],
   imports: [
     CommonModule,
@@ -39,6 +41,7 @@ import { StarRankComponent } from './shared/components/star-rank/star-rank.compo
     StarRankComponent,
     CustomImageComponent,
     ContactFormComponent,
+    HistoryMoneyComponent,
   ]
 })
 export class SharedModule { }
