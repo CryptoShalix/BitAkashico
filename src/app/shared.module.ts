@@ -13,6 +13,7 @@ import { CustomImageComponent } from './shared/components/custom-image/custom-im
 import { HistoryMoneyComponent } from './shared/components/history-money/history-money.component';
 import { LinkableIconComponent } from './shared/components/linkable-icon/linkable-icon.component';
 import { StarRankComponent } from './shared/components/star-rank/star-rank.component';
+import { MessageManagerComponent } from './shared/components/message-manager/message-manager.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { StarRankComponent } from './shared/components/star-rank/star-rank.compo
     CustomImageComponent,
     ContactFormComponent,
     HistoryMoneyComponent,
+    MessageManagerComponent,
   ],
   imports: [
     CommonModule,
@@ -42,6 +44,7 @@ import { StarRankComponent } from './shared/components/star-rank/star-rank.compo
     CustomImageComponent,
     ContactFormComponent,
     HistoryMoneyComponent,
+    MessageManagerComponent,
   ]
 })
 export class SharedModule { }

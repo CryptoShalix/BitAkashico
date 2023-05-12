@@ -1,5 +1,4 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
-import { IMAGES } from 'src/assets/images/images';
 
 import { CoreService } from './shared/services/core.service';
 import { TranslateService } from './shared/services/translate.service';
@@ -119,8 +118,8 @@ export class AppComponent implements OnInit, OnDestroy {
       isMenu: true
     }));
     this.iconListMenu.push(new LinkableIcon(this.icmIdCalc, {
-      routerLink: 'trading',
-      title: 'MENU.trading',
+      routerLink: 'finances',
+      title: 'MENU.finances',
       iconPath: 'assessment',
       color: '#fff',
       type: ELinkableIconType.ICON,

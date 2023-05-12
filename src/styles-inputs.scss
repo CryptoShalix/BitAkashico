@@ -12,6 +12,14 @@ select {
   font-size: inherit;
 }
 
+.mat-select {
+  background-color: $select-background;
+  color: $select-text;
+  border-color: $select-border;
+  margin: 5px auto;
+  border-radius: 5px;
+}
+
 .btn {
   position: relative;
   display: flex;
@@ -52,6 +60,21 @@ select {
       align-items: center;
       flex-wrap: wrap;
     }
+  }
+
+  &.btn-small {
+    width: 55px;
+    height: 50px;
+    min-width: 25px;
+    min-height: 25px;
+    margin: 5px 10px;
+  }
+
+  &.btn-center .mat-icon {
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
   }
 
   &:disabled {

@@ -2,6 +2,8 @@ import { formatDate } from '@angular/common';
 import { Injectable } from '@angular/core';
 
 import { EDateFormat, IAccordion, IAccordionItem, IValueText, URLS } from '../models/core';
+import { MessageService } from './message.service';
+import { MessageType } from '../components/message-manager/message-manager.component';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +16,7 @@ export class CoreService {
   private defaultCurrency: IValueText;
   private userLanguage: string;
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
   // APP RELATED
 
@@ -63,6 +65,21 @@ export class CoreService {
       image: '',
       rank
     };
+  }
+
+  // MESSAGE MANAGER
+
+  showMessage(message: string) {
+    this.messageService.sendMessage(message);
+  }
+  showSuccess(message: string) {
+    this.messageService.sendMessage(message, MessageType.SUCCESS);
+  }
+  showAlert(message: string) {
+    this.messageService.sendMessage(message, MessageType.ALERT);
+  }
+  showError(message: string) {
+    this.messageService.sendMessage(message, MessageType.ERROR);
   }
 
   // LANGUAGE

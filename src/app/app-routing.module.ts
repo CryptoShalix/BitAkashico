@@ -8,7 +8,7 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { GamesPageComponent } from './pages/games-page/games-page.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { ToolsPageComponent } from './pages/tools-page/tools-page.component';
-import { TradingPageComponent } from './pages/trading-page/trading-page.component';
+import { FinancesPageComponent } from './pages/finances-page/finances-page.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactPageComponent, pathMatch: 'full' },
   { path: 'games', component: GamesPageComponent, pathMatch: 'full' },
   { path: 'tools', component: ToolsPageComponent, pathMatch: 'full' },
-  { path: 'trading', component: TradingPageComponent, pathMatch: 'full' },
+  { path: 'finances', component: FinancesPageComponent, pathMatch: 'full' },
   { path: '**', component: ErrorPageComponent }
 ];
 

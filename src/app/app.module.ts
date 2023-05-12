@@ -18,14 +18,15 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { GamesPageComponent } from './pages/games-page/games-page.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { ToolsPageComponent } from './pages/tools-page/tools-page.component';
-import { TradingPageComponent } from './pages/trading-page/trading-page.component';
+import { FinancesPageComponent } from './pages/finances-page/finances-page.component';
+import { MessageService } from './shared/services/message.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     ToolsPageComponent,
-    TradingPageComponent,
+    FinancesPageComponent,
     GamesPageComponent,
     BooksPageComponent,
     AcademyPageComponent,
@@ -51,7 +52,8 @@ import { TradingPageComponent } from './pages/trading-page/trading-page.componen
     {
       provide: STEPPER_GLOBAL_OPTIONS,
       useValue: { displayDefaultIndicatorType: false }
-    }
+    },
+    MessageService,
   ],
   bootstrap: [AppComponent]
 })
