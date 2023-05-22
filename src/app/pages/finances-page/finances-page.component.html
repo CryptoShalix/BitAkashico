@@ -10,31 +10,52 @@
       <mat-icon>refresh</mat-icon>
     </button>
 
-    <mat-select
-      *ngIf="coinsCurrency && coinsCurrency.length > 0"
-      class="comboSearch"
-      [(value)]="coinSelectedOrigin"
-      (selectionChange)="getCoins()"
+    <button
+      type="button"
+      class="btn btn-submit btn-small btn-center"
+      (click)="onSavePortfolio()"
     >
-      <mat-option
-        *ngFor="let option of coinsCurrency"
-        [value]="option.symbol"
-      >[{{ option.symbol | uppercase }}] {{ option.name }}</mat-option>
-    </mat-select>
+      <mat-icon>save</mat-icon>
+    </button>
   </div>
-  {{coins.length}}
+
   <div
     *ngIf="coins && coins.length > 0"
     class="mat-elevation-z8"
   >
-    <input
-      #inputFilter
-      name="inputFilter"
+    <app-modal-selector
+      [setShow]="true"
+      [setListOrigin]="coins"
+      [setTitle]="'Titulo selector monedas'"
+    ></app-modal-selector>
+    <!-- <input
+      #inputSearchCoin
+      name="inputSearchCoin"
       type="text"
       class="inputSearch"
       placeholder="{{ 'PAGES.TRADING.searchInput' | translate }}"
       (input)="applyFilter($event)"
     >
+    <mat-icon (click)="onSearchCoinClear()">close</mat-icon>
+
+    <mat-selection-list
+      #coins
+      class="coins-selector"
+    >
+      <mat-list-option
+        *ngFor="let coin of coinsFiltered"
+        (click)="onSelectedCoin(coin)"
+      >
+        <div class="coin-selector-item">
+          <span class="coin-selector-symbol">[{{coin.symbol}}]</span>
+          <span class="coin-selector-name">{{coin.name}}</span>
+        </div>
+      </mat-list-option>
+    </mat-selection-list>
+
+    <p>
+      Coins selected: {{coinsPortfolioSelected.length}}
+    </p> -->
 
     <table
       mat-table
@@ -87,7 +108,6 @@
         *matRowDef="let row; columns: displayedColumns;"
       ></tr>
 
-      <!-- Row shown when there is no matching data. -->
       <tr
         class="mat-row"
         *matNoDataRow
@@ -95,7 +115,7 @@
         <td
           class="mat-cell"
           colspan="4"
-        >No data matching the filter "{{inputFilter.value}}"</td>
+        >Su portfolio está vacío. Seleccione algunas monedas para empezar.</td>
       </tr>
     </table>
 

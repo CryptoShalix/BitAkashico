@@ -12,6 +12,10 @@
   margin: 0;
   overflow-y: auto;
 
+  &.hideMessages {
+    display: none;
+  }
+
   &.showOnLeft {
     left: 15px;
   }

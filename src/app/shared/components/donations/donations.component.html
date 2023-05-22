@@ -1,0 +1,46 @@
+<app-modal-dialog
+  [setShow]="showContainerDonations"
+  [setTitle]="'DONATIONS.title'"
+>
+  <ng-template #modal_dialog_template>
+    <span
+      class="menu-donations-message"
+      [innerHTML]="('DONATIONS.message' | translate) | safe:'html'"
+    ></span>
+    <span class="menu-donations-message italic">{{ 'MSG.clickToCopy' | translate }}</span>
+    <div class="menu-donations-wallets">
+      <a
+        class="show-as-row"
+        (click)="onClickCopyToClipboard()"
+        [cdkCopyToClipboard]="walletBTCLNZebedeeTag"
+      >
+        <mat-icon>offline_bolt</mat-icon>
+        {{ walletBTCLNZebedeeTag }}
+      </a>
+
+      <a
+        class="show-as-row"
+        (click)="onClickCopyToClipboard()"
+        [cdkCopyToClipboard]="walletBTCPaynymTag"
+      >
+        <mat-icon>polymer</mat-icon>
+        {{walletBTCPaynymText}}
+      </a>
+
+      <a
+        class="show-as-row"
+        (click)="onClickCopyToClipboard()"
+        [cdkCopyToClipboard]="walletBTCLNZebedeeUrl"
+      >
+        <img [src]="walletBTCLNZebedeeQR">
+      </a>
+
+      <span
+        class="blinkMessage"
+        [ngClass]="{'visible': hasBeenCopied, 'invisible': !hasBeenCopied}"
+      >{{ 'MSG.copyToClipboard' | translate }}
+        <mat-icon>content_copy</mat-icon>
+      </span>
+    </div>
+  </ng-template>
+</app-modal-dialog>

@@ -1,0 +1,20 @@
+<div
+  class="modal-dialog-container"
+  [ngClass]="{'visible': showModalDialog}"
+>
+  <div class="modal-dialog-container-fix">
+
+    <div class="modal-dialog-toolbar">
+      <span class="modal-dialog-toolbar-title">
+        <span class="bitcoin">₿</span>{{ title | translate }}
+      </span>
+      <mat-icon
+        class="close-button"
+        (click)="showModalDialog = false"
+      >close</mat-icon>
+    </div>
+
+    <div class="modal-dialog-content">
+      <ng-template *ngTemplateOutlet="modal_dialog_template"></ng-template>
+    </div>
+  </div>

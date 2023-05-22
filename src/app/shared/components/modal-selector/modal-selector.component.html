@@ -1,0 +1,43 @@
+<app-modal-dialog
+  [setShow]="showModalDialog"
+  [setTitle]="title"
+>
+  <ng-template #modal_dialog_template>
+
+    <div class="inputSearch-container">
+      <input
+        #inputSearchCoin
+        class="inputSearch"
+        name="inputSearchCoin"
+        type="text"
+        placeholder="{{ 'PAGES.TRADING.searchInput' | translate }}"
+        (input)="applyFilter($event)"
+      >
+      <mat-icon
+        class="inputSearch-clear"
+        (click)="onSearchCoinClear()"
+      >close</mat-icon>
+    </div>
+
+    <mat-selection-list
+      #lists
+      class="lists-selector"
+      [multiple]="multiple"
+    >
+      <mat-list-option
+        *ngFor="let item of coinsFiltered"
+        (click)="onSelectedCoin(item)"
+      >
+        <div class="list-selector-item">
+          <span class="list-selector-item-symbol">[{{item.symbol}}]</span>
+          <span class="list-selector-item-name">{{item.name}}</span>
+        </div>
+      </mat-list-option>
+    </mat-selection-list>
+
+    <p>
+      Coins selected: {{coinsPortfolioSelected.length}}
+    </p>
+
+  </ng-template>
+</app-modal-dialog>

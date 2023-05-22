@@ -2,13 +2,12 @@ import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 
 import { CoreService } from './shared/services/core.service';
 import { TranslateService } from './shared/services/translate.service';
+import { CoingeckoService } from './shared/services/coingecko.service';
 
 import { map, Subscription, timer } from 'rxjs';
 import { Coin, ECoinFormat, ECurrency } from './shared/models/currency';
 
 import { ELinkableIcon, ELinkableIconType, ELinkableTarget, LinkableIcon } from './shared/components/linkable-icon/linkable-icon';
-import { URLS } from './shared/models/core';
-import { CoingeckoService } from './shared/services/coingecko.service';
 
 // Angular Material Icons: https://fonts.google.com/icons
 // Angular translate: https://medium.com/angular-chile/aplicaciones-multilenguaje-en-angular-7-con-ngx-translate-db8d1e7b380c
@@ -46,17 +45,8 @@ export class AppComponent implements OnInit, OnDestroy {
   currency = ECurrency.EUR;
   showContainerDonations = false;
 
-  hasBeenCopied = false;
-
   private maxScreenWidth = 800;
   private isBelowResolution = false;
-
-  // Copy text: https://www.geeksforgeeks.org/how-to-create-copy-to-clipboard-button/
-  walletBTCLNZebedeeTag = URLS.ZEBEDEE_LNTAG;
-  walletBTCLNZebedeeUrl = `${URLS.ZEBEDEE_LNURL}`;
-  walletBTCLNZebedeeQR = `${URLS.ZEBEDEE_LNQR}`;
-  walletBTCPaynymTag = `${URLS.PAYNYM}`;
-  walletBTCPaynymText = `Paynym: ${this.walletBTCPaynymTag}`;
 
   iconListMenu: LinkableIcon[] = [];
 
@@ -118,7 +108,7 @@ export class AppComponent implements OnInit, OnDestroy {
       isMenu: true
     }));
     this.iconListMenu.push(new LinkableIcon(this.icmIdCalc, {
-      routerLink: 'finances',
+      routerLink: '/',
       title: 'MENU.finances',
       iconPath: 'assessment',
       color: '#fff',
@@ -180,13 +170,5 @@ export class AppComponent implements OnInit, OnDestroy {
 
   getTooltipLanguage(): string {
     return `LANGUAGE.${this.translateService.userLang}`;
-  }
-
-  onClickCopyToClipboard(): void {
-    this.hasBeenCopied = true;
-    const interval = setInterval(() => {
-      this.hasBeenCopied = false;
-      clearInterval(interval);
-    }, 5000);
   }
 }

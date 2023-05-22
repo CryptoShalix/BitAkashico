@@ -20,6 +20,7 @@ select {
   border-radius: 5px;
 }
 
+// BUTTON
 .btn {
   position: relative;
   display: flex;
@@ -94,5 +95,24 @@ select {
 @media screen and (max-width: 1256px) {
   .btn-submit {
     max-width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .mat-list-option {
+    height: 60px !important;
+    font-size: 14px !important;
+
+    .mat-list-item-content,
+    .mat-list-item-content-reverse {
+      padding: 0 !important;
+      margin: 0 auto !important;
+      width: calc(100% - 10px) !important;
+    }
+
+    .mat-list-text {
+      border-bottom: 1px solid $select-border !important;
+    }
   }
 }

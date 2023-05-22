@@ -14,18 +14,24 @@ import { HistoryMoneyComponent } from './shared/components/history-money/history
 import { LinkableIconComponent } from './shared/components/linkable-icon/linkable-icon.component';
 import { StarRankComponent } from './shared/components/star-rank/star-rank.component';
 import { MessageManagerComponent } from './shared/components/message-manager/message-manager.component';
+import { DonationsComponent } from './shared/components/donations/donations.component';
+import { ModalDialogComponent } from './shared/components/modal-dialog/modal-dialog.component';
+import { ModalSelectorComponent } from './shared/components/modal-selector/modal-selector.component';
 
 @NgModule({
   declarations: [
     AccordionComponent,
     CarouselComponent,
     CoinComponent,
-    LinkableIconComponent,
-    StarRankComponent,
-    CustomImageComponent,
     ContactFormComponent,
+    CustomImageComponent,
+    DonationsComponent,
     HistoryMoneyComponent,
+    LinkableIconComponent,
     MessageManagerComponent,
+    ModalDialogComponent,
+    ModalSelectorComponent,
+    StarRankComponent,
   ],
   imports: [
     CommonModule,
@@ -35,16 +41,19 @@ import { MessageManagerComponent } from './shared/components/message-manager/mes
     ReactiveFormsModule,
   ],
   exports: [
-    PipesModule,
     AccordionComponent,
     CarouselComponent,
     CoinComponent,
-    LinkableIconComponent,
-    StarRankComponent,
-    CustomImageComponent,
     ContactFormComponent,
+    CustomImageComponent,
+    DonationsComponent,
     HistoryMoneyComponent,
+    LinkableIconComponent,
     MessageManagerComponent,
+    ModalDialogComponent,
+    ModalSelectorComponent,
+    PipesModule,
+    StarRankComponent,
   ]
 })
 export class SharedModule { }

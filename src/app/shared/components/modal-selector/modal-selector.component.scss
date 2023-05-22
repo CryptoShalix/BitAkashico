@@ -1,0 +1,73 @@
+@import '../../../../styles-colors.scss';
+
+.inputSearch-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 40px;
+  align-items: center;
+
+  .inputSearch {
+    margin: 0;
+    padding-right: 25px;
+    text-align: left;
+    background: transparent;
+    color: $btn-background;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 2px solid $btn-border;
+
+    &:hover {
+      border-color: $btn-border-hover;
+    }
+  }
+
+  .inputSearch-clear {
+    position: absolute;
+    right: 0;
+    font-size: 25px;
+  }
+}
+
+.lists-selector {
+  max-height: 300px;
+  background: $select-background;
+  color: $select-text;
+  text-align: start;
+  overflow: auto;
+
+
+  .list-selector-item {
+    display: flex;
+    flex-direction: row;
+
+    .list-selector-item-symbol {
+      width: 100%;
+      max-width: 25%;
+      text-transform: uppercase;
+    }
+
+    .list-selector-item-name {
+      width: 100%;
+      min-width: 200px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .lists-selector {
+    max-height: 300px;
+    background: $select-background;
+    color: $select-text;
+    text-align: start;
+    overflow: auto;
+
+    .list-selector-item {
+      flex-direction: column;
+    }
+  }
+}

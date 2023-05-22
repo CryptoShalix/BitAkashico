@@ -1,6 +1,7 @@
 <div
   class="msgMainContainer"
   [ngClass]="{
+    'hideMessages': messages.length===0,
     'showOnLeft':pShowLeft,
     'showOnRight':!pShowLeft
   }"
