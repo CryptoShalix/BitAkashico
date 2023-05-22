@@ -1,213 +1,220 @@
-[{
-  "BUTTONS": {
-    "accept": "Aceptar",
-    "cancel": "Cancelar"
-  },
-  "DONATIONS": {
-    "title": "Dona unos sats",
-    "message": "Cualquier cantidad de satoshis es bien recibida. Nos motivarán y ayudarán a hacer crecer más los contenidos.<br/><br/>Envía ₿itcoin por lightning network, y así apenas tendrás comisiones. Recuerda que tienes los wallets recomendados de ₿itcoin en <a class='selected' href='/#/tools'>herramientas</a>."
-  },
-  "LANGUAGE": {
-    "en": "Inglés",
-    "es": "Español"
-  },
-  "MENU": {
-    "academy": "Academia",
-    "books": "Libros",
-    "contact": "Contacto",
-    "games": "Juegos",
-    "home": "Home",
-    "portfolio": "Portfolio",
-    "security": "Seguridad",
-    "tools": "Herramientas",
-    "trading": "Trading"
-  },
-  "MSG": {
-    "copyToClipboard": "¡Se ha copiado al portapapeles!",
-    "clickToCopy": "Haz clic en el texto o imagen para copiar al portapapeles"
-  },
-  "PAGES": {
-    "MAIN": {
-      "about": "BitAkashico se presenta como el proyecto principal de <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Diferenciando la parte <b>material</b>, que pretende apoyar en la educación financiera (₿itcoin, criptomonedas, etc) e informática; de la parte <b>espiritual</b>, que busca recordarte a tí como alma que transita este mundo, quién eres, o a qué pruebas te enfrentas ahora, mediante la lectura de tus chakras o un registro akáshico.<br/><br/>Para empezar, revisa la <a class='selected' target='_self' href='#academy'>Academia</a> o la sección de <a class='selected' target='_self' href='#books'>Libros</a>.<br/><br/>Si lo deseas, ponte en contacto con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> y resuelve las dudas mediante una sesión individual y totalmente personalizada.",
-      "topAppsTitle": "⭐ TOP APPS DEL MOMENTO ⭐"
+[
+  {
+    "BUTTONS": {
+      "accept": "Aceptar",
+      "cancel": "Cancelar"
     },
-    "ACADEMY": {
-      "BIT": {
-        "about": "A través de nuestra mente, y enfocándonos en el mundo material, podemos aprender (juntos) sobre informática, finanzas o criptomonedas.<br/><br/>Tienes a tu disposición la consultoría privada uno a uno y totalmente personalizada con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a>, además de videos formativos explicando todo lo relacionado con ₿itcoin y otras criptomonedas en el canal de <a class='selected' target='_blank' href='https://www.youtube.com/@BitAkashico'>Youtube</a>.<br/><br/>Aquí puedes ver los niveles de aprendizaje que recomendamos para caer en la madriguera de ₿itcoin y las criptomonedas como es debido.<br/>",
-        "STEP_1": {
-          "title": "NIVEL: BÁSICO",
-          "description": "Revolución digital: Blockchain, criptomonedas, NFT y metaverso"
+    "DONATIONS": {
+      "title": "Dona unos sats",
+      "message": "Cualquier cantidad de satoshis es bien recibida. Nos motivarán y ayudarán a hacer crecer más los contenidos.<br/><br/>Envía ₿itcoin por lightning network, y así apenas tendrás comisiones. Recuerda que tienes los wallets recomendados de ₿itcoin en <a class='selected' href='/#/tools'>herramientas</a>."
+    },
+    "LANGUAGE": {
+      "en": "Inglés",
+      "es": "Español"
+    },
+    "MENU": {
+      "academy": "Academia",
+      "books": "Libros",
+      "contact": "Contacto",
+      "games": "Juegos",
+      "home": "Home",
+      "portfolio": "Portfolio",
+      "security": "Seguridad",
+      "tools": "Herramientas",
+      "finances": "Finanzas"
+    },
+    "MSG": {
+      "copyToClipboard": "¡Se ha copiado al portapapeles!",
+      "clickToCopy": "Haz clic en el texto o imagen para copiar al portapapeles"
+    },
+    "PAGES": {
+      "MAIN": {
+        "about": "BitAkashico se presenta como el proyecto principal de <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Diferenciando la parte <b>material</b>, que pretende apoyar en la educación financiera (₿itcoin, criptomonedas, etc) e informática; de la parte <b>espiritual</b>, que busca recordarte a tí como alma que transita este mundo, quién eres, o a qué pruebas te enfrentas ahora, mediante la lectura de tus chakras o un registro akáshico.<br/><br/>Para empezar, revisa la <a class='selected' target='_self' href='#academy'>Academia</a> o la sección de <a class='selected' target='_self' href='#books'>Libros</a>.<br/><br/>Si lo deseas, ponte en contacto con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> y resuelve las dudas mediante una sesión individual y totalmente personalizada.",
+        "topAppsTitle": "⭐ TOP APPS DEL MOMENTO ⭐"
+      },
+      "ACADEMY": {
+        "BIT": {
+          "about": "A través de nuestra mente, y enfocándonos en el mundo material, podemos aprender (juntos) sobre informática, finanzas o criptomonedas.<br/><br/>Tienes a tu disposición la consultoría privada uno a uno y totalmente personalizada con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a>, además de videos formativos explicando todo lo relacionado con ₿itcoin y otras criptomonedas en el canal de <a class='selected' target='_blank' href='https://www.youtube.com/@BitAkashico'>Youtube</a>.<br/><br/>Aquí puedes ver los niveles de aprendizaje que recomendamos para caer en la madriguera de ₿itcoin y las criptomonedas como es debido.<br/>",
+          "STEP_1": {
+            "title": "NIVEL: BÁSICO",
+            "description": "Revolución digital: Blockchain, criptomonedas, NFT y metaverso"
+          },
+          "STEP_2": {
+            "title": "NIVEL: INTERMEDIO",
+            "description": "Educación: ₿itcoin, privacidad y criptomonedas"
+          },
+          "STEP_3": {
+            "title": "NECESITO MÁS...",
+            "description": "Si aún tienes dudas o no has entendido algo, recuerda solicitar una sesión con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> para una clase individual totalmente personalizada."
+          }
         },
-        "STEP_2": {
-          "title": "NIVEL: INTERMEDIO",
-          "description": "Educación: ₿itcoin, privacidad y criptomonedas"
-        },
-        "STEP_3": {
-          "title": "NECESITO MÁS...",
-          "description": "Si aún tienes dudas o no has entendido algo, recuerda solicitar una sesión con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> para una clase individual totalmente personalizada."
+        "AKASHICO": {
+          "about": "A través de nuestro corazón, nos conectamos y descubrimos nuestro ser interior, con sus miedos, inquietudes y anhelos.<br/>Mediante una sesión individual (en una videollamada o de forma presencial) podremos ver nuestro mundo interior (Akasha) o descubrir el estado actual de nuestros chakras.<br/><br/>Solicita una sesión con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> y pregunta sin miedo."
         }
       },
-      "AKASHICO": {
-        "about": "A través de nuestro corazón, nos conectamos y descubrimos nuestro ser interior, con sus miedos, inquietudes y anhelos.<br/>Mediante una sesión individual (en una videollamada o de forma presencial) podremos ver nuestro mundo interior (Akasha) o descubrir el estado actual de nuestros chakras.<br/><br/>Solicita una sesión con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> y pregunta sin miedo."
-      }
-    },
-    "BOOKS": {
-      "about": "El conocimiento al alcance de un clic.<br/><br/>Esta es tu <i>'biblioteca'</i>, donde encontrarás los libros más interesantes con contenido sobre ₿itcoin, blockchain, smart contracts, finanzas y gestión del dinero, trading, desarrollo de aplicaciones y servicios relacionados con todo lo anterior... además de libros de espiritualidad, psicología, prácticas saludables, y mucho más.<br/><br/>Los libros se han recogido de diferentes fuentes por todo internet, y se almacenan en una cuenta de <a class='selected' href='https://mega.nz/aff=YvakZRq8M2Q' target='_blank'>Mega</a>, desde la que podrás visualizar y/o descargar los libros.<br/><br/><i>Si tras leerlos te han gustado, por favor, compra y mueve la economía aportando en aquello que para ti es de valor.</i>"
-    },
-    "CONTACT": {
-      "about": "Ponte en contacto con @CryptoShalix en las redes sociales o con el siguiente formulario de contacto y resuelve tus dudas o problemas relacionados con finanzas, criptomonedas, ₿itcoin, informática, etc, o pregunta por una sesión de chakras o un registro akáshico, todo de forma individual y totalmente personalizado.",
-      "email": "Email",
-      "emailHelp": "Los datos de contacto indicados NO serán compartidos ni almacenados.",
-      "nickname": "Nombre/Apodo",
-      "phone": "Teléfono/Id de Telegram",
-      "message": "Mensaje",
-      "messageHint": "Dudas, sugerencias, problemas...",
-      "submit": "Enviar"
-    },
-    "TOOLS": {
-      "about": "Aquí encontrarás todas las plataformas y herramientas necesarias para hacer análisis técnico y fundamental, y, por supuesto, invertir, ya sea de forma centralizada o descentralizada, y con todas las ventajas e inconvenientes de cada uno. Además de wallets para ₿itcoin y/o altcoins, incluso para Lightning Network (LN⚡).<br/><br/>Para Lightning Network se recomienda visitar la página <a class='selected' href='https://lightningaddress.com'>lightningaddress.com</a> y elegir desde ahí el wallet deseado para ₿itcoin.",
-      "aboutCustomTools": "Si lo que buscas es calcular ciertos datos, como el <i>beneficio de un trade con puntos de venta en DCA</i>, o el <i>precio de un activo en una fecha concreta</i>, o incluso <i>saber qué criptomoneda es la que mayores rendimientos dará desde el precio actual hasta su ATH</i>, mira aquí:",
-      "CUSTOM": {
-        "calculator": "Calculadora",
-        "calculatorTooltip": " ",
-        "whenToSell": "¿Cuándo debería vender...?",
-        "whenToSellTooltip": " ",
-        "benefits": "Calculadora de beneficios",
-        "benefitsTooltip": " "
+      "BOOKS": {
+        "about": "El conocimiento al alcance de un clic.<br/><br/>Esta es tu <i>'biblioteca'</i>, donde encontrarás los libros más interesantes con contenido sobre ₿itcoin, blockchain, smart contracts, finanzas y gestión del dinero, trading, desarrollo de aplicaciones y servicios relacionados con todo lo anterior... además de libros de espiritualidad, psicología, prácticas saludables, y mucho más.<br/><br/>Los libros se han recogido de diferentes fuentes por todo internet, y se almacenan en una cuenta de <a class='selected' href='https://mega.nz/aff=YvakZRq8M2Q' target='_blank'>Mega</a>, desde la que podrás visualizar y/o descargar los libros.<br/><br/><i>Si tras leerlos te han gustado, por favor, compra y mueve la economía aportando en aquello que para ti es de valor.</i>"
       },
-      "GROUPS": {
-        "ANALYSIS_MARKET": {
-          "title": "Análisis de mercado",
-          "description": "Herramientas de gestión de portfolio, análisis fundamental, seguimiento de proyectos y activos financieros",
-          "appCoinGecko": "Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.",
-          "appCoinMarketCap": "Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.",
-          "appCoinMarketCal": "Noticias y actualizaciones de proyectos",
-          "appSennet": "Sennet es un sistema de recomendación que usa tu historial de inversiones para ayudarte a encontrar tu próxima inversión. Analiza el mercado y te permite invertir sin tanto ruido.",
-          "appLunarcrush": "Análisis social completo de criptomonedas, con noticias, comentarios de influencers y mucho más.",
-          "appGoogleTrends": "Para ver el número de búsquedas de una o varias palabras.",
-          "appDefiLlama": "Para analizar el mercado DeFi, además de las principales redes y exchanges DEX."
+      "CONTACT": {
+        "about": "Ponte en contacto con @CryptoShalix en las redes sociales o con el siguiente formulario de contacto y resuelve tus dudas o problemas relacionados con finanzas, criptomonedas, ₿itcoin, informática, etc, o pregunta por una sesión de chakras o un registro akáshico, todo de forma individual y totalmente personalizado.",
+        "email": "Email",
+        "emailHelp": "Los datos de contacto indicados NO serán compartidos ni almacenados.",
+        "nickname": "Nombre/Apodo",
+        "phone": "Teléfono/Id de Telegram",
+        "message": "Mensaje",
+        "messageHint": "Dudas, sugerencias, problemas...",
+        "submit": "Enviar"
+      },
+      "TOOLS": {
+        "about": "Aquí encontrarás todas las plataformas y herramientas necesarias para hacer análisis técnico y fundamental, y, por supuesto, invertir, ya sea de forma centralizada o descentralizada, y con todas las ventajas e inconvenientes de cada uno. Además de wallets para ₿itcoin y/o altcoins, incluso para Lightning Network (LN⚡).<br/><br/>Para Lightning Network se recomienda visitar la página <a class='selected' href='https://lightningaddress.com'>lightningaddress.com</a> y elegir desde ahí el wallet deseado para ₿itcoin.",
+        "aboutCustomTools": "Si lo que buscas es calcular ciertos datos, como el <i>beneficio de un trade con puntos de venta en DCA</i>, o el <i>precio de un activo en una fecha concreta</i>, o incluso <i>saber qué criptomoneda es la que mayores rendimientos dará desde el precio actual hasta su ATH</i>, mira aquí:",
+        "CUSTOM": {
+          "calculator": "Calculadora",
+          "calculatorTooltip": " ",
+          "whenToSell": "¿Cuándo debería vender...?",
+          "whenToSellTooltip": " ",
+          "benefits": "Calculadora de beneficios",
+          "benefitsTooltip": " "
         },
-        "ANALYSIS_TECH": {
-          "title": "Análisis técnico",
-          "description": "Herramientas de estudio técnico de activos financieros",
-          "appTradingView": "Para hacer análisis técnico al más alto nivel. Totalmente gratuito hasta 4 indicadores. Para todas las funciones se debe pagar. Dispone de versión web, móvil y escritorio (PC)."
-        },
-        "BITCOIN_TOOLS": {
-          "title": "₿itcoin: herramientas",
-          "description": " ",
-          "appBitcoinRainbowChart": "Este lindo arcoíris te mostrará si estamos más cerca de una altseason (pump de altcoins) o del pump a ₿TC.",
-          "appKYCP": "Para saber si tu ₿itcoin son tan privados como esperas. Nivel avanzado. Muy útil para ver cómo han implementado los diferentes wallets la privacidad (Wasabi, JoinMarket, Whirlpool, etc).",
-          "appStackerNews": "Permite publicar posts y que te remuneren en BTC LN⚡, a la par que tú puedes también valorar al resto de usuarios con tus satoshis. Haces un ingreso de 1000 satoshis, y por cada publicación que te guste, donas unos pocos sats, pero si publicas posts, y la gente da like, recuperas esos sats. Mercado cíclico."
-        },
-        "BITCOIN_WALLETS": {
-          "title": "₿itcoin: wallets",
-          "titleLN": "⚡₿itcoin: wallets LN⚡",
-          "description": "Mejores monederos para ₿itcoin (on-chain, LN⚡, etc)",
-          "appBlixt": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN⚡). Tiene muchas herramientas muy útiles para aumentar la privacidad, seguridad y control de tus fondos.",
-          "appBlueWallet": "Wallet de ₿itcoin <i>semi-custodial</i>. Se pueden conectar nodos privados o crear wallets custodial tanto para ₿itcoin on-chain como LN⚡. Sencillo de usar tanto para on-chain como Lightning Network (LN⚡).",
-          "appBreez": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar en Lightning Network (LN⚡), con punto de venta (ideal para comercios), podcasts, recargas con tarjeta y mucho más.",
-          "appDefiant": "Wallet de ₿itcoin no-custodial. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra monedero NFT, navegador de Dapps, la red RSK para usar tropykus con más facilidad, y comercio P2P, además de la posibilidad de comprar mediante terceros (KYC).",
-          "appLiquality": "Wallet de ₿itcoin no-custodial. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra monedero NFT, swap con múltiples blockchain, y la red RSK para usar tropykus con más facilidad.",
-          "appMuunWallet": "Wallet de ₿itcoin no-custodial, sencillo de usar tanto para on-chain como Lightning Network (LN⚡). Solo se puede enviar y recibir, y su forma de guardar las claves es peculiar.",
-          "appPhoenix": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN⚡). Comisiones algo elevadas, pero genial incluso para nuevos usuarios por la pulida interfaz.",
-          "appSamouraiWallet": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos y ofrece cientos de funciones de seguridad y privacidad. Complejo, pero de lo mejor para gestionar tus BTC en el móvil.",
-          "appSimpleBitcoinWallet(SBW)": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN⚡).",
-          "appSparrowWallet": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos y ofrece cientos de funciones de seguridad y privacidad. Complejo, pero de lo mejor para gestionar tus BTC en el ordenador.",
-          "appSpecterWallet": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos y crear uno con '₿itcoin Core'. Ofrece bastantes funciones de seguridad y privacidad. Complejo, pero de lo mejor para gestionar tus BTC en el ordenador.",
-          "appWalletOfSatoshi": "Wallet de ₿itcoin custodial, muy sencillo de usar tanto para on-chain como Lightning Network (LN⚡). La cuenta funciona con un email. Con LNURL, una especie de email que permite recibir BTC por LN⚡ de forma más cómoda.",
-          "appZap": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN⚡).",
-          "appZebedee": "Wallet de ₿itcoin custodial, ideal para juegos y con bots para usar desde Discord o Telegram. Con LNURL, una especie de email que permite recibir BTC por LN⚡ de forma más cómoda. Sencillo de usar tanto para on-chain como Lightning Network (LN⚡).",
-          "appZeus": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN⚡)."
-        },
-        "EXCHANGES_CEX": {
-          "title": "Exchanges.<br>(CEN) Centralizados",
-          "description": "Exchanges centralizados con las mejores comisiones y servicios",
-          "appBinance": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Binance.",
-          "appBit2Me": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Bit2Me.",
-          "appBingX": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de BingX.",
-          "appWirex": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Wirex."
-        },
-        "EXCHANGES_DEX": {
-          "title": "Exchanges.<br>(DEX) Descentralizados",
-          "description": "Exchanges descentralizados con herramientas útiles, variedad, liquidez y mayor tiempo en el mercado",
-          "appPancakeSwap": "El exchange DeFi por excelencia sobre la Binance Smart Chain (BSC). Swap, Farms, Pools, Lottery, y mucho más.",
-          "appBoggedFinance": "Herramientas automatizadas para trading en la BSC. Puedes poner órdenes de compra y venta. No es la más útil ya que se desbloquean ciertas funciones si holdeas su token.",
-          "appDexGuru": "Herramienta muy completa para ver el gráfico, liquidez, listado comercial, etc.",
-          "appDexTools": "Herramienta de trading con muchos datos. Muy buena.",
-          "appPoocoin": "Comprar, vender, ver gráficas, liquidez, etc."
-        },
-        "WALLETS": {
-          "title": "Wallets: altcoins",
-          "description": "Mejores monederos de criptomonedas para ₿itcoin y altcoins. Todos self-custodial.",
-          "appBraveWallet": "Requiere tener instalado el navegador Brave (ya sea PC o móvil), el cual te pagará por ver publicidad (si lo deseas) además de ofrecerte privacidad, navegación más rápida, bloqueo de anuncios y rastreadores, y compatibilidad con todo lo que usa Chrome. El wallet va integrado, y permite hacer swap, comprar activos y conectarse a cualquier sitio admitido, directamente.",
-          "appCryptoDeFiWallet": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra monedero NFT, navegador de Dapps, swap con múltiples blockchain, además de la posibilidad de comprar y vender mediante terceros (KYC) y servicio earn con algunas altcoins.",
-          "appDefiant": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra monedero NFT, navegador de Dapps, la red RSK para usar tropykus con más facilidad, y comercio P2P, además de la posibilidad de comprar mediante terceros (KYC).",
-          "appEdgeWallet": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra swap con múltiples blockchain además de la posibilidad de comprar y vender mediante terceros (KYC).",
-          "appExodus": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra swap con múltiples blockchain además de la posibilidad de comprar y vender mediante terceros (KYC) y servicio earn con algunas altcoins. Se integra perfectamente con el hardware wallet Trezor.",
-          "appLiquality": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra monedero NFT, swap con múltiples blockchain, y la red RSK para usar tropykus con más facilidad.",
-          "appMetamask": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Seguro parcialmente. Lo mejor es combinarlo con un Hardware Wallet (HW) como Trezor o Ledger. Funciona con cualquier red de Ethereum (ERC20), y se pueden añadir otras.",
-          "appRabby": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra monedero NFT, navegador de Dapps, swap con múltiples blockchain, además de la posibilidad de comprar y vender mediante terceros (KYC) y servicio earn con algunas altcoins.",
-          "appStatus": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra navegador y chat punto a punto, cifrado, y 'descentralizado'. Funciona con cualquier red de Ethereum (ERC20), y se pueden añadir otras. Incluye además un dominio propio con Unstoppable Domains si dispones de su token SNT.",
-          "appSafepal": "Es una billetera fría y una aplicación que permite generar o importar cualquier billetera. Es seguro, fácil de usar y tiene múltiples funciones como su exchange interno montado sobre Binance, además de su sección de dApps, servicio earn y su propio token para reducir comisiones en las operaciones. Su única desventaja es: código cerrado.",
-          "appTrustWallet": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Seguro parcialmente. Lo mejor es combinarlo con un Hardware Wallet (HW) como Trezor o Ledger. Funciona con +160 criptomonedas diferentes (BTC, ETH, etc)."
-        },
-        "PORTFOLIO-TRACKERS": {
-          "title": "Portfolio trackers",
-          "description": "Protocolos para monitorizar tu portfolio e inversiones en el ecosistema DeFi.",
-          "appApeBoard": "El tracker más completo del mercado, con soporte para más de 400 protocolos y 40 redes diferentes. Interfaz y uso muy sencillo, e incluso integrado en navegadores como Opera.",
-          "appDappRadar": "Todo lo que necesitas. Todo en un solo lugar. Dapps, NFT's, Tokens, últimos proyectos DeFi, airdrops, swaps, rastreador de cartera y más...",
-          "appDeBank": "Permite ver tus wallets y controlar tus finanzas en DeFi, incluso podrás revocar contratos directamente sin necesidad de entrar a dicha blockchain. Tienes toda la información a tu alcance, aunque, eso sí, sólo versión web.",
-          "appDefiSaver": "Permite controlar tu portfolio DeFi incluso conectando tu cold wallet (Ledger, Trezor, etc), o utilizar la versión de simulación para ver cómo se gestionan los fondos en esta app.",
-          "appDefiYield": "Multichain, lee NFT's, transacciones, permite revocar contratos, dispone de calculadora de impermanent loss y proximamente scanner. Muy completa. Tienen una suscripción a newsletter con información diaria para los mejores pares en rentabilidad.",
-          "appZapper": "Dispone de 15 redes blockchain para conectar, desde las que podrás controlar tu portfolio y, además, recibir alertas de precio, ver tu historial de órdenes, y hacer farming, swaps, bridges, etc. Es muy completa.",
-          "appZerion": "Muy fácil de usar, con su optimizada interfaz, y siendo multichain, podrás ver todo, incluso los LP's. Se puede crear una billetera o importar otra hot wallet que tengas. Totalmente gratis y disponible para web y móvil (Android e iOS)."
-        },
-        "SCAM-DETECTOR": {
-          "title": "Detectores de scam",
-          "description": "Sitios web útiles para detectar estafas, honeypot, rug-pulls, etc.",
-          "appBSCheck": "Estupenda herramienta para análisis automático de tokens en varias redes blockchain: Binance, Ethereum y Polygon.",
-          "appTokenSniffer": "Herramienta para detectar si un token es un scam, rugpull o cualquier tipo de estafa.",
-          "appHoneyPot": "Herramienta para detectar si estamos ante un honeypot, es decir, un token que puedes comprar, pero no vender. O, en otras palabras, un scam.",
-          "appCertik": "Fundada en 2018 por profesores de Columbia y Yale, CertiK es pionera en seguridad blockchain y utiliza la mejor tecnología de inteligencia artificial y verificación formal de su clase para asegurar y monitorear blockchains, contratos inteligentes y aplicaciones Web3.",
-          "appScamAlert": "¡Denuncie estafas, robos y sitios web fraudulentos que involucren cualquier blockchain o criptomoneda y ayúdenos a combatir el criptocrimen!",
-          "appScamDoc": "Permite evaluar la confianza de una identidad digital (dirección de correo electrónico o sitio web).",
-          "appGemProtocol": "Herramienta gratuita que te ayudará a identificar posibles rugpulls ocultos en el contrato inteligente, honeypots e información importante sobre la liquidez del proyecto.",
-          "appRugDoc": "Herramienta que permite hacer análisis y detectar el nivel de riesgo de tokens, NFT, farms de liquidez y exchanges descentralizados (DEX) sobre varias redes blockchain.",
-          "appTokenFomo": "Cada token desplegado en las últimas 24 horas. Ojo, casi todos los tokens aquí mostrados son estafas."
-        },
-        "OTHERS": {
-          "title": "Otras aplicaciones interesantes",
-          "description": " ",
-          "appChainlist": "Permite añadir nuevas redes a tu wallet sobre EVM (Ethereum Virtual Machine), ya sea BraveWallet, Metamask o cualquier otro que utilice esta máquina virtual de Ethereum.",
-          "appSlice": "Con este plugin de navegador recibirás sats por ver anuncios mientras navegas por internet. Si deseas recibir 100 slice más, totalmente gratis, solo debes instalar con el enlace y usar la herramienta de Slice durante 30 dias. ¡Listo! Obtén tus sats, envíalos directamente a tu Zebedee wallet (LN⚡) cuando tú desees y sin costes.",
-          "appSatsback": "Con este plugin de navegador se mostrará una ventana en ciertas tiendas online donde, una vez activado y en el carrito, se aplicará una devolución en ₿itcoin al comprar."
+        "GROUPS": {
+          "ANALYSIS_MARKET": {
+            "title": "Análisis de mercado",
+            "description": "Herramientas de gestión de portfolio, análisis fundamental, seguimiento de proyectos y activos financieros",
+            "appCoinGecko": "Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.",
+            "appCoinMarketCap": "Ver los principales datos de mercado, de exchanges, y construcción de portfolio, además de noticias básicas y guías.",
+            "appCoinMarketCal": "Noticias y actualizaciones de proyectos",
+            "appSennet": "Sennet es un sistema de recomendación que usa tu historial de inversiones para ayudarte a encontrar tu próxima inversión. Analiza el mercado y te permite invertir sin tanto ruido.",
+            "appLunarcrush": "Análisis social completo de criptomonedas, con noticias, comentarios de influencers y mucho más.",
+            "appGoogleTrends": "Para ver el número de búsquedas de una o varias palabras.",
+            "appDefiLlama": "Para analizar el mercado DeFi, además de las principales redes y exchanges DEX."
+          },
+          "ANALYSIS_TECH": {
+            "title": "Análisis técnico",
+            "description": "Herramientas de estudio técnico de activos financieros",
+            "appTradingView": "Para hacer análisis técnico al más alto nivel. Totalmente gratuito hasta 4 indicadores. Para todas las funciones se debe pagar. Dispone de versión web, móvil y escritorio (PC)."
+          },
+          "BITCOIN_TOOLS": {
+            "title": "₿itcoin: herramientas",
+            "description": " ",
+            "appBitcoinRainbowChart": "Este lindo arcoíris te mostrará si estamos más cerca de una altseason (pump de altcoins) o del pump a ₿TC.",
+            "appKYCP": "Para saber si tu ₿itcoin son tan privados como esperas. Nivel avanzado. Muy útil para ver cómo han implementado los diferentes wallets la privacidad (Wasabi, JoinMarket, Whirlpool, etc).",
+            "appStackerNews": "Permite publicar posts y que te remuneren en BTC LN⚡, a la par que tú puedes también valorar al resto de usuarios con tus satoshis. Haces un ingreso de 1000 satoshis, y por cada publicación que te guste, donas unos pocos sats, pero si publicas posts, y la gente da like, recuperas esos sats. Mercado cíclico."
+          },
+          "BITCOIN_WALLETS": {
+            "title": "₿itcoin: wallets",
+            "titleLN": "⚡₿itcoin: wallets LN⚡",
+            "description": "Mejores monederos para ₿itcoin (on-chain, LN⚡, etc)",
+            "appBlixt": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN⚡). Tiene muchas herramientas muy útiles para aumentar la privacidad, seguridad y control de tus fondos.",
+            "appBlueWallet": "Wallet de ₿itcoin <i>semi-custodial</i>. Se pueden conectar nodos privados o crear wallets custodial tanto para ₿itcoin on-chain como LN⚡. Sencillo de usar tanto para on-chain como Lightning Network (LN⚡).",
+            "appBreez": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar en Lightning Network (LN⚡), con punto de venta (ideal para comercios), podcasts, recargas con tarjeta y mucho más.",
+            "appDefiant": "Wallet de ₿itcoin no-custodial. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra monedero NFT, navegador de Dapps, la red RSK para usar tropykus con más facilidad, y comercio P2P, además de la posibilidad de comprar mediante terceros (KYC).",
+            "appLiquality": "Wallet de ₿itcoin no-custodial. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra monedero NFT, swap con múltiples blockchain, y la red RSK para usar tropykus con más facilidad.",
+            "appMuunWallet": "Wallet de ₿itcoin no-custodial, sencillo de usar tanto para on-chain como Lightning Network (LN⚡). Solo se puede enviar y recibir, y su forma de guardar las claves es peculiar.",
+            "appPhoenix": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN⚡). Comisiones algo elevadas, pero genial incluso para nuevos usuarios por la pulida interfaz.",
+            "appSamouraiWallet": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos y ofrece cientos de funciones de seguridad y privacidad. Complejo, pero de lo mejor para gestionar tus BTC en el móvil.",
+            "appSimpleBitcoinWallet(SBW)": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN⚡).",
+            "appSparrowWallet": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos y ofrece cientos de funciones de seguridad y privacidad. Complejo, pero de lo mejor para gestionar tus BTC en el ordenador.",
+            "appSpecterWallet": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos y crear uno con '₿itcoin Core'. Ofrece bastantes funciones de seguridad y privacidad. Complejo, pero de lo mejor para gestionar tus BTC en el ordenador.",
+            "appWalletOfSatoshi": "Wallet de ₿itcoin custodial, muy sencillo de usar tanto para on-chain como Lightning Network (LN⚡). La cuenta funciona con un email. Con LNURL, una especie de email que permite recibir BTC por LN⚡ de forma más cómoda.",
+            "appZap": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN⚡).",
+            "appZebedee": "Wallet de ₿itcoin custodial, ideal para juegos y con bots para usar desde Discord o Telegram. Con LNURL, una especie de email que permite recibir BTC por LN⚡ de forma más cómoda. Sencillo de usar tanto para on-chain como Lightning Network (LN⚡).",
+            "appZeus": "Wallet de ₿itcoin no-custodial, que permite conectar tus propios nodos, sencillo de usar tanto para on-chain como Lightning Network (LN⚡)."
+          },
+          "EXCHANGES_CEX": {
+            "title": "Exchanges.<br>(CEN) Centralizados",
+            "description": "Exchanges centralizados con las mejores comisiones y servicios",
+            "appBinance": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Binance.",
+            "appBit2Me": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Bit2Me.",
+            "appBingX": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de BingX.",
+            "appWirex": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Wirex."
+          },
+          "EXCHANGES_DEX": {
+            "title": "Exchanges.<br>(DEX) Descentralizados",
+            "description": "Exchanges descentralizados con herramientas útiles, variedad, liquidez y mayor tiempo en el mercado",
+            "appPancakeSwap": "El exchange DeFi por excelencia sobre la Binance Smart Chain (BSC). Swap, Farms, Pools, Lottery, y mucho más.",
+            "appBoggedFinance": "Herramientas automatizadas para trading en la BSC. Puedes poner órdenes de compra y venta. No es la más útil ya que se desbloquean ciertas funciones si holdeas su token.",
+            "appDexGuru": "Herramienta muy completa para ver el gráfico, liquidez, listado comercial, etc.",
+            "appDexTools": "Herramienta de trading con muchos datos. Muy buena.",
+            "appPoocoin": "Comprar, vender, ver gráficas, liquidez, etc."
+          },
+          "WALLETS": {
+            "title": "Wallets: altcoins",
+            "description": "Mejores monederos de criptomonedas para ₿itcoin y altcoins. Todos self-custodial.",
+            "appBraveWallet": "Requiere tener instalado el navegador Brave (ya sea PC o móvil), el cual te pagará por ver publicidad (si lo deseas) además de ofrecerte privacidad, navegación más rápida, bloqueo de anuncios y rastreadores, y compatibilidad con todo lo que usa Chrome. El wallet va integrado, y permite hacer swap, comprar activos y conectarse a cualquier sitio admitido, directamente.",
+            "appCryptoDeFiWallet": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra monedero NFT, navegador de Dapps, swap con múltiples blockchain, además de la posibilidad de comprar y vender mediante terceros (KYC) y servicio earn con algunas altcoins.",
+            "appDefiant": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra monedero NFT, navegador de Dapps, la red RSK para usar tropykus con más facilidad, y comercio P2P, además de la posibilidad de comprar mediante terceros (KYC).",
+            "appEdgeWallet": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra swap con múltiples blockchain además de la posibilidad de comprar y vender mediante terceros (KYC).",
+            "appExodus": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra swap con múltiples blockchain además de la posibilidad de comprar y vender mediante terceros (KYC) y servicio earn con algunas altcoins. Se integra perfectamente con el hardware wallet Trezor.",
+            "appLiquality": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra monedero NFT, swap con múltiples blockchain, y la red RSK para usar tropykus con más facilidad.",
+            "appMetamask": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Seguro parcialmente. Lo mejor es combinarlo con un Hardware Wallet (HW) como Trezor o Ledger. Funciona con cualquier red de Ethereum (ERC20), y se pueden añadir otras.",
+            "appRabby": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra monedero NFT, navegador de Dapps, swap con múltiples blockchain, además de la posibilidad de comprar y vender mediante terceros (KYC) y servicio earn con algunas altcoins.",
+            "appStatus": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Integra navegador y chat punto a punto, cifrado, y 'descentralizado'. Funciona con cualquier red de Ethereum (ERC20), y se pueden añadir otras. Incluye además un dominio propio con Unstoppable Domains si dispones de su token SNT.",
+            "appSafepal": "Es una billetera fría y una aplicación que permite generar o importar cualquier billetera. Es seguro, fácil de usar y tiene múltiples funciones como su exchange interno montado sobre Binance, además de su sección de dApps, servicio earn y su propio token para reducir comisiones en las operaciones. Su única desventaja es: código cerrado.",
+            "appTrustWallet": "Software wallet. Fácil de utilizar, configurar y conectar a cualquier lugar. Seguro parcialmente. Lo mejor es combinarlo con un Hardware Wallet (HW) como Trezor o Ledger. Funciona con +160 criptomonedas diferentes (BTC, ETH, etc)."
+          },
+          "PORTFOLIO-TRACKERS": {
+            "title": "Portfolio trackers",
+            "description": "Protocolos para monitorizar tu portfolio e inversiones en el ecosistema DeFi.",
+            "appApeBoard": "El tracker más completo del mercado, con soporte para más de 400 protocolos y 40 redes diferentes. Interfaz y uso muy sencillo, e incluso integrado en navegadores como Opera.",
+            "appDappRadar": "Todo lo que necesitas. Todo en un solo lugar. Dapps, NFT's, Tokens, últimos proyectos DeFi, airdrops, swaps, rastreador de cartera y más...",
+            "appDeBank": "Permite ver tus wallets y controlar tus finanzas en DeFi, incluso podrás revocar contratos directamente sin necesidad de entrar a dicha blockchain. Tienes toda la información a tu alcance, aunque, eso sí, sólo versión web.",
+            "appDefiSaver": "Permite controlar tu portfolio DeFi incluso conectando tu cold wallet (Ledger, Trezor, etc), o utilizar la versión de simulación para ver cómo se gestionan los fondos en esta app.",
+            "appDefiYield": "Multichain, lee NFT's, transacciones, permite revocar contratos, dispone de calculadora de impermanent loss y proximamente scanner. Muy completa. Tienen una suscripción a newsletter con información diaria para los mejores pares en rentabilidad.",
+            "appZapper": "Dispone de 15 redes blockchain para conectar, desde las que podrás controlar tu portfolio y, además, recibir alertas de precio, ver tu historial de órdenes, y hacer farming, swaps, bridges, etc. Es muy completa.",
+            "appZerion": "Muy fácil de usar, con su optimizada interfaz, y siendo multichain, podrás ver todo, incluso los LP's. Se puede crear una billetera o importar otra hot wallet que tengas. Totalmente gratis y disponible para web y móvil (Android e iOS)."
+          },
+          "SCAM-DETECTOR": {
+            "title": "Detectores de scam",
+            "description": "Sitios web útiles para detectar estafas, honeypot, rug-pulls, etc.",
+            "appBSCheck": "Estupenda herramienta para análisis automático de tokens en varias redes blockchain: Binance, Ethereum y Polygon.",
+            "appTokenSniffer": "Herramienta para detectar si un token es un scam, rugpull o cualquier tipo de estafa.",
+            "appHoneyPot": "Herramienta para detectar si estamos ante un honeypot, es decir, un token que puedes comprar, pero no vender. O, en otras palabras, un scam.",
+            "appCertik": "Fundada en 2018 por profesores de Columbia y Yale, CertiK es pionera en seguridad blockchain y utiliza la mejor tecnología de inteligencia artificial y verificación formal de su clase para asegurar y monitorear blockchains, contratos inteligentes y aplicaciones Web3.",
+            "appScamAlert": "¡Denuncie estafas, robos y sitios web fraudulentos que involucren cualquier blockchain o criptomoneda y ayúdenos a combatir el criptocrimen!",
+            "appScamDoc": "Permite evaluar la confianza de una identidad digital (dirección de correo electrónico o sitio web).",
+            "appGemProtocol": "Herramienta gratuita que te ayudará a identificar posibles rugpulls ocultos en el contrato inteligente, honeypots e información importante sobre la liquidez del proyecto.",
+            "appRugDoc": "Herramienta que permite hacer análisis y detectar el nivel de riesgo de tokens, NFT, farms de liquidez y exchanges descentralizados (DEX) sobre varias redes blockchain.",
+            "appTokenFomo": "Cada token desplegado en las últimas 24 horas. Ojo, casi todos los tokens aquí mostrados son estafas."
+          },
+          "OTHERS": {
+            "title": "Otras aplicaciones interesantes",
+            "description": " ",
+            "appChainlist": "Permite añadir nuevas redes a tu wallet sobre EVM (Ethereum Virtual Machine), ya sea BraveWallet, Metamask o cualquier otro que utilice esta máquina virtual de Ethereum.",
+            "appSlice": "Con este plugin de navegador recibirás sats por ver anuncios mientras navegas por internet. Si deseas recibir 100 slice más, totalmente gratis, solo debes instalar con el enlace y usar la herramienta de Slice durante 30 dias. ¡Listo! Obtén tus sats, envíalos directamente a tu Zebedee wallet (LN⚡) cuando tú desees y sin costes.",
+            "appSatsback": "Con este plugin de navegador se mostrará una ventana en ciertas tiendas online donde, una vez activado y en el carrito, se aplicará una devolución en ₿itcoin al comprar."
+          }
         }
+      },
+      "TRADING": {
+        "searchInput": "Filtrar moneda..."
+      },
+      "GAMES": {
+        "about": "<i>¿Te imaginas generar ingresos jugando videojuegos?</i><br/><i>¿Te imaginas recibir esos ingresos en ₿itcoin?</i><br/><br/>Aquí traemos varios juegos que apenas ocupan espacio en tu móvil, puedes jugarlos cuando y cuanto quieras, y que te enviarán unos satoshis <i>(unidad mínima de bitcoin)</i> con un par de clics. Se indica también los <b>wallets</b> de bitcoin recomendados para estos juegos.",
+        "aboutGames": "Juegos Play&Earn (P&E), ya que siempre vas a ganar, aunque sea unos sats. Debemos agradecer a <a class='selected' href='https://www.thndr.games/bitcoin-games' target='_blank'>thndr.games</a> y a <a class='selected' href='https://zebedee.io' target='_blank'>zebedee.io</a> por ofrecernos estas maravillas de juegos.<br/><i style='font-size:12px;font-weight:bold;'>Nótese que hay muchos más, pero estos son los que se han probado y funcionan genial.</i>",
+        "gameSatsssName": "Satsss",
+        "gameSatsssTitle": "¡La serpiente de siempre, ahora con ₿itcoin!",
+        "gameSatsssDescription": "¿Serpiente + ₿itcoin? ¡Por qué no! Uno de los juegos móviles más conocidos y populares del mundo ahora te da sats por comer tickets.",
+        "gameTurbo84Name": "Turbo84",
+        "gameTurbo84Title": "¿Puedes llegar a 100mph?",
+        "gameTurbo84Description": "Conduce lo más rápido que puedas esquivando obstáculos y recogiendo tickets en este loco juego.",
+        "gameBounceName": "₿itcoin Bounce",
+        "gameBounceTitle": "¡Rebota en la cadena de bloques!",
+        "gameBounceDescription": "El objetivo del juego es simple: ver hasta dónde puedes rebotar a lo largo de la cadena de bloques.",
+        "gameBayName": "THNDR Bay",
+        "gameBayTitle": "Shooter de burbujas de ₿itcoin",
+        "gameBayDescription": "¡Gana ₿itcoin simplemente jugando un Bubble Shooter relajante junto al mar! ¡Únete a Spark en un viaje tropical!",
+        "gameSolitaireName": "Club ₿itcoin",
+        "gameSolitaireTitle": "El solitario que te da ₿itcoin",
+        "gameSolitaireDescription": "¡Gana ₿itcoin jugando al clásico Solitario de cartas pero con colores THNDR!",
+        "gameBitcoinMinerName": "₿itcoin Miner",
+        "gameBitcoinMinerTitle": "¡Un idle game que te paga!",
+        "gameBitcoinMinerDescription": "Construye tu propia fábrica minera de ₿itcoin y otras criptomonedas, y recibe sats por hacerla crecer y evolucionar.<br/><center><b>¡RECOMPENSAS GRATIS!</b></center>Usa este referido en amigos: RYXADE"
       }
     },
-    "GAMES": {
-      "about": "<i>¿Te imaginas generar ingresos jugando videojuegos?</i><br/><i>¿Te imaginas recibir esos ingresos en ₿itcoin?</i><br/><br/>Aquí traemos varios juegos que apenas ocupan espacio en tu móvil, puedes jugarlos cuando y cuanto quieras, y que te enviarán unos satoshis <i>(unidad mínima de bitcoin)</i> con un par de clics. Se indica también los <b>wallets</b> de bitcoin recomendados para estos juegos.",
-      "aboutGames": "Juegos Play&Earn (P&E), ya que siempre vas a ganar, aunque sea unos sats. Debemos agradecer a <a class='selected' href='https://www.thndr.games/bitcoin-games' target='_blank'>thndr.games</a> y a <a class='selected' href='https://zebedee.io' target='_blank'>zebedee.io</a> por ofrecernos estas maravillas de juegos.<br/><i style='font-size:12px;font-weight:bold;'>Nótese que hay muchos más, pero estos son los que se han probado y funcionan genial.</i>",
-      "gameSatsssName": "Satsss",
-      "gameSatsssTitle": "¡La serpiente de siempre, ahora con ₿itcoin!",
-      "gameSatsssDescription": "¿Serpiente + ₿itcoin? ¡Por qué no! Uno de los juegos móviles más conocidos y populares del mundo ahora te da sats por comer tickets.",
-      "gameTurbo84Name": "Turbo84",
-      "gameTurbo84Title": "¿Puedes llegar a 100mph?",
-      "gameTurbo84Description": "Conduce lo más rápido que puedas esquivando obstáculos y recogiendo tickets en este loco juego.",
-      "gameBounceName": "₿itcoin Bounce",
-      "gameBounceTitle": "¡Rebota en la cadena de bloques!",
-      "gameBounceDescription": "El objetivo del juego es simple: ver hasta dónde puedes rebotar a lo largo de la cadena de bloques.",
-      "gameBayName": "THNDR Bay",
-      "gameBayTitle": "Shooter de burbujas de ₿itcoin",
-      "gameBayDescription": "¡Gana ₿itcoin simplemente jugando un Bubble Shooter relajante junto al mar! ¡Únete a Spark en un viaje tropical!",
-      "gameSolitaireName": "Club ₿itcoin",
-      "gameSolitaireTitle": "El solitario que te da ₿itcoin",
-      "gameSolitaireDescription": "¡Gana ₿itcoin jugando al clásico Solitario de cartas pero con colores THNDR!",
-      "gameBitcoinMinerName": "₿itcoin Miner",
-      "gameBitcoinMinerTitle": "¡Un idle game que te paga!",
-      "gameBitcoinMinerDescription": "Construye tu propia fábrica minera de ₿itcoin y otras criptomonedas, y recibe sats por hacerla crecer y evolucionar.<br/><center><b>¡RECOMPENSAS GRATIS!</b></center>Usa este referido en amigos: RYXADE"
+    "STRINGS": {
+      "noImage": "No hay imagen",
+      "sendMsgSuccess": "¡El mensaje se ha enviado correctamente!<br/>Recibirá una respuesta a la mayor brevedad. Gracias",
+      "sendMsgError": "Se ha producido un error al enviar el mensaje => "
     }
-  },
-  "STRINGS": {
-    "noImage": "No hay imagen"
   }
-}]
+]
