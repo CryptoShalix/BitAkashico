@@ -1,59 +1,86 @@
-<div class="body">
-  <!-- <div class="coins-carousel">
+<ng-container *ngIf="APP_SIDE === 0; else templateSite">
+  <app-start-page></app-start-page>
+</ng-container>
+
+<ng-template #templateSite>
+  <div class="body">
+    <!-- <div class="coins-carousel">
     <app-carousel></app-carousel>
   </div> -->
 
-  <div class="main-container">
-    <router-outlet></router-outlet>
-  </div>
+    <div class="toolbar-top">
 
-  <div class="toolbar-top">
+      <div class="menu-top">
+        <div class="menu-top-container">
 
-    <div class="menu-top">
-      <div class="menu-top-container">
-
-        <div class="menu-currency">
-          <app-coin-info
-            class="coin-ticker"
-            [sCoinItem]="coinBitcoin"
-            [type]="coinFormat"
-          ></app-coin-info>
-        </div>
-
-        <span class="spacer"></span>
-
-        <div class="menu-actions">
-          <div
-            class="material-icons-donations"
-            (click)="showContainerDonations = true"
+          <!-- <div
+            *ngIf="IS_BIT_SITE"
+            class="menu-currency"
           >
-            <mat-icon>coffee</mat-icon>
+            <app-coin-info
+              class="coin-ticker"
+              [sCoinItem]="coinBitcoin"
+              [type]="coinFormat"
+            ></app-coin-info>
+          </div> -->
+          <mat-icon
+            class="menu-nav"
+            (click)="showMenu = !showMenu"
+          >{{ showMenu ? 'close' : 'menu' }}</mat-icon>
+
+          <span class="spacer"></span>
+
+          <div
+            class="menu-toggle-side tooltip"
+            (click)="onToggleSide()"
+          >
+            <span class="tooltip-label">{{ 'MSG.appSideChoose' | translate | uppercase }}</span>
+            <img
+              class="menu-toggle-side-logo"
+              [src]="LOGO_IMG"
+            >
           </div>
 
-          <div class="material-icons-language">
-            <span class="language-tooltip">{{ getTooltipLanguage() | translate | uppercase }}</span>
-            <mat-icon
-              class="material-icons"
-              (click)="onChangeLanguage()"
-            >translate</mat-icon>
+          <span class="spacer"></span>
+
+          <div class="menu-actions">
+            <div
+              class="material-icons-donations"
+              (click)="showContainerDonations = true"
+            >
+              <mat-icon>coffee</mat-icon>
+            </div>
+
+            <div class="material-icons-language tooltip">
+              <span class="tooltip-label">{{ getTooltipLanguage() | translate | uppercase }}</span>
+              <mat-icon
+                class="material-icons"
+                (click)="onChangeLanguage()"
+              >translate</mat-icon>
+            </div>
           </div>
+
         </div>
-
       </div>
+
     </div>
 
-    <div class="menu-bottom">
-
+    <div
+      class="menu-nav-container"
+      [ngClass]="{'animate': showMenu}"
+    >
       <app-linkable-icon
         *ngFor="let iconMenu of iconListMenu"
         [sDefaultIcon]="iconMenu"
       ></app-linkable-icon>
-
     </div>
 
+    <div class="main-container">
+      <router-outlet></router-outlet>
+    </div>
+
+    <app-message-manager></app-message-manager>
   </div>
 
-  <app-message-manager></app-message-manager>
-</div>
-
-<app-donations [setShow]="showContainerDonations"></app-donations>
+  <app-donations [setShow]="showContainerDonations"></app-donations>
+</ng-template>

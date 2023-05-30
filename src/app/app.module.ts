@@ -15,22 +15,25 @@ import { AppComponent } from './app.component';
 import { AcademyPageComponent } from './pages/academy-page/academy-page.component';
 import { BooksPageComponent } from './pages/books-page/books-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { FinancesPageComponent } from './pages/finances-page/finances-page.component';
 import { GamesPageComponent } from './pages/games-page/games-page.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { ToolsPageComponent } from './pages/tools-page/tools-page.component';
-import { FinancesPageComponent } from './pages/finances-page/finances-page.component';
 import { MessageService } from './shared/services/message.service';
+import { StartPageComponent } from './pages/start-page/start-page.component';
+import { StorageService } from './shared/services/storage.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent,
-    ToolsPageComponent,
+    AcademyPageComponent,
+    BooksPageComponent,
+    ContactPageComponent,
     FinancesPageComponent,
     GamesPageComponent,
-    BooksPageComponent,
-    AcademyPageComponent,
-    ContactPageComponent,
+    MainPageComponent,
+    StartPageComponent,
+    ToolsPageComponent,
   ],
   imports: [
     CommonModule,
@@ -54,6 +57,7 @@ import { MessageService } from './shared/services/message.service';
       useValue: { displayDefaultIndicatorType: false }
     },
     MessageService,
+    StorageService,
   ],
   bootstrap: [AppComponent]
 })

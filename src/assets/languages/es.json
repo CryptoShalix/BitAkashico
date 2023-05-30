@@ -2,7 +2,8 @@
   {
     "BUTTONS": {
       "accept": "Aceptar",
-      "cancel": "Cancelar"
+      "cancel": "Cancelar",
+      "enter": "Entrar"
     },
     "DONATIONS": {
       "title": "Dona unos sats",
@@ -25,12 +26,16 @@
     },
     "MSG": {
       "copyToClipboard": "¡Se ha copiado al portapapeles!",
-      "clickToCopy": "Haz clic en el texto o imagen para copiar al portapapeles"
+      "clickToCopy": "Haz clic en el texto o imagen para copiar al portapapeles",
+      "appSideChoose": "Elige tu lado"
     },
     "PAGES": {
       "MAIN": {
-        "about": "BitAkashico se presenta como el proyecto principal de <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Diferenciando la parte <b>material</b>, que pretende apoyar en la educación financiera (₿itcoin, criptomonedas, etc) e informática; de la parte <b>espiritual</b>, que busca recordarte a tí como alma que transita este mundo, quién eres, o a qué pruebas te enfrentas ahora, mediante la lectura de tus chakras o un registro akáshico.<br/><br/>Para empezar, revisa la <a class='selected' target='_self' href='#academy'>Academia</a> o la sección de <a class='selected' target='_self' href='#books'>Libros</a>.<br/><br/>Si lo deseas, ponte en contacto con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> y resuelve las dudas mediante una sesión individual y totalmente personalizada.",
-        "topAppsTitle": "⭐ TOP APPS DEL MOMENTO ⭐"
+        "about": "BitAkashico se presenta como el proyecto principal de <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Diferenciando la parte <b>material</b>, que pretende apoyar en la educación financiera (₿itcoin, criptomonedas, etc) e informática; de la parte <b>espiritual</b>, que busca recordarte a tí como alma que transita este mundo, quién eres, o a qué pruebas te enfrentas ahora, mediante la lectura de tus chakras o un registro akáshico.<br/><br/>Para empezar, revisa la <a class='selected' target='_self' href='#academy'>Academia</a> o la sección de <a class='selected' target='_self' href='#books'>Libros</a>.<br/><br/>Si lo deseas, ponte en contacto con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> y resuelve las dudas mediante una sesión individual y totalmente personalizada."
+      },
+      "START": {
+        "about-bit": "¿Problemas con tu móvil u ordenador?<br/>¿Necesitas organizar tus finanzas pero no sabes por donde empezar?<br/><br/>Entra, y descubre cómo podemos aprender (juntos) sobre informática, finanzas y ₿itcoin.",
+        "about-aka": "¿Sientes que hay un obstáculo en tu vida que te impide alcanzar tu paz interior?<br/>Entra, y buscaremos recordarte a tí, como alma que transita este mundo, quién eres, o a qué pruebas te enfrentas ahora, mediante la lectura de tus chakras y/o preguntando a tu Akasha."
       },
       "ACADEMY": {
         "BIT": {

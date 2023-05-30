@@ -1,90 +1,100 @@
+// COLORS
+$color-primary-1: rgb(0, 0, 0);
+$color-primary-2: rgb(34, 34, 34);
+$color-primary-3: rgb(44, 47, 51);
+$color-secondary-1: rgb(255, 255, 255);
+$color-secondary-2: rgb(221, 221, 221);
+$color-secondary-3: rgb(202, 202, 202);
+
+// STARS AND OTHER SPECIAL ICONS
+$color-positive: #006e21;
+$color-negative: #6e0000;
+$color-special-1: #edc16c;
+$color-special-2: #f7931a;
+$color-special-3: #ffcc11;
+
 // TOOLBAR
-$toolbar-background: #2c2f33;
-// $toolbar-border-color: #ef8e19;
-// $toolbar-border-color: #41c8e6;
-// $toolbar-border-color: #ffcc11;
-$toolbar-border-color: #edc16c;
-$toolbar-text: #ffffff;
+$toolbar-background: $color-primary-1;
+$toolbar-background2: $color-primary-3;
+$toolbar-border-color: $color-special-1;
+$toolbar-text: $color-secondary-1;
 
 // MESSAGE MANAGER
-$msg-container-text: #222222;
-$msg-container-background: #ffffff;
-$msg-container-border: #ffffff;
-$msg-container-success: #006e21;
-$msg-container-error: #6e0000;
-$msg-container-alert: #edc16c;
+$msg-container-text: $color-primary-2;
+$msg-container-background: $color-secondary-1;
+$msg-container-border: $color-secondary-1;
+$msg-container-success: $color-positive;
+$msg-container-error: $color-negative;
+$msg-container-alert: $color-special-1;
 
 // CAROUSEL
-$carousel-background: #2c2f33;
-$carousel-border-color: #edc16c;
-$carousel-item-hover-background: #edc16c;
-$carousel-item-hover-text: #2c2f33;
-$carousel-item-hover-border: #2c2f33;
+$carousel-background: $color-primary-3;
+$carousel-border-color: $color-special-1;
+$carousel-item-hover-background: $color-special-1;
+$carousel-item-hover-text: $color-primary-3;
+$carousel-item-hover-border: $color-primary-3;
 
 // BODY
-$body-background: #2c2f33;
-$body-text: #ffffff;
-$body-text-muted: #dddddd;
+$body-background: $color-primary-1;
+$body-text: $color-secondary-1;
+$body-text-muted: $color-secondary-2;
 
 // CONTENT
-$content-background: #dddddd;
-$content-text: #2c2f33;
+$content-background: $color-secondary-1;
+$content-text: $color-primary-1;
 $content-background-transparent: rgba(0, 0, 0, .75);
-$content-video-border: #000000;
-$content-border-color: #edc16c;
+$content-video-border: $color-primary-1;
+$content-border-color: $color-special-1;
+
+// CONTENT MAIN
+$content-start-background2: linear-gradient(180deg, rgba(44, 47, 51, 1) 0%, rgba(44, 47, 51, 1) 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+$content-start-background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+$content-start-bit-back: rgba(44, 47, 51, .9);
+$content-start-bit-color: #ffffff;
+$content-start-aka-back: rgba(255, 255, 255, .9);
+$content-start-aka-color: #000000;
 
 // MENU
 $menu-background-color: rgba(255, 255, 255, .75);
 $menu-item-background-color: rgba(64, 64, 64, .75);
 $menu-font-color: rgba(255, 255, 255, 1);
+$menu-color: $color-secondary-1;
+$menu-color-hover: $color-special-1;
 
 // BUTTON
-$btn-background: #ffffff;
-$btn-background-hover: #edc16c;
-$btn-background-disabled: #cacaca;
-$btn-border: #ffffff;
-$btn-border-hover: #edc16c;
-$btn-border-disabled: #cacaca;
-$btn-text: #2c2f33;
-$btn-text-hover: #2c2f33;
-$btn-text-disabled: #dddddd;
+$btn-background: $color-secondary-1;
+$btn-background-hover: $color-special-1;
+$btn-background-disabled: $color-secondary-1;
+$btn-border: $color-secondary-1;
+$btn-border-hover: $color-special-1;
+$btn-border-disabled: $color-secondary-1;
+$btn-text: $color-primary-3;
+$btn-text-hover: $color-primary-3;
+$btn-text-disabled: $color-secondary-2;
 
 // CARD
-$card-background: #2c2f33;
-$card-background-hover: #ffffff;
-$card-text: #ffffff;
-// $card-text-hover: #41c8e6;
-// $card-text-hover: #ffcc11;
-$card-text-hover: #edc16c;
-$card-border-light: #8986bf;
-$card-border-dark: #5c57a7;
+$card-background: $color-primary-3;
+$card-background-hover: $color-secondary-1;
+$card-text: $color-secondary-1;
+$card-text-hover: $color-special-1;
+$card-border-light: $color-special-1;
+$card-border-dark: $color-special-3;
 
 // RADIO
-$radio-color-thumb: #f7931a;
-$radio-color-bar: #ffcc11;
+$radio-color-thumb: $color-special-2;
+$radio-color-bar: $color-special-3;
 
 // SELECT
-$select-background: #ffffff;
-$select-text: #2c2f33;
-$select-border: #edc16c;
+$select-background: $color-secondary-1;
+$select-text: $color-primary-3;
+$select-border: $color-special-1;
 
 // STEPPER
-$stepper-tab-font: #ffffff;
-$stepper-tab-font-hover: #edc16c;
+$stepper-tab-font: $color-secondary-1;
+$stepper-tab-font-hover: $color-special-1;
 
 // GLOBAL
-$global-link-color: #ffffff;
-// $global-link-color-hover: #ef8e19;
-// $global-link-color-hover: #41c8e6;
-// $global-link-color-hover: #1b709b;
-// $global-link-color-hover: #ffcc11;
-$global-link-color-hover: #edc16c;
-
-// POSITIVE vs NEGATIVE
-$global-positive-color: #006e21;
-$global-negative-color: #6e0000;
-
-// STARS AND OTHER SPECIAL ICONS
-$bitcoin-color: #f7931a;
-$icon-star-color: #ffcc11;
-// $icon-star-color: #edc16c;
+$global-link-color: $color-secondary-1;
+$global-link-color-hover: $color-special-1;
+// $global-link-color-hover: $color-special-2;
+// $global-link-color-hover: $color-special-3;

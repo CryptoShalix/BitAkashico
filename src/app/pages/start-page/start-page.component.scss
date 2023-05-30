@@ -1,0 +1,98 @@
+@import '../../../styles-colors.scss';
+
+.content-start,
+.content-start-background {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background: rgb(44, 47, 51);
+  z-index: 999999;
+
+  .content-start-background {
+    background: $content-start-background;
+  }
+
+  .back-logo {
+    position: absolute;
+    max-width: 850px;
+    max-height: 850px;
+  }
+
+  .btn-submit {
+    display: none;
+    width: 50%;
+    border: 4px solid $btn-border-hover;
+
+    &.visible {
+      display: flex;
+    }
+  }
+
+  .content-bit,
+  .content-aka {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 30px;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(0, 0, 0, .25);
+    }
+
+    .content-start-text {
+      display: none;
+      width: 75%;
+    }
+  }
+
+  .content-bit {
+    top: 0;
+
+    &.visible {
+      background: $content-start-bit-back;
+      color: $content-start-bit-color;
+
+      .content-start-text {
+        display: flex;
+      }
+    }
+  }
+
+  .content-aka {
+    bottom: 0;
+
+    &.visible {
+      background: $content-start-aka-back;
+      color: $content-start-aka-color;
+
+      .content-start-text {
+        display: flex;
+      }
+    }
+  }
+}
+
+/* RESPONSIVE STYLES */
+@media screen and (max-width: 1256px) {
+
+  .content-bit,
+  .content-aka {
+    font-size: 14px;
+  }
+}

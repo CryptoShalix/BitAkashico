@@ -2,7 +2,8 @@
   {
     "BUTTONS": {
       "accept": "Accept",
-      "cancel": "Cancel"
+      "cancel": "Cancel",
+      "enter": "Enter"
     },
     "DONATIONS": {
       "title": "Donate some sats",
@@ -25,12 +26,17 @@
     },
     "MSG": {
       "copyToClipboard": "Copied to clipboard!",
-      "clickToCopy": "Click on the text or image to copy to clipboard"
+      "clickToCopy": "Click on the text or image to copy to clipboard",
+      "appSideBit": "Click to enter the world of Akasha",
+      "appSideAka": "Click to enter the world of finance and computing"
     },
     "PAGES": {
       "MAIN": {
-        "about": "BitAkashico is presented as the parent project of <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Differentiating the <b>material</b> part, which is intended to support financial education (₿itcoin, cryptocurrencies, etc.) and information technology; from the <b>spiritual</b> part, which seeks to remind you as a soul that transits this world, who you are, or what tests you are facing now, by reading your chakras or an akashic record.<br/><br/>To get started, check out the <a class='selected' target='_self' href='#academy'>Academy</a> or the <a class='selected' target='_self' href='#books'>Books</a> section.<br/><br/>If you wish, contact @CryptoShalix through the <a class='selected' target='_self' href='#contact'>contact form</a> and resolve any doubts through an individual and fully personalized session.",
-        "topAppsTitle": "⭐ TOP APPS OF THE MOMENT ⭐"
+        "about": "BitAkashico is presented as the parent project of <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Differentiating the <b>material</b> part, which is intended to support financial education (₿itcoin, cryptocurrencies, etc.) and information technology; from the <b>spiritual</b> part, which seeks to remind you as a soul that transits this world, who you are, or what tests you are facing now, by reading your chakras or an akashic record.<br/><br/>To get started, check out the <a class='selected' target='_self' href='#academy'>Academy</a> or the <a class='selected' target='_self' href='#books'>Books</a> section.<br/><br/>If you wish, contact @CryptoShalix through the <a class='selected' target='_self' href='#contact'>contact form</a> and resolve any doubts through an individual and fully personalized session."
+      },
+      "START": {
+        "about-bit": "Problems with your mobile or computer?<br/>Do you need to organize your finances but don't know where to start?<br/><br/>Enter, and discover how we can learn (together) about computing, finance and ₿itcoin.",
+        "about-aka": "Do you feel that there is an obstacle in your life that prevents you from reaching your inner peace?<br/>Enter, and we will seek to remind you, as a soul that transits this world, who you are, or what tests you are facing now, by reading your chakras and/or asking your Akasha."
       },
       "ACADEMY": {
         "BIT": {

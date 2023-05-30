@@ -1,0 +1,39 @@
+<div class="content-start">
+  <div class="content-start-background">
+
+    <img
+      class="back-logo"
+      src="../../../assets/images/logo_v2.png"
+    >
+
+    <div
+      class="content-bit"
+      [ngClass]="{'visible': nSideSelected === 1}"
+      (click)="toggleSelection(1)"
+    >
+      <div class="content-start-text">
+        <span [innerHTML]="('PAGES.START.about-bit' | translate) | safe:'html'"></span>
+      </div>
+    </div>
+
+    <div
+      class="content-aka"
+      [ngClass]="{'visible': nSideSelected === 2}"
+      (click)="toggleSelection(2)"
+    >
+      <div class="content-start-text">
+        <span [innerHTML]="('PAGES.START.about-aka' | translate) | safe:'html'"></span>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      class="btn btn-submit"
+      [ngClass]="{'visible': nSideSelected !== 0}"
+      (click)="onEnter()"
+    >
+      <mat-icon>welcome</mat-icon>
+      <span [innerHTML]="('BUTTONS.enter' | translate) | safe:'html'"></span>
+    </button>
+  </div>
+</div>

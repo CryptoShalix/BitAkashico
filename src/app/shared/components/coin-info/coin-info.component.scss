@@ -61,11 +61,11 @@
       border-radius: 25px;
 
       &.positive {
-        background: $global-positive-color;
+        background: $color-positive;
       }
 
       &.negative {
-        background: $global-negative-color;
+        background: $color-negative;
       }
     }
   }

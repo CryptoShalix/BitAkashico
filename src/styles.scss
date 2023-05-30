@@ -255,7 +255,7 @@ label {
 }
 
 .bitcoin {
-  color: $bitcoin-color;
+  color: $color-special-3;
   font-size: 16px;
   font-weight: bold;
   padding: 5px;
@@ -322,6 +322,33 @@ label {
     .mat-step-label {
       color: $stepper-tab-font;
     }
+  }
+}
+
+// TOOLTIP
+
+.tooltip {
+  cursor: pointer;
+
+  &:hover .tooltip-label {
+    visibility: visible;
+  }
+
+  .tooltip-label {
+    position: fixed;
+    display: flex;
+    visibility: hidden;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: rgba($color-primary-1, 1);
+    background: rgba($color-secondary-1, 1);
   }
 }
 

@@ -8,6 +8,8 @@ import { map, Subscription, timer } from 'rxjs';
 import { Coin, ECoinFormat, ECurrency } from './shared/models/currency';
 
 import { ELinkableIcon, ELinkableIconType, ELinkableTarget, LinkableIcon } from './shared/components/linkable-icon/linkable-icon';
+import { StorageService } from './shared/services/storage.service';
+import { IMAGES } from 'src/assets/images/images';
 
 // Angular Material Icons: https://fonts.google.com/icons
 // Angular translate: https://medium.com/angular-chile/aplicaciones-multilenguaje-en-angular-7-con-ngx-translate-db8d1e7b380c
@@ -35,6 +37,9 @@ import { ELinkableIcon, ELinkableIconType, ELinkableTarget, LinkableIcon } from 
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
+  APP_SIDE: number;
+  IS_BIT_SITE = false;
+  LOGO_IMG = IMAGES.HOME_IMG;
   title = ELinkableIcon.Home;
 
   private timerSubscription: Subscription;
@@ -44,6 +49,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   currency = ECurrency.EUR;
   showContainerDonations = false;
+  showMenu = false;
 
   private maxScreenWidth = 800;
   private isBelowResolution = false;
@@ -62,12 +68,12 @@ export class AppComponent implements OnInit, OnDestroy {
     private coreService: CoreService,
     private translateService: TranslateService,
     private coingeckoService: CoingeckoService,
+    private storageService: StorageService,
   ) { }
 
   ngOnInit(): void {
     this.getCurrentScreenResolution();
-    this.prepareData();
-    this.getCoinData();
+    this.prepareAppSide();
   }
 
   @HostListener('window:resize', ['$event'])
@@ -79,6 +85,18 @@ export class AppComponent implements OnInit, OnDestroy {
     this.timerSubscription.unsubscribe();
   }
 
+  private prepareAppSide() {
+    this.storageService.appSide$.subscribe(appSide => {
+      this.APP_SIDE = appSide;
+      if (this.storageService.hasAppSide()) {
+        this.IS_BIT_SITE = this.APP_SIDE === 1;
+        this.prepareMenu();
+        this.prepareData();
+        this.getCoinData();
+      }
+    });
+  }
+
   private getCurrentScreenResolution(): void {
     this.isBelowResolution = window.innerWidth <= this.maxScreenWidth;
     this.prepareMenu();
@@ -87,38 +105,31 @@ export class AppComponent implements OnInit, OnDestroy {
   private prepareMenu(): void {
     this.iconListMenu = [];
 
-    this.iconListMenu.push(new LinkableIcon(this.icmIdAcademy, {
-      routerLink: 'academy',
-      title: 'MENU.academy',
-      iconPath: 'school',
-      color: '#fff',
-      type: ELinkableIconType.ICON,
-      target: ELinkableTarget.SELF,
-      showText: !this.isBelowResolution,
-      isMenu: true
-    }));
-    this.iconListMenu.push(new LinkableIcon(this.icmIdTools, {
-      routerLink: 'tools',
-      title: 'MENU.tools',
-      iconPath: 'construction',
-      color: '#fff',
-      type: ELinkableIconType.ICON,
-      target: ELinkableTarget.SELF,
-      showText: !this.isBelowResolution,
-      isMenu: true
-    }));
-    this.iconListMenu.push(new LinkableIcon(this.icmIdCalc, {
-      routerLink: '/',
-      title: 'MENU.finances',
-      iconPath: 'assessment',
-      color: '#fff',
-      type: ELinkableIconType.ICON,
-      target: ELinkableTarget.SELF,
-      showText: !this.isBelowResolution,
-      isMenu: true
-    }));
+    if (this.IS_BIT_SITE) {
+      this.iconListMenu.push(new LinkableIcon(this.icmIdAcademy, {
+        routerLink: 'academy',
+        title: 'MENU.academy',
+        iconPath: 'school',
+        color: '#fff',
+        type: ELinkableIconType.ICON,
+        target: ELinkableTarget.SELF,
+        showText: !this.isBelowResolution,
+        isMenu: true
+      }));
+    }
 
-    this.iconListMenu.push(new LinkableIcon(ELinkableIcon.Home));
+    if (this.IS_BIT_SITE) {
+      this.iconListMenu.push(new LinkableIcon(this.icmIdTools, {
+        routerLink: 'tools',
+        title: 'MENU.tools',
+        iconPath: 'construction',
+        color: '#fff',
+        type: ELinkableIconType.ICON,
+        target: ELinkableTarget.SELF,
+        showText: !this.isBelowResolution,
+        isMenu: true
+      }));
+    }
 
     this.iconListMenu.push(new LinkableIcon(this.icmIdBooks, {
       routerLink: 'books',
@@ -130,16 +141,35 @@ export class AppComponent implements OnInit, OnDestroy {
       showText: !this.isBelowResolution,
       isMenu: true
     }));
-    this.iconListMenu.push(new LinkableIcon(this.icmIdGames, {
-      routerLink: 'games',
-      title: 'MENU.games',
-      iconPath: 'sports_esports',
-      color: '#fff',
-      type: ELinkableIconType.ICON,
-      target: ELinkableTarget.SELF,
-      showText: !this.isBelowResolution,
-      isMenu: true
-    }));
+
+    // this.iconListMenu.push(new LinkableIcon(ELinkableIcon.Home));
+
+    if (this.IS_BIT_SITE) {
+      this.iconListMenu.push(new LinkableIcon(this.icmIdCalc, {
+        routerLink: '/',
+        title: 'MENU.finances',
+        iconPath: 'assessment',
+        color: '#fff',
+        type: ELinkableIconType.ICON,
+        target: ELinkableTarget.SELF,
+        showText: !this.isBelowResolution,
+        isMenu: true
+      }));
+    }
+
+    if (this.IS_BIT_SITE) {
+      this.iconListMenu.push(new LinkableIcon(this.icmIdGames, {
+        routerLink: 'games',
+        title: 'MENU.games',
+        iconPath: 'sports_esports',
+        color: '#fff',
+        type: ELinkableIconType.ICON,
+        target: ELinkableTarget.SELF,
+        showText: !this.isBelowResolution,
+        isMenu: true
+      }));
+    }
+
     this.iconListMenu.push(new LinkableIcon(this.icmIdContact, {
       routerLink: 'contact',
       title: 'MENU.contact',
@@ -161,6 +191,10 @@ export class AppComponent implements OnInit, OnDestroy {
       const coins = await this.coingeckoService.getCoins(this.currency, 1, 1, false, false);
       this.coinBitcoin = coins[0];
     })).subscribe();
+  }
+
+  onToggleSide() {
+    this.storageService.setAppSide();
   }
 
   onChangeLanguage(): void {
