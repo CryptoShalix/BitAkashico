@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StorageService } from 'src/app/shared/services/storage.service';
+import { IMAGES } from 'src/assets/images/images';
 
 @Component({
   selector: 'app-start-page',
@@ -7,6 +8,7 @@ import { StorageService } from 'src/app/shared/services/storage.service';
   styleUrls: ['./start-page.component.scss']
 })
 export class StartPageComponent implements OnInit {
+  IMAGE_LOGO = IMAGES.HOME_IMG;
   nSideSelected = 0;
 
   constructor(private storageService: StorageService) { }
