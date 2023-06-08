@@ -24,7 +24,7 @@ svg.material-icons:not(:last-child) {
   max-height: 50px;
   padding: 0 5px;
   margin: 0;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   border: 1px solid transparent;
   cursor: pointer;
@@ -34,10 +34,10 @@ svg.material-icons:not(:last-child) {
     position: absolute;
     width: 0;
     height: 0;
-    top: calc(100% - 3px);
-    left: calc(50% - 6px);
+    top: calc(50% - 6px);
+    left: calc(0% - 12px);
     border: 6px solid transparent;
-    border-bottom-color: $global-link-color-hover;
+    border-left-color: $global-link-color-hover;
     z-index: 2;
   }
 
@@ -74,7 +74,7 @@ svg.material-icons:not(:last-child) {
     max-height: 150px;
     margin: 15px;
     padding: 0;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -88,16 +88,11 @@ svg.material-icons:not(:last-child) {
     &:hover {
       box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
 
-      .material-icons path {
-        fill: $card-text-hover;
-      }
-
-      span {
-        color: $card-text-hover;
-      }
-
+      span,
+      .material-icons path,
       svg.material-icons path {
         fill: $card-text-hover;
+        color: $card-text-hover;
       }
     }
 
@@ -105,13 +100,13 @@ svg.material-icons:not(:last-child) {
       position: relative;
       display: block;
       width: 100%;
-      min-width: 50px;
-      max-width: 50px;
+      min-width: 30px;
+      max-width: 30px;
       height: 100%;
-      min-height: 50px;
-      max-height: 50px;
+      min-height: 30px;
+      max-height: 30px;
       margin: 0 auto;
-      font-size: 50px;
+      font-size: 30px;
       text-align: center;
       align-items: center;
       justify-content: center;
@@ -136,12 +131,15 @@ svg.material-icons:not(:last-child) {
   }
 
   &.menu-button {
-    flex-direction: column;
-    min-width: 100px;
-    max-width: 100px;
+    flex-direction: row;
+    min-width: 250px;
+    max-width: 300px;
+    min-height: 50px;
+    max-height: 50px;
 
     span {
-      font-size: 10px;
+      font-size: 15px;
+      text-indent: 15px;
     }
   }
 
@@ -160,7 +158,7 @@ svg.material-icons:not(:last-child) {
       border-radius: 50%;
 
       g {
-        fill: #ffffff;
+        fill: $color-primary-1;
       }
     }
 
@@ -170,7 +168,7 @@ svg.material-icons:not(:last-child) {
     }
 
     .svgPath {
-      fill: #ffffff;
+      fill: $color-primary-1;
     }
   }
 
@@ -231,12 +229,29 @@ svg.material-icons:not(:last-child) {
   min-height: 50px;
   max-height: 50px;
   margin: 5px 15px;
-  background: $card-background-hover;
-  border: 5px solid $card-text-hover;
+  color: $card-text;
+  background: $card-background;
+  border: 5px solid $card-border-light;
+  user-select: none;
 
   &:hover {
-    background: $card-text-hover;
-    color: $card-background-hover;
+    color: $card-text;
+    background: $card-border-light;
+
+    span,
+    .material-icons path,
+    svg.material-icons path {
+      color: $card-text;
+    }
+  }
+
+  .mat-icon {
+    max-width: 25px;
+    min-width: 25px;
+    min-height: 25px;
+    max-height: 25px;
+    font-size: 25px;
+    color: $card-text;
   }
 }
 
@@ -244,14 +259,15 @@ svg.material-icons:not(:last-child) {
 .material-icons-language {
   position: relative;
   display: flex;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  margin: 0 5px;
   justify-content: center;
   align-items: center;
-  border: 1px solid transparent;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  padding: 0;
+  color: $global-link-color;
   font-size: 20px;
+  border: 1px solid transparent;
   cursor: pointer;
 
   &:hover {
@@ -290,45 +306,5 @@ svg.material-icons:not(:last-child) {
 
   66% {
     transform: scale(.90);
-  }
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 767px) {
-
-  .logo .linkable-icon img {
-    max-width: 90px !important;
-    max-height: 90px !important;
-    margin: 45px 5px 0 !important;
-  }
-
-  .linkable-icon {
-    max-height: 60px;
-
-    &.menu-button {
-      flex-direction: column;
-      min-width: 40px;
-      max-width: 40px;
-    }
-
-    img {
-      max-width: 65px;
-      max-height: 65px;
-      margin: 0 5px;
-    }
-
-    span {
-      font-size: 10px !important;
-    }
-
-    span,
-    .svgControl {
-      opacity: 1;
-      color: $global-link-color;
-    }
-
-    .mat-icon {
-      font-size: 25px;
-    }
   }
 }

@@ -69,7 +69,13 @@ form {
     cursor: default;
 
     &:hover {
-      color: $body-text;
+      color: $body-text-muted-hover;
     }
+  }
+}
+
+@media (pointer:coarse) {
+  .text-muted {
+    color: $body-text-muted-hover !important;
   }
 }

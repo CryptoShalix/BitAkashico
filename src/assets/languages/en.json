@@ -6,8 +6,12 @@
       "enter": "Enter"
     },
     "DONATIONS": {
-      "title": "Donate some sats",
-      "message": "Any amount of satoshi is welcome. They will motivate us and help us grow the content more.<br/><br/>Send ₿itcoin through the lightning network, and thus you will hardly have commissions. Remember that you have the recommended ₿itcoin wallets in <a class='selected' href='/#/tools'>tools</a>."
+      "titleBit": "Donate some sats",
+      "titleFiat": "Donate some euros",
+      "messageBit": "Any amount of satoshis is welcome. They will motivate us and help us to make the content grow more.<br/><br/>Send ₿itcoin through the lightning network, and you will hardly have commissions. Remember that you have the recommended ₿itcoin wallets in <a class='selected' href='/#/tools'>tools</a>.",
+      "messageFiat": "Any amount of euros is welcome. They will motivate us and help us to make the content grow more.<br/><br/><b>Attention!</b> <i>Paypal is a third-party service that requires an account with KYC (Know Your Customer), which implies that you will have to provide your personal data, including ID, to carry out operations.<br/><br/>This is the reason why we encourage you to use ₿itcoin for your donations and payments.<br/><br/>Clicking on the image will open the Paypal mobile application, or, if it is not installed, the corresponding Store to proceed with its installation on your device.</i>",
+      "payInBTC": "I prefer to donate in ₿itcoin",
+      "payInFiat": "I prefer to donate with traditional currencies"
     },
     "LANGUAGE": {
       "en": "English",
@@ -27,12 +31,17 @@
     "MSG": {
       "copyToClipboard": "Copied to clipboard!",
       "clickToCopy": "Click on the text or image to copy to clipboard",
-      "appSideBit": "Click to enter the world of Akasha",
-      "appSideAka": "Click to enter the world of finance and computing"
+      "appSideChoose": "Choose your side",
+      "appSentenceBit1": "Wake up the ₿it and take control of your life",
+      "appSentenceBit2": "The person you are in the future will be the result of the decisions you make today.",
+      "appSentenceAka": "Get rid of everything that is blocking your life",
+      "appCredits": "BitAkashico is an original idea of <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>",
+      "appRightsReserved": "All rights reserved"
     },
     "PAGES": {
       "MAIN": {
-        "about": "BitAkashico is presented as the parent project of <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Differentiating the <b>material</b> part, which is intended to support financial education (₿itcoin, cryptocurrencies, etc.) and information technology; from the <b>spiritual</b> part, which seeks to remind you as a soul that transits this world, who you are, or what tests you are facing now, by reading your chakras or an akashic record.<br/><br/>To get started, check out the <a class='selected' target='_self' href='#academy'>Academy</a> or the <a class='selected' target='_self' href='#books'>Books</a> section.<br/><br/>If you wish, contact @CryptoShalix through the <a class='selected' target='_self' href='#contact'>contact form</a> and resolve any doubts through an individual and fully personalized session."
+        "about": "BitAkashico is presented as the parent project of <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Differentiating the <b>material</b> part, which is intended to support financial education (₿itcoin, cryptocurrencies, etc.) and information technology; from the <b>spiritual</b> part, which seeks to remind you as a soul that transits this world, who you are, or what tests you are facing now, by reading your chakras or an akashic record.<br/><br/>To get started, check out the <a class='selected' target='_self' href='#academy'>Academy</a> or the <a class='selected' target='_self' href='#books'>Books</a> section.<br/><br/>If you wish, contact @CryptoShalix through the <a class='selected' target='_self' href='#contact'>contact form</a> and resolve any doubts through an individual and fully personalized session.",
+        "topAppsTitle": "TOP APPS OF THE MOMENT"
       },
       "START": {
         "about-bit": "Problems with your mobile or computer?<br/>Do you need to organize your finances but don't know where to start?<br/><br/>Enter, and discover how we can learn (together) about computing, finance and ₿itcoin.",
@@ -59,10 +68,13 @@
         }
       },
       "BOOKS": {
-        "about": "Knowledge at the reach of a click.<br/><br/>This is your <i>'library'</i>, where you will find the most interesting books with content on ₿itcoin, blockchain, smart contracts, finance and management of money, trading, application and services development related to all of the above... in addition to books on spirituality, psychology, healthy practices, and much more.<br/><br/>The books have been collected from different sources all over the internet, and are stored in a <a class='selected' href='https://mega.nz/aff=YvakZRq8M2Q' target='_blank'>Mega</a>, from which you can view and/or download the books.<br/><br/><i>If you liked after reading them, please buy and move the economy by contributing to what is of value to you.</i>"
+        "aboutBit": "Knowledge within reach of a click.<br/><br/>This is your <i>'₿itlibrary'</i>, where you will find the most interesting books with content on ₿itcoin, blockchain, smart contracts, finance and money management, trading, application development, and services related to all of the above.",
+        "aboutAka": "Knowledge within reach of a click.<br/><br/>This is your <i>'library'</i>, where you will find the most interesting books with content on spirituality, psychology, healthy practices, etc.",
+        "aboutOrigin": "<br/><br/>The books have been collected from different sources all over the internet, and are stored in a <a class='selected' href='https://mega.nz/aff=YvakZRq8M2Q' target='_blank'>Mega</a> account, from which you can view and/or download the books.<br/><br/><i>If after reading them you liked them, please buy and move the economy by contributing to what is of value to you.</i>"
       },
       "CONTACT": {
-        "about": "Get in touch with @CryptoShalix on social networks or with the following contact form and solve your doubts or problems related to finances, cryptocurrencies, ₿itcoin, computing, etc, or ask for a chakra session or an akashic record, all individually and totally personalized.",
+        "aboutBit": "Problems with your mobile or computer?<br/>Do you need to organize your finances but don't know where to start?<br/><br/>Get in touch with @CryptoShalix on social networks or with the following contact form and solve your doubts or problems related to finances, cryptocurrencies, ₿itcoin, computing, or mobile devices, all individually and totally personalized.",
+        "aboutAka": "Do you feel that there is an obstacle in your life that prevents you from reaching your inner peace?<br/><br/>Get in touch with @CryptoShalix on social networks or with the following contact form and ask for a chakra session or an akashic record, all individually and totally personalized.",
         "email": "Email",
         "emailHelp": "The indicated contact details will NOT be shared or stored.",
         "nickname": "Name/Nickname",

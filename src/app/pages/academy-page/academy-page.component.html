@@ -1,90 +1,94 @@
 <div class="content">
 
-  <div class="content-chooser">
-    <mat-tab-group
-      preserveContent
-      mat-align-tabs="center"
-      animationDuration="0ms"
-    >
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <mat-icon class="tab-icon">₿</mat-icon>
-          <span>BIT</span>
-        </ng-template>
-        <div class="content-about">
-          <span [innerHTML]="('PAGES.ACADEMY.BIT.about' | translate) | safe:'html'"></span>
-        </div>
-
-        <mat-vertical-stepper
-          [linear]="true"
-          [selectedIndex]="0"
-          #stepper
-        >
-          <ng-template matStepperIcon="school">
-            <mat-icon>school</mat-icon>
-          </ng-template>
-          <ng-template matStepperIcon="email">
-            <mat-icon>email</mat-icon>
-          </ng-template>
-
-          <mat-step
-            label="{{ 'PAGES.ACADEMY.BIT.STEP_1.title' | translate }}"
-            state="school"
-          >
-            <div class="content-video-responsive">
-              <iframe
-                width="945px"
-                height="600px"
-                src="https://www.youtube.com/embed/videoseries?list=PLGE24dPKonPajeP0e-lJVkhoTXSYi0ZsP"
-                [title]="'PAGES.ACADEMY.BIT.STEP_1.description' | translate"
-                frameborder="0"
-                autohide="1"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe></div>
-          </mat-step>
-
-          <mat-step
-            label="{{ 'PAGES.ACADEMY.BIT.STEP_2.title' | translate }}"
-            state="school"
-          >
-            <div class="content-video-responsive">
-              <iframe
-                width="945px"
-                height="600px"
-                src="https://www.youtube.com/embed/videoseries?list=PLGE24dPKonPbF6rLcgvxzu93NsIZXReov"
-                [title]="'PAGES.ACADEMY.BIT.STEP_2.description' | translate"
-                frameborder="0"
-                autohide="1"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe></div>
-          </mat-step>
-
-          <mat-step
-            label="{{ 'PAGES.ACADEMY.BIT.STEP_3.title' | translate }}"
-            state="email"
-          >
-            <div class="content-step">
-              <span [innerHTML]="('PAGES.ACADEMY.BIT.STEP_3.description' | translate) | safe:'html'"></span>
-            </div>
-          </mat-step>
-        </mat-vertical-stepper>
-
-      </mat-tab>
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <img
-            class="tab-icon"
-            [src]="LOGO_AKASHICO"
-          >
-          <span>AKASHICO</span>
-        </ng-template>
-        <div class="content-about">
-          <span [innerHTML]="('PAGES.ACADEMY.AKASHICO.about' | translate) | safe:'html'"></span>
-        </div>
-      </mat-tab>
-    </mat-tab-group>
+  <div class="content-about">
+    <span [innerHTML]="(getAboutTextBySide() | translate) | safe:'html'"></span>
   </div>
 
+  <div class="content-academy">
+    <div
+      class="content-academy-title"
+      [ngClass]="{'bit': IS_BIT_SIDE}"
+    >
+      <ng-container *ngIf="IS_BIT_SIDE; else templateTitleAkashico">
+        <mat-icon class="content-academy-title-logo">{{ TITLE_LOGO }}</mat-icon>
+      </ng-container>
+      <ng-template #templateTitleAkashico>
+        <img
+          class="content-academy-title-logo"
+          [src]="TITLE_LOGO"
+        >
+      </ng-template>
+      <span>{{ TITLE_TEXT }}</span>
+    </div>
+    <ng-container
+      *ngIf="IS_BIT_SIDE"
+      [ngTemplateOutlet]="bitAcademy"
+    ></ng-container>
+  </div>
 </div>
+
+<ng-template #bitAcademy>
+  <mat-vertical-stepper
+    [linear]="true"
+    [selectedIndex]="0"
+    #stepper
+  >
+    <ng-template matStepperIcon="school">
+      <mat-icon>school</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="email">
+      <mat-icon>email</mat-icon>
+    </ng-template>
+
+    <mat-step
+      label="{{ 'PAGES.ACADEMY.BIT.STEP_1.title' | translate }}"
+      state="school"
+    >
+      <div class="content-video-responsive">
+        <ng-container *ngTemplateOutlet="videoTemplate; context: {
+            source: 'PLGE24dPKonPajeP0e-lJVkhoTXSYi0ZsP',
+            title:'PAGES.ACADEMY.BIT.STEP_1.description'
+          }"></ng-container>
+      </div>
+    </mat-step>
+
+    <mat-step
+      label="{{ 'PAGES.ACADEMY.BIT.STEP_2.title' | translate }}"
+      state="school"
+    >
+      <div class="content-video-responsive">
+        <ng-container *ngTemplateOutlet="videoTemplate; context: {
+                  source: 'PLGE24dPKonPbF6rLcgvxzu93NsIZXReov',
+                  title:'PAGES.ACADEMY.BIT.STEP_2.description'
+                }"></ng-container>
+      </div>
+    </mat-step>
+
+    <mat-step
+      label="{{ 'PAGES.ACADEMY.BIT.STEP_3.title' | translate }}"
+      state="email"
+    >
+      <div class="content-step">
+        <span [innerHTML]="('PAGES.ACADEMY.BIT.STEP_3.description' | translate) | safe:'html'"></span>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
+
+</ng-template>
+
+<ng-template
+  #videoTemplate
+  let-source="source"
+  let-title="title"
+>
+  <iframe
+    width="945px"
+    height="600px"
+    [src]="getVideoUrl(source) | safe:'resourceUrl'"
+    [title]="title | translate"
+    frameborder="0"
+    autohide="1"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</ng-template>

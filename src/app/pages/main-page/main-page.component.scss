@@ -1,5 +1,51 @@
 @import '../../../styles-colors.scss';
 
+.back-sentence-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 1000px;
+  margin: 0;
+  padding: 0;
+  background-color: $background-back-color;
+
+  &.bit {
+    background: url(../../../assets/images/background_bit_1.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: cover;
+  }
+
+  &.aka {
+    background: url(../../../assets/images/background_aka_1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: cover;
+  }
+
+  .back-sentence-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: $background-sentence-back;
+
+    span {
+      max-width: 300px;
+      line-height: 3em;
+      text-align: center;
+      font-size: 2em;
+      font-style: italic;
+      text-transform: uppercase;
+      font-family: 'Bookman Old Style';
+      color: $background-sentence-text;
+    }
+  }
+}
+
 .content {
   display: block;
   max-width: 70%;
@@ -29,6 +75,7 @@
 
       .title-top-apps {
         font-weight: bold;
+        color: $body-text;
       }
 
       .container-top-apps {

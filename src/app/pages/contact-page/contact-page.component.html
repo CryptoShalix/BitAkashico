@@ -1,7 +1,7 @@
 <div class="content">
 
   <div class="content-about">
-    <span [innerHTML]="('PAGES.CONTACT.about' | translate) | safe:'html'"></span>
+    <span [innerHTML]="(getAboutText() | translate) | safe:'html'"></span>
   </div>
 
   <div class="content-cards">

@@ -5,23 +5,9 @@
   max-width: 50%;
   margin: 0 auto;
   font-size: 14px;
-  text-align: center;
+  text-align: justify;
   line-height: 30px;
   letter-spacing: 1px;
-  background-color: rgba(0, 0, 0, .25);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  border-radius: 10px;
-
-  .content-step {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 0;
-    margin: 0;
-    border-radius: 10px;
-  }
 
   .content-about {
     display: flex;
@@ -32,21 +18,93 @@
     margin: 0;
   }
 
-  .content-video-responsive {
-    position: relative;
-    height: 0;
-    padding-bottom: 56.25%;
-    padding-top: 25px;
+  .content-academy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    overflow-x: hidden;
 
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
+    .content-academy-title {
+      position: relative;
+      display: flex;
       width: 100%;
       height: 100%;
-      // border: 2px solid $toolbar-border-color;
-      border: 10px solid $content-video-border;
+      min-height: 50px;
+      max-height: 50px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      color: $card-text;
+      background: $card-background;
+      border: 2px solid $card-border-dark;
       border-radius: 10px;
+      cursor: default;
+
+      &.bit {
+        color: $card-text-hover;
+        background: $card-background-hover;
+      }
+
+      .content-academy-title-logo {
+        position: absolute;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        margin: 0 15px;
+
+        &.mat-icon {
+          position: absolute;
+          display: flex;
+          left: 0;
+          width: 40px;
+          height: 100%;
+          margin: 0 15px;
+          text-align: center;
+          top: 50%;
+          transform: translateY(-55%);
+        }
+      }
+
+      span {
+        display: block;
+        height: 100%;
+        padding: 5px;
+        font-size: 18px;
+        font-weight: 550;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+
+    .content-step {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 0;
+      margin: 0;
+      border-radius: 10px;
+    }
+
+    .content-video-responsive {
+      position: relative;
+      height: 0;
+      padding-bottom: 56.25%;
+      padding-top: 25px;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 10px solid $content-video-border;
+        border-radius: 10px;
+      }
     }
   }
 }

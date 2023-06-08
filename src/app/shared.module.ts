@@ -6,7 +6,7 @@ import { MaterialModule } from './material.module';
 import { PipesModule } from './shared/pipes/pipes.module';
 
 import { AccordionComponent } from './shared/components/accordion/accordion.component';
-import { CarouselComponent } from './shared/components/carousel/carousel.component';
+// import { CarouselComponent } from './shared/components/carousel/carousel.component';
 import { CoinComponent } from './shared/components/coin-info/coin-info.component';
 import { ContactFormComponent } from './shared/components/contact-form/contact-form.component';
 import { CustomImageComponent } from './shared/components/custom-image/custom-image.component';
@@ -21,7 +21,7 @@ import { ModalSelectorComponent } from './shared/components/modal-selector/modal
 @NgModule({
   declarations: [
     AccordionComponent,
-    CarouselComponent,
+    // CarouselComponent,
     CoinComponent,
     ContactFormComponent,
     CustomImageComponent,
@@ -42,7 +42,7 @@ import { ModalSelectorComponent } from './shared/components/modal-selector/modal
   ],
   exports: [
     AccordionComponent,
-    CarouselComponent,
+    // CarouselComponent,
     CoinComponent,
     ContactFormComponent,
     CustomImageComponent,

@@ -50,12 +50,14 @@
           margin: 5px;
           overflow-y: auto;
           align-items: center;
-          background: $content-background-transparent;
-          border: 1px solid transparent;
+          color: $card-text;
+          background: $card-background;
+          border: 2px solid transparent;
           border-radius: 5px;
+          cursor: default;
 
           &:hover {
-            border-color: $toolbar-border-color;
+            border-color: $card-border-dark;
           }
 
           img.large {

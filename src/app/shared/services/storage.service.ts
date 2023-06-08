@@ -28,4 +28,8 @@ export class StorageService {
   hasAppSide() {
     return this.getAppSide() !== 0;
   }
+
+  isAppSideBit() {
+    return this.getAppSide() === 1;
+  }
 }

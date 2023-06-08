@@ -13,9 +13,14 @@ $color-special-1: #edc16c;
 $color-special-2: #f7931a;
 $color-special-3: #ffcc11;
 
+// BACKGROUND
+$background-back-color: $color-primary-3;
+$background-sentence-back: rgba($color-primary-1, .35);
+$background-sentence-text: $color-secondary-1;
+
 // TOOLBAR
-$toolbar-background: $color-primary-1;
-$toolbar-background2: $color-primary-3;
+$toolbar-background: rgba($color-primary-1, .75);
+$toolbar-background-full: $color-primary-1;
 $toolbar-border-color: $color-special-1;
 $toolbar-text: $color-secondary-1;
 
@@ -35,14 +40,15 @@ $carousel-item-hover-text: $color-primary-3;
 $carousel-item-hover-border: $color-primary-3;
 
 // BODY
-$body-background: $color-primary-1;
-$body-text: $color-secondary-1;
-$body-text-muted: $color-secondary-2;
+$body-background: $color-secondary-1;
+$body-text: $color-primary-1;
+$body-text-muted: $color-secondary-3;
+$body-text-muted-hover: $color-primary-1;
 
 // CONTENT
 $content-background: $color-secondary-1;
 $content-text: $color-primary-1;
-$content-background-transparent: rgba(0, 0, 0, .75);
+$content-background-transparent: rgba($color-primary-1, .75);
 $content-video-border: $color-primary-1;
 $content-border-color: $color-special-1;
 
@@ -73,12 +79,12 @@ $btn-text-hover: $color-primary-3;
 $btn-text-disabled: $color-secondary-2;
 
 // CARD
-$card-background: $color-primary-3;
-$card-background-hover: $color-secondary-1;
-$card-text: $color-secondary-1;
-$card-text-hover: $color-special-1;
+$card-background: rgba($color-secondary-1, .9);
+$card-background-hover: $color-primary-1;
+$card-text: $color-primary-1;
+$card-text-hover: $color-secondary-1;
 $card-border-light: $color-special-1;
-$card-border-dark: $color-special-3;
+$card-border-dark: $color-primary-1;
 
 // RADIO
 $radio-color-thumb: $color-special-2;
@@ -90,8 +96,15 @@ $select-text: $color-primary-3;
 $select-border: $color-special-1;
 
 // STEPPER
-$stepper-tab-font: $color-secondary-1;
-$stepper-tab-font-hover: $color-special-1;
+$stepper-tab-back: $color-secondary-1;
+$stepper-tab-back-hover: $color-primary-1;
+$stepper-tab-text: $color-primary-1;
+$stepper-tab-text-hover: $color-secondary-1;
+$stepper-tab-border: $color-primary-1;
+$stepper-tab-border-hover: $color-primary-1;
+$stepper-tab-back-selected: $color-special-1;
+$stepper-tab-text-selected: $color-primary-1;
+$stepper-tab-border-selected: $color-special-1;
 
 // GLOBAL
 $global-link-color: $color-secondary-1;

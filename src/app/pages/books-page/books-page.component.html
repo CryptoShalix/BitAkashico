@@ -1,39 +1,36 @@
 <div class="content">
 
   <div class="content-about">
-    <span [innerHTML]="('PAGES.BOOKS.about' | translate) | safe:'html'"></span>
+    <span [innerHTML]="(getAboutTextBySide() | translate) | safe:'html'"></span>
+    <span [innerHTML]="('PAGES.BOOKS.aboutOrigin' | translate) | safe:'html'"></span>
   </div>
 
-  <mat-tab-group
-    mat-align-tabs="center"
-    animationDuration="0ms"
-  >
-    <mat-tab>
-      <ng-template mat-tab-label>
-        <mat-icon class="tab-icon">₿</mat-icon>
-        <span>BIT</span>
-      </ng-template>
-      <ng-container *ngTemplateOutlet="bookshelf; context: {books: booksBit}"></ng-container>
-    </mat-tab>
-
-    <mat-tab>
-      <ng-template mat-tab-label>
+  <div class="content-books">
+    <div
+      class="content-books-title"
+      [ngClass]="{'bit': IS_BIT_SIDE}"
+    >
+      <ng-container *ngIf="IS_BIT_SIDE; else templateTitleAkashico">
+        <mat-icon class="content-books-title-logo">{{ TITLE_LOGO }}</mat-icon>
+      </ng-container>
+      <ng-template #templateTitleAkashico>
         <img
-          class="tab-icon"
-          [src]="LOGO_AKASHICO"
+          class="content-books-title-logo"
+          [src]="TITLE_LOGO"
         >
-        <span>AKASHICO</span>
       </ng-template>
-      <ng-container *ngTemplateOutlet="bookshelf; context: {books: booksAkashico}"></ng-container>
-    </mat-tab>
-  </mat-tab-group>
+      <span>{{ TITLE_TEXT }}</span>
+    </div>
+    <ng-container *ngTemplateOutlet="bookshelf; context: {books: books}"></ng-container>
+  </div>
+
 </div>
 
 <ng-template
   #bookshelf
   let-books="books"
 >
-  <div class="content-books">
+  <div class="content-books-list">
     <div
       class="book-container"
       *ngFor="let book of books"

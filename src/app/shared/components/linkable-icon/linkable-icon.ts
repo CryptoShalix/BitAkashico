@@ -94,11 +94,11 @@ export class LinkableIcon {
         this.id = title ? title : ELinkableIcon.Home.toLowerCase();
         this.title = title ? title : ELinkableIcon.Home;
         this.routerLink = 'home';
-        this.iconPath = IMAGES.HOME_IMG;
+        this.iconPath = title ? 'home' : IMAGES.HOME_IMG;
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
         this.isSVG = false;
-        this.isImage = true;
+        this.isImage = title ? false : true;
         target = ELinkableTarget.SELF;
         showText = linkableIcon && linkableIcon.showText !== undefined ? linkableIcon.showText : false;
         break;

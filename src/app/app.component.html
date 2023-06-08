@@ -4,29 +4,19 @@
 
 <ng-template #templateSite>
   <div class="body">
-    <!-- <div class="coins-carousel">
-    <app-carousel></app-carousel>
-  </div> -->
 
     <div class="toolbar-top">
 
       <div class="menu-top">
         <div class="menu-top-container">
 
-          <!-- <div
-            *ngIf="IS_BIT_SITE"
-            class="menu-currency"
-          >
-            <app-coin-info
-              class="coin-ticker"
-              [sCoinItem]="coinBitcoin"
-              [type]="coinFormat"
-            ></app-coin-info>
-          </div> -->
-          <mat-icon
+          <div
             class="menu-nav"
             (click)="showMenu = !showMenu"
-          >{{ showMenu ? 'close' : 'menu' }}</mat-icon>
+          >
+            <mat-icon class="menu-nav-button">{{ showMenu ? 'close' : 'menu' }}</mat-icon>
+            <span class="menu-nav-breadcrumb">{{ getCurrentPage() | translate | uppercase }}</span>
+          </div>
 
           <span class="spacer"></span>
 
@@ -69,18 +59,33 @@
       class="menu-nav-container"
       [ngClass]="{'animate': showMenu}"
     >
-      <app-linkable-icon
-        *ngFor="let iconMenu of iconListMenu"
-        [sDefaultIcon]="iconMenu"
-      ></app-linkable-icon>
+      <div class="menu-nav-controls">
+        <app-linkable-icon
+          class="menu-nav-control"
+          (click)="showMenu=!showMenu"
+          *ngFor="let iconMenu of iconListMenu"
+          [sDefaultIcon]="iconMenu"
+        ></app-linkable-icon>
+      </div>
     </div>
 
     <div class="main-container">
       <router-outlet></router-outlet>
     </div>
 
+    <div class="toolbar-bottom">
+      <span [innerHTML]="'MSG.appCredits' | translate"></span>
+      <span>
+        <mat-icon>copyright</mat-icon>
+        <span [innerHTML]="'MSG.appRightsReserved' | translate"></span>
+      </span>
+    </div>
+
     <app-message-manager></app-message-manager>
   </div>
 
-  <app-donations [setShow]="showContainerDonations"></app-donations>
+  <app-donations
+    [setShow]="showContainerDonations"
+    (outOnClose)="showContainerDonations=$event"
+  ></app-donations>
 </ng-template>

@@ -10,17 +10,8 @@
       margin: 10px auto;
 
       &:hover {
-        box-shadow: 0 2px 0 $content-border-color, 0 2px 2px $content-border-color;
+        box-shadow: 0 2px 0 $card-border-dark, 0 2px 2px $card-border-dark;
         border-radius: 0 0 5px 5px;
-      }
-
-      &:hover .mat-icon,
-      &:hover .mat-expansion-panel-header-title {
-        color: $card-text-hover;
-      }
-
-      .mat-expansion-panel-header:hover {
-        background: $body-background  !important;
       }
 
       .mat-expansion-panel-header-title {
@@ -74,10 +65,14 @@
         background: transparent;
         color: $body-text;
         border: 2px solid transparent;
+        color: $card-text;
+        background-color: $card-background;
         cursor: pointer;
 
         &:hover {
-          border-color: $card-text-hover;
+          color: $card-text-hover;
+          background-color: $card-background-hover;
+          border-color: $card-border-dark;
         }
 
         .mat-card-title-group {

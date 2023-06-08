@@ -309,18 +309,41 @@ label {
   background-color: transparent;
 
   .mat-step-header {
-    border-radius: 10px;
+    margin: 1% auto;
+    border-radius: 10px 10px;
     font-weight: bold;
     opacity: 1;
+    color: $stepper-tab-text;
+    background: $stepper-tab-back;
+    border: 4px solid $stepper-tab-border;
+    cursor: pointer;
 
-    &:hover {
+    &:hover:not([aria-selected=true]) {
+      color: $stepper-tab-text-hover;
+      background: $stepper-tab-back-hover;
+      border-color: $stepper-tab-border-hover;
+
       .mat-step-label {
-        color: $stepper-tab-font-hover;
+        color: $stepper-tab-text-hover;
+      }
+    }
+
+    &[aria-selected=true] {
+      color: $stepper-tab-text-selected;
+      background: $stepper-tab-back;
+      border-color: $stepper-tab-border-selected;
+
+      &:hover {
+        background: $stepper-tab-back-selected;
+      }
+
+      .mat-step-label {
+        color: $stepper-tab-text-selected;
       }
     }
 
     .mat-step-label {
-      color: $stepper-tab-font;
+      color: $stepper-tab-text;
     }
   }
 }
@@ -347,8 +370,9 @@ label {
     justify-content: center;
     font-size: 12px;
     letter-spacing: 2px;
-    color: rgba($color-primary-1, 1);
-    background: rgba($color-secondary-1, 1);
+    color: rgba($color-secondary-1, 1);
+    background: rgba($color-primary-1, 1);
+    z-index: 9999999;
   }
 }
 

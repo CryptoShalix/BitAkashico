@@ -1,3 +1,15 @@
+<div
+  class="back-sentence-container"
+  [ngClass]="{
+        'bit': IS_BIT_SITE,
+        'aka':!IS_BIT_SITE
+      }"
+>
+  <div class="back-sentence-content">
+    <span>{{ getAppSentence() | translate }}</span>
+  </div>
+</div>
+
 <div class="content">
 
   <div class="content-about">

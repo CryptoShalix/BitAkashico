@@ -1,15 +1,32 @@
 <app-modal-dialog
   [setShow]="showContainerDonations"
-  [setTitle]="'DONATIONS.title'"
+  [setTitle]="getTitleText()"
+  [setTitleImage]="getTitleImage()"
+  (outOnClose)="onClose()"
 >
   <ng-template #modal_dialog_template>
+    <button
+      type="button"
+      class="btn btn-long"
+      (click)="PAY_IN_BTC = !PAY_IN_BTC"
+    >
+      <mat-icon>compare_arrows</mat-icon>
+      <span [innerHTML]="(getCheckBoxText() | translate) | safe:'html'"></span>
+    </button>
+
     <span
       class="menu-donations-message"
-      [innerHTML]="('DONATIONS.message' | translate) | safe:'html'"
+      [innerHTML]="(getMessageText() | translate) | safe:'html'"
     ></span>
-    <span class="menu-donations-message italic">{{ 'MSG.clickToCopy' | translate }}</span>
+
+    <span
+      *ngIf="PAY_IN_BTC"
+      class="menu-donations-message italic"
+    >{{ 'MSG.clickToCopy' | translate }}</span>
+
     <div class="menu-donations-wallets">
       <a
+        *ngIf="PAY_IN_BTC"
         class="show-as-row"
         (click)="onClickCopyToClipboard()"
         [cdkCopyToClipboard]="walletBTCLNZebedeeTag"
@@ -19,6 +36,7 @@
       </a>
 
       <a
+        *ngIf="PAY_IN_BTC"
         class="show-as-row"
         (click)="onClickCopyToClipboard()"
         [cdkCopyToClipboard]="walletBTCPaynymTag"
@@ -28,11 +46,21 @@
       </a>
 
       <a
+        *ngIf="PAY_IN_BTC"
         class="show-as-row"
         (click)="onClickCopyToClipboard()"
         [cdkCopyToClipboard]="walletBTCLNZebedeeUrl"
       >
         <img [src]="walletBTCLNZebedeeQR">
+      </a>
+
+      <a
+        *ngIf="!PAY_IN_BTC"
+        class="show-as-row"
+        [href]="walletPaypalUrl"
+        target="_blank"
+      >
+        <img [src]="walletPaypalQR">
       </a>
 
       <span

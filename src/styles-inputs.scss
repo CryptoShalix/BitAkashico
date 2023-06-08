@@ -20,6 +20,14 @@ select {
   border-radius: 5px;
 }
 
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
+.mat-checkbox-checked.mat-accent .mat-checkbox-background,
+.mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element,
+.mat-checkbox:active:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element {
+  background-color: $color-special-1 !important;
+}
+
+
 // BUTTON
 .btn {
   position: relative;
@@ -37,10 +45,12 @@ select {
   border-radius: 10px;
   cursor: pointer;
 
-  &.btn-submit {
+  &.btn-submit,
+  &.btn-long {
     width: 100%;
     max-width: 25%;
     height: 40px;
+    min-height: 40px;
 
     .mat-icon {
       position: absolute;
@@ -54,13 +64,20 @@ select {
 
     span {
       display: flex;
-      width: 100%;
-      height: 100%;
       align-content: center;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      margin-left: 35px;
     }
+  }
+
+  &.btn-long {
+    max-width: 100%;
+    height: 30px;
+    min-height: 30px;
   }
 
   &.btn-small {

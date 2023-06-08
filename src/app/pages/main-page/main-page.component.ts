@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { ELinkableIcon, ELinkableIconType, ELinkableTarget, LinkableIcon } from 'src/app/shared/components/linkable-icon/linkable-icon';
 
-import { IMAGES } from '../../../assets/images/images';
 import { URLS } from '../../shared/models/core';
+import { StorageService } from '../../shared/services/storage.service';
 
 @Component({
   selector: 'app-main-page',
@@ -11,12 +11,16 @@ import { URLS } from '../../shared/models/core';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
+  APP_SIDE: number;
+  IS_BIT_SITE: boolean = false;
   iconListMedia: LinkableIcon[];
   iconListTopApps: LinkableIcon[];
 
-  constructor() { }
+  constructor(private storageService: StorageService) { }
 
   ngOnInit(): void {
+    this.APP_SIDE = this.storageService.getAppSide();
+    this.IS_BIT_SITE = this.APP_SIDE === 1;
     this.prepareIconListMedia();
     this.prepareIconListTopApps();
   }
@@ -32,26 +36,36 @@ export class MainPageComponent implements OnInit {
   private prepareIconListTopApps(): void {
     this.iconListTopApps = [];
     this.iconListTopApps.push(new LinkableIcon('TopApp1', {
-      href: URLS.REF_Sennet,
-      title: 'Sennet',
-      tooltip: 'PAGES.TOOLS.GROUPS.ANALYSIS_MARKET.appSennet',
-      iconPath: IMAGES.LOGO_SENNET,
+      href: URLS.REF_Wirex,
+      title: 'Wirex',
+      tooltip: 'PAGES.TOOLS.GROUPS.EXCHANGES_CEX.appWirex',
+      iconPath: 'get_app',
       color: '#fff',
-      type: ELinkableIconType.IMAGE,
+      type: ELinkableIconType.ICON,
       target: ELinkableTarget.BLANK,
-      showText: false,
+      showText: true,
       isCard: true
     }));
     this.iconListTopApps.push(new LinkableIcon('TopApp2', {
       href: URLS.REF_Slice,
       title: 'Slice',
       tooltip: 'PAGES.TOOLS.GROUPS.OTHERS.appSlice',
-      iconPath: IMAGES.LOGO_SLICE,
+      iconPath: 'get_app',
       color: '#fff',
-      type: ELinkableIconType.IMAGE,
+      type: ELinkableIconType.ICON,
       target: ELinkableTarget.BLANK,
-      showText: false,
+      showText: true,
       isCard: true
     }));
+  }
+
+  getAppSentence() {
+    let msg = 'MSG.';
+    if (this.APP_SIDE === 1) {
+      msg += 'appSentenceBit' + (Math.random() + 1).toFixed(0);
+    } else if (this.APP_SIDE === 2) {
+      msg += 'appSentenceAka';
+    }
+    return msg;
   }
 }

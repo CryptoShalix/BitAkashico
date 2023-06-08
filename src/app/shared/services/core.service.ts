@@ -4,6 +4,8 @@ import { Injectable } from '@angular/core';
 import { EDateFormat, IAccordion, IAccordionItem, IValueText, URLS } from '../models/core';
 import { MessageService } from './message.service';
 import { MessageType } from '../components/message-manager/message-manager.component';
+import { Router } from '@angular/router';
+import { StorageService } from './storage.service';
 
 @Injectable({
   providedIn: 'root'
@@ -16,11 +18,19 @@ export class CoreService {
   private defaultCurrency: IValueText;
   private userLanguage: string;
 
-  constructor(private messageService: MessageService) { }
+  constructor(
+    private messageService: MessageService,
+    private storageService: StorageService,
+    private router: Router
+  ) { }
 
   // APP RELATED
 
   getAppTitle(): string { return this.appTitle; }
+
+  isAppSidebit() {
+    return this.storageService.isAppSideBit();
+  }
 
   prepareBitcoinWallets(lnOnly: boolean = false): IAccordion {
     const groupName = 'BITCOIN_WALLETS';
@@ -156,5 +166,14 @@ export class CoreService {
     if (!this.isNullOrEmpty(url)) {
       window.open(url, openAs);
     }
+  }
+
+  /**
+   * Redirect using router. Not reloading full page, but main container (router-outlet).
+   * 
+   * @param url The internal url for this app. See app-routing-module.ts for examples. If 'url' is not received, this will redirect to '/'
+   */
+  redirectTo(url: string = '/') {
+    this.router.navigateByUrl(url);
   }
 }

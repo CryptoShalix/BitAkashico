@@ -14,6 +14,8 @@ export enum URLS {
   ZEBEDEE_LNQR = './assets/images/ln_qr_zebedee.png',
   ZEBEDEE_LNURL = 'lnurl1dp68gurn8ghj7ctsdyh85etzv4jx2efwd9hj7a3s9aex2ut4v4ehgttnw3shg6tr943ksctjvajhxtm98q6kvefkxccz6vp4xyuz6dp3xenz6wfjvguz6vmxvverzwp5v5ux2vmph0ayvm',
   PAYNYM = '+shinysalad643',
+  PAYPAL_QR = './assets/images/fiat_qr_paypal.png',
+  PAYPAL_URL = 'https://www.paypal.com/qrcodes/managed/0aec90a0-d492-45da-8038-bd9f9fa5fb72?utm_source=consweb_more',
 
   // PLATFORMS
   COINGECKO = 'https://www.coingecko.com/en/coins/',
@@ -163,10 +165,12 @@ export class BOOKS {
       , 'https://mega.nz/file/ltA2ya4D#w1td92QbssTSRL8-U7-9AqL8C16TBFQuT_VKX_lfHgg');
 
     this.AddBook('Daniel Kahneman - Pensar rápido, pensar despacio'
-      , 'https://mega.nz/file/NsJSBTzC#fDjaB7TT5BwhQ6NOSyqRHr_E_-2EJ1P9nabqTZhHJKE');
+      , 'https://mega.nz/file/NsJSBTzC#fDjaB7TT5BwhQ6NOSyqRHr_E_-2EJ1P9nabqTZhHJKE'
+      , this.booksPathBase);
 
     this.AddBook('Sun Tzu - El arte de la guerra'
-      , 'https://mega.nz/file/Eth30ZaS#7udTq8Uk2Wj4sZeJmXZilIq4dRTVPHZvNuzC1bz9FMU');
+      , 'https://mega.nz/file/Eth30ZaS#7udTq8Uk2Wj4sZeJmXZilIq4dRTVPHZvNuzC1bz9FMU'
+      , this.booksPathBase);
 
     this.AddBook('Phil Champagne - El libro de Satoshi'
       , 'https://mega.nz/file/Vs4m2b6K#Mw_9iSwl0NHtdR6R0bA4bFe0lQj0ffiNUNuC5I9QSHE');
@@ -181,11 +185,19 @@ export class BOOKS {
     this.AddBook('Rebecca Campbell - Mensajes para una semilla estelar'
       , 'https://mega.nz/file/cgpWST4a#OVtTPFO8faDgOpZDq2AiJ_Y8PIrFG3Yrv1x1AAh8n00');
 
+    this.AddBook('Daniel Kahneman - Pensar rápido, pensar despacio'
+      , 'https://mega.nz/file/NsJSBTzC#fDjaB7TT5BwhQ6NOSyqRHr_E_-2EJ1P9nabqTZhHJKE'
+      , this.booksPathBase);
+
+    this.AddBook('Sun Tzu - El arte de la guerra'
+      , 'https://mega.nz/file/Eth30ZaS#7udTq8Uk2Wj4sZeJmXZilIq4dRTVPHZvNuzC1bz9FMU'
+      , this.booksPathBase);
+
     return this.list;
   }
 
-  static AddBook(name: string, url: string): void {
-    const image = `${this.booksPath}${name.toLowerCase()}.png`;
+  static AddBook(name: string, url: string, bookPath = this.booksPath): void {
+    const image = `${bookPath}${name.toLowerCase()}.png`;
     this.list.push({ name, url, image });
   }
 }

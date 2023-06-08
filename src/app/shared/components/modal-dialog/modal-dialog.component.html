@@ -6,11 +6,14 @@
 
     <div class="modal-dialog-toolbar">
       <span class="modal-dialog-toolbar-title">
-        <span class="bitcoin">₿</span>{{ title | translate }}
+        <mat-icon
+          class="modal-dialog-toolbar-title-image"
+          [ngClass]="{'bitcoin': isBitcoinImage}"
+        >{{ titleImage }}</mat-icon>{{ title | translate }}
       </span>
       <mat-icon
         class="close-button"
-        (click)="showModalDialog = false"
+        (click)="onClose()"
       >close</mat-icon>
     </div>
 
