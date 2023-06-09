@@ -15,6 +15,33 @@
   background: rgb(44, 47, 51);
   z-index: 999999;
 
+  .content-start-message-mobile {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 10%);
+    height: 40px;
+    top: 1%;
+    margin: 1% 5%;
+    font-size: 12px;
+    font-style: italic;
+    text-transform: uppercase;
+    color: $color-primary-1;
+    background: $color-secondary-1;
+    border: 2px solid $color-special-1;
+    border-radius: 10px;
+    opacity: 0.5;
+    z-index: 1;
+    animation: blinker 3s linear infinite;
+
+    &.invisible {
+      visibility: hidden !important;
+    }
+  }
+
   .content-start-background {
     background: $content-start-background;
   }
@@ -43,7 +70,7 @@
     align-items: center;
     height: 50%;
     width: 100%;
-    padding: 0;
+    padding: 50px 0;
     margin: 0;
     font-size: 16px;
     text-align: justify;
@@ -89,10 +116,35 @@
 }
 
 /* RESPONSIVE STYLES */
+@media (pointer:coarse) {
+  .content-start-message-mobile {
+    visibility: visible !important;
+  }
+}
+
 @media screen and (max-width: 1256px) {
 
   .content-bit,
   .content-aka {
-    font-size: 14px;
+    font-size: 14px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .content-bit {
+    align-items: self-end;
+  }
+
+  .content-aka {
+    align-items: self-start;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 1;
+    font-size: 13px;
+    border-width: 4px;
   }
 }
