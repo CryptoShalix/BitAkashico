@@ -29,9 +29,4 @@ export class AcademyPageComponent implements OnInit {
   getAboutTextBySide() {
     return this.IS_BIT_SIDE ? 'PAGES.ACADEMY.BIT.about' : 'PAGES.ACADEMY.AKASHICO.about';
   }
-
-  getVideoUrl(source: any) {
-    if (this.coreService.isNullOrEmpty(source)) { return 'https://www.youtube.com/@BitAkashico'; }
-    return 'https://www.youtube.com/embed/videoseries?list=' + source;
-  }
 }

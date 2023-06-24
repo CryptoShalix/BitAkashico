@@ -58,7 +58,7 @@ export enum URLS {
   // REFERRALS: BITCOIN TOOLS
   REF_BitcoinRainbowChart = 'https://www.blockchaincenter.net/bitcoin-rainbow-chart',
   REF_KYCP = 'https://kycp.org',
-  REF_StackerNews = 'https://stacker.news',
+  REF_StackerNews = 'https://stacker.news/r/cryptoshalix',
 
   // REFERRALS: BITCOIN WALLETS
   REF_Blixt = 'https://blixtwallet.github.io',

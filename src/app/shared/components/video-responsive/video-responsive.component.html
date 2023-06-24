@@ -1,0 +1,12 @@
+<div class="content-video-responsive">
+  <iframe
+    width="945px"
+    height="600px"
+    [src]="getVideoUrl(source) | safe:'resourceUrl'"
+    [title]="title | translate"
+    frameborder="0"
+    autohide="1"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>

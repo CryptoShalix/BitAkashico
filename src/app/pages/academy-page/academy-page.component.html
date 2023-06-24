@@ -44,24 +44,20 @@
       label="{{ 'PAGES.ACADEMY.BIT.STEP_1.title' | translate }}"
       state="school"
     >
-      <div class="content-video-responsive">
-        <ng-container *ngTemplateOutlet="videoTemplate; context: {
-            source: 'PLGE24dPKonPajeP0e-lJVkhoTXSYi0ZsP',
-            title:'PAGES.ACADEMY.BIT.STEP_1.description'
-          }"></ng-container>
-      </div>
+      <app-video
+        [setSource]="'PLGE24dPKonPajeP0e-lJVkhoTXSYi0ZsP'"
+        [setTitle]="'PAGES.ACADEMY.BIT.STEP_1.description'"
+      ></app-video>
     </mat-step>
 
     <mat-step
       label="{{ 'PAGES.ACADEMY.BIT.STEP_2.title' | translate }}"
       state="school"
     >
-      <div class="content-video-responsive">
-        <ng-container *ngTemplateOutlet="videoTemplate; context: {
-                  source: 'PLGE24dPKonPbF6rLcgvxzu93NsIZXReov',
-                  title:'PAGES.ACADEMY.BIT.STEP_2.description'
-                }"></ng-container>
-      </div>
+      <app-video
+        [setSource]="'PLGE24dPKonPbF6rLcgvxzu93NsIZXReov'"
+        [setTitle]="'PAGES.ACADEMY.BIT.STEP_2.description'"
+      ></app-video>
     </mat-step>
 
     <mat-step
@@ -74,21 +70,4 @@
     </mat-step>
   </mat-vertical-stepper>
 
-</ng-template>
-
-<ng-template
-  #videoTemplate
-  let-source="source"
-  let-title="title"
->
-  <iframe
-    width="945px"
-    height="600px"
-    [src]="getVideoUrl(source) | safe:'resourceUrl'"
-    [title]="title | translate"
-    frameborder="0"
-    autohide="1"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
 </ng-template>
