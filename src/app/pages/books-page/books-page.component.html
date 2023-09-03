@@ -21,23 +21,11 @@
       </ng-template>
       <span>{{ TITLE_TEXT }}</span>
     </div>
-    <ng-container *ngTemplateOutlet="bookshelf; context: {books: books}"></ng-container>
-  </div>
 
-</div>
-
-<ng-template
-  #bookshelf
-  let-books="books"
->
-  <div class="content-books-list">
-    <div
-      class="book-container"
-      *ngFor="let book of books"
-    >
-      <a
-        [href]="book.url"
-        target="_blank"
+    <div class="content-books-list">
+      <div
+        class="book-container"
+        *ngFor="let book of (books | async)"
       >
         <app-custom-image
           id="book-cover"
@@ -46,10 +34,22 @@
         ></app-custom-image>
 
         <span class="book-title">
-          <mat-icon>download</mat-icon>
           <p>{{book.name}}</p>
         </span>
-      </a>
+
+        <span class="book-buttons">
+          <app-linkable-icon
+            [sDisabled]="isNullOrEmpty(book.li_read.href)"
+            [sDefaultIcon]="book.li_read"
+          ></app-linkable-icon>
+
+          <app-linkable-icon
+            [sDisabled]="isNullOrEmpty(book.li_buy.href)"
+            [sDefaultIcon]="book.li_buy"
+          ></app-linkable-icon>
+        </span>
+      </div>
     </div>
   </div>
-</ng-template>
+
+</div>

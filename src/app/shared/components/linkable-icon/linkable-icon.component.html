@@ -1,55 +1,55 @@
 <ng-container *ngIf="defaultIcon">
   <a
-    *ngIf="defaultIcon.routerLink !== ''"
+    *ngIf="!_isRouterLink && defaultIcon.href !== ''"
     class="linkable-icon"
     [ngClass]="{
       'card': defaultIcon.isCard,
       'no-border': defaultIcon.isImage,
-      'router-link-active': isCurrentPage(defaultIcon.routerLink),
       'menu-button': defaultIcon.isMenu,
-      'nav-menu-link': defaultIcon.id === 'home'
+      'disabled': _disabled
     }"
     [attr.aria-valuenow]="defaultIcon.label | translate"
     [target]="defaultIcon.target"
     rel="noopener"
-    [routerLink]="defaultIcon.routerLink"
-    [href]="defaultIcon.routerLink"
-    [title]="defaultIcon.title | translate"
-    [attr.tooltip]="defaultIcon.tooltip | translate"
+    [href]="_disabled ? null : defaultIcon.href"
+    [title]="getTooltip() | translate"
+    [attr.tooltip]="getTooltip() | translate"
   >
     <ng-container *ngTemplateOutlet="linkContent"></ng-container>
   </a>
 
   <a
-    *ngIf="defaultIcon.href !== ''"
+    *ngIf="_isRouterLink && defaultIcon.href !== ''"
     class="linkable-icon"
     [ngClass]="{
-      'card': defaultIcon.isCard,
-      'no-border': defaultIcon.isImage,
-      'router-link-active': isCurrentPage(defaultIcon.href),
-      'menu-button': defaultIcon.isMenu,
-      'nav-menu-link': defaultIcon.id === 'home'
-    }"
+        'card': defaultIcon.isCard,
+        'no-border': defaultIcon.isImage,
+        'router-link-active': isCurrentPage(defaultIcon.href),
+        'menu-button': defaultIcon.isMenu,
+        'nav-menu-link': defaultIcon.id === 'home',
+        'disabled': _disabled
+      }"
     [attr.aria-valuenow]="defaultIcon.label | translate"
     [target]="defaultIcon.target"
     rel="noopener"
-    [href]="defaultIcon.href"
-    [title]="defaultIcon.title | translate"
-    [attr.tooltip]="defaultIcon.tooltip | translate"
+    [routerLink]="_disabled ? null : defaultIcon.href"
+    [href]="_disabled ? null : defaultIcon.href"
+    [title]="getTooltip() | translate"
+    [attr.tooltip]="getTooltip() | translate"
   >
     <ng-container *ngTemplateOutlet="linkContent"></ng-container>
   </a>
 
   <span
-    *ngIf="defaultIcon.href === '' && defaultIcon.routerLink === ''"
+    *ngIf="defaultIcon.href === ''"
     class="linkable-icon"
     [ngClass]="{
       'card': defaultIcon.isCard,
       'no-border': defaultIcon.isImage
     }"
     [attr.aria-valuenow]="defaultIcon.label | translate"
-    [title]="defaultIcon.title | translate"
-    [attr.tooltip]="defaultIcon.tooltip | translate"
+    [title]="getTooltip() | translate"
+    [attr.tooltip]="getTooltip() | translate"
   >
     <ng-container *ngTemplateOutlet="linkContent"></ng-container>
   </span>

@@ -83,6 +83,7 @@ export class TranslateService {
           const valueLevels = value.split('.');
           let base = file[0];
           for (const level of valueLevels) {
+            if (base[level] === undefined) { return value; }
             base = base[level];
           }
           result = base;

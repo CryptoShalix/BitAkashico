@@ -41,24 +41,47 @@ svg.material-icons:not(:last-child) {
     z-index: 2;
   }
 
-  &.router-link-active,
-  &:hover {
-    opacity: 1;
-    color: $global-link-color-hover;
+  &:not(.disabled) {
 
-    span,
-    .svgControl {
+    &.router-link-active,
+    &:hover {
       opacity: 1;
       color: $global-link-color-hover;
 
-      .svgPath {
-        fill: $global-link-color-hover;
+      img {
+        filter: drop-shadow(2px 4px 6px $color-primary-1);
       }
+
+      span,
+      .svgControl {
+        opacity: 1;
+        color: $global-link-color-hover;
+
+        .svgPath {
+          fill: $global-link-color-hover;
+        }
+      }
+    }
+
+    &:not(.no-border):hover {
+      border-color: $global-link-color-hover;
     }
   }
 
-  &:not(.no-border):hover {
-    border-color: $global-link-color-hover;
+  &.disabled {
+    opacity: .5;
+    cursor: default;
+
+    &:hover,
+    span,
+    .svgControl {
+      color: $global-link-color-disabled !important;
+      border-color: transparent;
+
+      .svgPath {
+        fill: $global-link-color-disabled;
+      }
+    }
   }
 
   &.card {
@@ -175,8 +198,8 @@ svg.material-icons:not(:last-child) {
   img {
     width: 100%;
     height: 100%;
-    max-width: 70px;
-    max-height: 70px;
+    max-width: 30px;
+    max-height: 30px;
     border-radius: 50%;
     margin: 0 2px;
   }

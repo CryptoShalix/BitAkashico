@@ -49,7 +49,7 @@ export class ToolsPageComponent implements OnInit {
   private prepareCustomTools(): void {
     this.customToolsList = [];
     this.customToolsList.push(new LinkableIcon(this.ctlCalculator, {
-      // routerLink: 'calculator',
+      // href: 'calculator',
       title: 'PAGES.TOOLS.CUSTOM.calculator',
       tooltip: 'PAGES.TOOLS.CUSTOM.calculatorTooltip',
       iconPath: 'dialpad',
@@ -60,7 +60,7 @@ export class ToolsPageComponent implements OnInit {
       isCard: true
     }));
     this.customToolsList.push(new LinkableIcon(this.ctlWhenToSell, {
-      // routerLink: 'when-to-sell',
+      // href: 'when-to-sell',
       title: 'PAGES.TOOLS.CUSTOM.whenToSell',
       tooltip: 'PAGES.TOOLS.CUSTOM.whenToSellTooltip',
       iconPath: 'score',
@@ -71,7 +71,7 @@ export class ToolsPageComponent implements OnInit {
       isCard: true
     }));
     this.customToolsList.push(new LinkableIcon(this.ctlBenefits, {
-      // routerLink: 'calculator-benefits',
+      // href: 'calculator-benefits',
       title: 'PAGES.TOOLS.CUSTOM.benefits',
       tooltip: 'PAGES.TOOLS.CUSTOM.benefitsTooltip',
       iconPath: 'poll',

@@ -34,7 +34,6 @@ export interface ICardGame {
 export interface ILinkableIcon {
   title?: string;
   href?: string;
-  routerLink?: string;
   iconPath?: string;
   tooltip?: string;
   color?: string;
@@ -51,7 +50,6 @@ export class LinkableIcon {
   public title: string;
   public iconPath: string;
   public href: string;
-  public routerLink: string;
   public tooltip: string;
   public color: string;
   public isCard: boolean;
@@ -67,7 +65,6 @@ export class LinkableIcon {
   ) {
     const title = linkableIcon?.title;
     const href = linkableIcon?.href;
-    const routerLink = linkableIcon?.routerLink;
     const tooltip = linkableIcon?.tooltip;
     const color = linkableIcon?.color;
     const iconPath = linkableIcon?.iconPath;
@@ -77,7 +74,6 @@ export class LinkableIcon {
     this.isMenu = linkableIcon && linkableIcon.isMenu ? true : false;
     this.isImage = false;
     this.isSVG = false;
-    this.routerLink = '';
     this.href = '';
 
     switch (linkableIcon?.type) {
@@ -93,7 +89,7 @@ export class LinkableIcon {
       case ELinkableIcon.Home:
         this.id = title ? title : ELinkableIcon.Home.toLowerCase();
         this.title = title ? title : ELinkableIcon.Home;
-        this.routerLink = 'home';
+        this.href = 'home';
         this.iconPath = title ? 'home' : IMAGES.HOME_IMG;
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = '#ffffff';
@@ -147,7 +143,6 @@ export class LinkableIcon {
         this.title = title ? title : '';
         this.iconPath = iconPath ? iconPath : '';
         this.href = href ? href : '';
-        this.routerLink = routerLink ? routerLink : '';
         this.tooltip = tooltip ? tooltip : this.title;
         this.color = color ? color : '';
         break;

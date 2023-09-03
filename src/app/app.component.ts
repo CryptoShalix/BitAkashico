@@ -86,7 +86,7 @@ export class AppComponent implements OnInit, OnDestroy {
         this.IS_BIT_SITE = this.APP_SIDE === 1;
         this.prepareMenu();
         this.prepareData();
-        this.getCoinData();
+        // this.getCoinData();
       }
     });
   }
@@ -101,7 +101,7 @@ export class AppComponent implements OnInit, OnDestroy {
     }));
 
     this.iconListMenu.push(new LinkableIcon(this.icmIdAcademy, {
-      routerLink: 'academy',
+      href: 'academy',
       title: 'MENU.academy',
       iconPath: 'school',
       color: '#fff',
@@ -113,7 +113,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
     if (this.IS_BIT_SITE) {
       this.iconListMenu.push(new LinkableIcon(this.icmIdTools, {
-        routerLink: 'tools',
+        href: 'tools',
         title: 'MENU.tools',
         iconPath: 'construction',
         color: '#fff',
@@ -125,7 +125,7 @@ export class AppComponent implements OnInit, OnDestroy {
     }
 
     this.iconListMenu.push(new LinkableIcon(this.icmIdBooks, {
-      routerLink: 'books',
+      href: 'books',
       title: 'MENU.books',
       iconPath: 'menu_book',
       color: '#fff',
@@ -137,7 +137,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
     // if (this.IS_BIT_SITE) {
     //   this.iconListMenu.push(new LinkableIcon(this.icmIdCalc, {
-    //     routerLink: 'finances',
+    //     href: 'finances',
     //     title: 'MENU.finances',
     //     iconPath: 'assessment',
     //     color: '#fff',
@@ -150,7 +150,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
     if (this.IS_BIT_SITE) {
       this.iconListMenu.push(new LinkableIcon(this.icmIdGames, {
-        routerLink: 'games',
+        href: 'games',
         title: 'MENU.games',
         iconPath: 'sports_esports',
         color: '#fff',
@@ -162,7 +162,7 @@ export class AppComponent implements OnInit, OnDestroy {
     }
 
     this.iconListMenu.push(new LinkableIcon(this.icmIdContact, {
-      routerLink: 'contact',
+      href: 'contact',
       title: 'MENU.contact',
       iconPath: 'alternate_email',
       color: '#fff',
@@ -185,8 +185,9 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   onToggleSide() {
-    this.storageService.setAppSide();
-    this.coreService.redirectTo();
+    const _appSide = this.storageService.isAppSideBit();
+    this.storageService.setAppSide(_appSide ? 2 : 1);
+    this.coreService.redirectTo(this.router.url);
   }
 
   onChangeLanguage(): void {

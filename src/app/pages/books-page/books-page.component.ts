@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import { BOOKS, IBOOK } from 'src/app/shared/models/core';
+import { IBOOK } from 'src/app/shared/models/core';
 import { IMAGES } from 'src/assets/images/images';
 
 import { CoreService } from '../../shared/services/core.service';
+import { DBService } from 'src/app/shared/services/db.service';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-books-page',
@@ -14,15 +16,21 @@ export class BooksPageComponent implements OnInit {
   IS_BIT_SIDE = false;
   TITLE_LOGO = '';
   TITLE_TEXT = '';
-  books: IBOOK[] = [];
+  books = new Subject<IBOOK[]>();
 
-  constructor(private coreService: CoreService) { }
+  ICON_AMAZON = IMAGES.Amazon;
 
-  ngOnInit(): void {
+  constructor(
+    private coreService: CoreService,
+    private dbService: DBService
+  ) { }
+
+  async ngOnInit(): Promise<void> {
     this.IS_BIT_SIDE = this.coreService.isAppSidebit();
     this.TITLE_LOGO = this.IS_BIT_SIDE ? '₿' : IMAGES.LOGO_AKASHICO;
     this.TITLE_TEXT = this.IS_BIT_SIDE ? 'BIT' : 'AKASHICO';
-    this.books = this.coreService.sorter(this.IS_BIT_SIDE ? BOOKS.getBit() : BOOKS.getAkashico(), 'name');
+
+    this.books.next(await this.dbService.getBooks(this.IS_BIT_SIDE));
   }
 
   isNullOrEmpty(text: string): boolean {
