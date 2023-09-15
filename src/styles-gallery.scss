@@ -1,0 +1,200 @@
+@import './styles-colors.scss';
+
+$var-width-gallery: 210px;
+
+.content-books {
+  display: block;
+  padding: 5px;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .content-books-title {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-height: 50px;
+    max-height: 50px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: $card-text;
+    background: $card-background;
+    border: 2px solid $card-border-dark;
+    border-radius: 10px;
+    cursor: default;
+
+    &.bit {
+      color: $card-background;
+      background: $card-text;
+    }
+
+    .content-books-title-logo {
+      position: absolute;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      margin: 0 15px;
+
+      &.mat-icon {
+        position: absolute;
+        display: flex;
+        left: 0;
+        width: 40px;
+        height: 100%;
+        margin: 0 15px;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-55%);
+      }
+    }
+
+    span {
+      display: block;
+      height: 100%;
+      padding: 5px;
+      font-size: 18px;
+      font-weight: 550;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+
+  .content-books-list {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax($var-width-gallery, 1fr));
+    gap: 10px;
+
+    .book-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: auto;
+      max-width: $var-width-gallery;
+      height: auto;
+      min-height: 350px;
+      max-height: 400px;
+      margin: 10px;
+      padding: 5px;
+      box-shadow: 0px 0px 10px $card-border-shadow;
+      border-radius: 10px;
+      cursor: default;
+
+      &:hover {
+        box-shadow: 5px 5px 20px $card-border-light, -5px -5px 20px $card-border-light;
+      }
+
+      .mat-icon.book-cover {
+        position: absolute;
+        font-size: 100px;
+        width: 100px;
+        height: 100px;
+        top: 50%;
+        transform: translate(0%, -75%);
+      }
+
+      span.book-title {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        bottom: 0;
+        align-items: center;
+        overflow: hidden;
+        border: 2px solid transparent;
+        background: $card-background;
+        color: $card-text;
+
+        p {
+          position: relative;
+          display: flex;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          bottom: 0;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          flex-direction: row;
+          white-space: break-spaces;
+          text-overflow: ellipsis;
+          overflow-wrap: normal;
+          line-height: 15px;
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+
+      span.book-buttons {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        width: 100%;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        bottom: 0;
+        overflow: hidden;
+        background: $card-background;
+        color: $card-text;
+        border-radius: 0 0 10px 10px;
+
+        app-linkable-icon {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+
+          a.linkable-icon {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            background: $card-background;
+            color: $card-text;
+            border-radius: 25px;
+            border: 3px solid transparent;
+
+            &:hover {
+              color: $color-primary-1;
+              border-color: $card-border-light;
+              animation: breathing 3s linear infinite;
+
+              img,
+              .mat-icon {
+                color: $color-primary-1;
+              }
+            }
+
+            img,
+            .mat-icon {
+              display: flex;
+              font-size: 25px;
+              width: 25px;
+              height: 25px;
+              fill: $card-text;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes breathing {
+  0% {
+    background: $card-background;
+  }
+
+  50% {
+    background: $card-border-light;
+  }
+}

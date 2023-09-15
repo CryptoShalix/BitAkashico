@@ -33,7 +33,6 @@ import { Router } from '@angular/router';
  */
 
 @Component({
-  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
@@ -187,7 +186,8 @@ export class AppComponent implements OnInit, OnDestroy {
   onToggleSide() {
     const _appSide = this.storageService.isAppSideBit();
     this.storageService.setAppSide(_appSide ? 2 : 1);
-    this.coreService.redirectTo(this.router.url);
+    this.coreService.redirectTo();
+    this.showMenu = true;
   }
 
   onChangeLanguage(): void {
@@ -197,16 +197,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
   getTooltipLanguage(): string {
     return `LANGUAGE.${this.translateService.userLang}`;
-  }
-
-  getAppSentence() {
-    let msg = 'MSG.';
-    if (this.APP_SIDE === 1) {
-      msg += 'appSentenceBit' + (Math.random() + 1).toFixed(0);
-    } else if (this.APP_SIDE === 2) {
-      msg += 'appSentenceAka';
-    }
-    return msg;
   }
 
   getCurrentPage() {

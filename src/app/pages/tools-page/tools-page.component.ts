@@ -150,10 +150,9 @@ export class ToolsPageComponent implements OnInit {
     const accordion = this.createToolsGroup(
       groupName,
       [
-        this.createToolItem(groupName, 'Binance', URLS.REF_Binance, 4.1),
-        this.createToolItem(groupName, 'Bit2Me', URLS.REF_Bit2Me, 4.2),
-        this.createToolItem(groupName, 'BingX', URLS.REF_BingX, 4),
-        this.createToolItem(groupName, 'Wirex', URLS.REF_Wirex, 4),
+        this.createToolItem(groupName, 'Binance', URLS.REF_Binance, 4.3),
+        this.createToolItem(groupName, 'Bit2Me', URLS.REF_Bit2Me, 4.4),
+        this.createToolItem(groupName, 'Wirex', URLS.REF_Wirex, 4.5),
       ],
       'account_balance'
     );
@@ -165,7 +164,9 @@ export class ToolsPageComponent implements OnInit {
     const accordion = this.createToolsGroup(
       groupName,
       [
-        this.createToolItem(groupName, 'PancakeSwap', URLS.REF_PancakeSwap, 5),
+        this.createToolItem(groupName, 'Relai', URLS.REF_Relai, 5),
+        this.createToolItem(groupName, 'PancakeSwap', URLS.REF_PancakeSwap, 4),
+        this.createToolItem(groupName, 'Fixed Float', URLS.REF_FixedFloat, 4),
         // this.createToolItem(groupName, 'BoggedFinance', URLS.REF_BoggedFinance, 0),
         // this.createToolItem(groupName, 'DexGuru', URLS.REF_DexGuru, 0),
         // this.createToolItem(groupName, 'DexTools', URLS.REF_DexTools, 0),

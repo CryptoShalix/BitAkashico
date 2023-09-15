@@ -18,6 +18,7 @@ import { DonationsComponent } from './shared/components/donations/donations.comp
 import { ModalDialogComponent } from './shared/components/modal-dialog/modal-dialog.component';
 import { ModalSelectorComponent } from './shared/components/modal-selector/modal-selector.component';
 import { VideoResponsiveComponent } from './shared/components/video-responsive/video-responsive.component';
+import { GalleryComponent } from './shared/components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { VideoResponsiveComponent } from './shared/components/video-responsive/v
     ModalSelectorComponent,
     StarRankComponent,
     VideoResponsiveComponent,
+    GalleryComponent,
   ],
   imports: [
     CommonModule,
@@ -57,6 +59,7 @@ import { VideoResponsiveComponent } from './shared/components/video-responsive/v
     PipesModule,
     StarRankComponent,
     VideoResponsiveComponent,
+    GalleryComponent,
   ]
 })
 export class SharedModule { }

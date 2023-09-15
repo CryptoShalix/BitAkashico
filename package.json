@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "publish-generate": "ng build --configuration production --base-href https://cryptoshalix.github.io/BitAkashico/",
-    "publish-upload": "ngh -d dist/CryptoShalix"
+    "publish-upload": "ngh -d dist/CryptoShalix",
+    "deploy": "npm run publish-generate && npm run publish-upload"
   },
   "private": false,
   "dependencies": {

@@ -7,6 +7,7 @@
 @import './styles-content.scss';
 @import './styles-tab.scss';
 @import './styles-custom-image.scss';
+@import './styles-gallery.scss';
 
 :root {
   --text-font: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica,
@@ -106,7 +107,6 @@ body {
 html {
   height: 100%;
   box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
 }
 
 body {

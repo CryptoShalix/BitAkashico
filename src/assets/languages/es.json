@@ -144,14 +144,15 @@
           "EXCHANGES_CEX": {
             "title": "Exchanges.<br>(CEN) Centralizados",
             "description": "Exchanges centralizados con las mejores comisiones y servicios",
-            "appBinance": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Binance.",
-            "appBit2Me": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Bit2Me.",
-            "appBingX": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de BingX.",
-            "appWirex": "Pulsar para ver una review con todas las ventajas e inconvenientes, guías de uso y consejos para sacar mayor rendimiento a tu capital dentro de la plataforma de Wirex."
+            "appBinance": "Binance es el mayor exchange del mundo.<br/><br/><b>VENTAJAS</b><br/>Activo desde 2017, dispone de cientos de criptomonedas, formas de pago y de trading. Con comisiones bajísimas con su token BNB y tarjeta utilizable en todo el mundo.<br/><br/><b>DESVENTAJAS</b><br/>Requiere KYC completo y puede dar datos personales al gobierno de tu país si así se requiere, además de congelar tus fondos.",
+            "appBit2Me": "Bit2Me es el mayor exchange de España.<br/><br/><b>VENTAJAS</b><br/>Activo desde 2011, dispone de cada vez más criptomonedas, formas de pago y de trading, servicio earn. Con comisiones bajísimas con su token B2M y tarjeta utilizable en todo el mundo.<br/><br/><b>DESVENTAJAS</b><br/>Requiere KYC completo y puede dar datos personales al gobierno de tu país si así se requiere, además de congelar tus fondos.",
+            "appWirex": "Wirex es un exchange accesible para todo el mundo.<br/><br/><b>VENTAJAS</b><br/>Activo desde 2014; dispone de cada vez más criptomonedas y monedas estables; cuenta IBAN personal; formas de pago y depósito; servicio earn <i>(¡X-Accounts, el rendimiento más alto del mercado!)</i>; tarjeta utilizable en todo el mundo.<br/><br/><b>DESVENTAJAS</b><br/>Requiere KYC completo y puede dar datos personales al gobierno de tu país si así se requiere, además de congelar tus fondos. Comisiones algo elevadas y sin opciones de trading avanzado."
           },
           "EXCHANGES_DEX": {
             "title": "Exchanges.<br>(DEX) Descentralizados",
             "description": "Exchanges descentralizados con herramientas útiles, variedad, liquidez y mayor tiempo en el mercado",
+            "appRelai": "Plataforma soft-KYC, que permite comprar o vender Bitcoin desde tu banco, tarjeta o incluso Google/Apple Pay y de forma recursiva, guardando los sats recibidos en un wallet self-custodial. Una solución ideal para obtener tus sats de forma automática y sencilla.<br/><br/>Introduce el siguiente código al crear tu orden de compra recursiva para obtener un descuento: <b>REL57044</b>",
+            "appFixedFloat": "Intercambia tus criptomonedas sin KYC y con comisiones bajas. Rápido y funcional.",
             "appPancakeSwap": "El exchange DeFi por excelencia sobre la Binance Smart Chain (BSC). Swap, Farms, Pools, Lottery, y mucho más.",
             "appBoggedFinance": "Herramientas automatizadas para trading en la BSC. Puedes poner órdenes de compra y venta. No es la más útil ya que se desbloquean ciertas funciones si holdeas su token.",
             "appDexGuru": "Herramienta muy completa para ver el gráfico, liquidez, listado comercial, etc.",

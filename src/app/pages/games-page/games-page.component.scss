@@ -1,5 +1,7 @@
 @import '../../../styles-colors.scss';
 
+$var-width-item: 300px;
+
 .content {
   display: block;
   max-width: 50%;
@@ -32,32 +34,32 @@
       }
 
       .content-games-items {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-flow: wrap;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax($var-width-item, 1fr));
+        gap: 10px;
 
         .content-games-item {
           position: relative;
           display: flex;
           flex-direction: column;
           width: 50%;
-          min-width: 300px;
-          max-width: 300px;
+          min-width: $var-width-item;
+          max-width: $var-width-item;
           height: 100%;
           min-height: 450px;
           max-height: 450px;
-          margin: 5px;
+          margin: 10px;
           overflow-y: auto;
           align-items: center;
           color: $card-text;
           background: $card-background;
-          border: 2px solid transparent;
+          box-shadow: 0px 0px 15px $card-border-shadow;
           border-radius: 5px;
           cursor: default;
 
           &:hover {
-            border-color: $card-border-dark;
+            box-shadow: 0px 0px 20px $card-border-light;
           }
 
           img.large {

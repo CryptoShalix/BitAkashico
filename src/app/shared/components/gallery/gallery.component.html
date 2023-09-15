@@ -1,0 +1,48 @@
+<div class="content-books">
+  <div
+    class="content-books-title"
+    [ngClass]="{'bit': TITLE_BACK_DARK}"
+  >
+    <ng-container *ngIf="TITLE_TYPE_IMG else templateTitleAkashico">
+      <mat-icon class="content-books-title-logo">{{ TITLE_LOGO }}</mat-icon>
+    </ng-container>
+    <ng-template #templateTitleAkashico>
+      <img
+        class="content-books-title-logo"
+        [src]="TITLE_LOGO"
+        [alt]="TITLE_TEXT"
+        title="{{TITLE_TEXT}}"
+      >
+    </ng-template>
+    <span>{{ TITLE_TEXT }}</span>
+  </div>
+
+  <div class="content-books-list">
+    <div
+      class="book-container"
+      *ngFor="let item of GALLERY_LIST"
+    >
+      <app-custom-image
+        id="book-cover"
+        [sClass]="'book-cover'"
+        [sImgSRC]="item.imgPath"
+      ></app-custom-image>
+
+      <span class="book-title">
+        <p>{{item.title}}</p>
+      </span>
+
+      <span class="book-buttons">
+        <app-linkable-icon
+          [sDisabled]="isNullOrEmpty(item.li_read.href)"
+          [sDefaultIcon]="item.li_read"
+        ></app-linkable-icon>
+
+        <app-linkable-icon
+          [sDisabled]="isNullOrEmpty(item.li_buy.href)"
+          [sDefaultIcon]="item.li_buy"
+        ></app-linkable-icon>
+      </span>
+    </div>
+  </div>
+</div>

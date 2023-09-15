@@ -37,7 +37,7 @@
                   <span
                     *ngIf="game.title"
                     class="title"
-                  >{{ stringsPrefix + game.title | translate  }}</span>
+                  >{{ stringsPrefix + game.title | translate }}</span>
                 </div>
               </div>
             </a>
@@ -54,12 +54,18 @@
               *ngIf="game.linkApple"
               [href]="game.linkApple"
               target="_blank"
-            ><img [src]="imgAppStoreApple"></a>
+            ><img
+                [src]="imgAppStoreApple"
+                title="{{game.linkApple}}"
+              ></a>
             <a
               *ngIf="game.linkGoogle"
               [href]="game.linkGoogle"
               target="_blank"
-            ><img [src]="imgAppStoreGoogle"></a>
+            ><img
+                [src]="imgAppStoreGoogle"
+                title="{{game.linkGoogle}}"
+              ></a>
           </div>
         </div>
       </div>

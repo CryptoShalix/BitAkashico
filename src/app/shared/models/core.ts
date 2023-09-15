@@ -76,12 +76,11 @@ export enum URLS {
   // REFERRALS: EXCHANGES CEX
   REF_Binance = 'https://www.binance.com/en/register?ref=EEICFSED',
   REF_Bit2Me = 'https://bit2me.com/es/registro?r=RQB-RWI-ECZ',
-  REF_BingX = 'https://bingx.com/invite/HWIXFQKZ',
-  REF_KuCoin = 'https://www.kucoin.com/ucenter/signup?rcode=rJ59448',
-  REF_Nexo = 'https://nexo.io/ref/mdqndmt0yw',
   REF_Wirex = 'https://wirexapp.com/r/CryptoShalix',
 
   // REFERRALS: EXCHANGES DEX
+  REF_Relai = 'https://relai.app/REL57044',
+  REF_FixedFloat = 'https://fixedfloat.com',
   REF_PancakeSwap = 'https://pancakeswap.finance',
   REF_BoggedFinance = 'https://bogged.finance',
   REF_DexGuru = 'https://dex.guru',

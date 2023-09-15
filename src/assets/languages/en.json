@@ -152,6 +152,7 @@
           "EXCHANGES_DEX": {
             "title": "Exchanges.<br>(DEX) Decentralized",
             "description": "Decentralized exchanges with useful tools, variety, liquidity and more time in the market",
+            "appRelai": "Soft-KYC platform, which allows you to buy or sell Bitcoin from your bank, card or even Google/Apple Pay and recursively, saving the sats received in a self-custodial wallet. An ideal solution to obtain your sats automatically and easily.<br/><br/>Enter the following code when creating your recursive purchase order to obtain a discount: <b>REL57044</b>",
             "appBoggedFinance": "Automated tools for trading in the BSC. You can place buy and sell orders. Not the most useful as certain features are unlocked if you hold its token.",
             "appDexGuru": "Very complete tool to see the graph, liquidity, commercial list, etc..",
             "appDexTools": "Data rich trading tool. Very good.",

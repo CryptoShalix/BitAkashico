@@ -174,10 +174,10 @@ export class CoreService {
    * @param url The internal url for this app. See app-routing-module.ts for examples. If 'url' is not received, this will redirect to '/'
    */
   redirectTo(url: string = '/') {
-    if (this.router.url === url) {
-      this.router.navigated = false;
-      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-    }
+    // if (this.router.url === url) {
+    //   this.router.navigated = false;
+    //   this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    // }
     this.router.navigateByUrl(url);
   }
 }

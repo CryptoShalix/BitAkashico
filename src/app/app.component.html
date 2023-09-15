@@ -28,6 +28,8 @@
             <img
               class="menu-toggle-side-logo"
               [src]="LOGO_IMG"
+              [alt]="title"
+              title="{{title}}"
             >
           </div>
 
@@ -62,9 +64,9 @@
       <div class="menu-nav-controls">
         <app-linkable-icon
           class="menu-nav-control"
-          (click)="showMenu=!showMenu"
           *ngFor="let iconMenu of iconListMenu"
           [sDefaultIcon]="iconMenu"
+          (click)="showMenu=!showMenu"
         ></app-linkable-icon>
       </div>
     </div>

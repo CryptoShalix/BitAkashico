@@ -5,51 +5,9 @@
     <span [innerHTML]="('PAGES.BOOKS.aboutOrigin' | translate) | safe:'html'"></span>
   </div>
 
-  <div class="content-books">
-    <div
-      class="content-books-title"
-      [ngClass]="{'bit': IS_BIT_SIDE}"
-    >
-      <ng-container *ngIf="IS_BIT_SIDE; else templateTitleAkashico">
-        <mat-icon class="content-books-title-logo">{{ TITLE_LOGO }}</mat-icon>
-      </ng-container>
-      <ng-template #templateTitleAkashico>
-        <img
-          class="content-books-title-logo"
-          [src]="TITLE_LOGO"
-        >
-      </ng-template>
-      <span>{{ TITLE_TEXT }}</span>
-    </div>
-
-    <div class="content-books-list">
-      <div
-        class="book-container"
-        *ngFor="let book of (books | async)"
-      >
-        <app-custom-image
-          id="book-cover"
-          [sClass]="'book-cover'"
-          [sImgSRC]="book.image"
-        ></app-custom-image>
-
-        <span class="book-title">
-          <p>{{book.name}}</p>
-        </span>
-
-        <span class="book-buttons">
-          <app-linkable-icon
-            [sDisabled]="isNullOrEmpty(book.li_read.href)"
-            [sDefaultIcon]="book.li_read"
-          ></app-linkable-icon>
-
-          <app-linkable-icon
-            [sDisabled]="isNullOrEmpty(book.li_buy.href)"
-            [sDefaultIcon]="book.li_buy"
-          ></app-linkable-icon>
-        </span>
-      </div>
-    </div>
-  </div>
+  <app-gallery
+    [setTitle]="_galleryTitle"
+    [setList]="_galleryBooks"
+  ></app-gallery>
 
 </div>

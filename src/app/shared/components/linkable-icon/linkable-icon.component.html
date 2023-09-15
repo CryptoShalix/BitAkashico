@@ -11,7 +11,7 @@
     [attr.aria-valuenow]="defaultIcon.label | translate"
     [target]="defaultIcon.target"
     rel="noopener"
-    [href]="_disabled ? null : defaultIcon.href"
+    [href]="getURL()"
     [title]="getTooltip() | translate"
     [attr.tooltip]="getTooltip() | translate"
   >
@@ -32,8 +32,7 @@
     [attr.aria-valuenow]="defaultIcon.label | translate"
     [target]="defaultIcon.target"
     rel="noopener"
-    [routerLink]="_disabled ? null : defaultIcon.href"
-    [href]="_disabled ? null : defaultIcon.href"
+    [routerLink]="getURL()"
     [title]="getTooltip() | translate"
     [attr.tooltip]="getTooltip() | translate"
   >
@@ -65,7 +64,10 @@
 
   <ng-template #imageTemplate>
     <ng-container *ngIf="defaultIcon.isImage; else iconTemplate">
-      <img [src]="defaultIcon.iconPath">
+      <img
+        [src]="defaultIcon.iconPath"
+        title="{{defaultIcon.label}}"
+      >
     </ng-container>
 
     <ng-template #iconTemplate>

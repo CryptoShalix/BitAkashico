@@ -11,18 +11,25 @@ import { StorageService } from '../../shared/services/storage.service';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
-  APP_SIDE: number;
+  private APP_SIDE: number;
+
   IS_BIT_SITE: boolean = false;
+  APP_SENTENCE: string = '';
   iconListMedia: LinkableIcon[];
   iconListTopApps: LinkableIcon[];
 
   constructor(private storageService: StorageService) { }
 
   ngOnInit(): void {
-    this.APP_SIDE = this.storageService.getAppSide();
-    this.IS_BIT_SITE = this.APP_SIDE === 1;
-    this.prepareIconListMedia();
-    this.prepareIconListTopApps();
+    this.storageService.appSide$.subscribe(appSide => {
+      this.APP_SIDE = appSide;
+      if (this.storageService.hasAppSide()) {
+        this.IS_BIT_SITE = this.APP_SIDE === 1;
+        this.APP_SENTENCE = this.getAppSentence();
+        this.prepareIconListMedia();
+        this.prepareIconListTopApps();
+      }
+    });
   }
 
   private prepareIconListMedia(): void {
@@ -47,6 +54,17 @@ export class MainPageComponent implements OnInit {
       isCard: true
     }));
     this.iconListTopApps.push(new LinkableIcon('TopApp2', {
+      href: URLS.REF_Slice,
+      title: 'Relai',
+      tooltip: 'PAGES.TOOLS.GROUPS.EXCHANGES_DEX.appRelai',
+      iconPath: 'get_app',
+      color: '#fff',
+      type: ELinkableIconType.ICON,
+      target: ELinkableTarget.BLANK,
+      showText: true,
+      isCard: true
+    }));
+    this.iconListTopApps.push(new LinkableIcon('TopApp3', {
       href: URLS.REF_Slice,
       title: 'Slice',
       tooltip: 'PAGES.TOOLS.GROUPS.OTHERS.appSlice',
