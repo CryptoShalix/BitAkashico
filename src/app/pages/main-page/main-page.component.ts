@@ -54,7 +54,7 @@ export class MainPageComponent implements OnInit {
       isCard: true
     }));
     this.iconListTopApps.push(new LinkableIcon('TopApp2', {
-      href: URLS.REF_Slice,
+      href: URLS.REF_Relai,
       title: 'Relai',
       tooltip: 'PAGES.TOOLS.GROUPS.EXCHANGES_DEX.appRelai',
       iconPath: 'get_app',
