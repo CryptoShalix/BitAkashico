@@ -1,0 +1,385 @@
+[
+  {
+    "groupName": "ANALYSIS_MARKET",
+    "items": [
+      {
+        "name": "CoinGecko",
+        "link": "https://www.coingecko.com",
+        "rank": 4.5
+      },
+      {
+        "name": "CoinMarketCap",
+        "link": "https://www.coinmarketcap.com/invite?ref=Z97Z1PVC",
+        "rank": 4
+      },
+      {
+        "name": "CoinMarketCal",
+        "link": "https://coinmarketcal.com",
+        "rank": 4.5
+      },
+      {
+        "name": "Sennet",
+        "link": "https://sennet.ai/es/?via=shalix",
+        "rank": 4.5
+      },
+      {
+        "name": "DefiLlama",
+        "link": "https://defillama.com",
+        "rank": 3.5
+      },
+      {
+        "name": "Lunarcrush",
+        "link": "https://www.lunarcrush.com",
+        "rank": 3.5
+      },
+      {
+        "name": "Google Trends",
+        "link": "https://trends.google.es/trends/explore",
+        "rank": 3.5
+      }
+    ],
+    "icon": "multiline_chart"
+  },
+  {
+    "groupName": "ANALYSIS_TECH",
+    "items": [
+      {
+        "name": "TradingView",
+        "link": "https://es.tradingview.com/gopro/?share_your_love=CryptoShalix",
+        "rank": 5
+      }
+    ],
+    "icon": "insert_chart_outlined"
+  },
+  {
+    "groupName": "BITCOIN_TOOLS",
+    "items": [
+      {
+        "name": "Bitcoin Rainbow Chart",
+        "link": "https://www.blockchaincenter.net/bitcoin-rainbow-chart",
+        "rank": 5
+      },
+      {
+        "name": "KYCP",
+        "link": "https://kycp.org",
+        "rank": 4.5
+      },
+      {
+        "name": "StackerNews",
+        "link": "https://stacker.news/r/cryptoshalix",
+        "rank": 4.5
+      },
+      {
+        "name": "Slice",
+        "link": "https://addslice.com/?crew=6Drqk",
+        "rank": 4.5
+      },
+      {
+        "name": "Satsback",
+        "link": "https://satsback.com/register/m6041W511MWJBwXv",
+        "rank": 3.5
+      }
+    ],
+    "icon": "bitcoin"
+  },
+  {
+    "groupName": "BITCOIN_WALLETS",
+    "items": [
+      {
+        "name": "Blixt",
+        "link": "https://blixtwallet.github.io",
+        "rank": 4.5,
+        "isLN": true
+      },
+      {
+        "name": "Blue Wallet",
+        "link": "https://bluewallet.io",
+        "rank": 4,
+        "isLN": true
+      },
+      {
+        "name": "Breez",
+        "link": "https://breez.technology",
+        "rank": 4,
+        "isLN": true
+      },
+      {
+        "name": "Muun Wallet",
+        "link": "https://muun.com",
+        "rank": 4.5,
+        "isLN": true
+      },
+      {
+        "name": "Phoenix",
+        "link": "https://phoenix.acinq.co",
+        "rank": 4.5,
+        "isLN": true
+      },
+      {
+        "name": "Samourai Wallet",
+        "link": "https://samouraiwallet.com",
+        "rank": 5,
+        "isLN": false
+      },
+      {
+        "name": "Simple Bitcoin Wallet (SBW)",
+        "link": "https://sbw.app",
+        "rank": 4,
+        "isLN": true
+      },
+      {
+        "name": "Sparrow Wallet",
+        "link": "https://sparrowwallet.com",
+        "rank": 5,
+        "isLN": false
+      },
+      {
+        "name": "Specter Wallet",
+        "link": "https://specter.solutions",
+        "rank": 4.5,
+        "isLN": false
+      },
+      {
+        "name": "Wallet Of Satoshi",
+        "link": "https://walletofsatoshi.com",
+        "rank": 3.8,
+        "isLN": true
+      },
+      {
+        "name": "Zap",
+        "link": "https://zaphq.io",
+        "rank": 4,
+        "isLN": true
+      },
+      {
+        "name": "Zebedee",
+        "link": "https://zebedee.io",
+        "rank": 3.8,
+        "isLN": true
+      },
+      {
+        "name": "Zeus",
+        "link": "https://zeusln.app",
+        "rank": 4.1,
+        "isLN": true
+      }
+    ],
+    "icon": "bitcoin"
+  },
+  {
+    "groupName": "WALLETS",
+    "items": [
+      {
+        "name": "Brave Wallet",
+        "link": "https://brave.com/es/wallet",
+        "rank": 4
+      },
+      {
+        "name": "Metamask",
+        "link": "https://metamask.io",
+        "rank": 3.2
+      },
+      {
+        "name": "Safepal",
+        "link": "https://www.safepal.com",
+        "rank": 3.2
+      },
+      {
+        "name": "Status",
+        "link": "https://status.im",
+        "rank": 4
+      },
+      {
+        "name": "TrustWallet",
+        "link": "https://trustwallet.com",
+        "rank": 3.4
+      },
+      {
+        "name": "Defiant",
+        "link": "https://defiantapp.tech",
+        "rank": 4.2
+      },
+      {
+        "name": "Liquality",
+        "link": "https://www.liquality.io/",
+        "rank": 3.8
+      },
+      {
+        "name": "Exodus",
+        "link": "https://www.exodus.com",
+        "rank": 3.9
+      },
+      {
+        "name": "Edge Wallet",
+        "link": "https://edge.app",
+        "rank": 3.8
+      },
+      {
+        "name": "Crypto DeFi Wallet",
+        "link": "https://crypto.com/eea/defi-wallet",
+        "rank": 3.5
+      },
+      {
+        "name": "Rabby",
+        "link": "https://rabby.io",
+        "rank": 3.8
+      }
+    ],
+    "icon": "account_balance_wallet"
+  },
+  {
+    "groupName": "EXCHANGES_CEX",
+    "items": [
+      {
+        "name": "Binance",
+        "link": "https://www.binance.com/en/register?ref=EEICFSED",
+        "rank": 4.3
+      },
+      {
+        "name": "Bit2Me",
+        "link": "https://bit2me.com/es/registro?r=RQB-RWI-ECZ",
+        "rank": 4.4
+      },
+      {
+        "name": "Wirex",
+        "link": "https://wirexapp.com/r/CryptoShalix",
+        "rank": 4.5
+      }
+    ],
+    "icon": "account_balance"
+  },
+  {
+    "groupName": "EXCHANGES_DEX",
+    "items": [
+      {
+        "name": "Relai",
+        "link": "https://relai.app/REL57044",
+        "rank": 5
+      },
+      {
+        "name": "PancakeSwap",
+        "link": "https://pancakeswap.finance",
+        "rank": 4
+      },
+      {
+        "name": "Fixed Float",
+        "link": "https://fixedfloat.com",
+        "rank": 4
+      },
+      {
+        "name": "DexGuru",
+        "link": "https://dex.guru",
+        "rank": 3.8
+      },
+      {
+        "name": "DexTools",
+        "link": "https://dextools.io/app",
+        "rank": 3.8
+      }
+    ],
+    "icon": "device_hub"
+  },
+  {
+    "groupName": "PORTFOLIO-TRACKERS",
+    "items": [
+      {
+        "name": "ApeBoard",
+        "link": "https://apeboard.finance/dashboard",
+        "rank": 4.2
+      },
+      {
+        "name": "DappRadar",
+        "link": "https://dappradar.com",
+        "rank": 4
+      },
+      {
+        "name": "DeBank",
+        "link": "https://debank.com",
+        "rank": 4.1
+      },
+      {
+        "name": "DefiSaver",
+        "link": "https://defisaver.com",
+        "rank": 4
+      },
+      {
+        "name": "DefiYield",
+        "link": "https://defiyield.app",
+        "rank": 4
+      },
+      {
+        "name": "Zapper",
+        "link": "https://zapper.fi",
+        "rank": 4
+      },
+      {
+        "name": "Zerion",
+        "link": "https://zerion.io",
+        "rank": 4
+      }
+    ],
+    "icon": "pie_chart"
+  },
+  {
+    "groupName": "SCAM-DETECTOR",
+    "items": [
+      {
+        "name": "BSCheck",
+        "link": "https://bscheck.eu",
+        "rank": 3
+      },
+      {
+        "name": "TokenSniffer",
+        "link": "https://tokensniffer.com",
+        "rank": 3
+      },
+      {
+        "name": "HoneyPot",
+        "link": "https://honeypot.is",
+        "rank": 3.5
+      },
+      {
+        "name": "Certik",
+        "link": "https://www.certik.com",
+        "rank": 4.2
+      },
+      {
+        "name": "GemProtocol",
+        "link": "https://gemprotocol.io/rug-checker",
+        "rank": 4
+      },
+      {
+        "name": "RugDoc",
+        "link": "https://rugdoc.io",
+        "rank": 4
+      },
+      {
+        "name": "ScamAlert",
+        "link": "https://scam-alert.io",
+        "rank": 3
+      },
+      {
+        "name": "ScamDoc",
+        "link": "https://www.scamdoc.com/es",
+        "rank": 2.5
+      },
+      {
+        "name": "TokenFomo",
+        "link": "https://tokenfomo.io",
+        "rank": 2
+      }
+    ],
+    "icon": "bug_report"
+  },
+  {
+    "groupName": "OTHERS",
+    "items": [
+      {
+        "name": "Chainlist",
+        "link": "https://chainlist.org",
+        "rank": 4.5
+      }
+    ],
+    "icon": "important_devices"
+  }
+]
