@@ -31,16 +31,7 @@ export class BooksPageComponent implements OnInit {
       type: this.IS_BIT_SIDE ? IGalleryTitleType.IMG : IGalleryTitleType.TXT
     };
 
-    const books = await this.dbService.getBooks(this.IS_BIT_SIDE);
-    books.map(book => {
-      this._galleryBooks.push({
-        imgPath: book.image,
-        title: book.name,
-        description: '',
-        li_read: book.li_read,
-        li_buy: book.li_buy,
-      });
-    });
+    this._galleryBooks = await this.dbService.getBooks(this.IS_BIT_SIDE);
   }
 
   getAboutTextBySide() {

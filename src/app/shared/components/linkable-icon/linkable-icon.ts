@@ -57,6 +57,7 @@ export class LinkableIcon {
   public isImage: boolean;
   public showText: boolean;
   public isMenu: boolean;
+  public type: ELinkableIconType;
   public target: string;
 
   constructor(

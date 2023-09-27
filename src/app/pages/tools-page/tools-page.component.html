@@ -3,8 +3,11 @@
   <div class="about">
     <span [innerHTML]="('PAGES.TOOLS.about' | translate) | safe:'html'"></span>
 
-    <div class="custom-tools">
-      <!-- <span [innerHTML]="('PAGES.TOOLS.aboutCustomTools' | translate) | safe:'html'"></span>
+    <div
+      *ngIf="customToolsList && customToolsList.length > 0"
+      class="custom-tools"
+    >
+      <span [innerHTML]="('PAGES.TOOLS.aboutCustomTools' | translate) | safe:'html'"></span>
 
       <div class="custom-tool-items">
         <app-linkable-icon
@@ -12,7 +15,7 @@
           *ngFor="let customTool of customToolsList"
           [sDefaultIcon]="customTool"
         ></app-linkable-icon>
-      </div> -->
+      </div>
 
     </div>
   </div>

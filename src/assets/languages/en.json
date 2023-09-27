@@ -65,7 +65,9 @@
           }
         },
         "AKASHICO": {
-          "about": "Through our hearts, we connect and discover our inner being, with its fears, concerns and desires.<br/>Through an individual session (in a video call or in person) we will be able to see our inner world (Akasha) or discover the current state of our chakras.<br/><br/>Request a session with @CryptoShalix using the <a class='selected' target='_self' href='#contact'>contact form</a> and ask without fear."
+          "about": "Throughout our lives, we find ourselves faced with blockages, fears, and concerns that prevent us from concentrating well, or that hinder us and prevent us from moving forward.<br/><br/>Through conversations in which we listen to our hearts, through an individual or group session, we connect and discover our inner being.<br/><br/>Although we can carry out other activities to focus or <i>disconnect</i> from day to day, with a session of channeling <i>(talking to your soul)</i>, we will be able to see our inner world (Akasha) and ask about what we really want to resolve or 'remember'.<br/><br/>Also, although only in person, we can discover the current state of our chakras.<br/><br/>Request a session with @CryptoShalix through the <a class='selected' target='_self' href='#contact'>contact form</a> and ask without fear to participate in an online or in-person meeting.",
+          "akademy": "In the <a class='selected' target='_self' href='#books'>books</a> section you will find the knowledge compiled over the years by various authors that, at BitAkashico, we consider essential to read.<br/><br/>You can also contact CryptoShalix using the <a class='selected' target='_self' href='#contact'>contact form</a> and, in a group or individual session, learn by sharing experiences and moments.",
+          "testimonials": "We leave you here some testimonials that have already tried CryptoShalix services."
         }
       },
       "BOOKS": {
@@ -117,7 +119,9 @@
             "description": " ",
             "appBitcoinRainbowChart": "This cute rainbow will show you if we are closer to an altseason (altcoin pump) or the ₿TC pump.",
             "appKYCP": "To find out if your ₿itcoin is as private as you expect. Advanced level. Very useful to see how the different wallets have implemented privacy (Wasabi, JoinMarket, Whirlpool, etc).",
-            "appStackerNews": "It allows you to publish posts and be paid in BTC LN⚡, while you can also rate other users with your satoshis. You make an income of 1000 satoshis, and for every post you like, you donate a few sats, but if you post, and people like, you get those sats back. Cyclical market."
+            "appStackerNews": "It allows you to publish posts and be paid in BTC LN⚡, while you can also rate other users with your satoshis. You make an income of 1000 satoshis, and for every post you like, you donate a few sats, but if you post, and people like, you get those sats back. Cyclical market.",
+            "appSlice": "With this browser plugin you will receive sats for viewing ads while browsing the internet. If you want to receive 100 more slices, totally free, you just have to install with my link and use the Slice tool for 30 days. Clever! Get your sats, send them directly to your Zebedee wallet (LN⚡) whenever you want and without costs.",
+            "appSatsback": "With this browser plugin, a window will be displayed in certain online stores where, once activated and in the cart, a refund in ₿itcoin will be applied when purchasing."
           },
           "BITCOIN_WALLETS": {
             "title": "₿itcoin: wallets",
@@ -152,11 +156,9 @@
           "EXCHANGES_DEX": {
             "title": "Exchanges.<br>(DEX) Decentralized",
             "description": "Decentralized exchanges with useful tools, variety, liquidity and more time in the market",
-            "appRelai": "Soft-KYC platform, which allows you to buy or sell Bitcoin from your bank, card or even Google/Apple Pay and recursively, saving the sats received in a self-custodial wallet. An ideal solution to obtain your sats automatically and easily.<br/><br/>Enter the following code when creating your recursive purchase order to obtain a discount: <b>REL57044</b>",
-            "appBoggedFinance": "Automated tools for trading in the BSC. You can place buy and sell orders. Not the most useful as certain features are unlocked if you hold its token.",
+            "appRelai": "Soft-KYC platform, which allows you to buy or sell Bitcoin from your bank, card or even Google/Apple Pay and periodically, saving the sats received in a self-custodial wallet. An ideal solution to obtain your sats automatically and easily.<br/><br/>Enter the following code when creating your periodic purchase order to obtain a discount: <b>REL57044</b>",
             "appDexGuru": "Very complete tool to see the graph, liquidity, commercial list, etc..",
-            "appDexTools": "Data rich trading tool. Very good.",
-            "appPoocoin": "Buy, sell, see graphs, liquidity, etc."
+            "appDexTools": "Data rich trading tool. Very good."
           },
           "WALLETS": {
             "title": "Wallets: altcoins",
@@ -200,9 +202,7 @@
           "OTHERS": {
             "title": "Other interesting applications",
             "description": " ",
-            "appChainlist": "It allows you to add new networks to your wallet on EVM (Ethereum Virtual Machine), be it this BraveWallet, Metamask or any other that uses this Ethereum virtual machine.",
-            "appSlice": "With this browser plugin you will receive sats for viewing ads while browsing the internet. If you want to receive 100 more slices, totally free, you just have to install with my link and use the Slice tool for 30 days. Clever! Get your sats, send them directly to your Zebedee wallet (LN⚡) whenever you want and without costs.",
-            "appSatsback": "With this browser plugin, a window will be displayed in certain online stores where, once activated and in the cart, a refund in ₿itcoin will be applied when purchasing."
+            "appChainlist": "It allows you to add new networks to your wallet on EVM (Ethereum Virtual Machine), be it this BraveWallet, Metamask or any other that uses this Ethereum virtual machine."
           }
         }
       },
@@ -233,6 +233,7 @@
       }
     },
     "STRINGS": {
+      "anonymous": "Anonymous",
       "noImage": "No image",
       "sendMsgSuccess": "The message has been sent successfully!<br/>You will receive a response as soon as possible. Thank you",
       "sendMsgError": "There was an error sending the message => "

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ELinkableIcon, ELinkableIconType, ELinkableTarget, LinkableIcon } from 'src/app/shared/components/linkable-icon/linkable-icon';
-
-import { URLS } from '../../shared/models/core';
+import { DBService } from 'src/app/shared/services/db.service';
 import { StorageService } from '../../shared/services/storage.service';
+
+import { ELinkableIcon, LinkableIcon } from 'src/app/shared/components/linkable-icon/linkable-icon';
 
 @Component({
   selector: 'app-main-page',
@@ -12,13 +12,17 @@ import { StorageService } from '../../shared/services/storage.service';
 })
 export class MainPageComponent implements OnInit {
   private APP_SIDE: number;
+  private APP_TOP_LIST = ['Wirex', 'Relai', 'Slice'];
 
   IS_BIT_SITE: boolean = false;
   APP_SENTENCE: string = '';
   iconListMedia: LinkableIcon[];
   iconListTopApps: LinkableIcon[];
 
-  constructor(private storageService: StorageService) { }
+  constructor(
+    private storageService: StorageService,
+    private dbService: DBService,
+  ) { }
 
   ngOnInit(): void {
     this.storageService.appSide$.subscribe(appSide => {
@@ -42,39 +46,10 @@ export class MainPageComponent implements OnInit {
 
   private prepareIconListTopApps(): void {
     this.iconListTopApps = [];
-    this.iconListTopApps.push(new LinkableIcon('TopApp1', {
-      href: URLS.REF_Wirex,
-      title: 'Wirex',
-      tooltip: 'PAGES.TOOLS.GROUPS.EXCHANGES_CEX.appWirex',
-      iconPath: 'get_app',
-      color: '#fff',
-      type: ELinkableIconType.ICON,
-      target: ELinkableTarget.BLANK,
-      showText: true,
-      isCard: true
-    }));
-    this.iconListTopApps.push(new LinkableIcon('TopApp2', {
-      href: URLS.REF_Relai,
-      title: 'Relai',
-      tooltip: 'PAGES.TOOLS.GROUPS.EXCHANGES_DEX.appRelai',
-      iconPath: 'get_app',
-      color: '#fff',
-      type: ELinkableIconType.ICON,
-      target: ELinkableTarget.BLANK,
-      showText: true,
-      isCard: true
-    }));
-    this.iconListTopApps.push(new LinkableIcon('TopApp3', {
-      href: URLS.REF_Slice,
-      title: 'Slice',
-      tooltip: 'PAGES.TOOLS.GROUPS.OTHERS.appSlice',
-      iconPath: 'get_app',
-      color: '#fff',
-      type: ELinkableIconType.ICON,
-      target: ELinkableTarget.BLANK,
-      showText: true,
-      isCard: true
-    }));
+    this.APP_TOP_LIST.forEach(async (topApp: string) => {
+      const _app = await this.dbService.getAppAsLinkableIcon(topApp);
+      if (_app !== null) { this.iconListTopApps.push(_app); }
+    });
   }
 
   getAppSentence() {

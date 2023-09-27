@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ICardGame } from 'src/app/shared/components/linkable-icon/linkable-icon';
 import { IMAGES } from 'src/assets/images/images';
 
-import { CoreService } from '../../shared/services/core.service';
+import { DBService } from 'src/app/shared/services/db.service';
 
 import { Platform } from '@angular/cdk/platform';
 import { IAccordion, URLS } from 'src/app/shared/models/core';
@@ -25,7 +25,7 @@ export class GamesPageComponent implements OnInit {
   noImage = IMAGES.NO_IMAGE;
 
   constructor(
-    private coreService: CoreService,
+    private dbService: DBService,
     private platform: Platform
   ) { }
 
@@ -105,9 +105,7 @@ export class GamesPageComponent implements OnInit {
     });
   }
 
-  private prepareWallets(): void {
-    this.walletsList = [];
-    const accordion = this.coreService.prepareBitcoinWallets(true);
-    this.walletsList.push(accordion);
+  private async prepareWallets() {
+    this.walletsList = await this.dbService.getBitcoinWallets(true);
   }
 }

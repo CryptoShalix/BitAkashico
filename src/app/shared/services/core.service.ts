@@ -1,11 +1,13 @@
 import { formatDate } from '@angular/common';
 import { Injectable } from '@angular/core';
-
-import { EDateFormat, IAccordion, IAccordionItem, IValueText, URLS } from '../models/core';
-import { MessageService } from './message.service';
-import { MessageType } from '../components/message-manager/message-manager.component';
 import { Router } from '@angular/router';
+
+import { MessageService } from './message.service';
 import { StorageService } from './storage.service';
+
+import { EDateFormat, IValueText } from '../models/core';
+
+import { MessageType } from '../components/message-manager/message-manager.component';
 
 @Injectable({
   providedIn: 'root'
@@ -30,51 +32,6 @@ export class CoreService {
 
   isAppSidebit() {
     return this.storageService.isAppSideBit();
-  }
-
-  prepareBitcoinWallets(lnOnly: boolean = false): IAccordion {
-    const groupName = 'BITCOIN_WALLETS';
-
-    const items: IAccordionItem[] = [];
-    items.push(this.createToolItem(groupName, 'Blixt', URLS.REF_Blixt, 4.2, true));
-    items.push(this.createToolItem(groupName, 'Blue Wallet', URLS.REF_BlueWallet, 4, true));
-    items.push(this.createToolItem(groupName, 'Breez', URLS.REF_Breez, 4, true));
-    items.push(this.createToolItem(groupName, 'Muun Wallet', URLS.REF_MuunWallet, 4.5, true));
-    items.push(this.createToolItem(groupName, 'Phoenix', URLS.REF_Phoenix, 4.5, true));
-    if (!lnOnly) { items.push(this.createToolItem(groupName, 'Samourai Wallet', URLS.REF_SamouraiWallet, 5)); }
-    items.push(this.createToolItem(groupName, 'Simple Bitcoin Wallet (SBW)', URLS.REF_SimpleBitcoinWallet, 4.2, true));
-    if (!lnOnly) { items.push(this.createToolItem(groupName, 'Sparrow Wallet', URLS.REF_SparrowWallet, 5)); }
-    if (!lnOnly) { items.push(this.createToolItem(groupName, 'Specter Wallet', URLS.REF_SpecterWallet, 4.5)); }
-    if (!lnOnly) { items.push(this.createToolItem(groupName, 'Defiant', URLS.REF_Defiant, 4)); }
-    if (!lnOnly) { items.push(this.createToolItem(groupName, 'Liquality', URLS.REF_Liquality, 3.8)); }
-    items.push(this.createToolItem(groupName, 'Wallet Of Satoshi', URLS.REF_WalletOfSatoshi, 3.8, true));
-    items.push(this.createToolItem(groupName, 'Zap', URLS.REF_Zap, 4, true));
-    items.push(this.createToolItem(groupName, 'Zebedee', URLS.REF_Zebedee, 3.8, true));
-    items.push(this.createToolItem(groupName, 'Zeus', URLS.REF_Zeus, 4.1, true));
-
-    const accordion = this.createToolsGroup(groupName, items, 'bitcoin', lnOnly);
-    return accordion;
-  }
-
-  createToolsGroup(groupName: string, items: IAccordionItem[], icon?: string, lnOnly?: boolean, disabled?: boolean): IAccordion {
-    items = (this.sorter(items, '-rank'));
-    return {
-      title: `PAGES.TOOLS.GROUPS.${groupName}.title${lnOnly ? 'LN' : ''}`,
-      description: `PAGES.TOOLS.GROUPS.${groupName}.description`,
-      disabled,
-      icon,
-      items
-    };
-  }
-
-  createToolItem(groupName: string, name: string, link: string, rank: number, isLN: boolean = false): IAccordionItem {
-    return {
-      text: (isLN ? '[LN] ' : '') + name,
-      link,
-      description: `PAGES.TOOLS.GROUPS.${groupName}.app${name.replace(/\s/g, '')}`,
-      image: '',
-      rank
-    };
   }
 
   // MESSAGE MANAGER

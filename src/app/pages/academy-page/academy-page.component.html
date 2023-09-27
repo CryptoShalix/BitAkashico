@@ -21,14 +21,20 @@
       </ng-template>
       <span>{{ TITLE_TEXT }}</span>
     </div>
+
     <ng-container
       *ngIf="IS_BIT_SIDE"
-      [ngTemplateOutlet]="bitAcademy"
+      [ngTemplateOutlet]="templateBitAcademy"
+    ></ng-container>
+
+    <ng-container
+      *ngIf="!IS_BIT_SIDE"
+      [ngTemplateOutlet]="templateAkademy"
     ></ng-container>
   </div>
 </div>
 
-<ng-template #bitAcademy>
+<ng-template #templateBitAcademy>
   <mat-vertical-stepper
     [linear]="true"
     [selectedIndex]="0"
@@ -71,4 +77,19 @@
     </mat-step>
   </mat-vertical-stepper>
 
+</ng-template>
+
+<ng-template #templateAkademy>
+  <span [innerHTML]="(getAkademyText() | translate) | safe:'html'"></span>
+
+  <!-- <div class="container-testimonials">
+    <span [innerHTML]="(getAkademyTestimonialsText() | translate) | safe:'html'"></span>
+    <div
+      *ngFor="let testimonial of testimonials"
+      class="testimonial"
+    >
+      <span>{{ testimonial.name | translate }}</span>
+      <span [innerHTML]="(testimonial.text | translate) | safe:'html'"></span>
+    </div>
+  </div> -->
 </ng-template>

@@ -1,5 +1,6 @@
 import { IMAGES } from 'src/assets/images/images';
 import { ELinkableIconType, ELinkableTarget, LinkableIcon } from '../components/linkable-icon/linkable-icon';
+
 export enum URLS {
   // SOCIAL MEDIA
   TWITTER = 'https://twitter.com/CryptoShalix',
@@ -40,90 +41,56 @@ export enum URLS {
   REF_GAME_IOS_BAY = 'https://thndr-bay.sng.link/Dk8fg/5lrf/d0c9',
   REF_GAME_IOS_SOLITAIRE = 'https://bitcoin-solitaire.sng.link/Dx606/kbea/04tp',
   REF_GAME_IOS_MINER = 'https://apps.apple.com/us/app/bitcoin-miner-idle-tycoon/id1413770650',
+}
 
-  // REFERRALS: ANALYSIS MARKET
-  REF_CoinGecko = 'https://www.coingecko.com',
-  REF_CoinMarketCap = 'https://www.coinmarketcap.com/invite?ref=Z97Z1PVC',
-  REF_CoinMarketCal = 'https://coinmarketcal.com',
-  REF_Sennet = 'https://sennet.ai/es/?via=shalix',
-  REF_DefiLlama = 'https://defillama.com',
-  REF_GoogleTrends = 'https://trends.google.es/trends/explore',
-  REF_Lunarcrush = 'https://www.lunarcrush.com',
+export interface IAPP {
+  name: string;
+  link: string;
+  rank: number;
+  isLN?: boolean;
+}
 
-  // REFERRALS: ANALYSIS TECHNICAL
-  REF_TradingView = 'https://es.tradingview.com/gopro/?share_your_love=CryptoShalix',
+export class APP {
+  name: string;
+  text: string;
+  link: string;
+  description: string;
+  image: string;
+  rank: number;
+  isLN: boolean;
 
-  // REFERRALS: BITCOIN TOOLS
-  REF_BitcoinRainbowChart = 'https://www.blockchaincenter.net/bitcoin-rainbow-chart',
-  REF_KYCP = 'https://kycp.org',
-  REF_StackerNews = 'https://stacker.news/r/cryptoshalix',
+  constructor(app: IAPP, groupName: string) {
+    this.name = app.name;
+    this.text = (app.isLN ? '[LN] ' : '') + app.name;
+    this.link = app.link;
+    this.description = `PAGES.TOOLS.GROUPS.${groupName}.app${app.name.replace(/\s/g, '')}`;
+    this.image = '';
+    this.rank = app.rank;
+    this.isLN = app.isLN ? true : false;
+    return this;
+  }
+}
 
-  // REFERRALS: BITCOIN WALLETS
-  REF_Blixt = 'https://blixtwallet.github.io',
-  REF_BlueWallet = 'https://bluewallet.io',
-  REF_Breez = 'https://breez.technology',
-  REF_MuunWallet = 'https://muun.com',
-  REF_Phoenix = 'https://phoenix.acinq.co',
-  REF_SamouraiWallet = 'https://samouraiwallet.com',
-  REF_SimpleBitcoinWallet = 'https://sbw.app',
-  REF_SparrowWallet = 'https://sparrowwallet.com',
-  REF_SpecterWallet = 'https://specter.solutions',
-  REF_WalletOfSatoshi = 'https://walletofsatoshi.com',
-  REF_Zap = 'https://zaphq.io',
-  REF_Zebedee = 'https://zebedee.io',
-  REF_Zeus = 'https://zeusln.app',
+export interface IAPP_GROUP {
+  groupName: string;
+  items: IAPP[];
+  icon: string;
+}
 
-  // REFERRALS: EXCHANGES CEX
-  REF_Binance = 'https://www.binance.com/en/register?ref=EEICFSED',
-  REF_Bit2Me = 'https://bit2me.com/es/registro?r=RQB-RWI-ECZ',
-  REF_Wirex = 'https://wirexapp.com/r/CryptoShalix',
+export class APP_GROUP {
+  groupName: string;
+  title: string;
+  description: string;
+  icon: string;
+  items: APP[];
 
-  // REFERRALS: EXCHANGES DEX
-  REF_Relai = 'https://relai.app/REL57044',
-  REF_FixedFloat = 'https://fixedfloat.com',
-  REF_PancakeSwap = 'https://pancakeswap.finance',
-  REF_BoggedFinance = 'https://bogged.finance',
-  REF_DexGuru = 'https://dex.guru',
-  REF_DexTools = 'https://dextools.io/app',
-  REF_PooCoin = 'https://poocoin.app',
-
-  // REFERRALS: WALLETS
-  REF_BraveWallet = 'https://brave.com/es/wallet/',
-  REF_Metamask = 'https://metamask.io',
-  REF_Safepal = 'https://www.safepal.com',
-  REF_Status = 'https://status.im',
-  REF_TrustWallet = 'https://trustwallet.com/es/',
-  REF_Defiant = 'https://www.defiantapp.tech/es',
-  REF_Liquality = 'https://liquality.io',
-  REF_Exodus = 'https://www.exodus.com',
-  REF_EdgeWallet = 'https://edge.app',
-  REF_CryptoDeFi = 'https://crypto.com/eea/defi-wallet',
-  REF_Rabby = 'https://rabby.io',
-
-  // REFERRALS: PORTFOLIO TRACKERS
-  REF_ApeBoard = 'https://apeboard.finance/dashboard',
-  REF_DappRadar = 'https://dappradar.com',
-  REF_DeBank = 'https://debank.com',
-  REF_DefiSaver = 'https://defisaver.com',
-  REF_DefiYield = 'https://defiyield.app',
-  REF_Zapper = 'https://zapper.fi',
-  REF_Zerion = 'https://zerion.io',
-
-  // REFERRALS: SCAM DETECTORS
-  REF_BSCheck = 'https://bscheck.eu',
-  REF_Certik = 'https://www.certik.com',
-  REF_GemProtocol = 'https://gemprotocol.io/rug-checker',
-  REF_Honeypot = 'https://honeypot.is',
-  REF_RugDoc = 'https://rugdoc.io',
-  REF_ScamAlert = 'https://scam-alert.io',
-  REF_ScamDoc = 'https://www.scamdoc.com/es',
-  REF_TokenFomo = 'https://tokenfomo.io',
-  REF_TokenSniffer = 'https://tokensniffer.com',
-
-  // REFERRALS: OTHERS
-  REF_Chainlist = 'https://chainlist.org',
-  REF_Slice = 'https://addslice.com/?crew=6Drqk',
-  REF_Satsback = 'https://satsback.com/register/m6041W511MWJBwXv',
+  constructor(appGroup: IAPP_GROUP) {
+    this.groupName = appGroup.groupName;
+    this.title = `PAGES.TOOLS.GROUPS.${this.groupName}.title`;
+    this.description = `PAGES.TOOLS.GROUPS.${this.groupName}.description`;
+    this.icon = appGroup.icon;
+    this.items = appGroup.items.map(app => new APP(app, this.groupName));
+  }
 }
 
 export interface IBOOK {
@@ -219,4 +186,9 @@ export interface IAccordion {
   description: string;
   icon?: string;
   disabled?: boolean;
+}
+
+export interface ITestimonial {
+  text: string;
+  name: string;
 }

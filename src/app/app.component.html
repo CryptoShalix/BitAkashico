@@ -15,7 +15,10 @@
             (click)="showMenu = !showMenu"
           >
             <mat-icon class="menu-nav-button">{{ showMenu ? 'close' : 'menu' }}</mat-icon>
-            <span class="menu-nav-breadcrumb">{{ getCurrentPage() | translate | uppercase }}</span>
+            <span class="menu-nav-breadcrumb">
+              [{{ APP_SIDE === 1 ? 'BIT' : 'AKASHICO' }}]<br/>
+              {{ getCurrentPage() | translate | uppercase }}
+            </span>
           </div>
 
           <span class="spacer"></span>

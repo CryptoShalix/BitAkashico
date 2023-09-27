@@ -52,7 +52,7 @@
       },
       "ACADEMY": {
         "BIT": {
-          "about": "A través de nuestra mente, y enfocándonos en el mundo material, podemos aprender (juntos) sobre informática, finanzas o criptomonedas.<br/><br/>Tienes a tu disposición la consultoría privada uno a uno y totalmente personalizada con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a>, además de videos formativos explicando todo lo relacionado con ₿itcoin y otras criptomonedas en el canal de <a class='selected' target='_blank' href='https://www.youtube.com/@BitAkashico'>Youtube</a>.<br/><br/>Aquí puedes ver los niveles de aprendizaje que recomendamos para caer en la madriguera de ₿itcoin y las criptomonedas como es debido.<br/>",
+          "about": "A través de nuestra mente, y enfocándonos en el mundo material, podemos aprender (juntos) sobre informática, finanzas y ₿itcoin.<br/><br/>Tienes a tu disposición la consultoría privada uno a uno y totalmente personalizada con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a>, además de videos formativos explicando todo lo relacionado con ₿itcoin y otras criptomonedas en el canal de <a class='selected' target='_blank' href='https://www.youtube.com/@BitAkashico'>Youtube</a>.<br/><br/>Aquí puedes ver los niveles de aprendizaje que recomendamos para caer en la madriguera de ₿itcoin y las criptomonedas como es debido.<br/>",
           "STEP_1": {
             "title": "NIVEL: BÁSICO",
             "description": "Revolución digital: Blockchain, criptomonedas, NFT y metaverso"
@@ -67,7 +67,9 @@
           }
         },
         "AKASHICO": {
-          "about": "A través de nuestro corazón, nos conectamos y descubrimos nuestro ser interior, con sus miedos, inquietudes y anhelos.<br/>Mediante una sesión individual (en una videollamada o de forma presencial) podremos ver nuestro mundo interior (Akasha) o descubrir el estado actual de nuestros chakras.<br/><br/>Solicita una sesión con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> y pregunta sin miedo."
+          "about": "A lo largo de nuestra vida, nos encontramos ante bloqueos, miedos, e inquietudes que nos impiden concentrarnos bien, o que nos lastran e impiden avanzar.<br/><br/>A través de conversaciones en las que escuchamos a nuestro corazón, mediante una sesión individual o en grupo, nos conectamos y descubrimos nuestro ser interior.<br/><br/>Si bien podemos realizar otras actividades para focalizarnos o <i>desconectar</i> del día a día, con una sesión de canalización <i>(hablando con tu alma)</i>, podremos ver nuestro mundo interior (Akasha) y preguntar sobre aquello que en verdad deseamos resolver o 'recordar'.<br/><br/>También, aunque solo de forma presencial, podemos descubrir el estado actual de nuestros chakras.<br/><br/>Solicita una sesión con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> y pregunta sin miedo para participar en un encuentro online o presencial.",
+          "akademy": "En la sección de <a class='selected' target='_self' href='#books'>libros</a> encontrarás el conocimiento recopilado a través de los años por varios autores que, desde BitAkashico, consideramos imprescindibles de leer.<br/><br/>También puedes contactar con CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> y, en una sesión grupal o individual, aprender compartiendo experiencias y momentos.",
+          "testimonials": "Te dejamos aquí algunos testimonios que ya han probado los servicios de CryptoShalix."
         }
       },
       "BOOKS": {
@@ -119,7 +121,9 @@
             "description": " ",
             "appBitcoinRainbowChart": "Este lindo arcoíris te mostrará si estamos más cerca de una altseason (pump de altcoins) o del pump a ₿TC.",
             "appKYCP": "Para saber si tu ₿itcoin son tan privados como esperas. Nivel avanzado. Muy útil para ver cómo han implementado los diferentes wallets la privacidad (Wasabi, JoinMarket, Whirlpool, etc).",
-            "appStackerNews": "Permite publicar posts y que te remuneren en BTC LN⚡, a la par que tú puedes también valorar al resto de usuarios con tus satoshis. Haces un ingreso de 1000 satoshis, y por cada publicación que te guste, donas unos pocos sats, pero si publicas posts, y la gente da like, recuperas esos sats. Mercado cíclico."
+            "appStackerNews": "Permite publicar posts y que te remuneren en BTC LN⚡, a la par que tú puedes también valorar al resto de usuarios con tus satoshis. Haces un ingreso de 1000 satoshis, y por cada publicación que te guste, donas unos pocos sats, pero si publicas posts, y la gente da like, recuperas esos sats. Mercado cíclico.",
+            "appSlice": "Con este plugin de navegador recibirás sats por ver anuncios mientras navegas por internet. Si deseas recibir 100 slice más, totalmente gratis, solo debes instalar con el enlace y usar la herramienta de Slice durante 30 dias. ¡Listo! Obtén tus sats, envíalos directamente a tu Zebedee wallet (LN⚡) cuando tú desees y sin costes.",
+            "appSatsback": "Con este plugin de navegador se mostrará una ventana en ciertas tiendas online donde, una vez activado y en el carrito, se aplicará una devolución en ₿itcoin al comprar."
           },
           "BITCOIN_WALLETS": {
             "title": "₿itcoin: wallets",
@@ -151,13 +155,11 @@
           "EXCHANGES_DEX": {
             "title": "Exchanges.<br>(DEX) Descentralizados",
             "description": "Exchanges descentralizados con herramientas útiles, variedad, liquidez y mayor tiempo en el mercado",
-            "appRelai": "Plataforma soft-KYC, que permite comprar o vender Bitcoin desde tu banco, tarjeta o incluso Google/Apple Pay y de forma recursiva, guardando los sats recibidos en un wallet self-custodial. Una solución ideal para obtener tus sats de forma automática y sencilla.<br/><br/>Introduce el siguiente código al crear tu orden de compra recursiva para obtener un descuento: <b>REL57044</b>",
+            "appRelai": "Plataforma soft-KYC, que permite comprar o vender Bitcoin desde tu banco, tarjeta o incluso Google/Apple Pay y de forma periódica, guardando los sats recibidos en un wallet self-custodial. Una solución ideal para obtener tus sats de forma automática y sencilla.<br/><br/>Introduce el siguiente código al crear tu orden de compra periódica para obtener un descuento: <b>REL57044</b>",
             "appFixedFloat": "Intercambia tus criptomonedas sin KYC y con comisiones bajas. Rápido y funcional.",
             "appPancakeSwap": "El exchange DeFi por excelencia sobre la Binance Smart Chain (BSC). Swap, Farms, Pools, Lottery, y mucho más.",
-            "appBoggedFinance": "Herramientas automatizadas para trading en la BSC. Puedes poner órdenes de compra y venta. No es la más útil ya que se desbloquean ciertas funciones si holdeas su token.",
             "appDexGuru": "Herramienta muy completa para ver el gráfico, liquidez, listado comercial, etc.",
-            "appDexTools": "Herramienta de trading con muchos datos. Muy buena.",
-            "appPoocoin": "Comprar, vender, ver gráficas, liquidez, etc."
+            "appDexTools": "Herramienta de trading con muchos datos. Muy buena."
           },
           "WALLETS": {
             "title": "Wallets: altcoins",
@@ -201,9 +203,7 @@
           "OTHERS": {
             "title": "Otras aplicaciones interesantes",
             "description": " ",
-            "appChainlist": "Permite añadir nuevas redes a tu wallet sobre EVM (Ethereum Virtual Machine), ya sea BraveWallet, Metamask o cualquier otro que utilice esta máquina virtual de Ethereum.",
-            "appSlice": "Con este plugin de navegador recibirás sats por ver anuncios mientras navegas por internet. Si deseas recibir 100 slice más, totalmente gratis, solo debes instalar con el enlace y usar la herramienta de Slice durante 30 dias. ¡Listo! Obtén tus sats, envíalos directamente a tu Zebedee wallet (LN⚡) cuando tú desees y sin costes.",
-            "appSatsback": "Con este plugin de navegador se mostrará una ventana en ciertas tiendas online donde, una vez activado y en el carrito, se aplicará una devolución en ₿itcoin al comprar."
+            "appChainlist": "Permite añadir nuevas redes a tu wallet sobre EVM (Ethereum Virtual Machine), ya sea BraveWallet, Metamask o cualquier otro que utilice esta máquina virtual de Ethereum."
           }
         }
       },
@@ -234,6 +234,7 @@
       }
     },
     "STRINGS": {
+      "anonymous": "Anónimo",
       "noImage": "No hay imagen",
       "sendMsgSuccess": "¡El mensaje se ha enviado correctamente!<br/>Recibirá una respuesta a la mayor brevedad. Gracias",
       "sendMsgError": "Se ha producido un error al enviar el mensaje => "
