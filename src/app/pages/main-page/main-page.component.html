@@ -16,15 +16,22 @@
     <span [innerHTML]="('PAGES.MAIN.about' | translate) | safe:'html'"></span>
   </div>
 
-  <div class="content-cards">
+  <app-linkable-icon-container></app-linkable-icon-container>
+
+  <app-linkable-icon-container
+    [setTitle]="'PAGES.MAIN.topAppsTitle'"
+    [setList]="iconListTopApps"
+  ></app-linkable-icon-container>
+
+  <!-- <div class="content-cards">
     <app-linkable-icon
       *ngFor="let icon of iconListMedia"
       [sDefaultIcon]="icon"
     >
     </app-linkable-icon>
-  </div>
+  </div> -->
 
-  <div class="content-cards top-apps">
+  <!-- <div class="content-cards top-apps">
     <span class="title-top-apps">{{ 'PAGES.MAIN.topAppsTitle' | translate }}</span>
     <div class="container-top-apps">
       <app-linkable-icon
@@ -34,5 +41,5 @@
       >
       </app-linkable-icon>
     </div>
-  </div>
+  </div> -->
 </div>

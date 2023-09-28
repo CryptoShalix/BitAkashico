@@ -21,7 +21,6 @@ export class ContactPageComponent implements OnInit {
 
   private prepareIconListMedia(): void {
     this.iconListMedia = [];
-    this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Twitter));
     this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Discord));
     this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Telegram));
     this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Youtube));

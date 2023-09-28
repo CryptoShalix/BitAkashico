@@ -3,7 +3,6 @@ import { ELinkableIconType, ELinkableTarget, LinkableIcon } from '../components/
 
 export enum URLS {
   // SOCIAL MEDIA
-  TWITTER = 'https://twitter.com/CryptoShalix',
   DISCORD = 'https://discord.gg/9QQhZhn3Gc',
   TELEGRAM = 'https://t.me/BitAkashico',
   YOUTUBE = 'https://www.youtube.com/@BitAkashico',

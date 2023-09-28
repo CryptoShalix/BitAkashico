@@ -1,0 +1,18 @@
+<div
+  class="content-cards"
+  [ngClass]="{'top-apps': hasTitle()}"
+>
+  <span
+    *ngIf="hasTitle()"
+    class="title-top-apps"
+  >{{ _title | translate }}</span>
+
+  <div [ngClass]="{'container-top-apps':hasTitle()}">
+    <app-linkable-icon
+      [ngClass]="{'small': hasTitle()}"
+      *ngFor="let icon of _list"
+      [sDefaultIcon]="icon"
+    >
+    </app-linkable-icon>
+  </div>
+</div>

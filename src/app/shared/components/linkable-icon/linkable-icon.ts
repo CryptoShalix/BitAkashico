@@ -3,7 +3,6 @@ import { URLS } from '../../models/core';
 
 export enum ELinkableIcon {
   Home = 'BitAkashico',
-  Twitter = 'Twitter',
   Discord = 'Discord',
   Telegram = 'Telegram',
   Youtube = 'Youtube',
@@ -98,16 +97,6 @@ export class LinkableIcon {
         this.isImage = title ? false : true;
         target = ELinkableTarget.SELF;
         showText = linkableIcon && linkableIcon.showText !== undefined ? linkableIcon.showText : false;
-        break;
-      case ELinkableIcon.Twitter:
-        this.id = ELinkableIcon.Twitter.toLowerCase();
-        this.title = title ? title : ELinkableIcon.Twitter;
-        this.href = href ? href : URLS.TWITTER;
-        this.iconPath = this.setSVGComponent(IMAGES.Twitter);
-        this.tooltip = tooltip ? tooltip : this.title;
-        this.color = color ? color : '#ffffff';
-        this.isSVG = true;
-        this.isImage = true;
         break;
       case ELinkableIcon.Discord:
         this.id = ELinkableIcon.Discord.toLowerCase();

@@ -1,16 +1,21 @@
-import { Component, OnDestroy, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { map, Subscription, timer } from 'rxjs';
+import { Router } from '@angular/router';
 
 import { CoreService } from './shared/services/core.service';
 import { TranslateService } from './shared/services/translate.service';
+import { StorageService } from './shared/services/storage.service';
 import { CoingeckoService } from './shared/services/coingecko.service';
 
-import { map, Subscription, timer } from 'rxjs';
 import { Coin, ECoinFormat, ECurrency } from './shared/models/currency';
+import {
+  ELinkableIcon,
+  ELinkableIconType,
+  ELinkableTarget,
+  LinkableIcon
+} from './shared/components/linkable-icon/linkable-icon';
 
-import { ELinkableIcon, ELinkableIconType, ELinkableTarget, LinkableIcon } from './shared/components/linkable-icon/linkable-icon';
-import { StorageService } from './shared/services/storage.service';
 import { IMAGES } from 'src/assets/images/images';
-import { Router } from '@angular/router';
 
 // Angular Material Icons: https://fonts.google.com/icons
 // Angular translate: https://medium.com/angular-chile/aplicaciones-multilenguaje-en-angular-7-con-ngx-translate-db8d1e7b380c
@@ -29,6 +34,7 @@ import { Router } from '@angular/router';
  * OR
  * 1. npm run publish-generate
  * 2. npm run publish-upload
+ * 3. npm run deploy (this one launches both generate and upload same time)
  * (this one launches a package.json script. Check it out to update any details)
  */
 
@@ -93,83 +99,39 @@ export class AppComponent implements OnInit, OnDestroy {
   private prepareMenu(): void {
     this.iconListMenu = [];
 
-    this.iconListMenu.push(new LinkableIcon(ELinkableIcon.Home, {
-      title: 'MENU.home',
-      showText: true,
-      isMenu: true
-    }));
-
-    this.iconListMenu.push(new LinkableIcon(this.icmIdAcademy, {
-      href: 'academy',
-      title: 'MENU.academy',
-      iconPath: 'school',
-      color: '#fff',
-      type: ELinkableIconType.ICON,
-      target: ELinkableTarget.SELF,
-      showText: true,
-      isMenu: true
-    }));
+    this.addMenuItem(ELinkableIcon.Home);
+    this.addMenuItem(this.icmIdContact, 'alternate_email');
+    this.addMenuItem(this.icmIdAcademy, 'school');
+    this.addMenuItem(this.icmIdBooks, 'menu_book');
 
     if (this.IS_BIT_SITE) {
-      this.iconListMenu.push(new LinkableIcon(this.icmIdTools, {
-        href: 'tools',
-        title: 'MENU.tools',
-        iconPath: 'construction',
+      this.addMenuItem(this.icmIdTools, 'construction');
+      this.addMenuItem(this.icmIdGames, 'sports_esports');
+      //this.addMenuItem(this.icmIdCalc,'assessment');
+    }
+  }
+
+  private addMenuItem(linkId: string, linkIcon: string = '') {
+    let _linkableIcon: LinkableIcon;
+    if (linkIcon === '') {
+      _linkableIcon = new LinkableIcon(ELinkableIcon.Home, {
+        title: 'MENU.home',
+        showText: true,
+        isMenu: true
+      });
+    } else {
+      _linkableIcon = new LinkableIcon(linkId, {
+        href: linkId,
+        title: 'MENU.' + linkId,
+        iconPath: linkIcon,
         color: '#fff',
         type: ELinkableIconType.ICON,
         target: ELinkableTarget.SELF,
         showText: true,
         isMenu: true
-      }));
+      });
     }
-
-    this.iconListMenu.push(new LinkableIcon(this.icmIdBooks, {
-      href: 'books',
-      title: 'MENU.books',
-      iconPath: 'menu_book',
-      color: '#fff',
-      type: ELinkableIconType.ICON,
-      target: ELinkableTarget.SELF,
-      showText: true,
-      isMenu: true
-    }));
-
-    // if (this.IS_BIT_SITE) {
-    //   this.iconListMenu.push(new LinkableIcon(this.icmIdCalc, {
-    //     href: 'finances',
-    //     title: 'MENU.finances',
-    //     iconPath: 'assessment',
-    //     color: '#fff',
-    //     type: ELinkableIconType.ICON,
-    //     target: ELinkableTarget.SELF,
-    //     showText: true,
-    //     isMenu: true
-    //   }));
-    // }
-
-    if (this.IS_BIT_SITE) {
-      this.iconListMenu.push(new LinkableIcon(this.icmIdGames, {
-        href: 'games',
-        title: 'MENU.games',
-        iconPath: 'sports_esports',
-        color: '#fff',
-        type: ELinkableIconType.ICON,
-        target: ELinkableTarget.SELF,
-        showText: true,
-        isMenu: true
-      }));
-    }
-
-    this.iconListMenu.push(new LinkableIcon(this.icmIdContact, {
-      href: 'contact',
-      title: 'MENU.contact',
-      iconPath: 'alternate_email',
-      color: '#fff',
-      type: ELinkableIconType.ICON,
-      target: ELinkableTarget.SELF,
-      showText: true,
-      isMenu: true
-    }));
+    this.iconListMenu.push(_linkableIcon);
   }
 
   private prepareData(): void {

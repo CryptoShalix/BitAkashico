@@ -12,6 +12,7 @@ import { ContactFormComponent } from './shared/components/contact-form/contact-f
 import { CustomImageComponent } from './shared/components/custom-image/custom-image.component';
 import { HistoryMoneyComponent } from './shared/components/history-money/history-money.component';
 import { LinkableIconComponent } from './shared/components/linkable-icon/linkable-icon.component';
+import { LinkableIconContainerComponent } from './shared/components/linkable-icon-container/linkable-icon-container.component';
 import { StarRankComponent } from './shared/components/star-rank/star-rank.component';
 import { MessageManagerComponent } from './shared/components/message-manager/message-manager.component';
 import { DonationsComponent } from './shared/components/donations/donations.component';
@@ -30,6 +31,7 @@ import { GalleryComponent } from './shared/components/gallery/gallery.component'
     DonationsComponent,
     HistoryMoneyComponent,
     LinkableIconComponent,
+    LinkableIconContainerComponent,
     MessageManagerComponent,
     ModalDialogComponent,
     ModalSelectorComponent,
@@ -53,6 +55,7 @@ import { GalleryComponent } from './shared/components/gallery/gallery.component'
     DonationsComponent,
     HistoryMoneyComponent,
     LinkableIconComponent,
+    LinkableIconContainerComponent,
     MessageManagerComponent,
     ModalDialogComponent,
     ModalSelectorComponent,

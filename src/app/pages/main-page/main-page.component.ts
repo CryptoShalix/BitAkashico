@@ -30,7 +30,7 @@ export class MainPageComponent implements OnInit {
       if (this.storageService.hasAppSide()) {
         this.IS_BIT_SITE = this.APP_SIDE === 1;
         this.APP_SENTENCE = this.getAppSentence();
-        this.prepareIconListMedia();
+        // this.prepareIconListMedia();
         this.prepareIconListTopApps();
       }
     });
@@ -38,7 +38,6 @@ export class MainPageComponent implements OnInit {
 
   private prepareIconListMedia(): void {
     this.iconListMedia = [];
-    this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Twitter));
     this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Discord));
     this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Telegram));
     this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Youtube));
