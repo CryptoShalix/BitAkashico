@@ -41,16 +41,16 @@
     },
     "PAGES": {
       "MAIN": {
-        "about": "BitAkashico is presented as the parent project of <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Differentiating the <b>material</b> part, which is intended to support financial education (₿itcoin, cryptocurrencies, etc.) and information technology; from the <b>spiritual</b> part, which seeks to remind you as a soul that transits this world, who you are, or what tests you are facing now, by reading your chakras or an akashic record.<br/><br/>To get started, check out the <a class='selected' target='_self' href='#academy'>Academy</a> or the <a class='selected' target='_self' href='#books'>Books</a> section.<br/><br/>If you wish, contact @CryptoShalix through the <a class='selected' target='_self' href='#contact'>contact form</a> and resolve any doubts through an individual and fully personalized session.",
+        "about": "BitAkashico is presented as the main project of <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Differentiating two parts with the same purpose: <i><b><u>help</u></b></i>.<br/><br/><b>Matter</b>: In which The aim is to support financial education (₿itcoin, cryptocurrencies, personal finance management, etc.) and the resolution of problems with computing, whether mobile phones or computers.<br/><br/><b>Spirit</b>: In which we seek to remind you, as a soul that transits this world, who you are, or what trials you face now, through reading your chakras or a channeling session <i>(talking to your soul)</i>.<br/><br/>To get started, check out the <a class='selected' target='_self' href='#academy'>Academy</a> or the <a class='selected' target='_self' href='#books'>Books</a> section.<br/><br/>If you wish, please contact @CryptoShalix through <a class='selected' target='_self' href='#contact'>contact form</a> and resolve your doubts through an individual and totally personalized session.",
         "topAppsTitle": "TOP APPS OF THE MOMENT"
       },
       "START": {
         "about-bit": "Problems with your mobile or computer?<br/>Do you need to organize your finances but don't know where to start?<br/><br/>Enter, and discover how we can learn (together) about computing, finance and ₿itcoin.",
-        "about-aka": "Do you feel that there is an obstacle in your life that prevents you from reaching your inner peace?<br/>Enter, and we will seek to remind you, as a soul that transits this world, who you are, or what tests you are facing now, by reading your chakras and/or asking your Akasha."
+        "about-aka": "Do you feel that there is an obstacle in your life that prevents you from reaching your inner peace?<br/>Enter, and we will seek to remind you, as a soul that transits this world, who you are, or what tests you are facing now, by reading your chakras and/or a channeling session (talking to your soul)."
       },
       "ACADEMY": {
         "BIT": {
-          "about": "Through our mind, and focusing on the material world, we can learn (together) about computers, finances or cryptocurrencies.<br/><br/>You have at your disposal a private one-on-one and fully personalized consultancy with @CryptoShalix through the <a class='selected' target='_self' href='#contact'>contact form</a>, as well as training videos explaining everything related to ₿itcoin and other cryptocurrencies on the <a class='selected' target='_blank' href='https://www.youtube.com/@BitAkashico'>Youtube</a> channel.<br/><br/>Here you can see the learning levels we recommend to fall into the ₿itcoin rabbit hole and the cryptocurrencies as it should.<br/>",
+          "about": "If you are looking to learn about computing, finance, ₿itcoin and privacy, you have at your disposal one-on-one and fully personalized private consulting with @CryptoShalix through <a class='selected' target='_self' href='#contact'>contact form</a>, as well as training videos explaining everything related to online privacy, trading and finance, and, of course, ₿itcoin and other cryptocurrencies, on the <a class='selected' target='_blank' href='https://www.youtube.com/@BitAkashico'>Youtube</a> channel.<br/><br/>Here you can see the learning levels that we recommend to fall into the rabbit hole of ₿itcoin and see the world properly.<br/>",
           "STEP_1": {
             "title": "LEVEL: BASIC",
             "description": "[ES] Revolución digital: Blockchain, criptomonedas, NFT y metaverso"
@@ -234,6 +234,7 @@
     },
     "STRINGS": {
       "anonymous": "Anonymous",
+      "donations": "Donations",
       "noImage": "No image",
       "sendMsgSuccess": "The message has been sent successfully!<br/>You will receive a response as soon as possible. Thank you",
       "sendMsgError": "There was an error sending the message => "
