@@ -5,8 +5,7 @@ import { CoreService } from '../../shared/services/core.service';
 
 @Component({
   selector: 'app-contact-page',
-  templateUrl: './contact-page.component.html',
-  styleUrls: ['./contact-page.component.scss']
+  templateUrl: './contact-page.component.html'
 })
 export class ContactPageComponent implements OnInit {
   isAppSidebit = true;

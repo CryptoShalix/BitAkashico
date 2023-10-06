@@ -1,7 +1,7 @@
 <ng-container *ngIf="defaultIcon">
   <a
     *ngIf="!_isRouterLink && defaultIcon.href !== ''"
-    class="linkable-icon"
+    class="linkable-icon tooltip"
     [ngClass]="{
       'card': defaultIcon.isCard,
       'no-border': defaultIcon.isImage,
@@ -12,15 +12,13 @@
     [target]="defaultIcon.target"
     rel="noopener"
     [href]="getURL()"
-    [title]="getTooltip() | translate"
-    [attr.tooltip]="getTooltip() | translate"
   >
     <ng-container *ngTemplateOutlet="linkContent"></ng-container>
   </a>
 
   <a
     *ngIf="_isRouterLink && defaultIcon.href !== ''"
-    class="linkable-icon"
+    class="linkable-icon tooltip"
     [ngClass]="{
         'card': defaultIcon.isCard,
         'no-border': defaultIcon.isImage,
@@ -33,28 +31,29 @@
     [target]="defaultIcon.target"
     rel="noopener"
     [routerLink]="getURL()"
-    [title]="getTooltip() | translate"
-    [attr.tooltip]="getTooltip() | translate"
   >
     <ng-container *ngTemplateOutlet="linkContent"></ng-container>
   </a>
 
   <span
     *ngIf="defaultIcon.href === ''"
-    class="linkable-icon"
+    class="linkable-icon tooltip"
     [ngClass]="{
       'card': defaultIcon.isCard,
       'no-border': defaultIcon.isImage
     }"
     [attr.aria-valuenow]="defaultIcon.label | translate"
-    [title]="getTooltip() | translate"
-    [attr.tooltip]="getTooltip() | translate"
   >
     <ng-container *ngTemplateOutlet="linkContent"></ng-container>
   </span>
 </ng-container>
 
 <ng-template #linkContent>
+  <span
+    class="tooltip-label message"
+    [innerHTML]="getTooltip() | translate"
+  ></span>
+
   <ng-container *ngIf="defaultIcon.isSVG; else imageTemplate">
     <div
       class="material-icons"

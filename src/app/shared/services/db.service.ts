@@ -4,15 +4,18 @@ import { first } from 'rxjs';
 
 import { CoreService } from './core.service';
 
-import { APP, APP_GROUP, BOOKS, IAPP_GROUP, IBOOK } from '../models/core';
 import { IGalleryItem } from '../components/gallery/gallery.model';
 import { LinkableIcon, ELinkableIconType, ELinkableTarget } from '../components/linkable-icon/linkable-icon';
+import { APP_GROUP, APP, IAPP_GROUP } from '../models/app';
+import { IBOOK, BOOKS } from '../models/book';
+import { ITestimonial } from '../models/testimonial';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DBService {
   private PATH_DB_APPS = 'assets/db/db_apps.json';
+  private PATH_DB_TESTIMONIALS = 'assets/db/db_testimonials.json';
   private PATH_DB_BOOKS = 'assets/db/db_books.json';
 
   constructor(
@@ -80,6 +83,10 @@ export class DBService {
     return null;
   }
 
+  async getTestimonials(): Promise<ITestimonial[]> {
+    return await this._getTestimonials();
+  }
+
   async getBooks(IS_BIT_SIDE: boolean): Promise<IGalleryItem[]> {
     const list: IGalleryItem[] = [];
     const books = await this._getBooks(IS_BIT_SIDE);
@@ -115,6 +122,23 @@ export class DBService {
       console.error(error);
     }
     return result;
+  }
+
+  private async _getTestimonials(): Promise<ITestimonial[]> {
+    let list: ITestimonial[] = [];
+    try {
+      const currentLanguage = this.coreService.getUserLanguage();
+      const dirtyList: ITestimonial[] = await this.getData(this.PATH_DB_TESTIMONIALS);
+      dirtyList.map(t => {
+        if (!this.isNullOrEmpty(t.testimonial[currentLanguage])) {
+          t.name = this.isNullOrEmpty(t.name) ? 'STRINGS.anonymous' : t.name;
+          list.push(t);
+        }
+      });
+    } catch (error) {
+      console.error(error);
+    }
+    return list;
   }
 
   private async _getBooks(isBitSide: boolean = false): Promise<IBOOK[]> {

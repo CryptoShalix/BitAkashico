@@ -375,6 +375,25 @@ label {
     color: rgba($color-secondary-1, 1);
     background: rgba($color-primary-1, 1);
     z-index: 9999999;
+
+    &.message {
+      display: block;
+      text-align: center;
+      width: calc(100% - 1rem);
+      max-width: 50%;
+      height: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0.5rem;
+      padding: 1rem;
+      text-transform: none;
+      font-size: 12px;
+      color: rgba($color-primary-1, 1) !important;
+      background: rgba($color-secondary-1, 1) !important;
+      overflow: auto;
+      box-shadow: 0px 0px 10px #000;
+      border-radius: 10px;
+    }
   }
 }
 
@@ -391,7 +410,8 @@ label {
 
 // SELECTION
 ::selection {
-  background: var(--accent-color-03);
+  // background: var(--accent-color-03);
+  background: $color-special-1;
 }
 
 pre ::selection {
@@ -419,6 +439,17 @@ pre ::selection {
   border-radius: 0px;
   background-color: #eef0f2;
 }
+
+/* RESPONSIVE STYLES */
+@media screen and (max-width: 1256px) {
+  .tooltip-label.message {
+    max-width: 100% !important;
+    left: 0 !important;
+    transform: none !important;
+  }
+}
+
+// ANIMATIONS
 
 @keyframes makeInvisible {
   from {

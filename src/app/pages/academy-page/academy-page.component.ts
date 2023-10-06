@@ -3,7 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { IMAGES } from 'src/assets/images/images';
 
 import { CoreService } from '../../shared/services/core.service';
-import { ITestimonial } from 'src/app/shared/models/core';
+import { DBService } from 'src/app/shared/services/db.service';
+
+import { ITestimonial } from 'src/app/shared/models/testimonial';
 
 @Component({
   selector: 'app-academy-page',
@@ -18,13 +20,19 @@ export class AcademyPageComponent implements OnInit {
 
   testimonials: ITestimonial[] = [];
 
-  constructor(private coreService: CoreService) { }
+  currentLanguage: string = '';
+
+  constructor(
+    private coreService: CoreService,
+    private dbService: DBService
+  ) { }
 
   ngOnInit(): void {
+    this.currentLanguage = this.coreService.getUserLanguage();
     this.IS_BIT_SIDE = this.coreService.isAppSidebit();
     this.TITLE_LOGO = this.IS_BIT_SIDE ? '₿' : IMAGES.LOGO_AKASHICO;
     this.TITLE_TEXT = this.IS_BIT_SIDE ? 'BIT-ACADEMY' : 'AKA-DEMY';
-    // this.getTestimonials();
+    this.getTestimonials();
   }
 
   isNullOrEmpty(text: string): boolean {
@@ -43,9 +51,11 @@ export class AcademyPageComponent implements OnInit {
     return this._translateRoot + 'AKASHICO.testimonials';
   }
 
-  private getTestimonials() {
-    this.testimonials = [
-      { name: 'STRINGS.anonymous', text: '' }
-    ];
+  getTestimonialByLanguage(_testimonial: ITestimonial) {
+    return _testimonial.testimonial[this.currentLanguage];
+  }
+
+  private async getTestimonials() {
+    this.testimonials = await this.dbService.getTestimonials();
   }
 }

@@ -4,10 +4,10 @@
 >
   <span
     *ngIf="hasTitle()"
-    class="title-top-apps"
+    class="content-cards-title"
   >{{ _title | translate }}</span>
 
-  <div [ngClass]="{'container-top-apps':hasTitle()}">
+  <div class="content-cards-container">
     <app-linkable-icon
       [ngClass]="{'small': hasTitle()}"
       *ngFor="let icon of _list"

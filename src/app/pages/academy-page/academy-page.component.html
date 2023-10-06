@@ -82,14 +82,18 @@
 <ng-template #templateAkademy>
   <span [innerHTML]="(getAkademyText() | translate) | safe:'html'"></span>
 
-  <!-- <div class="container-testimonials">
+  <div class="container-testimonials">
     <span [innerHTML]="(getAkademyTestimonialsText() | translate) | safe:'html'"></span>
     <div
       *ngFor="let testimonial of testimonials"
       class="testimonial"
     >
-      <span>{{ testimonial.name | translate }}</span>
-      <span [innerHTML]="(testimonial.text | translate) | safe:'html'"></span>
+      <mat-icon class="testimonial-quote-symbol">format_quote</mat-icon>
+      <span class="testimonial-name">{{ testimonial.name | translate }}</span>
+      <span
+        class="testimonial-quote"
+        [innerHTML]="(getTestimonialByLanguage(testimonial)) | safe:'html'"
+      ></span>
     </div>
-  </div> -->
+  </div>
 </ng-template>

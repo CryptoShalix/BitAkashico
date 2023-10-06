@@ -16,7 +16,7 @@
           >
             <mat-icon class="menu-nav-button">{{ showMenu ? 'close' : 'menu' }}</mat-icon>
             <span class="menu-nav-breadcrumb">
-              [{{ APP_SIDE === 1 ? 'BIT' : 'AKASHICO' }}]<br/>
+              [{{ APP_SIDE === 1 ? 'BIT' : 'AKASHICO' }}]<br />
               {{ getCurrentPage() | translate | uppercase }}
             </span>
           </div>
@@ -40,9 +40,10 @@
 
           <div class="menu-actions">
             <div
-              class="material-icons-donations"
+              class="material-icons-donations tooltip"
               (click)="showContainerDonations = true"
             >
+              <span class="tooltip-label">{{ 'STRINGS.donations' | translate | uppercase }}</span>
               <mat-icon>coffee</mat-icon>
             </div>
 

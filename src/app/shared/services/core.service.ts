@@ -55,6 +55,8 @@ export class CoreService {
     this.userLanguage = userLang;
   }
 
+  getUserLanguage() { return this.userLanguage; }
+
   // TEXT AND ITEMS
 
   isNullOrEmpty = (val: string | null | undefined) => val === undefined || val === null || val === '';

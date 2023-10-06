@@ -253,6 +253,51 @@
       color: $content-text;
     }
   }
+
+  .content {
+    display: block;
+    max-width: 50%;
+    margin: 0 auto;
+    font-size: 14px;
+    text-align: justify;
+    line-height: 30px;
+    letter-spacing: 1px;
+
+    .content-about,
+    .content-cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 0;
+      margin: 10px auto;
+
+      &.top-apps {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: space-around;
+        align-items: center;
+        justify-content: space-evenly;
+        color: $card-text-hover;
+        border-radius: 10px;
+      }
+
+      .content-cards-title {
+        font-weight: bold;
+        color: $body-text;
+      }
+
+      .content-cards-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-around;
+        align-items: center;
+        justify-content: space-around;
+      }
+    }
+  }
 }
 
 .carousel-wrapper {

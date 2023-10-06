@@ -31,7 +31,9 @@ export class MainPageComponent implements OnInit {
         this.IS_BIT_SITE = this.APP_SIDE === 1;
         this.APP_SENTENCE = this.getAppSentence();
         // this.prepareIconListMedia();
-        this.prepareIconListTopApps();
+        if (this.IS_BIT_SITE) {
+          this.prepareIconListTopApps();
+        }
       }
     });
   }

@@ -43,16 +43,16 @@
     },
     "PAGES": {
       "MAIN": {
-        "about": "BitAkashico se presenta como el proyecto principal de <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Diferenciando la parte <b>material</b>, que pretende apoyar en la educación financiera (₿itcoin, criptomonedas, etc) e informática; de la parte <b>espiritual</b>, que busca recordarte a tí como alma que transita este mundo, quién eres, o a qué pruebas te enfrentas ahora, mediante la lectura de tus chakras o un registro akáshico.<br/><br/>Para empezar, revisa la <a class='selected' target='_self' href='#academy'>Academia</a> o la sección de <a class='selected' target='_self' href='#books'>Libros</a>.<br/><br/>Si lo deseas, ponte en contacto con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> y resuelve las dudas mediante una sesión individual y totalmente personalizada.",
+        "about": "BitAkashico se presenta como el proyecto principal de <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Diferenciando dos partes con un mismo propósito: <i><b><u>ayudar</u></b></i>.<br/><br/><b>Materia</b>: En la que se pretende apoyar en la educación financiera (₿itcoin, criptomonedas, gestión de finanzas personales, etc) y la resolución de problemas con la informática, ya sea móviles u ordenadores.<br/><br/><b>Espíritu</b>: En la que buscamos recordarte a tí, como alma que transita este mundo, quién eres, o a qué pruebas te enfrentas ahora, mediante la lectura de tus chakras o una sesión de canalización <i>(hablando con tu alma)</i>.<br/><br/>Para empezar, revisa la <a class='selected' target='_self' href='#academy'>Academia</a> o la sección de <a class='selected' target='_self' href='#books'>Libros</a>.<br/><br/>Si lo deseas, ponte en contacto con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> y resuelve las dudas mediante una sesión individual y totalmente personalizada.",
         "topAppsTitle": "TOP APPS DEL MOMENTO"
       },
       "START": {
         "about-bit": "¿Problemas con tu móvil u ordenador?<br/>¿Necesitas organizar tus finanzas pero no sabes por donde empezar?<br/><br/>Entra, y descubre cómo podemos aprender (juntos) sobre informática, finanzas y ₿itcoin.",
-        "about-aka": "¿Sientes que hay un obstáculo en tu vida que te impide alcanzar tu paz interior?<br/>Entra, y buscaremos recordarte a tí, como alma que transita este mundo, quién eres, o a qué pruebas te enfrentas ahora, mediante la lectura de tus chakras y/o preguntando a tu Akasha."
+        "about-aka": "¿Sientes que hay un obstáculo en tu vida que te impide alcanzar tu paz interior?<br/>Entra, y buscaremos recordarte a tí, como alma que transita este mundo, quién eres, o a qué pruebas te enfrentas ahora, mediante la lectura de tus chakras y/o una sesión de canalización <i>(hablando con tu alma)</i>."
       },
       "ACADEMY": {
         "BIT": {
-          "about": "A través de nuestra mente, y enfocándonos en el mundo material, podemos aprender (juntos) sobre informática, finanzas y ₿itcoin.<br/><br/>Tienes a tu disposición la consultoría privada uno a uno y totalmente personalizada con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a>, además de videos formativos explicando todo lo relacionado con ₿itcoin y otras criptomonedas en el canal de <a class='selected' target='_blank' href='https://www.youtube.com/@BitAkashico'>Youtube</a>.<br/><br/>Aquí puedes ver los niveles de aprendizaje que recomendamos para caer en la madriguera de ₿itcoin y las criptomonedas como es debido.<br/>",
+          "about": "Si buscas aprender sobre informática, finanzas, ₿itcoin y privacidad, tienes a tu disposición la consultoría privada uno a uno y totalmente personalizada con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a>, además de videos formativos explicando todo lo relacionado con privacidad en la red, trading y finanzas, y, por supuesto, de ₿itcoin y otras criptomonedas, en el canal de <a class='selected' target='_blank' href='https://www.youtube.com/@BitAkashico'>Youtube</a>.<br/><br/>Aquí puedes ver los niveles de aprendizaje que recomendamos para caer en la madriguera de ₿itcoin y ver el mundo como es debido.<br/>",
           "STEP_1": {
             "title": "NIVEL: BÁSICO",
             "description": "Revolución digital: Blockchain, criptomonedas, NFT y metaverso"
@@ -235,6 +235,7 @@
     },
     "STRINGS": {
       "anonymous": "Anónimo",
+      "donations": "Donaciones",
       "noImage": "No hay imagen",
       "sendMsgSuccess": "¡El mensaje se ha enviado correctamente!<br/>Recibirá una respuesta a la mayor brevedad. Gracias",
       "sendMsgError": "Se ha producido un error al enviar el mensaje => "
