@@ -24,7 +24,6 @@
       "games": "Juegos",
       "home": "Inicio",
       "portfolio": "Portfolio",
-      "security": "Seguridad",
       "tools": "Herramientas",
       "finances": "Finanzas"
     },
@@ -33,9 +32,6 @@
       "clickToCopy": "Haz clic en el texto o imagen para copiar al portapapeles",
       "appSideChoose": "Elige tu lado",
       "appSideChooseMobile": "Prueba a hacer clic sobre un color",
-      "appSentenceBit1": "Despierta el ₿it y toma las riendas de tu vida",
-      "appSentenceBit2": "La persona que seas en el futuro será el resultado de las decisiones que tomes hoy mismo",
-      "appSentenceAka": "Libérate de todo aquello que esté bloqueando tu vida",
       "appCredits": "BitAkashico es una idea original de <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>",
       "appRightsReserved": "Todos los derechos reservados",
       "readDownload": "Clic para leer o descargar",
@@ -43,7 +39,7 @@
     },
     "PAGES": {
       "MAIN": {
-        "about": "BitAkashico se presenta como el proyecto principal de <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Diferenciando dos partes con un mismo propósito: <i><b><u>ayudar</u></b></i>.<br/><br/><b>Materia</b>: En la que se pretende apoyar en la educación financiera (₿itcoin, criptomonedas, gestión de finanzas personales, etc) y la resolución de problemas con la informática, ya sea móviles u ordenadores.<br/><br/><b>Espíritu</b>: En la que buscamos recordarte a tí, como alma que transita este mundo, quién eres, o a qué pruebas te enfrentas ahora, mediante la lectura de tus chakras o una sesión de canalización <i>(hablando con tu alma)</i>.<br/><br/>Para empezar, revisa la <a class='selected' target='_self' href='#academy'>Academia</a> o la sección de <a class='selected' target='_self' href='#books'>Libros</a>.<br/><br/>Si lo deseas, ponte en contacto con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> y resuelve las dudas mediante una sesión individual y totalmente personalizada.",
+        "about": "BitAkashico se presenta como el proyecto principal de <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Diferenciando tres partes con un mismo propósito: <i><b><u>ayudar</u></b></i>.<br/><br/><b>Finanzas</b>: En la que se pretende apoyar en la educación financiera, con conceptos y nuevas formas de gestionar y usar el dinero, haciendo que crezca sin apenas darnos cuenta.<br/>Crearemos una cartera personal, adaptada a tí, para gestionar tus finanzas personales, implementando, si se desea, nuevos conceptos sobre ₿itcoin, criptomonedas, o formas de inversión.<br/><br/><b>Nuevas tecnologías</b>: Buscando apoyar en la resolución de problemas informáticos, educando e implementando las nuevas tecnologías, para que puedas estar actualizad@ siempre y no te pierdas en la red.<br/><br/><b>Espíritu</b>: En la que buscamos recordarte a tí, como alma que transita este mundo, quién eres, o a qué pruebas te enfrentas ahora, mediante la lectura de tus chakras o una sesión de canalización <i>(hablando con tu alma)</i>.<br/><br/>Para empezar, revisa la <a class='selected' target='_self' href='#academy'>Academia</a> o la sección de <a class='selected' target='_self' href='#books'>Libros</a>.<br/><br/>Si lo deseas, ponte en contacto con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> y resuelve las dudas mediante una sesión individual y totalmente personalizada.",
         "topAppsTitle": "TOP APPS DEL MOMENTO"
       },
       "START": {
@@ -75,11 +71,11 @@
       "BOOKS": {
         "aboutBit": "El conocimiento al alcance de un clic.<br/><br/>Esta es tu <i>'₿itblioteca'</i>, donde encontrarás los libros más interesantes con contenido sobre ₿itcoin, blockchain, smart contracts, finanzas y gestión del dinero, trading, desarrollo de aplicaciones, y servicios relacionados con todo lo anterior.",
         "aboutAka": "El conocimiento al alcance de un clic.<br/><br/>Esta es tu <i>'biblioteca'</i>, donde encontrarás los libros más interesantes con contenido sobre espiritualidad, psicología, prácticas saludables, etc.",
-        "aboutOrigin": "<br/><br/>Los libros se han recopilado de diferentes fuentes por todo internet, y se almacenan en una cuenta de <a class='selected' href='https://mega.nz/aff=YvakZRq8M2Q' target='_blank'>Mega</a>, desde la que podrás visualizar y/o descargar los libros.<br/><br/><i>Si tras leerlos te han gustado, por favor, compra y mueve la economía aportando en aquello que para ti es de valor.</i>"
+        "aboutOrigin": "<br/>Los libros se han recopilado de diferentes fuentes por todo internet, y se almacenan en una cuenta de <a class='selected' href='https://mega.nz/aff=YvakZRq8M2Q' target='_blank'>Mega</a>, desde la que podrás visualizar y/o descargar los libros.<br/><br/><i>Si tras leerlos te han gustado, por favor, compra y mueve la economía aportando en aquello que para ti es de valor.</i>"
       },
       "CONTACT": {
-        "aboutBit": "¿Problemas con tu móvil u ordenador?<br/>¿Necesitas organizar tus finanzas pero no sabes por donde empezar?<br/><br/>Ponte en contacto con @CryptoShalix en las redes sociales o con el siguiente formulario de contacto y resuelve tus dudas o problemas relacionados con finanzas, criptomonedas, ₿itcoin, informática, o dispositivos móviles, todo de forma individual y totalmente personalizado.",
-        "aboutAka": "¿Sientes que hay un obstáculo en tu vida que te impide alcanzar tu paz interior?<br/><br/>Ponte en contacto con @CryptoShalix en las redes sociales o con el siguiente formulario de contacto y pregunta por una sesión de chakras o un registro akáshico, todo de forma individual y totalmente personalizado.",
+        "aboutBit": "¿Problemas con tu móvil u ordenador?<br/>¿Necesitas organizar tus finanzas pero no sabes por donde empezar?<br/><br/>Ponte en contacto con @CryptoShalix en las redes sociales o con el siguiente formulario de contacto y resuelve tus dudas o problemas relacionados con las finanzas <i>(gestión de cartera personal y/o de inversiones, ₿itcoin y otras criptomonedas, formas de ahorro, etc)</i>, o con las nuevas tecnologías, ya sean problemas de informática <i>(con tu ordenador)</i>, o dispositivos móviles, y todo de forma individual y totalmente personalizada.",
+        "aboutAka": "¿Sientes que hay un obstáculo en tu vida que te impide alcanzar tu paz interior?<br/><br/>Ponte en contacto con @CryptoShalix en las redes sociales o con el siguiente formulario de contacto y pregunta por una sesión de chakras o una sesión de canalización <i>(hablando con tu alma)</i>, todo de forma individual y totalmente personalizado.",
         "email": "Email",
         "emailHelp": "Los datos de contacto indicados NO serán compartidos ni almacenados.",
         "nickname": "Nombre/Apodo",
@@ -232,6 +228,14 @@
         "gameBitcoinMinerTitle": "¡Un idle game que te paga!",
         "gameBitcoinMinerDescription": "Construye tu propia fábrica minera de ₿itcoin y otras criptomonedas, y recibe sats por hacerla crecer y evolucionar.<br/><center><b>¡RECOMPENSAS GRATIS!</b></center>Usa este referido en amigos: RYXADE"
       }
+    },
+    "SENTENCES": {
+      "appSentenceCom1": "La persona que seas en el futuro será el resultado de las decisiones que tomes hoy mismo",
+      "appSentenceCom2": "La envidia es una pérdida de tiempo. Tu ya tienes todo lo que necesitas",
+      "appSentenceBit1": "Despierta el ₿it y toma las riendas de tu vida para hacer crecer tu abundancia financiera",
+      "appSentenceBit2": "El hombre que sabe gastar y ahorrar es el más feliz, porque disfruta de ambas cosas",
+      "appSentenceAka1": "Libérate de todo aquello que esté bloqueando tu vida",
+      "appSentenceAka2": "Escucha a tu corazón. Él conoce todas las cosas, porque vino del Alma del Mundo y un día retornará a ella."
     },
     "STRINGS": {
       "anonymous": "Anónimo",

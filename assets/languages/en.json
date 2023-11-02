@@ -24,7 +24,6 @@
       "games": "Games",
       "home": "Home",
       "portfolio": "Portfolio",
-      "security": "Security",
       "tools": "Tools",
       "finances": "Finances"
     },
@@ -41,7 +40,7 @@
     },
     "PAGES": {
       "MAIN": {
-        "about": "BitAkashico is presented as the main project of <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Differentiating two parts with the same purpose: <i><b><u>help</u></b></i>.<br/><br/><b>Matter</b>: In which The aim is to support financial education (₿itcoin, cryptocurrencies, personal finance management, etc.) and the resolution of problems with computing, whether mobile phones or computers.<br/><br/><b>Spirit</b>: In which we seek to remind you, as a soul that transits this world, who you are, or what trials you face now, through reading your chakras or a channeling session <i>(talking to your soul)</i>.<br/><br/>To get started, check out the <a class='selected' target='_self' href='#academy'>Academy</a> or the <a class='selected' target='_self' href='#books'>Books</a> section.<br/><br/>If you wish, please contact @CryptoShalix through <a class='selected' target='_self' href='#contact'>contact form</a> and resolve your doubts through an individual and totally personalized session.",
+        "about": "BitAkashico is presented as the main project of <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Differentiating three parts with the same purpose: <i><b><u>help</u></b></i>.<br/><br/><b>Finances</b>: In which the aim is to support financial education, with concepts and new ways of managing and using money, making it grow without hardly realizing it.<br/>We will create a personal portfolio, adapted to you, to manage your personal finances, implementing, if desired, new concepts about ₿itcoin, cryptocurrencies, or forms of investment.<br/><br/><b>New technologies</b>: Seeking to support the resolution of computer problems, educating and implementing new technologies, so that you can always be updated and do not get lost in the network.<br/><br/><b>Spirit</b>: In which we seek to remember you, as a soul that travels this world, who you are, or what trials you are facing now, through reading your chakras or a channeling session <i>(talking to your soul)</i>.<br/><br/>To get started, review the < a class='selected' target='_self' href='#academy'>Academy</a> or the <a class='selected' target='_self' href='#books'>Books</a> section.<br/><br/>If you wish, contact @CryptoShalix through the <a class='selected' target='_self' href='#contact'>contact form</a> and resolve doubts through an individual and totally personalized meeting.",
         "topAppsTitle": "TOP APPS OF THE MOMENT"
       },
       "START": {
@@ -73,7 +72,7 @@
       "BOOKS": {
         "aboutBit": "Knowledge within reach of a click.<br/><br/>This is your <i>'₿itlibrary'</i>, where you will find the most interesting books with content on ₿itcoin, blockchain, smart contracts, finance and money management, trading, application development, and services related to all of the above.",
         "aboutAka": "Knowledge within reach of a click.<br/><br/>This is your <i>'library'</i>, where you will find the most interesting books with content on spirituality, psychology, healthy practices, etc.",
-        "aboutOrigin": "<br/><br/>The books have been collected from different sources all over the internet, and are stored in a <a class='selected' href='https://mega.nz/aff=YvakZRq8M2Q' target='_blank'>Mega</a> account, from which you can view and/or download the books.<br/><br/><i>If after reading them you liked them, please buy and move the economy by contributing to what is of value to you.</i>"
+        "aboutOrigin": "<br/>The books have been collected from different sources all over the internet, and are stored in a <a class='selected' href='https://mega.nz/aff=YvakZRq8M2Q' target='_blank'>Mega</a> account, from which you can view and/or download the books.<br/><br/><i>If after reading them you liked them, please buy and move the economy by contributing to what is of value to you.</i>"
       },
       "CONTACT": {
         "aboutBit": "Problems with your mobile or computer?<br/>Do you need to organize your finances but don't know where to start?<br/><br/>Get in touch with @CryptoShalix on social networks or with the following contact form and solve your doubts or problems related to finances, cryptocurrencies, ₿itcoin, computing, or mobile devices, all individually and totally personalized.",
