@@ -6,6 +6,7 @@ import { CoreService } from '../../shared/services/core.service';
 import { DBService } from 'src/app/shared/services/db.service';
 
 import { IGalleryItem, IGalleryTitle, IGalleryTitleType } from 'src/app/shared/components/gallery/gallery.model';
+import { StorageService } from 'src/app/shared/services/storage.service';
 @Component({
   selector: 'app-books-page',
   templateUrl: './books-page.component.html',
@@ -19,11 +20,18 @@ export class BooksPageComponent implements OnInit {
 
   constructor(
     private coreService: CoreService,
+    private storageService: StorageService,
     private dbService: DBService
   ) { }
 
   async ngOnInit(): Promise<void> {
-    this.IS_BIT_SIDE = this.coreService.isAppSidebit();
+    this.storageService.appSide$.subscribe(() => {
+      this.IS_BIT_SIDE = this.coreService.isAppSidebit();
+      this.getData();
+    });
+  }
+
+  private async getData() {
     this._galleryTitle = {
       titleLogo: this.IS_BIT_SIDE ? '₿' : IMAGES.LOGO_AKASHICO,
       titleText: this.IS_BIT_SIDE ? 'BIT' : 'AKASHICO',

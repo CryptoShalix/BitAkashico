@@ -198,7 +198,7 @@
   .menu-nav-container {
     position: fixed;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
@@ -216,6 +216,42 @@
     &.animate {
       animation: slide-in 1s ease;
       left: 0;
+    }
+
+    .menu-nav-toggle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 300px;
+      height: 100%;
+      max-height: 100px;
+      cursor: pointer;
+
+      span {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0.5em 0;
+        font-size: 2em;
+        text-transform: uppercase;
+        color: $global-link-color;
+        transition: all 1s ease-in-out;
+
+        &.selected {
+          font-size: 4em;
+          color: $global-link-color-hover;
+          border-top: 2px solid #edc16c;
+          border-bottom: 2px solid #edc16c;
+          transition: all 1s ease-in-out;
+        }
+
+        &:hover:not(.selected) {
+          background: $btn-background;
+          color: $btn-text;
+          transition: all 1s ease-in-out;
+        }
+      }
     }
 
     .menu-nav-controls {

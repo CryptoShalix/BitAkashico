@@ -1,13 +1,11 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { map, Subscription, timer } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { CoreService } from './shared/services/core.service';
 import { TranslateService } from './shared/services/translate.service';
 import { StorageService } from './shared/services/storage.service';
-import { CoingeckoService } from './shared/services/coingecko.service';
 
-import { Coin, ECoinFormat, ECurrency } from './shared/models/currency';
+import { ECurrency } from './shared/models/currency';
 import {
   ELinkableIcon,
   ELinkableIconType,
@@ -43,16 +41,11 @@ import { IMAGES } from 'src/assets/images/images';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit {
   APP_SIDE: number;
   IS_BIT_SITE = false;
-  LOGO_IMG = IMAGES.HOME_IMG;
+  IMAGE_LOGO = IMAGES.HOME_IMG;
   title = ELinkableIcon.Home;
-
-  private timerSubscription: Subscription;
-  private callTiming = 60;
-  coinFormat = ECoinFormat.INFO;
-  coinBitcoin: Coin;
 
   currency = ECurrency.EUR;
   showContainerDonations = false;
@@ -71,17 +64,12 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(
     private coreService: CoreService,
     private translateService: TranslateService,
-    private coingeckoService: CoingeckoService,
     private storageService: StorageService,
     private router: Router
   ) { }
 
   ngOnInit(): void {
     this.prepareAppSide();
-  }
-
-  ngOnDestroy(): void {
-    this.timerSubscription.unsubscribe();
   }
 
   private prepareAppSide() {
@@ -91,7 +79,6 @@ export class AppComponent implements OnInit, OnDestroy {
         this.IS_BIT_SITE = this.APP_SIDE === 1;
         this.prepareMenu();
         this.prepareData();
-        // this.getCoinData();
       }
     });
   }
@@ -138,18 +125,10 @@ export class AppComponent implements OnInit, OnDestroy {
     this.coreService.setDefaultCurrency(ECurrency.USD);
   }
 
-  private async getCoinData(): Promise<void> {
-    this.timerSubscription = timer(0, this.callTiming * 1000).pipe(map(async () => {
-      const coins = await this.coingeckoService.getCoins(this.currency, 1, 1, false, false);
-      this.coinBitcoin = coins[0];
-    })).subscribe();
-  }
-
   onToggleSide() {
     const _appSide = this.storageService.isAppSideBit();
     this.storageService.setAppSide(_appSide ? 2 : 1);
-    this.coreService.redirectTo();
-    this.showMenu = true;
+    this.showMenu = false;
   }
 
   onChangeLanguage(): void {

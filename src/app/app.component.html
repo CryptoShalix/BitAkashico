@@ -25,12 +25,12 @@
 
           <div
             class="menu-toggle-side tooltip"
-            (click)="onToggleSide()"
+            (click)="showMenu = true"
           >
             <span class="tooltip-label">{{ 'MSG.appSideChoose' | translate | uppercase }}</span>
             <img
               class="menu-toggle-side-logo"
-              [src]="LOGO_IMG"
+              [src]="IMAGE_LOGO"
               [alt]="title"
               title="{{title}}"
             >
@@ -65,12 +65,20 @@
       class="menu-nav-container"
       [ngClass]="{'animate': showMenu}"
     >
+      <div
+        class="menu-nav-toggle"
+        (click)="onToggleSide()"
+      >
+        <span [ngClass]="{'selected': IS_BIT_SITE}">Bit</span>
+        <span [ngClass]="{'selected': !IS_BIT_SITE}">Akashico</span>
+      </div>
+
       <div class="menu-nav-controls">
         <app-linkable-icon
           class="menu-nav-control"
           *ngFor="let iconMenu of iconListMenu"
           [sDefaultIcon]="iconMenu"
-          (click)="showMenu=!showMenu"
+          (click)="showMenu = false"
         ></app-linkable-icon>
       </div>
     </div>

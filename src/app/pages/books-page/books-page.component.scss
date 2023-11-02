@@ -6,4 +6,8 @@
   text-align: justify;
   line-height: 30px;
   letter-spacing: 1px;
+
+  .content-about {
+    flex-direction: column;
+  }
 }

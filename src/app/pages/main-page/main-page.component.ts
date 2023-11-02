@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { DBService } from 'src/app/shared/services/db.service';
 import { StorageService } from '../../shared/services/storage.service';
 
-import { ELinkableIcon, LinkableIcon } from 'src/app/shared/components/linkable-icon/linkable-icon';
+import { LinkableIcon } from 'src/app/shared/components/linkable-icon/linkable-icon';
 
 @Component({
   selector: 'app-main-page',
@@ -16,7 +16,6 @@ export class MainPageComponent implements OnInit {
 
   IS_BIT_SITE: boolean = false;
   APP_SENTENCE: string = '';
-  iconListMedia: LinkableIcon[];
   iconListTopApps: LinkableIcon[];
 
   constructor(
@@ -30,19 +29,11 @@ export class MainPageComponent implements OnInit {
       if (this.storageService.hasAppSide()) {
         this.IS_BIT_SITE = this.APP_SIDE === 1;
         this.APP_SENTENCE = this.getAppSentence();
-        // this.prepareIconListMedia();
         if (this.IS_BIT_SITE) {
           this.prepareIconListTopApps();
         }
       }
     });
-  }
-
-  private prepareIconListMedia(): void {
-    this.iconListMedia = [];
-    this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Discord));
-    this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Telegram));
-    this.iconListMedia.push(new LinkableIcon(ELinkableIcon.Youtube));
   }
 
   private prepareIconListTopApps(): void {
@@ -54,12 +45,22 @@ export class MainPageComponent implements OnInit {
   }
 
   getAppSentence() {
-    let msg = 'MSG.';
-    if (this.APP_SIDE === 1) {
-      msg += 'appSentenceBit' + (Math.random() + 1).toFixed(0);
-    } else if (this.APP_SIDE === 2) {
-      msg += 'appSentenceAka';
+    let msg = 'SENTENCES.';
+    const _random = this.random(2);
+    if (parseInt(_random) > 2) {
+      msg += 'appSentenceCom' + this.random();
+    } else {
+      if (this.APP_SIDE === 1) {
+        msg += 'appSentenceBit' + this.random();
+      } else if (this.APP_SIDE === 2) {
+        msg += 'appSentenceAka' + this.random();
+      }
     }
     return msg;
   }
+
+  /**
+   * @returns Get a random number between 1 and 2
+   */
+  private random = (_num: number = 1) => (Math.random() + _num).toFixed(0);
 }
