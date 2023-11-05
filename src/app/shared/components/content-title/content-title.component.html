@@ -1,0 +1,16 @@
+<div
+  class="content-title"
+  [ngClass]="{'bit': IS_BIT_SIDE}"
+>
+  <ng-container *ngIf="IS_BIT_SIDE; else templateTitleAkashico">
+    <mat-icon class="content-title-logo">{{ TITLE_LOGO }}</mat-icon>
+  </ng-container>
+  <ng-template #templateTitleAkashico>
+    <img
+      class="content-title-logo"
+      [src]="TITLE_LOGO"
+      title="{{TITLE_TEXT}}"
+    >
+  </ng-template>
+  <span [innerHTML]="TITLE_TEXT | translate | safe:'html'"></span>
+</div>

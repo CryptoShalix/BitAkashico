@@ -1,22 +1,4 @@
 <div class="content-books">
-  <div
-    class="content-books-title"
-    [ngClass]="{'bit': TITLE_BACK_DARK}"
-  >
-    <ng-container *ngIf="TITLE_TYPE_IMG else templateTitleAkashico">
-      <mat-icon class="content-books-title-logo">{{ TITLE_LOGO }}</mat-icon>
-    </ng-container>
-    <ng-template #templateTitleAkashico>
-      <img
-        class="content-books-title-logo"
-        [src]="TITLE_LOGO"
-        [alt]="TITLE_TEXT"
-        title="{{TITLE_TEXT}}"
-      >
-    </ng-template>
-    <span>{{ TITLE_TEXT }}</span>
-  </div>
-
   <div class="content-books-list">
     <div
       class="book-container"

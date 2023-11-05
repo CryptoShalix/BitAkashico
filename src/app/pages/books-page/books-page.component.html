@@ -1,13 +1,10 @@
 <div class="content">
 
   <div class="content-about">
+    <app-content-title [setTitle]="TITLE_TEXT"></app-content-title>
     <span [innerHTML]="(getAboutTextBySide() | translate) | safe:'html'"></span>
     <span [innerHTML]="('PAGES.BOOKS.aboutOrigin' | translate) | safe:'html'"></span>
   </div>
 
-  <app-gallery
-    [setTitle]="_galleryTitle"
-    [setList]="_galleryBooks"
-  ></app-gallery>
-
+  <app-gallery [setList]="_galleryBooks"></app-gallery>
 </div>

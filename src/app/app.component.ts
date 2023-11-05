@@ -50,6 +50,7 @@ export class AppComponent implements OnInit {
   currency = ECurrency.EUR;
   showContainerDonations = false;
   showMenu = false;
+  showMenuAsLogo = true;
 
   iconListMenu: LinkableIcon[] = [];
 
@@ -69,18 +70,18 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.prepareAppSide();
+    this.storageService.appSide$.subscribe(appSide => {
+      this.APP_SIDE = appSide;
+      this.prepareAppSide();
+    });
   }
 
   private prepareAppSide() {
-    this.storageService.appSide$.subscribe(appSide => {
-      this.APP_SIDE = appSide;
-      if (this.storageService.hasAppSide()) {
-        this.IS_BIT_SITE = this.APP_SIDE === 1;
-        this.prepareMenu();
-        this.prepareData();
-      }
-    });
+    if (this.storageService.hasAppSide()) {
+      this.IS_BIT_SITE = this.APP_SIDE === 1;
+      this.prepareMenu();
+      this.prepareData();
+    }
   }
 
   private prepareMenu(): void {

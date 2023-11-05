@@ -32,15 +32,19 @@
       "clickToCopy": "Click on the text or image to copy to clipboard",
       "appSideChoose": "Choose your side",
       "appSideChooseMobile": "Try clicking on a color",
-      "appSentenceBit1": "Wake up the ₿it and take control of your life",
-      "appSentenceBit2": "The person you are in the future will be the result of the decisions you make today.",
-      "appSentenceAka": "Get rid of everything that is blocking your life",
       "appCredits": "BitAkashico is an original idea of <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>",
       "appRightsReserved": "All rights reserved"
     },
     "PAGES": {
       "MAIN": {
-        "about": "BitAkashico is presented as the main project of <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>.<br/><br/>Differentiating three parts with the same purpose: <i><b><u>help</u></b></i>.<br/><br/><b>Finances</b>: In which the aim is to support financial education, with concepts and new ways of managing and using money, making it grow without hardly realizing it.<br/>We will create a personal portfolio, adapted to you, to manage your personal finances, implementing, if desired, new concepts about ₿itcoin, cryptocurrencies, or forms of investment.<br/><br/><b>New technologies</b>: Seeking to support the resolution of computer problems, educating and implementing new technologies, so that you can always be updated and do not get lost in the network.<br/><br/><b>Spirit</b>: In which we seek to remember you, as a soul that travels this world, who you are, or what trials you are facing now, through reading your chakras or a channeling session <i>(talking to your soul)</i>.<br/><br/>To get started, review the < a class='selected' target='_self' href='#academy'>Academy</a> or the <a class='selected' target='_self' href='#books'>Books</a> section.<br/><br/>If you wish, contact @CryptoShalix through the <a class='selected' target='_self' href='#contact'>contact form</a> and resolve doubts through an individual and totally personalized meeting.",
+        "aboutMeTitle": "Who is CryptoShalix? What is the reason for that nickname?",
+        "aboutMe": "CryptoShalix comes from the union of the words <i>Crypto</i>, short for cryptography, and <i>Shalix</i>, a nickname that was born as a teenager.<br/><br/>Cryptography is applied both for computer issues <i>(such as generating passwords)</i> and for <b><i>de-encrypting</i></b> the messages received when performing channeling <i>(soul readings)</i>",
+        "aboutProjectTitle": "What is <i>BitAkashico</i>? What am I going to receive?",
+        "aboutProject": "BitAkashico is presented as the main project of <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>, and aspires to become the place where we can find the necessary tools to understand ourselves <i>(Akasha)</i> and the digital and financial world that changes so much <i>(Bit)</i>.<br/><br/>To do this, <a class='selected' target='_self' href='#contact'>direct contact</a> is facilitated, so that it is easy to receive help or advice in any of the fields in which we work.<br/><br/>Thus, we differentiate three parts with the same purpose: <i><b><u>help</u></b></i>.<br/><br/><b>Finances</b>: In which the aim is to support financial education, with concepts and new ways of managing and using money, making it grow without hardly realizing it.<br/><i>We will create a personal portfolio, adapted to you, to manage your personal finances, implementing, if desired, new concepts about ₿itcoin, cryptocurrencies, or forms of investment.</i><br/><br/><b>New technologies</b>: Seeking to support in the resolution of computer problems, whether by advising, educating or implementing tools and improvements on these new technologies, so that you can always be updated and do not get lost on the network.<br/><br/><b>Spirit</b>: In which we seek to remember you, as a soul that travels this world, who you are, or what trials you are facing now, through reading your chakras or a channeling session <i>(talking to your soul)</i>.",
+        "howMuchTitle": "How much does each service cost?",
+        "howMuch": "All services <i>(finance, new technologies and spirit)</i> are offered through <b>exchange</b>, that is, you can offer me a service, a product that you make yourself, the equivalent of €10 in any financial asset <i>(estimated minimum price)</i>, or even invite me to a meal.<br/><br/>If the service in question requires a longer process, or is more complex to carry out, the price will be assessed accordingly. <b><i>Always without obligation and warning in advance.</i></b>",
+        "howToStartTitle": "Where do I begin?",
+        "howToStart": "To get started, check out the <a class='selected' target='_self' href='#academy'>Academy</a> or the <a class='selected' target='_self' href='#books'>Books</a> section.<br/><br/>If you wish, please contact @CryptoShalix using the <a class='selected' target='_self' href='#contact'>contact form</a> or the social networks shown below, and resolve doubts through an individual and totally personalized meeting.",
         "topAppsTitle": "TOP APPS OF THE MOMENT"
       },
       "START": {
@@ -48,6 +52,8 @@
         "about-aka": "Do you feel that there is an obstacle in your life that prevents you from reaching your inner peace?<br/>Enter, and we will seek to remind you, as a soul that transits this world, who you are, or what tests you are facing now, by reading your chakras and/or a channeling session (talking to your soul)."
       },
       "ACADEMY": {
+        "titleBit": "<i>₿IT</i>-ACADEMY",
+        "titleAka": "<i>AKA</i>-DEMY",
         "BIT": {
           "about": "If you are looking to learn about computing, finance, ₿itcoin and privacy, you have at your disposal one-on-one and fully personalized private consulting with @CryptoShalix through <a class='selected' target='_self' href='#contact'>contact form</a>, as well as training videos explaining everything related to online privacy, trading and finance, and, of course, ₿itcoin and other cryptocurrencies, on the <a class='selected' target='_blank' href='https://www.youtube.com/@BitAkashico'>Youtube</a> channel.<br/><br/>Here you can see the learning levels that we recommend to fall into the rabbit hole of ₿itcoin and see the world properly.<br/>",
           "STEP_1": {
@@ -64,19 +70,21 @@
           }
         },
         "AKASHICO": {
-          "about": "Throughout our lives, we find ourselves faced with blockages, fears, and concerns that prevent us from concentrating well, or that hinder us and prevent us from moving forward.<br/><br/>Through conversations in which we listen to our hearts, through an individual or group session, we connect and discover our inner being.<br/><br/>Although we can carry out other activities to focus or <i>disconnect</i> from day to day, with a session of channeling <i>(talking to your soul)</i>, we will be able to see our inner world (Akasha) and ask about what we really want to resolve or 'remember'.<br/><br/>Also, although only in person, we can discover the current state of our chakras.<br/><br/>Request a session with @CryptoShalix through the <a class='selected' target='_self' href='#contact'>contact form</a> and ask without fear to participate in an online or in-person meeting.",
-          "akademy": "In the <a class='selected' target='_self' href='#books'>books</a> section you will find the knowledge compiled over the years by various authors that, at BitAkashico, we consider essential to read.<br/><br/>You can also contact CryptoShalix using the <a class='selected' target='_self' href='#contact'>contact form</a> and, in a group or individual session, learn by sharing experiences and moments.",
+          "about": "Throughout our lives, we find ourselves faced with blockages, fears, and concerns that prevent us from concentrating well, or that hinder us and prevent us from moving forward.<br/><br/>Through conversations in which we listen to our hearts, through an individual or group session, we connect and discover our inner being.<br/><br/>Although we can carry out other activities to focus or <i>disconnect</i> from day to day, with a session of channeling <i>(talking to your soul)</i>, we will be able to see our inner world (Akasha) and ask about what we really want to resolve or 'remember'.<br/><br/>Also, although only in person, we can discover the current state of our chakras.<br/><br/>Request a session with @CryptoShalix through the <a class='selected' target='_self' href='#contact'>contact form</a> and ask without fear to participate in an online or in-person meeting, whether in a group or individual session, to learn by sharing experiences and moments.<br/><br/>In the <a class='selected' target='_self' href='#books'>books</a> section you will find the knowledge compiled over the years by various authors that, at BitAkashico, we consider essential to read.",
+          "testimonialsTitle": "Testimonials",
           "testimonials": "We leave you here some testimonials that have already tried CryptoShalix services."
         }
       },
       "BOOKS": {
+        "titleBit": "<i>₿it</i>-brary (Library)",
+        "titleAka": "Akasha (Library)",
         "aboutBit": "Knowledge within reach of a click.<br/><br/>This is your <i>'₿itlibrary'</i>, where you will find the most interesting books with content on ₿itcoin, blockchain, smart contracts, finance and money management, trading, application development, and services related to all of the above.",
         "aboutAka": "Knowledge within reach of a click.<br/><br/>This is your <i>'library'</i>, where you will find the most interesting books with content on spirituality, psychology, healthy practices, etc.",
         "aboutOrigin": "<br/>The books have been collected from different sources all over the internet, and are stored in a <a class='selected' href='https://mega.nz/aff=YvakZRq8M2Q' target='_blank'>Mega</a> account, from which you can view and/or download the books.<br/><br/><i>If after reading them you liked them, please buy and move the economy by contributing to what is of value to you.</i>"
       },
       "CONTACT": {
-        "aboutBit": "Problems with your mobile or computer?<br/>Do you need to organize your finances but don't know where to start?<br/><br/>Get in touch with @CryptoShalix on social networks or with the following contact form and solve your doubts or problems related to finances, cryptocurrencies, ₿itcoin, computing, or mobile devices, all individually and totally personalized.",
-        "aboutAka": "Do you feel that there is an obstacle in your life that prevents you from reaching your inner peace?<br/><br/>Get in touch with @CryptoShalix on social networks or with the following contact form and ask for a chakra session or an akashic record, all individually and totally personalized.",
+        "aboutBit": "<i>Problems with your mobile or computer?</i><br/><i>Do you need to organize your finances but don't know where to start?</i><br/><br/>Get in touch with @CryptoShalix on social networks or with the following contact form and solve your doubts or problems related to finances, cryptocurrencies, ₿itcoin, computing, or mobile devices, all individually and totally personalized.",
+        "aboutAka": "<i>Do you feel that there is an obstacle in your life that prevents you from reaching your inner peace?</i><br/><br/>Get in touch with @CryptoShalix on social networks or with the following contact form and ask for a chakra session or an akashic record, all individually and totally personalized.",
         "email": "Email",
         "emailHelp": "The indicated contact details will NOT be shared or stored.",
         "nickname": "Name/Nickname",
@@ -230,6 +238,14 @@
         "gameBitcoinMinerTitle": "An idle game that pays you!",
         "gameBitcoinMinerDescription": "Build your own mining factory, and receive sats for making it grow and evolve.<br/><center><b>¡FREE REWARDS!</b></center>Use this referral in friends tab: RYXADE"
       }
+    },
+    "SENTENCES": {
+      "appSentenceCom1": "The person you are in the future will be the result of the decisions you make today",
+      "appSentenceCom2": "Envy is a waste of time<br/>You already have everything you need",
+      "appSentenceBit1": "Awaken the ₿it and take control of your life to grow your financial abundance",
+      "appSentenceBit2": "The man who knows how to spend and save is the happiest, because he enjoys both things",
+      "appSentenceAka1": "Free yourself from everything that is blocking your life",
+      "appSentenceAka2": "Listen to your heart<br/>He knows all things, because he came from the soul of the world and one day he will return to it"
     },
     "STRINGS": {
       "anonymous": "Anonymous",

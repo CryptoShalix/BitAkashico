@@ -34,7 +34,7 @@
     background: $background-sentence-back;
 
     span {
-      max-width: 300px;
+      max-width: 75%;
       line-height: 3em;
       text-align: center;
       font-size: 2em;
@@ -42,6 +42,17 @@
       text-transform: uppercase;
       font-family: 'Bookman Old Style';
       color: $background-sentence-text;
+    }
+  }
+}
+
+/* RESPONSIVE STYLES */
+@media screen and (max-width: 1256px) {
+  .back-sentence-container {
+    .back-sentence-content {
+      span {
+        font-size: 1.5em;
+      }
     }
   }
 }

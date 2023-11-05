@@ -9,6 +9,7 @@ import { StorageService } from 'src/app/shared/services/storage.service';
 })
 export class ContactPageComponent implements OnInit {
   private IS_BIT_SIDE = true;
+  TITLE_TEXT = 'MENU.contact';
 
   constructor(
     private coreService: CoreService,

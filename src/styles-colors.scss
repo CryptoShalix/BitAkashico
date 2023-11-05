@@ -19,10 +19,15 @@ $background-sentence-back: rgba($color-primary-1, .35);
 $background-sentence-text: $color-secondary-1;
 
 // TOOLBAR
-$toolbar-background: rgba($color-primary-1, .75);
+$toolbar-background-bit: rgba($color-primary-1, .75);
+$toolbar-background-aka: rgba($color-special-1, .95);
 $toolbar-background-full: $color-primary-1;
-$toolbar-border-color: $color-special-1;
-$toolbar-text: $color-secondary-1;
+$toolbar-border-color-bit: $color-special-1;
+$toolbar-border-color-aka: $color-primary-1;
+$toolbar-text-bit: $color-secondary-1;
+$toolbar-text-bit-hover: $color-special-1;
+$toolbar-text-aka: $color-primary-3;
+$toolbar-text-aka-hover: $color-primary-1;
 
 // MESSAGE MANAGER
 $msg-container-text: $color-primary-2;

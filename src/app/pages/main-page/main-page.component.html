@@ -6,20 +6,24 @@
       }"
 >
   <div class="back-sentence-content">
-    <span>{{ APP_SENTENCE | translate }}</span>
+    <span [innerHTML]="APP_SENTENCE | translate | safe:'html'"></span>
   </div>
 </div>
 
 <div class="content">
 
   <div class="content-about">
-    <span [innerHTML]="('PAGES.MAIN.about' | translate) | safe:'html'"></span>
+    <span
+      *ngFor="let item of mainPageContent"
+      [ngClass]="{'title hover-border': item.isTitle}"
+      [innerHTML]="(item.text | translate) | safe:'html'"
+    ></span>
   </div>
 
   <app-linkable-icon-container></app-linkable-icon-container>
 
   <app-linkable-icon-container
-    *ngIf="iconListTopApps"
+    *ngIf="iconListTopApps.length > 0"
     [setTitle]="'PAGES.MAIN.topAppsTitle'"
     [setList]="iconListTopApps"
   ></app-linkable-icon-container>

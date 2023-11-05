@@ -1,26 +1,9 @@
 <div class="content">
 
-  <div class="content-about">
-    <span [innerHTML]="(getAboutTextBySide() | translate) | safe:'html'"></span>
-  </div>
-
   <div class="content-academy">
-    <div
-      class="content-academy-title"
-      [ngClass]="{'bit': IS_BIT_SIDE}"
-    >
-      <ng-container *ngIf="IS_BIT_SIDE; else templateTitleAkashico">
-        <mat-icon class="content-academy-title-logo">{{ TITLE_LOGO }}</mat-icon>
-      </ng-container>
-      <ng-template #templateTitleAkashico>
-        <img
-          class="content-academy-title-logo"
-          [src]="TITLE_LOGO"
-          title="{{TITLE_TEXT}}"
-        >
-      </ng-template>
-      <span>{{ TITLE_TEXT }}</span>
-    </div>
+    <app-content-title [setTitle]="TITLE_TEXT"></app-content-title>
+
+    <span [innerHTML]="(getAboutTextBySide() | translate) | safe:'html'"></span>
 
     <ng-container
       *ngIf="IS_BIT_SIDE"
@@ -80,10 +63,13 @@
 </ng-template>
 
 <ng-template #templateAkademy>
-  <span [innerHTML]="(getAkademyText() | translate) | safe:'html'"></span>
-
   <div class="container-testimonials">
+    <span
+      class="title hover-border"
+      [innerHTML]="(getAkademyTestimonialsTextTitle() | translate) | safe:'html'"
+    ></span>
     <span [innerHTML]="(getAkademyTestimonialsText() | translate) | safe:'html'"></span>
+
     <div
       *ngFor="let testimonial of testimonials"
       class="testimonial"

@@ -8,6 +8,7 @@ import { PipesModule } from './shared/pipes/pipes.module';
 import { AccordionComponent } from './shared/components/accordion/accordion.component';
 // import { CarouselComponent } from './shared/components/carousel/carousel.component';
 import { CoinComponent } from './shared/components/coin-info/coin-info.component';
+import { ContentTitleComponent } from './shared/components/content-title/content-title.component';
 import { ContactFormComponent } from './shared/components/contact-form/contact-form.component';
 import { CustomImageComponent } from './shared/components/custom-image/custom-image.component';
 import { HistoryMoneyComponent } from './shared/components/history-money/history-money.component';
@@ -26,6 +27,7 @@ import { GalleryComponent } from './shared/components/gallery/gallery.component'
     AccordionComponent,
     // CarouselComponent,
     CoinComponent,
+    ContentTitleComponent,
     ContactFormComponent,
     CustomImageComponent,
     DonationsComponent,
@@ -50,6 +52,7 @@ import { GalleryComponent } from './shared/components/gallery/gallery.component'
     AccordionComponent,
     // CarouselComponent,
     CoinComponent,
+    ContentTitleComponent,
     ContactFormComponent,
     CustomImageComponent,
     DonationsComponent,

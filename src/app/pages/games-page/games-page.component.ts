@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { Platform } from '@angular/cdk/platform';
 
-import { ICardGame } from 'src/app/shared/components/linkable-icon/linkable-icon';
 import { IMAGES } from 'src/assets/images/images';
 
+import { StorageService } from 'src/app/shared/services/storage.service';
 import { DBService } from 'src/app/shared/services/db.service';
 
-import { Platform } from '@angular/cdk/platform';
+import { ICardGame } from 'src/app/shared/components/linkable-icon/linkable-icon';
 import { IAccordion, URLS } from 'src/app/shared/models/core';
 
 @Component({
@@ -14,6 +15,7 @@ import { IAccordion, URLS } from 'src/app/shared/models/core';
   styleUrls: ['./games-page.component.scss']
 })
 export class GamesPageComponent implements OnInit {
+  TITLE_TEXT = 'MENU.games';
   gamesList: ICardGame[] = [];
   walletsList: IAccordion[] = [];
 
@@ -25,13 +27,17 @@ export class GamesPageComponent implements OnInit {
   noImage = IMAGES.NO_IMAGE;
 
   constructor(
+    private storageService: StorageService,
     private dbService: DBService,
     private platform: Platform
   ) { }
 
   ngOnInit(): void {
-    this.prepareGames();
-    this.prepareWallets();
+    this.storageService.setAppSide(1);
+    this.storageService.appSide$.subscribe(() => {
+      this.prepareGames();
+      this.prepareWallets();
+    });
   }
 
   private prepareGames(): void {

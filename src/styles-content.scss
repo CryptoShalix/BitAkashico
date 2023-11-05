@@ -36,10 +36,32 @@
     padding: 0;
     justify-content: center;
     align-items: center;
-    color: $toolbar-text;
-    background-color: $toolbar-background;
-    border-bottom: 2px solid $toolbar-border-color;
+    border-bottom: 2px solid transparent;
     z-index: 1;
+
+    &.bit {
+      color: $toolbar-text-bit;
+      background-color: $toolbar-background-bit;
+      border-color: $toolbar-border-color-bit;
+
+      :hover {
+        color: $toolbar-text-bit-hover;
+      }
+    }
+
+    &.aka {
+      color: $toolbar-text-aka;
+      background-color: $toolbar-background-aka;
+      border-color: $toolbar-border-color-aka;
+
+      .menu-nav:hover .menu-nav-logo,
+      .menu-nav:hover .menu-nav-button,
+      .menu-nav:hover .menu-nav-breadcrumb,
+      :hover {
+        color: $toolbar-text-aka-hover !important;
+        border-color: $toolbar-text-aka-hover !important;
+      }
+    }
 
     .menu-top {
       position: relative;
@@ -76,7 +98,7 @@
       cursor: pointer;
 
       &:hover {
-        color: $toolbar-border-color;
+        color: $toolbar-border-color-bit;
       }
 
       .mat-icon {
@@ -105,9 +127,9 @@
     font-size: .5em;
     font-weight: 550;
     font-style: italic;
-    color: $toolbar-text;
+    color: $toolbar-text-bit;
     background: $toolbar-background-full;
-    border-top: 2px solid $toolbar-border-color;
+    border-top: 2px solid $toolbar-border-color-bit;
     z-index: 1;
 
     a,
@@ -154,6 +176,7 @@
 
     &:hover {
 
+      .menu-nav-logo,
       .menu-nav-button,
       .menu-nav-breadcrumb {
         color: $menu-color-hover;
@@ -164,6 +187,7 @@
       }
     }
 
+    .menu-nav-logo,
     .menu-nav-button {
       position: relative;
       display: flex;
@@ -175,6 +199,16 @@
       align-items: center;
       font-size: 25px;
       color: $menu-color;
+      user-select: none;
+    }
+
+    .menu-nav-logo {
+      margin: 0 10px;
+
+      img.menu-toggle-side-logo {
+        width: 40px;
+        height: 40px;
+      }
     }
 
     .menu-nav-breadcrumb {
@@ -183,7 +217,6 @@
       justify-content: flex-start;
       flex-wrap: nowrap;
       width: 100%;
-      max-width: 100px;
       height: 100%;
       min-height: 40px;
       padding: 0px;
@@ -203,11 +236,11 @@
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    height: calc(100vh - 50px);
+    height: 100%;
     min-height: 50%;
     padding: 0;
-    color: $toolbar-text;
-    background: $toolbar-background;
+    color: $toolbar-text-bit;
+    background: $toolbar-background-bit;
     animation: slide-out 1s ease;
     top: 50px;
     left: -100%;
@@ -268,7 +301,7 @@
       align-items: center;
 
       .menu-nav-control {
-        margin: 0;
+        margin: .25rem 0;
       }
     }
   }
@@ -288,6 +321,65 @@
       padding: 45px 0;
       color: $content-text;
     }
+
+    app-content-title {
+      width: 100%;
+
+      .content-title {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        min-height: 50px;
+        max-height: 50px;
+        margin-bottom: 1em;
+        color: $card-text;
+        background: $card-background;
+        border: 2px solid $card-border-dark;
+        border-radius: 10px;
+        user-select: none;
+        cursor: default;
+
+        &.bit {
+          color: $card-text-hover;
+          background: $card-background-hover;
+        }
+
+        .content-title-logo {
+          position: absolute;
+          left: 0;
+          width: 40px;
+          height: 40px;
+          margin: 0 15px;
+
+          &.mat-icon {
+            position: absolute;
+            display: flex;
+            left: 0;
+            width: 40px;
+            height: 100%;
+            margin: 0 15px;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-55%);
+          }
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          padding: 5px;
+          font-size: 18px;
+          font-weight: 550;
+          text-transform: uppercase;
+          text-align: center;
+        }
+      }
+    }
   }
 
   .content {
@@ -302,7 +394,7 @@
     .content-about,
     .content-cards {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 5px 0;
@@ -333,11 +425,30 @@
         justify-content: space-around;
       }
     }
+
+    span {
+      margin: .5rem auto;
+
+      &.title {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+
+        &.hover-border {
+          user-select: none;
+          border-bottom: 2px solid transparent;
+
+          &:hover {
+            border-color: $card-border-light;
+          }
+        }
+      }
+    }
   }
 }
 
 .carousel-wrapper {
-  background-color: $toolbar-background !important;
+  background-color: $toolbar-background-bit !important;
 }
 
 // STEPPER
@@ -386,6 +497,24 @@
     .content {
       max-width: 100% !important;
       padding: 45px 15px !important;
+    }
+  }
+}
+
+@media only screen and (hover: none) and (pointer: coarse) {
+  .body .menu-nav-container .menu-nav-toggle span {
+    font-size: 1.5em;
+
+    &.selected {
+      font-size: 3em;
+    }
+  }
+
+  .body .content span.title {
+    font-size: 15px;
+
+    &.hover-border {
+      border-bottom: 2px solid $card-border-light;
     }
   }
 }

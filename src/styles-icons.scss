@@ -209,7 +209,7 @@ svg.material-icons:not(:last-child) {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: $toolbar_text;
+    color: $toolbar-text-bit;
   }
 
   .mat-icon {
@@ -230,7 +230,7 @@ svg.material-icons:not(:last-child) {
     max-height: 100px;
     border-radius: 50%;
     margin: 50px 10px 0;
-    border: 1px solid $toolbar-border-color;
+    border: 1px solid $toolbar-border-color-bit;
     transition: all 1s ease-in-out;
 
     &:hover {
@@ -243,7 +243,7 @@ svg.material-icons:not(:last-child) {
     font-size: 25px;
     font-weight: bold;
     font-family: 'rowdies-bold';
-    color: $toolbar-border-color;
+    color: $toolbar-border-color-bit;
     letter-spacing: 1px;
   }
 }

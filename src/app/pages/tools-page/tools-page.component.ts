@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatAccordion } from '@angular/material/expansion';
 
+import { StorageService } from 'src/app/shared/services/storage.service';
 import { DBService } from 'src/app/shared/services/db.service';
 
 import {
@@ -19,6 +20,7 @@ import { ECurrency } from '../../shared/models/currency';
 export class ToolsPageComponent implements OnInit {
   @ViewChild(MatAccordion) accordion: MatAccordion;
 
+  TITLE_TEXT = 'MENU.tools';
   showExpanded = false;
   bitcoinText = ECurrency.BTC.text;
 
@@ -30,17 +32,21 @@ export class ToolsPageComponent implements OnInit {
   private ctlBenefits = 'ctlBenefits';
 
   constructor(
+    private storageService: StorageService,
     private dbService: DBService
   ) { }
 
   ngOnInit(): void {
-    this.initialize();
+    this.storageService.setAppSide(1);
+    this.storageService.appSide$.subscribe(() => {
+      this.prepareToolsList();
+      // this.prepareCustomTools();
+      if (this.accordion) { this.accordion.openAll(); }
+    });
   }
 
-  private initialize(): void {
-    // this.prepareCustomTools();
-    this.prepareToolsList();
-    if (this.accordion) { this.accordion.openAll(); }
+  private async prepareToolsList() {
+    this.toolsList = await this.dbService.getAppList();
   }
 
   private prepareCustomTools(): void {
@@ -78,9 +84,5 @@ export class ToolsPageComponent implements OnInit {
       showText: true,
       isCard: true
     }));
-  }
-
-  private async prepareToolsList() {
-    this.toolsList = await this.dbService.getAppList();
   }
 }

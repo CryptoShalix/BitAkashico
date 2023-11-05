@@ -84,3 +84,8 @@ export interface IAccordion {
   icon?: string;
   disabled?: boolean;
 }
+
+export interface ISpanOrTitle {
+  text: string;
+  isTitle?: boolean;
+}

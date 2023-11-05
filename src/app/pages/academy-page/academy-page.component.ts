@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { IMAGES } from 'src/assets/images/images';
 
 import { CoreService } from '../../shared/services/core.service';
+import { StorageService } from 'src/app/shared/services/storage.service';
 import { DBService } from 'src/app/shared/services/db.service';
 
 import { ITestimonial } from 'src/app/shared/models/testimonial';
@@ -15,24 +16,25 @@ import { ITestimonial } from 'src/app/shared/models/testimonial';
 export class AcademyPageComponent implements OnInit {
   private _translateRoot = 'PAGES.ACADEMY.';
   IS_BIT_SIDE = false;
-  TITLE_LOGO = '';
   TITLE_TEXT = '';
 
   testimonials: ITestimonial[] = [];
 
-  currentLanguage: string = '';
+  private currentLanguage: string = '';
 
   constructor(
     private coreService: CoreService,
+    private storageService: StorageService,
     private dbService: DBService
   ) { }
 
   ngOnInit(): void {
     this.currentLanguage = this.coreService.getUserLanguage();
-    this.IS_BIT_SIDE = this.coreService.isAppSidebit();
-    this.TITLE_LOGO = this.IS_BIT_SIDE ? '₿' : IMAGES.LOGO_AKASHICO;
-    this.TITLE_TEXT = this.IS_BIT_SIDE ? 'BIT-ACADEMY' : 'AKA-DEMY';
-    this.getTestimonials();
+    this.storageService.appSide$.subscribe(() => {
+      this.IS_BIT_SIDE = this.coreService.isAppSidebit();
+      this.TITLE_TEXT = this._translateRoot + (this.IS_BIT_SIDE ? 'titleBit' : 'titleAka');
+      this.getTestimonials();
+    });
   }
 
   isNullOrEmpty(text: string): boolean {
@@ -43,8 +45,8 @@ export class AcademyPageComponent implements OnInit {
     return this._translateRoot + (this.IS_BIT_SIDE ? 'BIT.about' : 'AKASHICO.about');
   }
 
-  getAkademyText() {
-    return this._translateRoot + 'AKASHICO.akademy';
+  getAkademyTestimonialsTextTitle() {
+    return this._translateRoot + 'AKASHICO.testimonialsTitle';
   }
 
   getAkademyTestimonialsText() {

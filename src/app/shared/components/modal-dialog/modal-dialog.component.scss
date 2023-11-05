@@ -40,7 +40,7 @@
       padding: 10px;
       align-items: center;
       justify-content: flex-end;
-      border-bottom: 1px solid $toolbar-border-color;
+      border-bottom: 1px solid $toolbar-border-color-bit;
 
       .close-button {
         width: 30px;
@@ -49,7 +49,7 @@
         cursor: pointer;
 
         &:hover {
-          color: $toolbar-border-color;
+          color: $toolbar-border-color-bit;
         }
       }
 
