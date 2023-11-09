@@ -44,8 +44,22 @@
       background-color: $toolbar-background-bit;
       border-color: $toolbar-border-color-bit;
 
+      .menu-nav .menu-nav-logo,
+      .menu-nav .menu-nav-button,
+      .menu-nav .menu-nav-breadcrumb,
+      .material-icons-donations,
+      .material-icons-language {
+        color: $toolbar-text-bit;
+      }
+
+      .menu-nav:hover .menu-nav-logo,
+      .menu-nav:hover .menu-nav-button,
+      .menu-nav:hover .menu-nav-breadcrumb,
+      .material-icons-donations:hover,
+      .material-icons-language:hover,
       :hover {
-        color: $toolbar-text-bit-hover;
+        color: $toolbar-text-bit-hover !important;
+        border-color: $toolbar-text-bit-hover !important;
       }
     }
 
@@ -54,12 +68,21 @@
       background-color: $toolbar-background-aka;
       border-color: $toolbar-border-color-aka;
 
+      .menu-nav .menu-nav-logo,
+      .menu-nav .menu-nav-button,
+      .menu-nav .menu-nav-breadcrumb,
+      .material-icons-donations,
+      .material-icons-language {
+        color: $toolbar-text-aka;
+      }
+
       .menu-nav:hover .menu-nav-logo,
       .menu-nav:hover .menu-nav-button,
       .menu-nav:hover .menu-nav-breadcrumb,
-      :hover {
-        color: $toolbar-text-aka-hover !important;
-        border-color: $toolbar-text-aka-hover !important;
+      .material-icons-donations:hover,
+      .material-icons-language:hover {
+        color: $toolbar-text-aka-hover;
+        border-color: $toolbar-text-aka-hover;
       }
     }
 
@@ -79,6 +102,7 @@
         align-items: center;
         justify-content: center;
         width: 100%;
+        max-width: 1200px;
         margin: 0 auto;
       }
     }
@@ -220,7 +244,8 @@
       height: 100%;
       min-height: 40px;
       padding: 0px;
-      color: $menu-color;
+      // color: $menu-color;
+      color: inherit;
       font-size: 10px;
       font-weight: 550;
       text-transform: uppercase;
@@ -239,8 +264,8 @@
     height: 100%;
     min-height: 50%;
     padding: 0;
-    color: $toolbar-text-bit;
-    background: $toolbar-background-bit;
+    color: $toolbar-text-full;
+    background: rgba($toolbar-background-full, .75);
     animation: slide-out 1s ease;
     top: 50px;
     left: -100%;
@@ -502,6 +527,32 @@
 }
 
 @media only screen and (hover: none) and (pointer: coarse) {
+  .toolbar-top {
+    &.bit {
+
+      .menu-nav .menu-nav-logo,
+      .menu-nav .menu-nav-button,
+      .menu-nav .menu-nav-breadcrumb,
+      .material-icons-donations,
+      .material-icons-language {
+        color: $toolbar-text-bit !important;
+        border-color: $toolbar-text-bit !important;
+      }
+    }
+
+    &.aka {
+
+      .menu-nav .menu-nav-logo,
+      .menu-nav .menu-nav-button,
+      .menu-nav .menu-nav-breadcrumb,
+      .material-icons-donations,
+      .material-icons-language {
+        color: $toolbar-text-aka-hover !important;
+        border-color: $toolbar-text-aka-hover !important;
+      }
+    }
+  }
+
   .body .menu-nav-container .menu-nav-toggle span {
     font-size: 1.5em;
 
@@ -519,6 +570,7 @@
   }
 }
 
+// ANIMATIONS
 @keyframes slide-in {
   from {
     left: -100%;

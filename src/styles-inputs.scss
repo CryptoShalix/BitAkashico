@@ -27,7 +27,6 @@ select {
   background-color: $color-special-1 !important;
 }
 
-
 // BUTTON
 .btn {
   position: relative;
@@ -36,7 +35,7 @@ select {
   justify-content: center;
   justify-self: flex-end;
   min-width: 50px;
-  min-height: 25px;
+  min-height: 50px;
   color: $btn-text;
   font-weight: bold;
   text-transform: uppercase;
@@ -49,12 +48,12 @@ select {
   &.btn-long {
     width: 100%;
     max-width: 25%;
-    height: 40px;
-    min-height: 40px;
+    height: 50px;
+    min-height: 50px;
 
     .mat-icon {
       position: absolute;
-      left: 0;
+      left: 10px;
       display: flex;
       width: 35px;
       height: 35px;
@@ -72,15 +71,15 @@ select {
       height: 100%;
 
       &.icon-space {
-        margin-left: 35px;
+        margin-left: 50px;
       }
     }
   }
 
   &.btn-long {
     max-width: 100%;
-    height: 30px;
-    min-height: 30px;
+    height: 40px;
+    min-height: 40px;
   }
 
   &.btn-small {

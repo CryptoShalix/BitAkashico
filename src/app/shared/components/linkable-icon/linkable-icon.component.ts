@@ -3,6 +3,7 @@ import { Component, Input } from '@angular/core';
 import { CoreService } from '../../services/core.service';
 
 import { ELinkableTarget, LinkableIcon } from './linkable-icon';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-linkable-icon',
@@ -25,6 +26,7 @@ export class LinkableIconComponent {
   }
 
   constructor(
+    private router: Router,
     private coreService: CoreService,
   ) { }
 
@@ -45,8 +47,9 @@ export class LinkableIconComponent {
   }
 
   isCurrentPage(href: string): boolean {
-    const currentFullPage = window.location.hash;
-    return currentFullPage.includes(`/${href}`);
+    let path = this.router.url.replace('/', '').toLowerCase();
+    if (this.isNullOrEmpty(path)) { path = 'home'; }
+    return path.includes(href);
   }
 
   isNullOrEmpty(text: string) {

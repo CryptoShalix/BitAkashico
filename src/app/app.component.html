@@ -14,9 +14,11 @@
         <div class="menu-top-container">
 
           <div
-            class="menu-nav"
+            class="menu-nav tooltip"
             (click)="showMenu = !showMenu"
           >
+            <span class="tooltip-label">{{ 'MSG.appSideChoose' | translate | uppercase }}</span>
+
             <div
               *ngIf="showMenuAsLogo"
               class="menu-nav-logo"
