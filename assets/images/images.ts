@@ -1,7 +1,6 @@
 export class IMAGES {
   static HOME_IMG_V1 = `./assets/images/logo_v1.png`;
-  static HOME_IMG_V2 = `./assets/images/logo_v2.png`;
-  static HOME_IMG = IMAGES.HOME_IMG_V2;
+  static HOME_IMG = IMAGES.HOME_IMG_V1;
 
   static NO_IMAGE = `./assets/images/no_image.png`;
 
@@ -12,8 +11,10 @@ export class IMAGES {
 
   static SHOP_AMAZON = `./assets/images/amazon-icon.svg`;
 
-  static LOGO_SENNET = `./assets/images/logo_app_sennet.png`;
-  static LOGO_SLICE = `./assets/images/logo_app_slice.svg`;
+  static CAT_FIN_ES = `./assets/images/img_catFin_es.png`;
+  static CAT_FIN_EN = `./assets/images/img_catFin_en.png`;
+  static CAT_TEC = `./assets/images/img_catTec.jpg`;
+  static CAT_SPI = `./assets/images/img_catSpi.jpg`;
 
   static GAMES_THNDR_BAY_LARGE = `./assets/images/games/game_thndr_bay_large.jpg`;
   static GAMES_THNDR_BAY_SMALL = `./assets/images/games/game_thndr_bay_small.png`;
