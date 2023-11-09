@@ -13,11 +13,21 @@
 <div class="content">
 
   <div class="content-about">
-    <span
-      *ngFor="let item of mainPageContent"
-      [ngClass]="{'title hover-border': item.isTitle}"
-      [innerHTML]="(item.text | translate) | safe:'html'"
-    ></span>
+    <ng-container *ngFor="let item of mainPageContent">
+      <div [ngClass]="{'content-with-image': item.image !== ''}">
+        <img
+          *ngIf="item.image !== ''"
+          alt="category_image"
+          class="image-side"
+          [src]="item.image"
+        >
+
+        <span
+          [ngClass]="{'title hover-border': item.isTitle}"
+          [innerHTML]="(item.text | translate) | safe:'html'"
+        ></span>
+      </div>
+    </ng-container>
   </div>
 
   <app-linkable-icon-container></app-linkable-icon-container>

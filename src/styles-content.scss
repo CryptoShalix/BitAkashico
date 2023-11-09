@@ -409,7 +409,7 @@
 
   .content {
     display: block;
-    max-width: 50%;
+    max-width: 1122.40px;
     margin: 0 auto;
     font-size: 14px;
     text-align: justify;
@@ -449,8 +449,41 @@
         align-items: center;
         justify-content: space-around;
       }
+
+      .content-with-image {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 75%;
+        margin: 1em auto;
+        padding: 0;
+        opacity: .5;
+        border-radius: 5px;
+        box-shadow: 0px 0px 15px $card-border-shadow;
+        transition: all 1s ease-in-out;
+        cursor: default;
+
+        &:hover {
+          opacity: 1;
+          border-radius: 15px;
+          box-shadow: 0px 0px 15px $card-border-light;
+          transition: all 1s ease-in-out;
+        }
+
+        .image-side {
+          width: 200px;
+          height: 200px;
+          margin: 1em;
+        }
+
+        span {
+          padding: 0 2em;
+        }
+      }
     }
 
+    div,
     span {
       margin: .5rem auto;
 
@@ -514,6 +547,29 @@
   }
 }
 
+@media screen and (max-width: 1049.6px) {
+  .content {
+
+    .content-with-image {
+      max-width: 100% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .content {
+    .content-with-image {
+      flex-direction: column !important;
+      max-width: 100% !important;
+
+      .image-side {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 767px) {
 
   .main-container {
@@ -561,11 +617,18 @@
     }
   }
 
-  .body .content span.title {
-    font-size: 15px;
+  .body .content {
 
-    &.hover-border {
-      border-bottom: 2px solid $card-border-light;
+    .content-with-image {
+      opacity: 1 !important;
+    }
+
+    span.title {
+      font-size: 15px;
+
+      &.hover-border {
+        border-bottom: 2px solid $card-border-light;
+      }
     }
   }
 }

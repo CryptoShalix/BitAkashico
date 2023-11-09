@@ -5,6 +5,8 @@ import { StorageService } from '../../shared/services/storage.service';
 
 import { LinkableIcon } from 'src/app/shared/components/linkable-icon/linkable-icon';
 import { ISpanOrTitle } from 'src/app/shared/models/core';
+import { IMAGES } from 'src/assets/images/images';
+import { CoreService } from 'src/app/shared/services/core.service';
 
 @Component({
   selector: 'app-main-page',
@@ -12,6 +14,7 @@ import { ISpanOrTitle } from 'src/app/shared/models/core';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
+  private userLanguage: string;
   private APP_SIDE: number;
   private APP_TOP_LIST = ['Wirex', 'Relai', 'Slice'];
 
@@ -21,6 +24,7 @@ export class MainPageComponent implements OnInit {
   iconListTopApps: LinkableIcon[];
 
   constructor(
+    private coreService: CoreService,
     private storageService: StorageService,
     private dbService: DBService,
   ) { }
@@ -29,6 +33,7 @@ export class MainPageComponent implements OnInit {
     this.storageService.appSide$.subscribe(appSide => {
       this.APP_SIDE = appSide;
       if (this.storageService.hasAppSide()) {
+        this.userLanguage = this.coreService.getUserLanguage();
         this.IS_BIT_SITE = this.APP_SIDE === 1;
         this.APP_SENTENCE = this.getAppSentence();
         this.prepareMainPageContent();
@@ -41,19 +46,35 @@ export class MainPageComponent implements OnInit {
     this.mainPageContent = [];
     this.addContent('aboutMeTitle');
     this.addContent('aboutMe');
-    this.addContent('aboutProjectTitle');
-    this.addContent('aboutProject');
+
+    this.addContent('aboutProject.title');
+    this.addContent('aboutProject.main');
+    this.addContent(
+      'aboutProject.catFin',
+      this.userLanguage === 'es' ? IMAGES.CAT_FIN_ES : IMAGES.CAT_FIN_EN
+    );
+    this.addContent(
+      'aboutProject.catTec',
+      IMAGES.CAT_TEC
+    );
+    this.addContent(
+      'aboutProject.catSpi',
+      IMAGES.CAT_SPI
+    );
+
     this.addContent('howMuchTitle');
     this.addContent('howMuch');
+
     this.addContent('howToStartTitle');
     this.addContent('howToStart');
   }
 
-  private addContent(text: string) {
+  private addContent(text: string, _pathImg: string = '') {
     const _pathRoot = 'PAGES.MAIN.';
     this.mainPageContent.push({
       text: _pathRoot + text,
-      isTitle: text.includes('Title')
+      isTitle: text.toLowerCase().includes('title'),
+      image: _pathImg
     });
   }
 

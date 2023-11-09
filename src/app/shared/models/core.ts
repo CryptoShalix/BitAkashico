@@ -88,4 +88,5 @@ export interface IAccordion {
 export interface ISpanOrTitle {
   text: string;
   isTitle?: boolean;
+  image?: string;
 }
