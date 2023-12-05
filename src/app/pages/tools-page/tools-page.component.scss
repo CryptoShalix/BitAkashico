@@ -129,6 +129,10 @@
             align-items: center;
             text-align: left;
 
+            div:first-child {
+              margin: 0 !important;
+            }
+
             .mat-card-title {
               display: block;
               width: 100%;

@@ -38,7 +38,7 @@
     "PAGES": {
       "MAIN": {
         "aboutMeTitle": "Who is CryptoShalix? What is the reason for that nickname?",
-        "aboutMe": "CryptoShalix comes from the union of the words <i>Crypto</i>, short for cryptography, and <i>Shalix</i>, a nickname that was born as a teenager.<br/><br/>Cryptography is applied both for computer issues <i>(such as generating passwords)</i> and for <b><i>de-encrypting</i></b> the messages received when performing channeling <i>(soul readings)</i>",
+        "aboutMe": "CryptoShalix comes from the union of the words <i>Crypto</i>, short for cryptography, and <i>Shalix</i>, a nickname that was born as a teenager.<br/><br/>Cryptography is applied both for computer issues <i>(such as generating passwords)</i> and for <b><i>de-encrypting</i></b> the messages received when performing channeling <i>(conversations with the soul)</i>",
         "aboutProject": {
           "title": "What is <i>BitAkashico</i>? What am I going to receive?",
           "main": "BitAkashico is presented as the main project of <a class='selected' target='_blank' href='https://linktr.ee/BitAkashico'>@CryptoShalix</a>, and aspires to become the place where we can find the necessary tools to understand ourselves <i>(Akasha)</i> and the digital and financial world that changes so much <i>(Bit)</i>.<br/><br/>To do this, <a class='selected' target='_self' href='#contact'>direct contact</a> is facilitated, so that it is easy to receive help or advice in any of the fields in which we work.<br/><br/>Thus, we differentiate three parts with the same purpose: <i><b><u>help</u></b></i>.",
@@ -139,7 +139,7 @@
             "title": "₿itcoin: wallets",
             "titleLN": "⚡₿itcoin: wallets LN⚡",
             "description": "Best wallets for ₿itcoin (on-chain, LN⚡, etc)",
-            "appBlixt": "Non-custodial ₿itcoin wallet, which allows you to connect your own nodes, easy to use for both on-chain and Lightning Network (LN⚡). It has many very useful tools to increase the privacy, security and control of your funds.",
+            "appBlixt": "Non-custodial ₿itcoin wallet, which allows you to have your mobile node and even connect your own nodes, easy to use for both on-chain and Lightning Network (LN⚡). It has many very useful tools to increase the privacy, security and control of your funds.",
             "appBlueWallet": "Semi-custodial ₿itcoin wallet. Private nodes can be connected or custodial wallets created for both ₿itcoin on-chain and LN⚡. Simple to use for both on-chain and Lightning Network (LN⚡).",
             "appBreez": "Non-custodial ₿itcoin wallet, which allows you to connect your own nodes, easy to use on the Lightning Network (LN⚡), with a point of sale (ideal for businesses), podcasts, card top-ups and much more.",
             "appDefiant": "Non-custodial ₿itcoin wallet. Easy to use, configure and connect anywhere. It integrates NFT wallet, Dapps browser, the RSK network to use tropykus more easily, and P2P commerce, in addition to the possibility of buying through third parties (KYC).",

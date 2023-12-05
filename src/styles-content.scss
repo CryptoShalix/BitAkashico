@@ -483,6 +483,10 @@
       }
     }
 
+    .mat-card-title-group div:first-child {
+      margin: 0 !important;
+    }
+
     div,
     span {
       margin: .5rem auto;
@@ -593,6 +597,7 @@
       .material-icons-language {
         color: $toolbar-text-bit !important;
         border-color: $toolbar-text-bit !important;
+        border-radius: 4px;
       }
     }
 
@@ -605,6 +610,7 @@
       .material-icons-language {
         color: $toolbar-text-aka-hover !important;
         border-color: $toolbar-text-aka-hover !important;
+        border-radius: 4px;
       }
     }
   }

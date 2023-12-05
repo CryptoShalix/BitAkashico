@@ -1,4 +1,7 @@
 app-custom-image#small {
+  display: grid;
+  justify-items: center;
+  align-items: center;
   width: auto;
   max-width: 70px;
   min-width: 70px;
