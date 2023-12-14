@@ -7,6 +7,7 @@ import { StorageService } from 'src/app/shared/services/storage.service';
 import { DBService } from 'src/app/shared/services/db.service';
 
 import { ITestimonial } from 'src/app/shared/models/testimonial';
+import { ELinkableIconType, ELinkableTarget, LinkableIcon } from 'src/app/shared/components/linkable-icon/linkable-icon';
 
 @Component({
   selector: 'app-academy-page',
@@ -55,6 +56,10 @@ export class AcademyPageComponent implements OnInit {
 
   getTestimonialByLanguage(_testimonial: ITestimonial) {
     return _testimonial.testimonial[this.currentLanguage];
+  }
+
+  onAddTestimonial() {
+
   }
 
   private async getTestimonials() {

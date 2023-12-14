@@ -70,6 +70,15 @@
     ></span>
     <span [innerHTML]="(getAkademyTestimonialsText() | translate) | safe:'html'"></span>
 
+    <button
+      type="button"
+      class="btn btn-long"
+      (click)="onAddTestimonial()"
+    >
+      <mat-icon>add</mat-icon><span
+        [innerHTML]="('PAGES.ACADEMY.AKASHICO.testimonialButton' | translate) | safe:'html'"></span>
+    </button>
+
     <div class="testimonial-grid">
       <div
         *ngFor="let testimonial of testimonials"

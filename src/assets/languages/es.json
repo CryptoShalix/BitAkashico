@@ -79,7 +79,9 @@
         "AKASHICO": {
           "about": "A lo largo de nuestra vida, nos encontramos ante bloqueos, miedos, e inquietudes que nos impiden concentrarnos bien, o que nos lastran e impiden avanzar.<br/><br/>A través de conversaciones en las que escuchamos a nuestro corazón, mediante una sesión individual o en grupo, nos conectamos y descubrimos nuestro ser interior.<br/><br/>Si bien podemos realizar otras actividades para focalizarnos o <i>desconectar</i> del día a día, con una sesión de canalización <i>(hablando con tu alma)</i>, podremos ver nuestro mundo interior </i>(Akasha)</i> y preguntar sobre aquello que en verdad deseamos resolver o 'recordar'.<br/><br/>También, aunque solo de forma presencial, podemos descubrir el estado actual de nuestros chakras.<br/><br/>Solicita una sesión con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> y pregunta sin miedo para participar en un encuentro online o presencial, ya sea en una sesión grupal o individual, para aprender compartiendo experiencias y momentos.<br/><br/>En la sección de <a class='selected' target='_self' href='#books'>libros</a> encontrarás el conocimiento recopilado a través de los años por varios autores que, desde BitAkashico, consideramos imprescindibles de leer.",
           "testimonialsTitle": "Testimonios",
-          "testimonials": "Te dejamos aquí algunos testimonios que ya han probado los servicios de CryptoShalix."
+          "testimonials": "Te dejamos aquí algunos testimonios que ya han probado los servicios de CryptoShalix.",
+          "testimonialButton": "Añadir mi testimonio",
+          "testimonialWarning": "El testimonio podrá modificarse o eliminarse si no cumple con los términos de BitAkashico"
         }
       },
       "BOOKS": {
