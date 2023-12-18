@@ -2,6 +2,7 @@
   {
     "BUTTONS": {
       "accept": "Accept",
+      "confirm": "Confirm",
       "cancel": "Cancel",
       "enter": "Enter"
     },
@@ -75,10 +76,7 @@
           }
         },
         "AKASHICO": {
-          "about": "Throughout our lives, we find ourselves faced with blockages, fears, and concerns that prevent us from concentrating well, or that hinder us and prevent us from moving forward.<br/><br/>Through conversations in which we listen to our hearts, through an individual or group session, we connect and discover our inner being.<br/><br/>Although we can carry out other activities to focus or <i>disconnect</i> from day to day, with a session of channeling <i>(talking to your soul)</i>, we will be able to see our inner world (Akasha) and ask about what we really want to resolve or 'remember'.<br/><br/>Also, although only in person, we can discover the current state of our chakras.<br/><br/>Request a session with @CryptoShalix through the <a class='selected' target='_self' href='#contact'>contact form</a> and ask without fear to participate in an online or in-person meeting, whether in a group or individual session, to learn by sharing experiences and moments.<br/><br/>In the <a class='selected' target='_self' href='#books'>books</a> section you will find the knowledge compiled over the years by various authors that, at BitAkashico, we consider essential to read.",
-          "testimonialsTitle": "Testimonials",
-          "testimonials": "We leave you here some testimonials that have already tried CryptoShalix services.",
-          "testimonialButton": "Add my testimonial"
+          "about": "Throughout our lives, we find ourselves faced with blockages, fears, and concerns that prevent us from concentrating well, or that hinder us and prevent us from moving forward.<br/><br/>Through conversations in which we listen to our hearts, through an individual or group session, we connect and discover our inner being.<br/><br/>Although we can carry out other activities to focus or <i>disconnect</i> from day to day, with a session of channeling <i>(talking to your soul)</i>, we will be able to see our inner world (Akasha) and ask about what we really want to resolve or 'remember'.<br/><br/>Also, although only in person, we can discover the current state of our chakras.<br/><br/>Request a session with @CryptoShalix through the <a class='selected' target='_self' href='#contact'>contact form</a> and ask without fear to participate in an online or in-person meeting, whether in a group or individual session, to learn by sharing experiences and moments.<br/><br/>In the <a class='selected' target='_self' href='#books'>books</a> section you will find the knowledge compiled over the years by various authors that, at BitAkashico, we consider essential to read."
         }
       },
       "BOOKS": {
@@ -244,6 +242,21 @@
         "gameBitcoinMinerTitle": "An idle game that pays you!",
         "gameBitcoinMinerDescription": "Build your own mining factory, and receive sats for making it grow and evolve.<br/><center><b>¡FREE REWARDS!</b></center>Use this referral in friends tab: RYXADE"
       }
+    },
+    "TESTIMONIAL": {
+      "title": "Testimonials",
+      "about": "We leave you here some testimonials that have already tried CryptoShalix services.",
+      "buttonCreate": "Add my testimonial",
+      "inputNameLabel": "Name/Nickname",
+      "inputNamePlaceholder": "Indicate first and last name, or your nickname",
+      "inputAnonLabel": "Show as 'Anonymous'?",
+      "inputAnonHelp": "Marking the check means that the indicated <i>'Name/Nickname'</i> will <b>NOT</b> be displayed",
+      "inputTestimonyLabel": "Testimony",
+      "inputTestimonyPlaceholder": "Here you can write your testimony. Remember that it will be public.",
+      "inputUrlLabel": "Preferred website or social network",
+      "inputUrlPlaceholder": "i.e. http://url.com o https://linktr.ee/BitAkashico",
+      "inputUrlHelp": "Indicate the url of your website or linktr.ee. Or leave it blank if you don't want to show anything.",
+      "msgWarning": "The testimonial will be reviewed and may be modified or deleted if it does not comply with BitAkashico's terms.<br/>If you wish to delete or modify the data of your testimonial, indicate this using the <a class='selected' target='_self' href='#contact'>contact form</a>."
     },
     "SENTENCES": {
       "appSentenceCom1": "The person you are in the future will be the result of the decisions you make today",

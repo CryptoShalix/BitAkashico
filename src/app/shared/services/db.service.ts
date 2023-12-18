@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { first } from 'rxjs';
 
 import { CoreService } from './core.service';
+import { ContactService } from './contact.service';
 
 import { IGalleryItem } from '../components/gallery/gallery.model';
 import { LinkableIcon, ELinkableIconType, ELinkableTarget } from '../components/linkable-icon/linkable-icon';
@@ -20,7 +21,8 @@ export class DBService {
 
   constructor(
     private http: HttpClient,
-    private coreService: CoreService
+    private coreService: CoreService,
+    private contactService: ContactService,
   ) { }
 
   // METHODS: PUBLIC
@@ -87,6 +89,16 @@ export class DBService {
     return await this._getTestimonials();
   }
 
+  async saveTestimonial(testimonial: ITestimonial): Promise<boolean> {
+    try {
+      this.contactService.sendTestimonial(testimonial);
+      return true;
+    } catch (error) {
+      console.error(error);
+    }
+    return false;
+  }
+
   async getBooks(IS_BIT_SIDE: boolean): Promise<IGalleryItem[]> {
     const list: IGalleryItem[] = [];
     const books = await this._getBooks(IS_BIT_SIDE);
@@ -128,9 +140,10 @@ export class DBService {
     let list: ITestimonial[] = [];
     try {
       const currentLanguage = this.coreService.getUserLanguage();
+      const appSide = this.coreService.isAppSidebit() ? 'bit' : 'aka';
       const dirtyList: ITestimonial[] = await this.getData(this.PATH_DB_TESTIMONIALS);
       dirtyList.map(t => {
-        if (!this.isNullOrEmpty(t.testimonial[currentLanguage])) {
+        if (t.side === appSide && !this.isNullOrEmpty(t.testimonial[currentLanguage])) {
           t.name = this.isNullOrEmpty(t.name) ? 'STRINGS.anonymous' : t.name;
           list.push(t);
         }

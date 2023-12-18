@@ -1,0 +1,71 @@
+<div class="custom-form">
+  <form
+    [formGroup]="form"
+    (ngSubmit)="onSubmit(form.value)"
+  >
+    <div
+      class="form-group"
+      *ngFor="let field of fields"
+    >
+      <div
+        class="form-input"
+        [ngClass]="{'flex-row': field.inputType === 'checkbox'}"
+      >
+        <label [for]="field.name">
+          <mat-icon>{{ isNullOrEmpty(field.icon) ? '' : field.icon }}</mat-icon>
+          <span [innerHTML]="(field.label| translate) | safe:'html'"></span>
+          <span *ngIf="isNullOrEmpty(field.isRequired) ? false : true">*</span>
+        </label>
+
+        <ng-container [ngSwitch]="field.inputType">
+          <ng-container *ngSwitchCase="'textarea'">
+            <textarea
+              [id]="field.name"
+              class="form-control"
+              [formControlName]="field.name"
+              [name]="field.name"
+              rows="5"
+              placeholder="{{ isNullOrEmpty(field.placeholder) ? '' : (field.placeholder | translate) }}"
+              [minlength]="field.minLength === undefined ? minMessageLength : field.minLength"
+              [required]="isNullOrEmpty(field.isRequired) ? false : true"
+            ></textarea>
+          </ng-container>
+
+          <ng-container *ngSwitchDefault>
+            <input
+              [id]="field.name"
+              [type]="field.inputType"
+              [name]="field.name"
+              placeholder="{{ isNullOrEmpty(field.placeholder) ? '' : (field.placeholder | translate) }}"
+              [formControlName]="field.name"
+              [required]="isNullOrEmpty(field.isRequired) ? false : true"
+            >
+          </ng-container>
+        </ng-container>
+      </div>
+
+      <small
+        *ngIf="field.helpMessage"
+        [id]="field.name+'Help'"
+        class="text-muted"
+        [innerHTML]="(field.helpMessage | translate) | safe:'html'"
+      ></small>
+    </div>
+
+    <div class="buttons-container">
+      <ng-container *ngFor="let button of buttons">
+        <button
+          type="{{ button.isSubmit ? 'submit' :'button' }}"
+          class="btn"
+          [ngClass]="{'btn-submit': button.isSubmit, 'btn-long': button.showLong}"
+          [disabled]="button.isSubmit ? !form.valid : false"
+          (click)="button.isSubmit ? null : onClicked()"
+        >
+          <mat-icon>{{ isNullOrEmpty(button.icon) ? '' : button.icon }}</mat-icon>
+          <span [innerHTML]="(button.text | translate) | safe:'html'"></span>
+        </button>
+      </ng-container>
+    </div>
+  </form>
+
+</div>

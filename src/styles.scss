@@ -296,6 +296,19 @@ label {
   color: $body-text !important;
 }
 
+// LABELS
+
+.text-muted {
+  font-size: 10px;
+  font-style: italic;
+  color: $body-text-muted;
+  cursor: default;
+
+  &:hover {
+    color: $body-text-muted-hover;
+  }
+}
+
 // RADIO
 
 .mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-thumb {
@@ -443,6 +456,12 @@ pre ::selection {
 }
 
 /* RESPONSIVE STYLES */
+@media (pointer:coarse) {
+  .text-muted {
+    color: $body-text-muted-hover !important;
+  }
+}
+
 @media screen and (max-width: 1256px) {
   .tooltip-label.message {
     max-width: 100% !important;

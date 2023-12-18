@@ -2,6 +2,7 @@
   {
     "BUTTONS": {
       "accept": "Aceptar",
+      "confirm": "Confirmar",
       "cancel": "Cancelar",
       "enter": "Entrar"
     },
@@ -77,11 +78,7 @@
           }
         },
         "AKASHICO": {
-          "about": "A lo largo de nuestra vida, nos encontramos ante bloqueos, miedos, e inquietudes que nos impiden concentrarnos bien, o que nos lastran e impiden avanzar.<br/><br/>A través de conversaciones en las que escuchamos a nuestro corazón, mediante una sesión individual o en grupo, nos conectamos y descubrimos nuestro ser interior.<br/><br/>Si bien podemos realizar otras actividades para focalizarnos o <i>desconectar</i> del día a día, con una sesión de canalización <i>(hablando con tu alma)</i>, podremos ver nuestro mundo interior </i>(Akasha)</i> y preguntar sobre aquello que en verdad deseamos resolver o 'recordar'.<br/><br/>También, aunque solo de forma presencial, podemos descubrir el estado actual de nuestros chakras.<br/><br/>Solicita una sesión con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> y pregunta sin miedo para participar en un encuentro online o presencial, ya sea en una sesión grupal o individual, para aprender compartiendo experiencias y momentos.<br/><br/>En la sección de <a class='selected' target='_self' href='#books'>libros</a> encontrarás el conocimiento recopilado a través de los años por varios autores que, desde BitAkashico, consideramos imprescindibles de leer.",
-          "testimonialsTitle": "Testimonios",
-          "testimonials": "Te dejamos aquí algunos testimonios que ya han probado los servicios de CryptoShalix.",
-          "testimonialButton": "Añadir mi testimonio",
-          "testimonialWarning": "El testimonio podrá modificarse o eliminarse si no cumple con los términos de BitAkashico"
+          "about": "A lo largo de nuestra vida, nos encontramos ante bloqueos, miedos, e inquietudes que nos impiden concentrarnos bien, o que nos lastran e impiden avanzar.<br/><br/>A través de conversaciones en las que escuchamos a nuestro corazón, mediante una sesión individual o en grupo, nos conectamos y descubrimos nuestro ser interior.<br/><br/>Si bien podemos realizar otras actividades para focalizarnos o <i>desconectar</i> del día a día, con una sesión de canalización <i>(hablando con tu alma)</i>, podremos ver nuestro mundo interior </i>(Akasha)</i> y preguntar sobre aquello que en verdad deseamos resolver o 'recordar'.<br/><br/>También, aunque solo de forma presencial, podemos descubrir el estado actual de nuestros chakras.<br/><br/>Solicita una sesión con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> y pregunta sin miedo para participar en un encuentro online o presencial, ya sea en una sesión grupal o individual, para aprender compartiendo experiencias y momentos.<br/><br/>En la sección de <a class='selected' target='_self' href='#books'>libros</a> encontrarás el conocimiento recopilado a través de los años por varios autores que, desde BitAkashico, consideramos imprescindibles de leer."
         }
       },
       "BOOKS": {
@@ -247,6 +244,21 @@
         "gameBitcoinMinerDescription": "Construye tu propia fábrica minera de ₿itcoin y otras criptomonedas, y recibe sats por hacerla crecer y evolucionar.<br/><center><b>¡RECOMPENSAS GRATIS!</b></center>Usa este referido en amigos: RYXADE"
       }
     },
+    "TESTIMONIAL": {
+      "title": "Testimonios",
+      "about": "Te dejamos aquí algunos testimonios que ya han probado los servicios de CryptoShalix.",
+      "buttonCreate": "Añadir mi testimonio",
+      "inputNameLabel": "Nombre/Apodo",
+      "inputNamePlaceholder": "Indica nombre y apellidos, o tu apodo",
+      "inputAnonLabel": "¿Mostrar como 'Anónimo'?",
+      "inputAnonHelp": "Marcar el check significa que <b>NO</b> se mostrará el <i>'Nombre/Apodo'</i> indicado",
+      "inputTestimonyLabel": "Testimonio",
+      "inputTestimonyPlaceholder": "Aquí puedes redactar tu testimonio. Recuerda que será público.",
+      "inputUrlLabel": "Página web o red social de preferencia",
+      "inputUrlPlaceholder": "e.g. http://url.com o https://linktr.ee/BitAkashico",
+      "inputUrlHelp": "Indica la url de tu sitio web o linktr.ee. O déjalo en blanco si no deseas mostrar nada.",
+      "msgWarning": "El testimonio será revisado y podrá modificarse o eliminarse si no cumple con los términos de BitAkashico.<br/>Si deseas eliminar o modificar los datos de tu testimonio, índicalo mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a>."
+    },
     "SENTENCES": {
       "appSentenceCom1": "La persona que seas en el futuro será el resultado de las decisiones que tomes hoy mismo",
       "appSentenceCom2": "La envidia es una pérdida de tiempo<br/>Tu ya tienes todo lo que necesitas",
@@ -260,7 +272,10 @@
       "donations": "Donaciones",
       "noImage": "No hay imagen",
       "sendMsgSuccess": "¡El mensaje se ha enviado correctamente!<br/>Recibirá una respuesta a la mayor brevedad. Gracias",
-      "sendMsgError": "Se ha producido un error al enviar el mensaje => "
+      "sendMsgError": "Se ha producido un error al enviar el mensaje => ",
+      "saveMsgSuccess": "¡Los cambios se han guardado correctamente!",
+      "saveMsgError": "Se ha producido un error al guardar los datos => ",
+      "saveMsgAlert": "Se ha producido un error al guardar los datos. Recargue la página e inténtelo de nuevo. Si el error persiste, comuníquelo desde el <a class='selected' target='_self' href='#contact'>formulario de contacto</a>."
     }
   }
 ]

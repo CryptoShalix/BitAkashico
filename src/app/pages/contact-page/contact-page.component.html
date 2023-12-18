@@ -9,5 +9,8 @@
     <app-linkable-icon-container></app-linkable-icon-container>
   </div>
 
-  <app-contact-form></app-contact-form>
+  <app-custom-form
+    [sFormItem]="formItem"
+    (outOnSubmit)="onSubmit($event)"
+  ></app-custom-form>
 </div>

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject, Observable } from 'rxjs';
+
 import { MessageType } from '../components/message-manager/message-manager.component';
 
 @Injectable()

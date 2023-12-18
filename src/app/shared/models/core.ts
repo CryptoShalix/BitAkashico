@@ -1,3 +1,5 @@
+import { FormGroup } from '@angular/forms';
+
 export enum URLS {
   // SOCIAL MEDIA
   DISCORD = 'https://discord.gg/9QQhZhn3Gc',
@@ -89,4 +91,39 @@ export interface ISpanOrTitle {
   text: string;
   isTitle?: boolean;
   image?: string;
+}
+
+export enum EInputType {
+  TEXT = 'text',
+  TEXTAREA = 'textarea',
+  EMAIL = 'email',
+  CHECK = 'checkbox'
+}
+
+export interface IFormItemField {
+  name: string;
+  label: string;
+  placeholder: string;
+  inputType: EInputType;
+  helpMessage?: string;
+  icon?: string;
+  isRequired?: boolean;
+  minLength?: number;
+}
+
+export interface IFormItemButton {
+  text: string;
+  icon?: string;
+  isSubmit: boolean;
+  showLong?: boolean;
+}
+
+export interface FormItem {
+  fields: IFormItemField[];
+  buttons: IFormItemButton[];
+}
+
+export interface FormResponse {
+  form: FormGroup;
+  data: any;
 }

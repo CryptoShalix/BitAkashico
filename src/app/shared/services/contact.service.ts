@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { first } from 'rxjs';
 
-import { CoreService } from './core.service';
+import { ITestimonial } from '../models/testimonial';
 
 // https://medium.com/javarevisited/sending-a-message-to-a-telegram-channel-the-easy-way-eb0a0b32968
 
@@ -15,11 +15,10 @@ export class ContactService {
   private chatId = '@BitAkashicoContact';
 
   constructor(
-    private http: HttpClient,
-    private coreService: CoreService
+    private http: HttpClient
   ) { }
 
-  sendEmail(
+  sendTelegram(
     nickname: string,
     email: string,
     message: string,
@@ -33,6 +32,23 @@ export class ContactService {
     - Phone: ${phone} ${this.sCharBR}
     - Message:${this.sCharBR} ${message} ${this.sCharBR}`;
 
+    return this.doCall(text);
+  }
+
+  sendTestimonial(_testimonial: ITestimonial): Promise<any> {
+    // Prepare params
+    _testimonial.testimonial = _testimonial.testimonial.replace(/<[^>]*>/g, '').replace(/(\\r\\n)|([\r\n])/gmi, this.sCharBR);
+    const text = `¡NUEVO TESTIMONIO desde BitAkashico! ${this.sCharBR}${this.sCharBR}
+    - Side: ${_testimonial.side} ${this.sCharBR}
+    - Anonymous: ${_testimonial.anon ? 'true' : 'false'} ${this.sCharBR}
+    - Name: ${_testimonial.name} ${this.sCharBR}
+    - Link: ${_testimonial.link} ${this.sCharBR}
+    - Testimony:${this.sCharBR} ${_testimonial.testimonial} ${this.sCharBR}`;
+
+    return this.doCall(text);
+  }
+
+  private doCall(text: string) {
     const path = `https://api.telegram.org/bot${this.apiToken}/sendMessage?chat_id=${this.chatId}&text=${text}`;
 
     // Do the call

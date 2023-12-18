@@ -9,7 +9,7 @@ import { AccordionComponent } from './shared/components/accordion/accordion.comp
 // import { CarouselComponent } from './shared/components/carousel/carousel.component';
 import { CoinComponent } from './shared/components/coin-info/coin-info.component';
 import { ContentTitleComponent } from './shared/components/content-title/content-title.component';
-import { ContactFormComponent } from './shared/components/contact-form/contact-form.component';
+import { CustomFormComponent } from './shared/components/custom-form/custom-form.component';
 import { CustomImageComponent } from './shared/components/custom-image/custom-image.component';
 import { HistoryMoneyComponent } from './shared/components/history-money/history-money.component';
 import { LinkableIconComponent } from './shared/components/linkable-icon/linkable-icon.component';
@@ -28,7 +28,7 @@ import { GalleryComponent } from './shared/components/gallery/gallery.component'
     // CarouselComponent,
     CoinComponent,
     ContentTitleComponent,
-    ContactFormComponent,
+    CustomFormComponent,
     CustomImageComponent,
     DonationsComponent,
     HistoryMoneyComponent,
@@ -53,7 +53,7 @@ import { GalleryComponent } from './shared/components/gallery/gallery.component'
     // CarouselComponent,
     CoinComponent,
     ContentTitleComponent,
-    ContactFormComponent,
+    CustomFormComponent,
     CustomImageComponent,
     DonationsComponent,
     HistoryMoneyComponent,

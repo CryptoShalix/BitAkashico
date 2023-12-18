@@ -73,11 +73,18 @@
     <button
       type="button"
       class="btn btn-long"
-      (click)="onAddTestimonial()"
+      (click)="showTestimonialEditor = true"
     >
-      <mat-icon>add</mat-icon><span
-        [innerHTML]="('PAGES.ACADEMY.AKASHICO.testimonialButton' | translate) | safe:'html'"></span>
+      <mat-icon>add</mat-icon>
+      <span [innerHTML]="('TESTIMONIAL.buttonCreate' | translate) | safe:'html'"></span>
     </button>
+
+    <app-custom-form
+      *ngIf="showTestimonialEditor"
+      [sFormItem]="formItem"
+      (outOnSubmit)="onSubmit($event)"
+      (outOnCancel)="showTestimonialEditor = false"
+    ></app-custom-form>
 
     <div class="testimonial-grid">
       <div
