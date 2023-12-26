@@ -14,6 +14,8 @@
       *ngIf="!IS_BIT_SIDE"
       [ngTemplateOutlet]="templateAkademy"
     ></ng-container>
+
+    <ng-container [ngTemplateOutlet]="templateTestimonials"></ng-container>
   </div>
 </div>
 
@@ -62,7 +64,9 @@
 
 </ng-template>
 
-<ng-template #templateAkademy>
+<ng-template #templateAkademy></ng-template>
+
+<ng-template #templateTestimonials>
   <div class="container-testimonials">
     <span
       class="title hover-border"
@@ -79,12 +83,19 @@
       <span [innerHTML]="('TESTIMONIAL.buttonCreate' | translate) | safe:'html'"></span>
     </button>
 
-    <app-custom-form
-      *ngIf="showTestimonialEditor"
-      [sFormItem]="formItem"
-      (outOnSubmit)="onSubmit($event)"
-      (outOnCancel)="showTestimonialEditor = false"
-    ></app-custom-form>
+    <app-modal-dialog
+      [setShow]="showTestimonialEditor"
+      [setTitle]="'TESTIMONIAL.buttonCreate' | translate"
+      [setTitleImage]="'format_quote'"
+      (outOnClose)="showTestimonialEditor = false"
+    >
+      <ng-template #modal_dialog_template>
+        <app-custom-form
+          [sFormItem]="formItem"
+          (outOnSubmit)="onSubmit($event)"
+        ></app-custom-form>
+      </ng-template>
+    </app-modal-dialog>
 
     <div class="testimonial-grid">
       <div

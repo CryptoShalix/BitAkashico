@@ -4,7 +4,8 @@
       "accept": "Accept",
       "confirm": "Confirm",
       "cancel": "Cancel",
-      "enter": "Enter"
+      "enter": "Enter",
+      "send": "Send"
     },
     "DONATIONS": {
       "titleBit": "Donate some sats",
@@ -12,7 +13,7 @@
       "messageBit": "Any amount of satoshis is welcome. They will motivate us and help us to make the content grow more.<br/><br/>Send ₿itcoin through the lightning network, and you will hardly have commissions. Remember that you have the recommended ₿itcoin wallets in <a class='selected' href='/#/tools'>tools</a>.",
       "messageFiat": "Any amount of euros is welcome. They will motivate us and help us to make the content grow more.<br/><br/><b>Attention!</b> <i>Paypal is a third-party service that requires an account with KYC (Know Your Customer), which implies that you will have to provide your personal data, including ID, to carry out operations.<br/><br/>This is the reason why we encourage you to use ₿itcoin for your donations and payments.<br/><br/>Clicking on the image will open the Paypal mobile application, or, if it is not installed, the corresponding Store to proceed with its installation on your device.</i>",
       "payInBTC": "I prefer to donate in ₿itcoin",
-      "payInFiat": "I prefer to donate with traditional currencies"
+      "payInFiat": "I prefer to donate in €uros"
     },
     "LANGUAGE": {
       "en": "English",
@@ -256,7 +257,7 @@
       "inputUrlLabel": "Preferred website or social network",
       "inputUrlPlaceholder": "i.e. http://url.com o https://linktr.ee/BitAkashico",
       "inputUrlHelp": "Indicate the url of your website or linktr.ee. Or leave it blank if you don't want to show anything.",
-      "msgWarning": "The testimonial will be reviewed and may be modified or deleted if it does not comply with BitAkashico's terms.<br/>If you wish to delete or modify the data of your testimonial, indicate this using the <a class='selected' target='_self' href='#contact'>contact form</a>."
+      "msgWarning": "The testimonial will be reviewed before being published, and may be modified or deleted if it does not comply with BitAkashico's terms.<br/>If you wish to delete or modify the data of your testimonial, indicate this using the <a class='selected' target='_self' href='#contact'>contact form</a>."
     },
     "SENTENCES": {
       "appSentenceCom1": "The person you are in the future will be the result of the decisions you make today",

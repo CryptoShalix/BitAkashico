@@ -16,7 +16,7 @@ import { CoreService } from 'src/app/shared/services/core.service';
 export class MainPageComponent implements OnInit {
   private userLanguage: string;
   private APP_SIDE: number;
-  private APP_TOP_LIST = ['Wirex', 'Relai', 'Slice'];
+  private APP_TOP_LIST = ['Wirex', 'Relai', 'Bit2Me'];
 
   IS_BIT_SITE: boolean = false;
   APP_SENTENCE: string = '';

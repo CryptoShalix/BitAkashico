@@ -1,6 +1,8 @@
 @import '../../../../styles-colors.scss';
 
 .custom-form {
+  margin: 0;
+
   form {
     display: grid;
     margin: 0 5%;
@@ -73,6 +75,7 @@
 
       textarea {
         resize: vertical;
+        font-size: 14px;
         min-height: 100px;
         max-height: 400px;
         border-radius: 5px;
@@ -94,6 +97,51 @@
     .btn {
       width: 50%;
       margin: 0 2px;
+    }
+  }
+}
+
+/* RESPONSIVE STYLES */
+@media screen and (max-width: 1000px) {
+  .custom-form {
+
+    .buttons-container {
+      flex-wrap: wrap;
+
+      .btn {
+        width: 100%;
+        margin: 2px;
+      }
+    }
+  }
+}
+
+@media (pointer:coarse) {
+  .custom-form {
+
+    .buttons-container {
+      flex-wrap: wrap;
+
+      .btn {
+        width: 100%;
+        margin: 2px;
+      }
+    }
+
+    form {
+      margin: 0;
+
+      .form-input {
+
+        label,
+        span,
+        input,
+        textarea,
+        .text-muted {
+          font-size: 10px !important;
+          line-height: 1rem !important;
+        }
+      }
     }
   }
 }

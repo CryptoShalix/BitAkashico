@@ -11,10 +11,7 @@
       (click)="PAY_IN_BTC = !PAY_IN_BTC"
     >
       <mat-icon>compare_arrows</mat-icon>
-      <span
-        class="icon-space"
-        [innerHTML]="(getCheckBoxText() | translate) | safe:'html'"
-      ></span>
+      <span [innerHTML]="(getCheckBoxText() | translate) | safe:'html'"></span>
     </button>
 
     <span

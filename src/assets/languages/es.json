@@ -4,7 +4,8 @@
       "accept": "Aceptar",
       "confirm": "Confirmar",
       "cancel": "Cancelar",
-      "enter": "Entrar"
+      "enter": "Entrar",
+      "send": "Enviar"
     },
     "DONATIONS": {
       "titleBit": "Dona unos sats",
@@ -12,7 +13,7 @@
       "messageBit": "Cualquier cantidad de satoshis es bien recibida. Nos motivarán y ayudarán a hacer crecer más los contenidos.<br/><br/>Envía ₿itcoin por lightning network, y así apenas tendrás comisiones. Recuerda que tienes los wallets recomendados de ₿itcoin en <a class='selected' href='/#/tools'>herramientas</a>.",
       "messageFiat": "Cualquier cantidad de euros es bien recibida. Nos motivarán y ayudarán a hacer crecer más los contenidos.<br/><br/><b>¡Atención!</b> <i>Paypal es un servicio de terceros que requiere de una cuenta con KYC (Know Your Customer), lo que implica que tendrás que facilitar tus datos personales, incluyendo DNI, para realizar operaciones.<br/><br/>Este es el motivo por el que te motivamos a usar ₿itcoin para tus donaciones y pagos.<br/><br/>Al hacer clic sobre la imagen se abrirá la aplicación móvil de Paypal, o, en caso de no tenerla instalada, la Store correspondiente para proceder con la instalación de la misma en tu dispositivo.</i>",
       "payInBTC": "Prefiero donar en ₿itcoin",
-      "payInFiat": "Prefiero donar con monedas tradicionales"
+      "payInFiat": "Prefiero donar en €uros"
     },
     "LANGUAGE": {
       "en": "Inglés",
@@ -257,7 +258,7 @@
       "inputUrlLabel": "Página web o red social de preferencia",
       "inputUrlPlaceholder": "e.g. http://url.com o https://linktr.ee/BitAkashico",
       "inputUrlHelp": "Indica la url de tu sitio web o linktr.ee. O déjalo en blanco si no deseas mostrar nada.",
-      "msgWarning": "El testimonio será revisado y podrá modificarse o eliminarse si no cumple con los términos de BitAkashico.<br/>Si deseas eliminar o modificar los datos de tu testimonio, índicalo mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a>."
+      "msgWarning": "El testimonio será revisado antes de publicarse, y podrá modificarse o eliminarse si no cumple con los términos de BitAkashico.<br/>Si deseas eliminar o modificar los datos de tu testimonio, índicalo mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a>."
     },
     "SENTENCES": {
       "appSentenceCom1": "La persona que seas en el futuro será el resultado de las decisiones que tomes hoy mismo",

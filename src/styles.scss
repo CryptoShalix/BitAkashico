@@ -362,6 +362,14 @@ label {
     .mat-step-label {
       color: $stepper-tab-text;
     }
+
+    .mat-step-icon {
+      margin-right: 12px;
+    }
+
+    div {
+      margin: 0;
+    }
   }
 }
 
@@ -459,6 +467,16 @@ pre ::selection {
 @media (pointer:coarse) {
   .text-muted {
     color: $body-text-muted-hover !important;
+  }
+
+  .btn .mat-icon {
+    position: absolute;
+    left: 5px;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    font-size: 30px;
   }
 }
 

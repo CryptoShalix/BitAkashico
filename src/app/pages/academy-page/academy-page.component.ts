@@ -85,12 +85,7 @@ export class AcademyPageComponent implements OnInit {
     // BUTTONS
     const buttons: IFormItemButton[] = [];
     buttons.push({
-      text: 'BUTTONS.cancel',
-      icon: 'cancel',
-      isSubmit: false
-    });
-    buttons.push({
-      text: 'BUTTONS.confirm',
+      text: 'BUTTONS.send',
       icon: 'check',
       isSubmit: true
     });
@@ -125,7 +120,6 @@ export class AcademyPageComponent implements OnInit {
   async onSubmit(formResponse: FormResponse) {
     try {
       const formData = formResponse.data;
-      console.log(formData);
       const testimonial: ITestimonial = {
         side: this.IS_BIT_SIDE ? 'bit' : 'aka',
         name: formData.name,
