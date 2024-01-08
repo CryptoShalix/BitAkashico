@@ -31,6 +31,20 @@
             ></textarea>
           </ng-container>
 
+          <ng-container *ngSwitchCase="'checkbox'">
+            <input
+              [id]="field.name"
+              [type]="field.inputType"
+              [name]="field.name"
+              placeholder="{{ isNullOrEmpty(field.placeholder) ? '' : (field.placeholder | translate) }}"
+              [formControlName]="field.name"
+              [required]="isNullOrEmpty(field.isRequired) ? false : true"
+              [value]="getFieldValue(field.name, 'false')"
+              [checked]="getFieldValue(field.name, 'false')"
+              (change)="onCheckChanged(field.name)"
+            >
+          </ng-container>
+
           <ng-container *ngSwitchDefault>
             <input
               [id]="field.name"

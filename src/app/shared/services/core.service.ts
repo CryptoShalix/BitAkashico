@@ -40,10 +40,10 @@ export class CoreService {
     this.messageService.sendMessage(message);
   }
   showSuccess(message: string) {
-    this.messageService.sendMessage(message, MessageType.SUCCESS);
+    this.messageService.sendMessage(message, MessageType.SUCCESS, 15);
   }
   showAlert(message: string) {
-    this.messageService.sendMessage(message, MessageType.ALERT);
+    this.messageService.sendMessage(message, MessageType.ALERT, 30);
   }
   showError(message: string) {
     this.messageService.sendMessage(message, MessageType.ERROR);

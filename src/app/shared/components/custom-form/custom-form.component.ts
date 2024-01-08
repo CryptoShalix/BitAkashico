@@ -42,21 +42,36 @@ export class CustomFormComponent implements OnInit {
 
     this.fields.forEach(field => {
       let validators: ValidatorFn[] = [];
+      let value: any = '';
       if (field.isRequired) {
         validators.push(Validators.required);
       }
       if (field.inputType === EInputType.EMAIL) {
         validators.push(Validators.email);
       }
+      if (field.inputType === EInputType.CHECK) {
+        value = false;
+      }
       if (field.minLength !== undefined && field.minLength > 0) {
         validators.push(Validators.minLength(field.minLength));
       }
-      this.form.addControl(field.name, new FormControl('', validators));
+      this.form.addControl(field.name, new FormControl(value, validators));
     });
+  }
+
+  getFieldValue(fieldName: string, _def: any = '') {
+    const formItem = this.form.get(fieldName);
+    return formItem === null ? _def : formItem.value;
+  }
+
+  onCheckChanged(fieldName: string) {
+    const formItem = this.form.get(fieldName);
+    formItem?.setValue(formItem.value === 'false' ? true : false);
   }
 
   onSubmit(formData: FormData): void {
     this.outOnSubmit.emit({ form: this.form, data: formData });
+    this.form.reset();
   }
 
   onClicked() {

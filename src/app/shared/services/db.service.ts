@@ -144,7 +144,7 @@ export class DBService {
       const dirtyList: ITestimonial[] = await this.getData(this.PATH_DB_TESTIMONIALS);
       dirtyList.map(t => {
         if (t.side === appSide && !this.isNullOrEmpty(t.testimonial[currentLanguage])) {
-          t.name = this.isNullOrEmpty(t.name) ? 'STRINGS.anonymous' : t.name;
+          t.name = t.anon || this.isNullOrEmpty(t.name) ? 'STRINGS.anonymous' : t.name;
           list.push(t);
         }
       });

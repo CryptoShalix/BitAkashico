@@ -7,8 +7,8 @@ import { MessageType } from '../components/message-manager/message-manager.compo
 export class MessageService {
   private subject = new Subject<any>();
 
-  sendMessage(message: string, type: MessageType = MessageType.NORMAL) {
-    this.subject.next({ text: message, type });
+  sendMessage(message: string, type: MessageType = MessageType.NORMAL, timer: number = 60) {
+    this.subject.next({ text: message, type, timer });
   }
 
   clearMessage() {

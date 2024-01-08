@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
-import { IMAGES } from 'src/assets/images/images';
-
 import { CoreService } from '../../shared/services/core.service';
 import { StorageService } from 'src/app/shared/services/storage.service';
 import { DBService } from 'src/app/shared/services/db.service';
+import { TranslateService } from '../../shared/services/translate.service';
 
 import { ITestimonial } from 'src/app/shared/models/testimonial';
 import { EInputType, FormItem, FormResponse, IFormItemButton, IFormItemField } from 'src/app/shared/models/core';
-import { TranslateService } from '../../shared/services/translate.service';
-import { URLS } from '../../shared/models/core';
 
 @Component({
   selector: 'app-academy-page',

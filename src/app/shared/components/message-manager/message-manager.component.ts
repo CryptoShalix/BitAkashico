@@ -29,10 +29,10 @@ export class MessageItem {
 export class MessageManagerComponent implements OnDestroy {
   // MESSAGE CONTAINER PARAMETERS
   pShowLeft = false;
-  pShowBorderSameColor = false;
+  pShowBorderSameColor = true;
 
   // MAIN VARIABLES
-  private timer = 30000;
+  private timer = 1000;
   private subscription: Subscription;
   messages: MessageItem[] = [];
 
@@ -53,7 +53,7 @@ export class MessageManagerComponent implements OnDestroy {
   private addNewMessage(data: any) {
     const msgItem = new MessageItem(this.getMessageId(), data.text, data.type);
     this.messages.push(msgItem);
-    setInterval(() => this.clearMessage(msgItem.id), this.timer)
+    setInterval(() => this.clearMessage(msgItem.id), data.timer * this.timer);
   }
 
   private getMessageId() {
