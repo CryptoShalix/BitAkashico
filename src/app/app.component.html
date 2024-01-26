@@ -5,7 +5,7 @@
 <ng-template #templateSite>
   <div class="body">
 
-    <div
+    <!-- <div
       class="toolbar-top"
       [ngClass]="{'bit': IS_BIT_SITE, 'aka': !IS_BIT_SITE}"
     >
@@ -84,7 +84,7 @@
         </div>
       </div>
 
-    </div>
+    </div> -->
 
     <div
       class="menu-nav-container"
@@ -125,9 +125,4 @@
 
     <app-message-manager></app-message-manager>
   </div>
-
-  <app-donations
-    [setShow]="showContainerDonations"
-    (outOnClose)="showContainerDonations=$event"
-  ></app-donations>
 </ng-template>

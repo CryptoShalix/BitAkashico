@@ -2,16 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { CoreService } from './shared/services/core.service';
-import { TranslateService } from './shared/services/translate.service';
 import { StorageService } from './shared/services/storage.service';
+import { TranslateService } from './shared/services/translate.service';
 
-import { ECurrency } from './shared/models/currency';
 import {
   ELinkableIcon,
   ELinkableIconType,
   ELinkableTarget,
   LinkableIcon
 } from './shared/components/linkable-icon/linkable-icon';
+import { ECurrency } from './shared/models/currency';
 
 import { IMAGES } from 'src/assets/images/images';
 
@@ -132,14 +132,14 @@ export class AppComponent implements OnInit {
     this.showMenu = false;
   }
 
-  onChangeLanguage(): void {
-    this.translateService.toggleUserLanguage();
-    location.reload();
-  }
+  // onChangeLanguage(): void {
+  //   this.translateService.toggleUserLanguage();
+  //   location.reload();
+  // }
 
-  getTooltipLanguage(): string {
-    return `LANGUAGE.${this.translateService.userLang}`;
-  }
+  // getTooltipLanguage(): string {
+  //   return `LANGUAGE.${this.translateService.userLang}`;
+  // }
 
   getCurrentPage() {
     const path = this.router.url.replace('/', '').toLowerCase();

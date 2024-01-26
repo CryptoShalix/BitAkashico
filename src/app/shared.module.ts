@@ -11,16 +11,17 @@ import { CoinComponent } from './shared/components/coin-info/coin-info.component
 import { ContentTitleComponent } from './shared/components/content-title/content-title.component';
 import { CustomFormComponent } from './shared/components/custom-form/custom-form.component';
 import { CustomImageComponent } from './shared/components/custom-image/custom-image.component';
-import { HistoryMoneyComponent } from './shared/components/history-money/history-money.component';
-import { LinkableIconComponent } from './shared/components/linkable-icon/linkable-icon.component';
-import { LinkableIconContainerComponent } from './shared/components/linkable-icon-container/linkable-icon-container.component';
-import { StarRankComponent } from './shared/components/star-rank/star-rank.component';
-import { MessageManagerComponent } from './shared/components/message-manager/message-manager.component';
 import { DonationsComponent } from './shared/components/donations/donations.component';
+import { GalleryComponent } from './shared/components/gallery/gallery.component';
+import { HistoryMoneyComponent } from './shared/components/history-money/history-money.component';
+import { LinkableIconContainerComponent } from './shared/components/linkable-icon-container/linkable-icon-container.component';
+import { LinkableIconComponent } from './shared/components/linkable-icon/linkable-icon.component';
+import { MessageManagerComponent } from './shared/components/message-manager/message-manager.component';
 import { ModalDialogComponent } from './shared/components/modal-dialog/modal-dialog.component';
 import { ModalSelectorComponent } from './shared/components/modal-selector/modal-selector.component';
+import { StarRankComponent } from './shared/components/star-rank/star-rank.component';
+import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
 import { VideoResponsiveComponent } from './shared/components/video-responsive/video-responsive.component';
-import { GalleryComponent } from './shared/components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -31,15 +32,16 @@ import { GalleryComponent } from './shared/components/gallery/gallery.component'
     CustomFormComponent,
     CustomImageComponent,
     DonationsComponent,
+    GalleryComponent,
     HistoryMoneyComponent,
-    LinkableIconComponent,
     LinkableIconContainerComponent,
+    LinkableIconComponent,
     MessageManagerComponent,
     ModalDialogComponent,
     ModalSelectorComponent,
     StarRankComponent,
     VideoResponsiveComponent,
-    GalleryComponent,
+    ToolbarComponent,
   ],
   imports: [
     CommonModule,
