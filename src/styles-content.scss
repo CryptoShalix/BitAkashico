@@ -211,7 +211,7 @@
     .menu-nav-button {
       position: relative;
       display: flex;
-      width: 40px;
+      width: 100%;
       height: 40px;
       padding: 0 5px;
       margin: 0 5px;
@@ -310,16 +310,16 @@
 
     .menu-nav-controls {
       display: flex;
-      width: 100%;
-      height: auto;
-      max-width: 600px;
-      max-height: 600px;
-      overflow: auto;
-      justify-content: space-evenly;
       flex-direction: column;
-      flex-wrap: wrap;
+      justify-content: space-evenly;
       align-content: center;
       align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      max-height: 600px;
+      overflow: auto;
 
       .menu-nav-control {
         margin: .25rem 0;
@@ -408,7 +408,7 @@
     max-width: 1122.40px;
     margin: 0 auto;
     font-size: 14px;
-    text-align: justify;
+    text-align: pretty;
     line-height: 30px;
     letter-spacing: 1px;
 

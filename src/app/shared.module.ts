@@ -40,8 +40,8 @@ import { VideoResponsiveComponent } from './shared/components/video-responsive/v
     ModalDialogComponent,
     ModalSelectorComponent,
     StarRankComponent,
-    VideoResponsiveComponent,
     ToolbarComponent,
+    VideoResponsiveComponent,
   ],
   imports: [
     CommonModule,
@@ -51,6 +51,7 @@ import { VideoResponsiveComponent } from './shared/components/video-responsive/v
     ReactiveFormsModule,
   ],
   exports: [
+    PipesModule,
     AccordionComponent,
     // CarouselComponent,
     CoinComponent,
@@ -58,16 +59,16 @@ import { VideoResponsiveComponent } from './shared/components/video-responsive/v
     CustomFormComponent,
     CustomImageComponent,
     DonationsComponent,
+    GalleryComponent,
     HistoryMoneyComponent,
-    LinkableIconComponent,
     LinkableIconContainerComponent,
+    LinkableIconComponent,
     MessageManagerComponent,
     ModalDialogComponent,
     ModalSelectorComponent,
-    PipesModule,
     StarRankComponent,
+    ToolbarComponent,
     VideoResponsiveComponent,
-    GalleryComponent,
   ]
 })
 export class SharedModule { }

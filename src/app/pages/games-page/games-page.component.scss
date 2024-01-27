@@ -7,7 +7,7 @@ $var-width-item: 300px;
   max-width: 50%;
   margin: 0 auto;
   font-size: 14px;
-  text-align: justify;
+  text-align: pretty;
   line-height: 30px;
   letter-spacing: 1px;
 
@@ -122,7 +122,7 @@ $var-width-item: 300px;
             }
 
             .description {
-              text-align: justify;
+              text-align: pretty;
               padding: 5px 10px;
               max-height: 125px px;
               overflow: auto;

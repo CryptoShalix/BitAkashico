@@ -76,8 +76,30 @@
 
     </div>
   </div>
-
 </div>
+
+<div
+  class="menu-nav-container"
+  [ngClass]="{'animate': showMenu}"
+>
+  <div
+    class="menu-nav-toggle"
+    (click)="onToggleSide()"
+  >
+    <span [ngClass]="{'selected': IS_BIT_SITE}">Bit</span>
+    <span [ngClass]="{'selected': !IS_BIT_SITE}">Akashico</span>
+  </div>
+
+  <div class="menu-nav-controls">
+    <app-linkable-icon
+      class="menu-nav-control"
+      *ngFor="let iconMenu of iconListMenu"
+      [sDefaultIcon]="iconMenu"
+      (click)="showMenu = false"
+    ></app-linkable-icon>
+  </div>
+</div>
+
 
 <app-donations
   [setShow]="showContainerDonations"
