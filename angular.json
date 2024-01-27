@@ -86,10 +86,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "CryptoShalix:build:production"
+              "buildTarget": "CryptoShalix:build:production"
             },
             "development": {
-              "browserTarget": "CryptoShalix:build:development"
+              "buildTarget": "CryptoShalix:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -97,7 +97,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "CryptoShalix:build"
+            "buildTarget": "CryptoShalix:build"
           }
         },
         "test": {
@@ -145,6 +145,5 @@
         }
       }
     }
-  },
-  "defaultProject": "CryptoShalix"
+  }
 }
