@@ -23,11 +23,12 @@
       "academy": "Academy",
       "books": "Books",
       "contact": "Contact",
+      "finances": "Finances",
       "games": "Games",
       "home": "Home",
       "portfolio": "Portfolio",
-      "tools": "Tools",
-      "finances": "Finances"
+      "testimonials": "Testimonios",
+      "tools": "Tools"
     },
     "MSG": {
       "copyToClipboard": "Copied to clipboard!",
@@ -51,7 +52,7 @@
         "howMuchTitle": "How much does each service cost?",
         "howMuch": "All services <i>(finance, new technologies and spirit)</i> are offered through <b>exchange</b>, that is, you can offer me a service, a product that you make yourself, the equivalent of €10 in any financial asset <i>(estimated minimum price)</i>, or even invite me to a meal.<br/><br/>If the service in question requires a longer process, or is more complex to carry out, the price will be assessed accordingly. <b><i>Always without obligation and warning in advance.</i></b>",
         "howToStartTitle": "Where do I begin?",
-        "howToStart": "To get started, check out the <a class='selected' target='_self' href='#academy'>Academy</a> or the <a class='selected' target='_self' href='#books'>Books</a> section.<br/><br/>If you wish, please contact @CryptoShalix using the <a class='selected' target='_self' href='#contact'>contact form</a> or the social networks shown below, and resolve doubts through an individual and totally personalized meeting.",
+        "howToStart": "To get started, check out the <a class='selected' target='_self' href='#academy'>Academy</a>, the <a class='selected' target='_self' href='#books'>Books</a> section, or the <a class='selected' target='_self' href='#testimonials'>Testimonials</a>.<br/><br/>If you wish, please contact @CryptoShalix using the <a class='selected' target='_self' href='#contact'>contact form</a> or the social networks shown below, and resolve doubts through an individual and totally personalized meeting.",
         "topAppsTitle": "TOP APPS OF THE MOMENT"
       },
       "START": {
@@ -130,6 +131,7 @@
             "title": "₿itcoin: herramientas",
             "description": " ",
             "appBitcoinRainbowChart": "This cute rainbow will show you if we are closer to an altseason (altcoin pump) or the ₿TC pump.",
+            "appChatBTC": "A conversational AI based on technical bitcoin sources. That is, a chat that uses artificial intelligence to answer questions related to Bitcoin.",
             "appKYCP": "To find out if your ₿itcoin is as private as you expect. Advanced level. Very useful to see how the different wallets have implemented privacy (Wasabi, JoinMarket, Whirlpool, etc).",
             "appStackerNews": "It allows you to publish posts and be paid in BTC LN⚡, while you can also rate other users with your satoshis. You make an income of 1000 satoshis, and for every post you like, you donate a few sats, but if you post, and people like, you get those sats back. Cyclical market.",
             "appSlice": "With this browser plugin you will receive sats for viewing ads while browsing the internet. If you want to receive 100 more slices, totally free, you just have to install with my link and use the Slice tool for 30 days. Clever! Get your sats, send them directly to your Zebedee wallet (LN⚡) whenever you want and without costs.",
