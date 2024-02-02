@@ -32,6 +32,7 @@ export class ToolbarComponent {
   icmIdCalc = 'calc';
   icmIdHome = 'home';
   icmIdBooks = 'books';
+  icmIdTestimonials = 'testimonials';
   icmIdGames = 'games';
   icmIdContact = 'contact';
 
@@ -48,6 +49,7 @@ export class ToolbarComponent {
     this.addMenuItem(this.icmIdContact, 'alternate_email');
     this.addMenuItem(this.icmIdAcademy, 'school');
     this.addMenuItem(this.icmIdBooks, 'menu_book');
+    this.addMenuItem(this.icmIdTestimonials, 'format_quote');
 
     if (this.IS_BIT_SITE) {
       this.addMenuItem(this.icmIdTools, 'construction');

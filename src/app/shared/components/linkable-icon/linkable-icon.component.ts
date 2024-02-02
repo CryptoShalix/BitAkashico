@@ -2,8 +2,8 @@ import { Component, Input } from '@angular/core';
 
 import { CoreService } from '../../services/core.service';
 
-import { ELinkableTarget, LinkableIcon } from './linkable-icon';
 import { Router } from '@angular/router';
+import { ELinkableTarget, LinkableIcon } from './linkable-icon';
 
 @Component({
   selector: 'app-linkable-icon',

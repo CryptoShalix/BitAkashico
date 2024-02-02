@@ -13,7 +13,7 @@
     "publish-generate": "ng build --configuration production --base-href https://cryptoshalix.github.io/BitAkashico/",
     "publish-upload": "ngh -d dist/CryptoShalix",
     "deploy": "npm run publish-generate && npm run publish-upload",
-    "reinstall": "rm -rf node_modules && npm cache clean --force && npm i",
+    "reinstall": "rm -rf node_modules && npm cache clean --force && npm i --force --legacy-peer-deps",
     "prune-packages": "npm prune",
     "update-packages": "ng update --legacy-peer-deps"
   },

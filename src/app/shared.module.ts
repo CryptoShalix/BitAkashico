@@ -20,6 +20,7 @@ import { MessageManagerComponent } from './shared/components/message-manager/mes
 import { ModalDialogComponent } from './shared/components/modal-dialog/modal-dialog.component';
 import { ModalSelectorComponent } from './shared/components/modal-selector/modal-selector.component';
 import { StarRankComponent } from './shared/components/star-rank/star-rank.component';
+import { TestimonialsComponent } from './shared/components/testimonials/testimonials.component';
 import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
 import { VideoResponsiveComponent } from './shared/components/video-responsive/video-responsive.component';
 
@@ -40,6 +41,7 @@ import { VideoResponsiveComponent } from './shared/components/video-responsive/v
     ModalDialogComponent,
     ModalSelectorComponent,
     StarRankComponent,
+    TestimonialsComponent,
     ToolbarComponent,
     VideoResponsiveComponent,
   ],
@@ -67,6 +69,7 @@ import { VideoResponsiveComponent } from './shared/components/video-responsive/v
     ModalDialogComponent,
     ModalSelectorComponent,
     StarRankComponent,
+    TestimonialsComponent,
     ToolbarComponent,
     VideoResponsiveComponent,
   ]

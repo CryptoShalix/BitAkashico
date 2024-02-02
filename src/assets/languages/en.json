@@ -23,11 +23,12 @@
       "academy": "Academy",
       "books": "Books",
       "contact": "Contact",
+      "finances": "Finances",
       "games": "Games",
       "home": "Home",
       "portfolio": "Portfolio",
-      "tools": "Tools",
-      "finances": "Finances"
+      "testimonials": "Testimonios",
+      "tools": "Tools"
     },
     "MSG": {
       "copyToClipboard": "Copied to clipboard!",
@@ -51,7 +52,7 @@
         "howMuchTitle": "How much does each service cost?",
         "howMuch": "All services <i>(finance, new technologies and spirit)</i> are offered through <b>exchange</b>, that is, you can offer me a service, a product that you make yourself, the equivalent of €10 in any financial asset <i>(estimated minimum price)</i>, or even invite me to a meal.<br/><br/>If the service in question requires a longer process, or is more complex to carry out, the price will be assessed accordingly. <b><i>Always without obligation and warning in advance.</i></b>",
         "howToStartTitle": "Where do I begin?",
-        "howToStart": "To get started, check out the <a class='selected' target='_self' href='#academy'>Academy</a> or the <a class='selected' target='_self' href='#books'>Books</a> section.<br/><br/>If you wish, please contact @CryptoShalix using the <a class='selected' target='_self' href='#contact'>contact form</a> or the social networks shown below, and resolve doubts through an individual and totally personalized meeting.",
+        "howToStart": "To get started, check out the <a class='selected' target='_self' href='#academy'>Academy</a>, the <a class='selected' target='_self' href='#books'>Books</a> section, or the <a class='selected' target='_self' href='#testimonials'>Testimonials</a>.<br/><br/>If you wish, please contact @CryptoShalix using the <a class='selected' target='_self' href='#contact'>contact form</a> or the social networks shown below, and resolve doubts through an individual and totally personalized meeting.",
         "topAppsTitle": "TOP APPS OF THE MOMENT"
       },
       "START": {

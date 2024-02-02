@@ -5,10 +5,11 @@ import { AcademyPageComponent } from './pages/academy-page/academy-page.componen
 import { BooksPageComponent } from './pages/books-page/books-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
+import { FinancesPageComponent } from './pages/finances-page/finances-page.component';
 import { GamesPageComponent } from './pages/games-page/games-page.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
+import { TestimonialsPageComponent } from './pages/testimonials-page/testimonials-page.component';
 import { ToolsPageComponent } from './pages/tools-page/tools-page.component';
-import { FinancesPageComponent } from './pages/finances-page/finances-page.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'books', component: BooksPageComponent, pathMatch: 'full' },
   { path: 'contact', component: ContactPageComponent, pathMatch: 'full' },
   { path: 'games', component: GamesPageComponent, pathMatch: 'full' },
+  { path: 'testimonials', component: TestimonialsPageComponent, pathMatch: 'full' },
   { path: 'tools', component: ToolsPageComponent, pathMatch: 'full' },
   { path: 'finances', component: FinancesPageComponent, pathMatch: 'full' },
   { path: '**', component: ErrorPageComponent }

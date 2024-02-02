@@ -1,4 +1,4 @@
-@import '../../../../styles-colors.scss';
+@import '../../../../styles/styles-colors.scss';
 
 .modal-dialog-container {
   position: fixed;
@@ -24,10 +24,10 @@
     flex-direction: column;
     width: 85%;
     min-width: 250px;
-    max-width: 800px;
+    max-width: 50%;
     height: auto;
     min-height: 400px;
-    max-height: 600px;
+    max-height: 90%;
     color: $content-text;
     background: $content-background;
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
@@ -86,7 +86,7 @@
     min-height: 500px;
     margin: 0;
     margin-top: 40px;
-    padding: 0 10px;
+    padding: 10px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;

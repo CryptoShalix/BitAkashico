@@ -23,11 +23,12 @@
       "academy": "Academia",
       "books": "Libros",
       "contact": "Contacto",
+      "finances": "Finanzas",
       "games": "Juegos",
       "home": "Inicio",
       "portfolio": "Portfolio",
-      "tools": "Herramientas",
-      "finances": "Finanzas"
+      "testimonials": "Testimonios",
+      "tools": "Herramientas"
     },
     "MSG": {
       "copyToClipboard": "¡Se ha copiado al portapapeles!",
@@ -53,7 +54,7 @@
         "howMuchTitle": "¿Cuánto cuesta cada servicio?",
         "howMuch": "Todos los servicios <i>(finanzas, nuevas tecnologías y espítiru)</i> se ofrecen mediante <b>intercambio</b>, es decir, que me puedes ofrecer un servicio, un producto que tú mism@ fabriques, el equivalente a 10€ en cualquier activo financiero <i>(precio mínimo estimado)</i>, o incluso invitarme a una comida.<br/><br/>Si el servicio en cuestión requiere de un proceso de mayor duración, o es más complejo de llevar a cabo, el precio se valorará según corresponda. <b><i>Siempre sin compromiso y advirtiendo con antelación.</i></b>",
         "howToStartTitle": "¿Por dónde empiezo?",
-        "howToStart": "Para empezar, revisa la <a class='selected' target='_self' href='#academy'>Academia</a> o la sección de <a class='selected' target='_self' href='#books'>Libros</a>.<br/><br/>Si lo deseas, ponte en contacto con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> o las redes sociales que se muestran aquí abajo, y resuelve las dudas mediante una sesión individual y totalmente personalizada.",
+        "howToStart": "Para empezar, revisa la <a class='selected' target='_self' href='#academy'>Academia</a>, la sección de <a class='selected' target='_self' href='#books'>Libros</a>, o los <a class='selected' target='_self' href='#testimonials'>Testimonios</a>.<br/><br/>Si lo deseas, ponte en contacto con @CryptoShalix mediante el <a class='selected' target='_self' href='#contact'>formulario de contacto</a> o las redes sociales que se muestran aquí abajo, y resuelve las dudas mediante una sesión individual y totalmente personalizada.",
         "topAppsTitle": "TOP APPS DEL MOMENTO"
       },
       "START": {

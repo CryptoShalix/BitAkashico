@@ -15,7 +15,7 @@
       [ngTemplateOutlet]="templateAkademy"
     ></ng-container>
 
-    <ng-container [ngTemplateOutlet]="templateTestimonials"></ng-container>
+    <app-testimonials></app-testimonials>
   </div>
 </div>
 
@@ -65,60 +65,3 @@
 </ng-template>
 
 <ng-template #templateAkademy></ng-template>
-
-<ng-template #templateTestimonials>
-  <div class="container-testimonials">
-    <span
-      class="title hover-border"
-      [innerHTML]="(getAkademyTestimonialsTextTitle() | translate) | safe:'html'"
-    ></span>
-    <span [innerHTML]="(getAkademyTestimonialsText() | translate) | safe:'html'"></span>
-
-    <button
-      type="button"
-      class="btn btn-long"
-      (click)="showTestimonialEditor = true"
-    >
-      <mat-icon>add</mat-icon>
-      <span [innerHTML]="('TESTIMONIAL.buttonCreate' | translate) | safe:'html'"></span>
-    </button>
-
-    <app-modal-dialog
-      [setShow]="showTestimonialEditor"
-      [setTitle]="'TESTIMONIAL.buttonCreate' | translate"
-      [setTitleImage]="'format_quote'"
-      (outOnClose)="showTestimonialEditor = false"
-    >
-      <ng-template #modal_dialog_template>
-        <app-custom-form
-          [sFormItem]="formItem"
-          (outOnSubmit)="onSubmit($event)"
-        ></app-custom-form>
-      </ng-template>
-    </app-modal-dialog>
-
-    <div class="testimonial-grid">
-      <div
-        *ngFor="let testimonial of testimonials"
-        class="testimonial"
-      >
-        <span class="testimonial-name">
-          <mat-icon class="testimonial-quote-symbol">format_quote</mat-icon>
-          {{ testimonial.name | translate }}
-          <a
-            [ngClass]="{'visible': testimonial.link !== ''}"
-            [href]="testimonial.link"
-            target="_blank"
-          ><mat-icon>link</mat-icon></a>
-        </span>
-
-        <div class="testimonial-content">
-          <span
-            class="testimonial-quote"
-            [innerHTML]="(getTestimonialByLanguage(testimonial)) | safe:'html'"
-          ></span>
-        </div>
-      </div>
-    </div>
-  </div>
-</ng-template>
