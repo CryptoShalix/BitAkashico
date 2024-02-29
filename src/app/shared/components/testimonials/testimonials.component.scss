@@ -17,9 +17,10 @@ $testimonial-quote-symbol-size: 30px;
   .testimonial-grid {
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax($var-width-gallery, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax($var-width-gallery, 1fr));
     gap: 10px;
     width: 100%;
+    max-width: 1000px;
     margin: 1rem auto;
 
     .testimonial {
@@ -28,7 +29,8 @@ $testimonial-quote-symbol-size: 30px;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      width: $var-width-gallery;
+      width: 100%;
+      height: $var-width-gallery;
       margin: 0;
       user-select: none;
 
@@ -71,10 +73,11 @@ $testimonial-quote-symbol-size: 30px;
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         margin: 0;
         background: $testimonial-background;
+        overflow: auto;
 
         .testimonial-quote {
           border-radius: 10px;
@@ -97,12 +100,13 @@ $testimonial-quote-symbol-size: 30px;
 }
 
 /* RESPONSIVE STYLES */
-@media screen and (max-width: ($var-width-gallery + 25)) {
+@media screen and (max-width: (1000px)) {
   .testimonial-grid {
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)) !important;
 
     .testimonial {
       width: 100% !important;
+      height: 100% !important;
     }
   }
 }
