@@ -1,5 +1,9 @@
 @import 'styles-colors.scss';
 
+$toolbar-top-title-height: 40px;
+$toolbar-top-height: 60px;
+$toolbar-top-margin: calc($toolbar-top-height + $toolbar-top-title-height);
+
 app-testimonials {
   width: 100%;
 }
@@ -33,62 +37,17 @@ app-testimonials {
     position: fixed;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 50px;
-    top: 0;
-    margin: 0 auto;
-    padding: 0;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid transparent;
+    width: 100%;
+    height: $toolbar-top-height;
+    top: $toolbar-top-title-height;
+    margin: 0 auto;
+    padding: 0;
+    color: $toolbar-text;
+    background-color: $toolbar-background;
+    box-shadow: 0px 0px 10px $toolbar-border;
     z-index: 1;
-
-    &.bit {
-      color: $toolbar-text-bit;
-      background-color: $toolbar-background-bit;
-      border-color: $toolbar-border-color-bit;
-
-      .menu-nav .menu-nav-logo,
-      .menu-nav .menu-nav-button,
-      .menu-nav .menu-nav-breadcrumb,
-      .material-icons-donations,
-      .material-icons-language {
-        color: $toolbar-text-bit;
-      }
-
-      .menu-nav:hover .menu-nav-logo,
-      .menu-nav:hover .menu-nav-button,
-      .menu-nav:hover .menu-nav-breadcrumb,
-      .material-icons-donations:hover,
-      .material-icons-language:hover,
-      :hover {
-        color: $toolbar-text-bit-hover !important;
-        border-color: $toolbar-text-bit-hover !important;
-      }
-    }
-
-    &.aka {
-      color: $toolbar-text-aka;
-      background-color: $toolbar-background-aka;
-      border-color: $toolbar-border-color-aka;
-
-      .menu-nav .menu-nav-logo,
-      .menu-nav .menu-nav-button,
-      .menu-nav .menu-nav-breadcrumb,
-      .material-icons-donations,
-      .material-icons-language {
-        color: $toolbar-text-aka;
-      }
-
-      .menu-nav:hover .menu-nav-logo,
-      .menu-nav:hover .menu-nav-button,
-      .menu-nav:hover .menu-nav-breadcrumb,
-      .material-icons-donations:hover,
-      .material-icons-language:hover {
-        color: $toolbar-text-aka-hover;
-        border-color: $toolbar-text-aka-hover;
-      }
-    }
 
     .menu-top {
       position: relative;
@@ -97,7 +56,7 @@ app-testimonials {
       align-items: center;
       justify-content: center;
       width: 100%;
-      min-height: 50px;
+      min-height: $toolbar-top-height;
       padding: 0 2%;
 
       .menu-top-container {
@@ -126,7 +85,7 @@ app-testimonials {
       cursor: pointer;
 
       &:hover {
-        color: $toolbar-border-color-bit;
+        color: $toolbar-border;
       }
 
       .mat-icon {
@@ -155,9 +114,9 @@ app-testimonials {
     font-size: .5em;
     font-weight: 550;
     font-style: italic;
-    color: $toolbar-text-bit;
-    background: $toolbar-background-full;
-    border-top: 2px solid $toolbar-border-color-bit;
+    color: $toolbar-text;
+    background: $toolbar-background;
+    box-shadow: 0px 0px 10px $toolbar-border;
     z-index: 1;
 
     a,
@@ -173,18 +132,62 @@ app-testimonials {
   }
 
   .menu-toggle-side {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 0;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
     height: 100%;
-    max-height: 30px;
+    max-height: $toolbar-top-title-height;
     font-size: 15px;
+    color: $toolbar-text;
+    background-color: $toolbar-background;
+    z-index: 1;
     cursor: pointer;
 
     img.menu-toggle-side-logo {
-      width: 40px;
-      height: 40px;
+      position: absolute;
+      top: 5px;
+      width: 90px;
+      height: 90px;
+      z-index: 1;
+    }
+
+    .menu-toggle-side-title {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-weight: bold;
+      letter-spacing: 0.2rem;
+      font-size: 0.75rem;
+      box-shadow: 0px 0px 10px $color-secondary-1;
+
+      &:hover:not(.selected) {
+        color: $color-secondary-1;
+        background: $color-special-1;
+      }
+    }
+
+    .selected {
+      color: $color-special-1;
+      box-shadow: 0px 0px 10px $color-special-1;
+
+      &::before {
+        content: "[";
+        left: 0;
+      }
+
+      &::after {
+        content: "]";
+        right: 0;
+      }
     }
   }
 
@@ -194,6 +197,7 @@ app-testimonials {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 200px;
     height: 40px;
     padding: 0;
     margin: 0;
@@ -217,9 +221,9 @@ app-testimonials {
     .menu-nav-button {
       position: relative;
       display: flex;
-      width: 100%;
+      width: 50px;
       height: 40px;
-      padding: 0 5px;
+      padding: 0;
       margin: 0 5px;
       justify-content: center;
       align-items: center;
@@ -246,8 +250,7 @@ app-testimonials {
       height: 100%;
       min-height: 40px;
       padding: 0px;
-      // color: $menu-color;
-      color: inherit;
+      color: $menu-color;
       font-size: 10px;
       font-weight: 550;
       text-transform: uppercase;
@@ -259,17 +262,17 @@ app-testimonials {
     position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    height: calc(100% - 50px);
+    height: calc(100% - $toolbar-top-margin);
     min-height: 50%;
     padding: 0;
-    color: $toolbar-text-full;
-    background: rgba($toolbar-background-full, .75);
+    color: $menu-nav-text;
+    background: rgba($menu-nav-background, .85);
     animation: slide-out 1s ease;
-    top: 50px;
+    top: $toolbar-top-margin;
     left: -100%;
     z-index: 9999;
 
@@ -295,12 +298,12 @@ app-testimonials {
         padding: 0.5em 0;
         font-size: 2em;
         text-transform: uppercase;
-        color: $global-link-color;
+        color: $menu-nav-text;
         transition: all 1s ease-in-out;
 
         &.selected {
           font-size: 4em;
-          color: $global-link-color-hover;
+          color: $menu-nav-text-hover;
           border-top: 2px solid #edc16c;
           border-bottom: 2px solid #edc16c;
           transition: all 1s ease-in-out;
@@ -340,7 +343,7 @@ app-testimonials {
     min-height: calc(100vh - 150px);
     top: 0;
     bottom: 0;
-    margin: 50px auto 0;
+    margin: $toolbar-top-margin auto 0;
     padding: 0;
     background: $content-background;
 
@@ -485,7 +488,7 @@ app-testimonials {
       }
     }
 
-    .mat-card-title-group div:first-child {
+    .mat-mdc-card-title-group div:first-child {
       margin: 0 !important;
     }
 
@@ -516,7 +519,7 @@ app-testimonials {
 }
 
 .carousel-wrapper {
-  background-color: $toolbar-background-bit !important;
+  background-color: $toolbar-background !important;
 }
 
 // STEPPER
@@ -546,7 +549,7 @@ app-testimonials {
   }
 
   .menu-donations-container-fix {
-    width: 75% !important;
+    width: 90% !important;
   }
 
   .toolbar-bottom {
@@ -594,30 +597,15 @@ app-testimonials {
 
 @media only screen and (hover: none) and (pointer: coarse) {
   .toolbar-top {
-    &.bit {
 
-      .menu-nav .menu-nav-logo,
-      .menu-nav .menu-nav-button,
-      .menu-nav .menu-nav-breadcrumb,
-      .material-icons-donations,
-      .material-icons-language {
-        color: $toolbar-text-bit !important;
-        border-color: $toolbar-text-bit !important;
-        border-radius: 4px;
-      }
-    }
-
-    &.aka {
-
-      .menu-nav .menu-nav-logo,
-      .menu-nav .menu-nav-button,
-      .menu-nav .menu-nav-breadcrumb,
-      .material-icons-donations,
-      .material-icons-language {
-        color: $toolbar-text-aka-hover !important;
-        border-color: $toolbar-text-aka-hover !important;
-        border-radius: 4px;
-      }
+    .menu-nav .menu-nav-logo,
+    .menu-nav .menu-nav-button,
+    .menu-nav .menu-nav-breadcrumb,
+    .material-icons-donations,
+    .material-icons-language {
+      color: $toolbar-text !important;
+      border-color: $toolbar-text !important;
+      border-radius: 4px;
     }
   }
 

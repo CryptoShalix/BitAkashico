@@ -19,16 +19,9 @@ $background-sentence-back: rgba($color-primary-1, .35);
 $background-sentence-text: $color-secondary-1;
 
 // TOOLBAR
-$toolbar-background-bit: rgba($color-primary-1, .75);
-$toolbar-background-aka: rgba($color-special-1, .85);
-$toolbar-background-full: $color-primary-1;
-$toolbar-border-color-bit: $color-special-1;
-$toolbar-border-color-aka: $color-primary-1;
-$toolbar-text-full: $color-secondary-1;
-$toolbar-text-bit: $color-secondary-1;
-$toolbar-text-bit-hover: $color-special-1;
-$toolbar-text-aka: $color-secondary-1;
-$toolbar-text-aka-hover: $color-primary-1;
+$toolbar-background: $color-secondary-1;
+$toolbar-text: $color-primary-1;
+$toolbar-border: $color-primary-1;
 
 // MESSAGE MANAGER
 $msg-container-text: $color-primary-2;
@@ -67,10 +60,13 @@ $content-start-aka-back: rgba(255, 255, 255, .9);
 $content-start-aka-color: #000000;
 
 // MENU
+$menu-nav-text: $color-secondary-1;
+$menu-nav-text-hover: $color-special-1;
+$menu-nav-background: $color-primary-1;
 $menu-background-color: rgba(255, 255, 255, .75);
 $menu-item-background-color: rgba(64, 64, 64, .75);
 $menu-font-color: rgba(255, 255, 255, 1);
-$menu-color: $color-secondary-1;
+$menu-color: $color-primary-1;
 $menu-color-hover: $color-special-1;
 
 // BUTTON
@@ -118,7 +114,7 @@ $stepper-tab-text-selected: $color-primary-1;
 $stepper-tab-border-selected: $color-special-1;
 
 // GLOBAL
-$global-link-color: $color-secondary-1;
+$global-link-color: $color-primary-1;
 $global-link-color-hover: $color-special-1;
 $global-link-color-disabled: $color-primary-3;
 // $global-link-color-hover: $color-special-2;

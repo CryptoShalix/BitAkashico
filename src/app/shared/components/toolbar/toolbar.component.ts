@@ -23,7 +23,6 @@ export class ToolbarComponent {
 
   showContainerDonations = false;
   showMenu = false;
-  showMenuAsLogo = true;
 
   iconListMenu: LinkableIcon[] = [];
 

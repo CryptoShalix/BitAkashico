@@ -10,7 +10,6 @@ export enum URLS {
   ZEBEDEE_LNTAG = 'cryptoshalix@zbd.gg',
   ZEBEDEE_LNQR = './assets/images/ln_qr_zebedee.png',
   ZEBEDEE_LNURL = 'lnurl1dp68gurn8ghj7ctsdyh85etzv4jx2efwd9hj7a3s9aex2ut4v4ehgttnw3shg6tr943ksctjvajhxtm98q6kvefkxccz6vp4xyuz6dp3xenz6wfjvguz6vmxvverzwp5v5ux2vmph0ayvm',
-  PAYNYM = '+shinysalad643',
   PAYPAL_QR = './assets/images/fiat_qr_paypal.png',
   PAYPAL_URL = 'https://www.paypal.com/qrcodes/managed/0aec90a0-d492-45da-8038-bd9f9fa5fb72?utm_source=consweb_more',
 

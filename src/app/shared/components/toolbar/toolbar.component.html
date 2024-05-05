@@ -1,33 +1,34 @@
-<div
-  class="toolbar-top"
-  [ngClass]="{'bit': IS_BIT_SITE, 'aka': !IS_BIT_SITE}"
->
+<div class="toolbar-top">
 
   <div class="menu-top">
+    <div
+      class="menu-toggle-side tooltip"
+      (click)="onToggleSide()"
+    >
+      <span class="tooltip-label">{{ 'MSG.appSideChoose' | translate | uppercase }}</span>
+      <span
+        class="menu-toggle-side-title"
+        [ngClass]="{'selected': IS_BIT_SITE}"
+      >BIT</span>
+      <img
+        class="menu-toggle-side-logo"
+        [src]="IMAGE_LOGO"
+        [alt]="title"
+        title="{{title}}"
+      >
+      <span
+        class="menu-toggle-side-title"
+        [ngClass]="{'selected': !IS_BIT_SITE}"
+      >AKASHICO</span>
+    </div>
+
     <div class="menu-top-container">
 
       <div
-        class="menu-nav tooltip"
+        class="menu-nav"
         (click)="showMenu = !showMenu"
       >
-        <span class="tooltip-label">{{ 'MSG.appSideChoose' | translate | uppercase }}</span>
-
-        <div
-          *ngIf="showMenuAsLogo"
-          class="menu-nav-logo"
-        >
-          <img
-            class="menu-toggle-side-logo"
-            [src]="IMAGE_LOGO"
-            [alt]="title"
-            title="{{title}}"
-          >
-        </div>
-
-        <mat-icon
-          *ngIf="!showMenuAsLogo"
-          class="menu-nav-button"
-        >{{ showMenu ? 'close' : 'menu' }}</mat-icon>
+        <mat-icon class="menu-nav-button">{{ showMenu ? 'close' : 'menu' }}</mat-icon>
 
         <span class="menu-nav-breadcrumb">
           [{{ IS_BIT_SITE ? 'BIT' : 'AKASHICO' }}]<br />
@@ -36,25 +37,6 @@
       </div>
 
       <span class="spacer"></span>
-
-      <div
-        *ngIf="!showMenuAsLogo"
-        class="menu-toggle-side tooltip"
-        (click)="showMenu = !showMenu"
-      >
-        <span class="tooltip-label">{{ 'MSG.appSideChoose' | translate | uppercase }}</span>
-        <img
-          class="menu-toggle-side-logo"
-          [src]="IMAGE_LOGO"
-          [alt]="title"
-          title="{{title}}"
-        >
-      </div>
-
-      <span
-        *ngIf="!showMenuAsLogo"
-        class="spacer"
-      ></span>
 
       <div class="menu-actions">
         <div
@@ -82,13 +64,13 @@
   class="menu-nav-container"
   [ngClass]="{'animate': showMenu}"
 >
-  <div
+  <!-- <div
     class="menu-nav-toggle"
     (click)="onToggleSide()"
   >
     <span [ngClass]="{'selected': IS_BIT_SITE}">Bit</span>
     <span [ngClass]="{'selected': !IS_BIT_SITE}">Akashico</span>
-  </div>
+  </div> -->
 
   <div class="menu-nav-controls">
     <app-linkable-icon

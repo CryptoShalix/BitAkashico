@@ -39,16 +39,6 @@
         *ngIf="PAY_IN_BTC"
         class="show-as-row"
         (click)="onClickCopyToClipboard()"
-        [cdkCopyToClipboard]="walletBTCPaynymTag"
-      >
-        <mat-icon>polymer</mat-icon>
-        {{walletBTCPaynymText}}
-      </a>
-
-      <a
-        *ngIf="PAY_IN_BTC"
-        class="show-as-row"
-        (click)="onClickCopyToClipboard()"
         [cdkCopyToClipboard]="walletBTCLNZebedeeUrl"
       >
         <img

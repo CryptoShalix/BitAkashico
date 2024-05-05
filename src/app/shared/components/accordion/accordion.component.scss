@@ -22,6 +22,15 @@
         line-height: 15px;
         text-align: left;
         text-transform: uppercase;
+
+        div {
+          margin: 0;
+        }
+
+        .mat-icon {
+          width: 34px;
+          height: 34px;
+        }
       }
 
       .mat-expansion-panel-header-description {
@@ -55,38 +64,37 @@
         overflow-y: auto;
       }
 
-      .mat-card {
+      .mdc-card {
         position: relative;
         display: flex;
+        flex-direction: row;
         align-items: center;
         margin: 5px auto;
         padding: 0;
-        background: transparent;
-        color: $body-text;
-        border: 2px solid transparent;
         color: $card-text;
         background-color: $card-background;
+        border: 2px solid transparent;
         cursor: pointer;
 
         &:hover {
           border-color: $card-border-dark;
         }
 
-        .mat-card-title-group {
+        .mat-mdc-card-title-group {
           display: flex;
           width: 100%;
-          max-width: 200px;
+          max-width: auto;
           min-width: 200px;
           margin: 0;
           padding: 5px;
           align-items: center;
           text-align: left;
 
-          div:first-child {
+          div {
             margin: 0 !important;
           }
 
-          .mat-card-title {
+          .mat-mdc-card-title {
             display: block;
             width: 100%;
             margin: 0;
@@ -94,19 +102,19 @@
             font-size: 14px;
           }
 
-          .mat-card-subtitle {
+          .mat-mdc-card-subtitle {
             margin: 0;
             font-size: 12px;
             color: $body-text;
           }
 
-          .mat-card-title:not(:first-child),
-          .mat-card-subtitle:not(:first-child) {
+          .mat-mdc-card-title:not(:first-child),
+          .mat-mdc-card-subtitle:not(:first-child) {
             margin: 0;
           }
         }
 
-        .mat-card-content {
+        .mat-mdc-card-content {
           width: calc(100% - 10px);
           margin: 0;
           font-size: 14px;
@@ -121,10 +129,10 @@
 
 /* Responsive Styles */
 @media screen and (max-width: 1256px) {
-  .mat-card {
-    flex-direction: column;
+  .mdc-card {
+    flex-direction: column !important;
 
-    .mat-card-title-group {
+    .mdc-card-title-group {
       min-width: 100% !important;
     }
   }

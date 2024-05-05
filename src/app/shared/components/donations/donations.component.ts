@@ -22,8 +22,6 @@ export class DonationsComponent {
   walletBTCLNZebedeeTag = URLS.ZEBEDEE_LNTAG;
   walletBTCLNZebedeeUrl = `${URLS.ZEBEDEE_LNURL}`;
   walletBTCLNZebedeeQR = `${URLS.ZEBEDEE_LNQR}`;
-  walletBTCPaynymTag = `${URLS.PAYNYM}`;
-  walletBTCPaynymText = `Paynym: ${this.walletBTCPaynymTag}`;
   walletPaypalQR = `${URLS.PAYPAL_QR}`;
   walletPaypalUrl = `${URLS.PAYPAL_URL}`;
 

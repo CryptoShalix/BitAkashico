@@ -22,9 +22,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 85%;
+    width: 90%;
     min-width: 250px;
-    max-width: 50%;
+    max-width: 600px;
     height: auto;
     min-height: 400px;
     max-height: 90%;
@@ -43,7 +43,7 @@
       padding: 10px;
       align-items: center;
       justify-content: flex-end;
-      border-bottom: 1px solid $toolbar-border-color-bit;
+      border-bottom: 1px solid $toolbar-border;
 
       .close-button {
         width: 30px;
@@ -52,7 +52,7 @@
         cursor: pointer;
 
         &:hover {
-          color: $toolbar-border-color-bit;
+          color: $toolbar-border;
         }
       }
 
