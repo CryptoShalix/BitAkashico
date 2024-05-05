@@ -1,6 +1,6 @@
 export class IMAGES {
-  static HOME_IMG = `./assets/images/logo_v1.png`;
-  static HOME_IMG_SMALL = `./assets/images/logo_v1_small.png`;
+  static HOME_IMG = `./assets/images/logo_v2.png`;
+  static HOME_IMG_SMALL = `./assets/images/logo_v2_small.png`;
 
   static NO_IMAGE = `./assets/images/no_image.png`;
 

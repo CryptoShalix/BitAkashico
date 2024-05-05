@@ -18,11 +18,6 @@
         "rank": 4.5
       },
       {
-        "name": "Sennet",
-        "link": "https://sennet.ai/es/?via=shalix",
-        "rank": 4.5
-      },
-      {
         "name": "DefiLlama",
         "link": "https://defillama.com",
         "rank": 3.5
@@ -93,7 +88,7 @@
       {
         "name": "Blixt",
         "link": "https://blixtwallet.github.io",
-        "rank": 4.5,
+        "rank": 4.8,
         "isLN": true
       },
       {
@@ -121,12 +116,6 @@
         "isLN": true
       },
       {
-        "name": "Samourai Wallet",
-        "link": "https://samouraiwallet.com",
-        "rank": 5,
-        "isLN": false
-      },
-      {
         "name": "Simple Bitcoin Wallet (SBW)",
         "link": "https://sbw.app",
         "rank": 4,
@@ -141,7 +130,7 @@
       {
         "name": "Specter Wallet",
         "link": "https://specter.solutions",
-        "rank": 4.5,
+        "rank": 4,
         "isLN": false
       },
       {
@@ -165,7 +154,7 @@
       {
         "name": "Zeus",
         "link": "https://zeusln.app",
-        "rank": 4.1,
+        "rank": 5,
         "isLN": true
       }
     ],
@@ -177,7 +166,7 @@
       {
         "name": "Brave Wallet",
         "link": "https://brave.com/es/wallet",
-        "rank": 4
+        "rank": 4.5
       },
       {
         "name": "Metamask",
