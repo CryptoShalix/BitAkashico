@@ -1,27 +1,6 @@
 <div class="toolbar-top">
 
   <div class="menu-top">
-    <div
-      class="menu-toggle-side tooltip"
-      (click)="onToggleSide()"
-    >
-      <span class="tooltip-label">{{ 'MSG.appSideChoose' | translate | uppercase }}</span>
-      <span
-        class="menu-toggle-side-title"
-        [ngClass]="{'selected': IS_BIT_SITE}"
-      >BIT</span>
-      <img
-        class="menu-toggle-side-logo"
-        [src]="IMAGE_LOGO"
-        [alt]="title"
-        title="{{title}}"
-      >
-      <span
-        class="menu-toggle-side-title"
-        [ngClass]="{'selected': !IS_BIT_SITE}"
-      >AKASHICO</span>
-    </div>
-
     <div class="menu-top-container">
 
       <div
@@ -56,6 +35,27 @@
         </div>
       </div>
 
+    </div>
+
+    <div
+      class="menu-toggle-side tooltip"
+      (click)="onToggleSide()"
+    >
+      <span class="tooltip-label">{{ 'MSG.appSideChoose' | translate | uppercase }}</span>
+      <span
+        class="menu-toggle-side-title"
+        [ngClass]="{'selected': IS_BIT_SITE}"
+      >BIT</span>
+      <img
+        class="menu-toggle-side-logo"
+        [src]="IMAGE_LOGO"
+        [alt]="title"
+        title="{{title}}"
+      >
+      <span
+        class="menu-toggle-side-title"
+        [ngClass]="{'selected': !IS_BIT_SITE}"
+      >AKASHICO</span>
     </div>
   </div>
 </div>
