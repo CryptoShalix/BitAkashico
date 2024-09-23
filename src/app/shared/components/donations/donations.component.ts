@@ -19,6 +19,7 @@ export class DonationsComponent {
   showContainerDonations = false;
 
   // Copy text: https://www.geeksforgeeks.org/how-to-create-copy-to-clipboard-button/
+  walletBTCLNStackerNewsTag = URLS.STACKERNEWS_LNTAG;
   walletBTCLNZebedeeTag = URLS.ZEBEDEE_LNTAG;
   walletBTCLNZebedeeUrl = `${URLS.ZEBEDEE_LNURL}`;
   walletBTCLNZebedeeQR = `${URLS.ZEBEDEE_LNQR}`;

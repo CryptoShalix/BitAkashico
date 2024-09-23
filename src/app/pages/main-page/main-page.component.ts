@@ -5,8 +5,8 @@ import { StorageService } from '../../shared/services/storage.service';
 
 import { LinkableIcon } from 'src/app/shared/components/linkable-icon/linkable-icon';
 import { ISpanOrTitle } from 'src/app/shared/models/core';
-import { IMAGES } from 'src/assets/images/images';
 import { CoreService } from 'src/app/shared/services/core.service';
+import { IMAGES } from 'src/assets/images/images';
 
 @Component({
   selector: 'app-main-page',
@@ -16,7 +16,7 @@ import { CoreService } from 'src/app/shared/services/core.service';
 export class MainPageComponent implements OnInit {
   private userLanguage: string;
   private APP_SIDE: number;
-  private APP_TOP_LIST = ['Wirex', 'Relai', 'Bit2Me'];
+  private APP_TOP_LIST = ['Wirex', 'Brave Browser', 'TradingView'];
 
   IS_BIT_SITE: boolean = false;
   APP_SENTENCE: string = '';

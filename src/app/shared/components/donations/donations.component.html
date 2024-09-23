@@ -29,6 +29,16 @@
         *ngIf="PAY_IN_BTC"
         class="show-as-row"
         (click)="onClickCopyToClipboard()"
+        [cdkCopyToClipboard]="walletBTCLNStackerNewsTag"
+      >
+        <mat-icon>offline_bolt</mat-icon>
+        {{ walletBTCLNStackerNewsTag }}
+      </a>
+
+      <a
+        *ngIf="PAY_IN_BTC"
+        class="show-as-row"
+        (click)="onClickCopyToClipboard()"
         [cdkCopyToClipboard]="walletBTCLNZebedeeTag"
       >
         <mat-icon>offline_bolt</mat-icon>

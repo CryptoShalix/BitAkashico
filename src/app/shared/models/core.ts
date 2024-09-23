@@ -7,6 +7,7 @@ export enum URLS {
   YOUTUBE = 'https://www.youtube.com/@BitAkashico',
 
   // WALLETS
+  STACKERNEWS_LNTAG = 'cryptoshalix@stacker.news',
   ZEBEDEE_LNTAG = 'cryptoshalix@zbd.gg',
   ZEBEDEE_LNQR = './assets/images/ln_qr_zebedee.png',
   ZEBEDEE_LNURL = 'lnurl1dp68gurn8ghj7ctsdyh85etzv4jx2efwd9hj7a3s9aex2ut4v4ehgttnw3shg6tr943ksctjvajhxtm98q6kvefkxccz6vp4xyuz6dp3xenz6wfjvguz6vmxvverzwp5v5ux2vmph0ayvm',
