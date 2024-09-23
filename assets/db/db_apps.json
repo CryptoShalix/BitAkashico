@@ -166,7 +166,7 @@
       {
         "name": "Brave Wallet",
         "link": "https://brave.com/es/wallet",
-        "rank": 4.5
+        "rank": 4.8
       },
       {
         "name": "Metamask",
@@ -181,42 +181,37 @@
       {
         "name": "Status",
         "link": "https://status.im",
-        "rank": 4
+        "rank": 3.9
       },
       {
         "name": "TrustWallet",
         "link": "https://trustwallet.com",
-        "rank": 3.4
-      },
-      {
-        "name": "Defiant",
-        "link": "https://defiantapp.tech",
-        "rank": 4.2
+        "rank": 2.5
       },
       {
         "name": "Liquality",
         "link": "https://www.liquality.io/",
-        "rank": 3.8
+        "rank": 3.4
       },
       {
         "name": "Exodus",
         "link": "https://www.exodus.com",
-        "rank": 3.9
+        "rank": 3.5
       },
       {
         "name": "Edge Wallet",
         "link": "https://edge.app",
-        "rank": 3.8
+        "rank": 3.5
       },
       {
         "name": "Crypto DeFi Wallet",
         "link": "https://crypto.com/eea/defi-wallet",
-        "rank": 3.5
+        "rank": 3.8
       },
       {
         "name": "Rabby",
         "link": "https://rabby.io",
-        "rank": 3.8
+        "rank": 3.6
       }
     ],
     "icon": "account_balance_wallet"
@@ -227,7 +222,7 @@
       {
         "name": "Binance",
         "link": "https://www.binance.com/en/register?ref=EEICFSED",
-        "rank": 4.3
+        "rank": 4
       },
       {
         "name": "Bit2Me",
@@ -248,7 +243,7 @@
       {
         "name": "Relai",
         "link": "https://relai.app/REL57044",
-        "rank": 5
+        "rank": 4
       },
       {
         "name": "PancakeSwap",
@@ -258,7 +253,7 @@
       {
         "name": "Fixed Float",
         "link": "https://fixedfloat.com",
-        "rank": 4
+        "rank": 4.2
       },
       {
         "name": "DexGuru",
@@ -272,6 +267,37 @@
       }
     ],
     "icon": "device_hub"
+  },
+  {
+    "groupName": "EXCHANGES_P2P",
+    "items": [
+      {
+        "name": "Hodl Hodl",
+        "link": "https://hodlhodl.com/join/A2AG",
+        "rank": 4.5
+      },
+      {
+        "name": "Bisq",
+        "link": "https://bisq.network",
+        "rank": 4.5
+      },
+      {
+        "name": "Peach Bitcoin",
+        "link": "https://peachbitcoin.com/es/referral?code=PR659F",
+        "rank": 4
+      },
+      {
+        "name": "Paxful",
+        "link": "https://paxful.com/es",
+        "rank": 4
+      },
+      {
+        "name": "Vexl",
+        "link": "https://vexl.it",
+        "rank": 3.8
+      }
+    ],
+    "icon": "account_balance"
   },
   {
     "groupName": "PORTFOLIO-TRACKERS",
@@ -366,8 +392,49 @@
     "icon": "bug_report"
   },
   {
+    "groupName": "DEFI-TOOLS",
+    "items": [
+      {
+        "name": "DefiLlama",
+        "link": "https://defillama.com",
+        "rank": 4.8
+      },
+      {
+        "name": "WalletGuard",
+        "link": "https://www.walletguard.app",
+        "rank": 4.5
+      },
+      {
+        "name": "Etherscan",
+        "link": "https://etherscan.io",
+        "rank": 4.5
+      },
+      {
+        "name": "Dune Analytics",
+        "link": "https://dune.com/home",
+        "rank": 4.5
+      },
+      {
+        "name": "DEXTools",
+        "link": "https://www.dextools.io",
+        "rank": 4.8
+      },
+      {
+        "name": "DEXscreener",
+        "link": "https://dexscreener.com",
+        "rank": 4.5
+      }
+    ],
+    "icon": "important_devices"
+  },
+  {
     "groupName": "OTHERS",
     "items": [
+      {
+        "name": "Brave Browser",
+        "link": "https://brave.com",
+        "rank": 5
+      },
       {
         "name": "Chainlist",
         "link": "https://chainlist.org",
