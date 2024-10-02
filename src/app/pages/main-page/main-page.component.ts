@@ -16,7 +16,7 @@ import { IMAGES } from 'src/assets/images/images';
 export class MainPageComponent implements OnInit {
   private userLanguage: string;
   private APP_SIDE: number;
-  private APP_TOP_LIST = ['Wirex', 'Brave Browser', 'TradingView'];
+  private APP_TOP_LIST = ['Wirex', 'Brave Browser', 'Hodl Hodl'];
 
   IS_BIT_SITE: boolean = false;
   APP_SENTENCE: string = '';

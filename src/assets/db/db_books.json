@@ -2,42 +2,42 @@
   {
     "name": "Sun Tzu - El arte de la guerra",
     "urlRead": "https://mega.nz/file/Eth30ZaS#7udTq8Uk2Wj4sZeJmXZilIq4dRTVPHZvNuzC1bz9FMU",
-    "urlBuy": "https://amzn.eu/d/2vOtdGR",
+    "urlBuy": "https://amzn.to/3Na3zS9",
     "image": "./assets/images/books/",
     "side": "com"
   },
   {
     "name": "Rebecca Campbell - Mensajes para una semilla estelar",
     "urlRead": "https://mega.nz/file/cgpWST4a#OVtTPFO8faDgOpZDq2AiJ_Y8PIrFG3Yrv1x1AAh8n00",
-    "urlBuy": "https://amzn.eu/d/3bHamq6",
+    "urlBuy": "https://amzn.to/3zQ4ZhC",
     "image": "./assets/images/books/aka",
     "side": "aka"
   },
   {
     "name": "Andreas M. Antonopoulos - Mastering Bitcoin",
     "urlRead": "https://mega.nz/file/slhASYSZ#f8nCtECHZi5Hxwt-2HdS30lQe791vFWF4txxkh7xUko",
-    "urlBuy": "https://amzn.eu/d/aFShy9R",
+    "urlBuy": "https://amzn.to/4er5SfF",
     "image": "./assets/images/books/bit",
     "side": "bit"
   },
   {
     "name": "Andreas M. Antonopoulos, Rene Pickhardt - Mastering the lightning network",
     "urlRead": "https://mega.nz/file/k8h1TSLS#Ds_5qtU4SV3s55o2LT_uz7LfceO0yJU5ezBHxsXzupA",
-    "urlBuy": "https://amzn.eu/d/24Yt1DB",
+    "urlBuy": "https://amzn.to/3NbRcVG",
     "image": "./assets/images/books/bit",
     "side": "bit"
   },
   {
-    "name": "Andreas M. Antonopoulos - Dominando Bitcoin",
-    "urlRead": "https://mega.nz/file/0lYxXB7B#6kByHHcVy8BjEWq3VUhVXjFSncIZycluhdMfSsWOay0",
-    "urlBuy": "https://amzn.eu/d/aIxPkuI",
+    "name": "T. Harv Eker - Los secretos de la mente millonaria",
+    "urlRead": "https://mega.nz/file/dohhhLwK#l4YEeU9uEDLU-M3KESOBMfjrhylez-xmY5OVHSG9vKQ",
+    "urlBuy": "https://amzn.to/3TREHTd",
     "image": "./assets/images/books/bit",
     "side": "bit"
   },
   {
     "name": "Andreas M. Antonopoulos - Internet del dinero",
     "urlRead": "https://mega.nz/file/ZkIzwBRS#pUGSe-HSr1JoEMUXdpz9ZslkzTZFrmGOYudVXpoNi3Y",
-    "urlBuy": "Andreas M. Antonopoulos - Internet del dinero",
+    "urlBuy": "https://amzn.to/47R30Gw",
     "image": "./assets/images/books/bit",
     "side": "bit"
   },
@@ -49,23 +49,30 @@
     "side": "com"
   },
   {
+    "name": "Amalia Guerrero - En casa las cuentas claras",
+    "urlRead": "https://mega.nz/file/45RzGaLK#xMxTh8e3QNVqE0JXDoL90gQkGo5My6RHPqDUBRiS9kc",
+    "urlBuy": "https://amzn.to/47Ocu5e",
+    "image": "./assets/images/books/",
+    "side": "com"
+  },
+  {
     "name": "Bitcoin. Un sistema de efectivo electrónico usuario a usuario",
     "urlRead": "https://mega.nz/file/ltA2ya4D#w1td92QbssTSRL8-U7-9AqL8C16TBFQuT_VKX_lfHgg",
-    "urlBuy": "https://amzn.eu/d/4u03EpC",
+    "urlBuy": "https://amzn.to/4eNiRs4",
     "image": "./assets/images/books/bit",
     "side": "bit"
   },
   {
     "name": "Daniel Kahneman - Pensar rápido, pensar despacio",
     "urlRead": "https://mega.nz/file/NsJSBTzC#fDjaB7TT5BwhQ6NOSyqRHr_E_-2EJ1P9nabqTZhHJKE",
-    "urlBuy": "https://amzn.eu/d/59PSrPL",
+    "urlBuy": "https://amzn.to/47Mt0mx",
     "image": "./assets/images/books/",
     "side": "com"
   },
   {
     "name": "Phil Champagne - El libro de Satoshi",
     "urlRead": "https://mega.nz/file/Vs4m2b6K#Mw_9iSwl0NHtdR6R0bA4bFe0lQj0ffiNUNuC5I9QSHE",
-    "urlBuy": "https://amzn.eu/d/jaQuGJw",
+    "urlBuy": "https://amzn.to/3N7aRGm",
     "image": "./assets/images/books/bit",
     "side": "bit"
   }

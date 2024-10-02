@@ -3,8 +3,8 @@ $color-primary-1: rgb(0, 0, 0);
 $color-primary-2: rgb(34, 34, 34);
 $color-primary-3: rgb(44, 47, 51);
 $color-secondary-1: rgb(255, 255, 255);
-$color-secondary-2: rgb(221, 221, 221);
-$color-secondary-3: rgb(202, 202, 202);
+$color-secondary-2: rgb(227, 220, 209);
+$color-secondary-3: rgb(247, 243, 238);
 
 // STARS AND OTHER SPECIAL ICONS
 $color-positive: #006e21;
@@ -39,7 +39,7 @@ $carousel-item-hover-text: $color-primary-3;
 $carousel-item-hover-border: $color-primary-3;
 
 // BODY
-$body-background: $color-secondary-1;
+$body-background: $color-primary-1;
 $body-text: $color-primary-1;
 $body-text-muted: $color-secondary-3;
 $body-text-muted-hover: $color-primary-1;
