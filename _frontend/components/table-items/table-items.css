@@ -1,0 +1,199 @@
+.table-items {
+  --main-color: var(--color-primary-rgb);
+  --item-box-size: 400px;
+  --shadow: var(--color-accent-rgb);
+  --btn-buy-height: 4rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--item-box-size), 1fr));
+  gap: 1rem;
+
+  .item-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: var(--item-box-size);
+    padding: 1rem;
+    padding-bottom: calc(var(--btn-buy-height) + (var(--btn-buy-height)/2));
+    border: 2px solid var(--main-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      border-color: var(--color-accent-rgb);
+      box-shadow: 0px 0px 10px 0px var(--shadow);
+      transition: all 0.5s ease-in-out;
+    }
+
+    .item-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+
+      img {
+        --item-image-size: 5rem;
+
+        width: 100%;
+        min-width: var(--item-image-size);
+        max-width: var(--item-image-size);
+        height: 100%;
+        min-height: var(--item-image-size);
+        max-height: var(--item-image-size);
+        border-radius: 2rem;
+        box-shadow: var(--shadow);
+      }
+
+      h1 {
+        width: 100%;
+        font-size: 1.5rem;
+      }
+    }
+
+    .item-body {
+      text-align: center;
+      color: var(--color-text-secondary);
+    }
+
+    .prices {
+      --color-text-subtle: rgb(var(--color-hover));
+      --price-font-size: 2rem;
+
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+
+      .price-periodicity {
+        --color-periodicity: var(--main-color);
+
+        width: 100%;
+        font-size: calc(var(--price-font-size) - .5rem);
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        padding: .5rem;
+        color: var(--color-periodicity);
+        border-top: 2px dashed var(--color-periodicity);
+        border-bottom: 2px dashed var(--color-periodicity);
+      }
+
+      .price-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        gap: 1rem;
+        margin: 1rem auto;
+        padding: 1rem;
+        font-size: var(--price-font-size);
+        font-weight: bolder;
+        text-transform: uppercase;
+        background: var(--color-text-subtle);
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+
+        .price-original,
+        .price-final {
+          width: 100%;
+          text-align: center;
+          border-radius: 2rem;
+          font-size: var(--price-font-size);
+
+          &.crossedOut {
+            font-style: italic;
+            text-decoration: line-through !important;
+            color: rgb(var(--color-secondary));
+            background-color: rgba(var(--color-secondary), 0.1);
+          }
+
+          .price,
+          .currency {
+            font-size: var(--price-font-size);
+          }
+        }
+
+        .price-final .price {
+          font-size: calc(var(--price-font-size) + 1rem);
+          font-style: italic;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .item-footer {
+      position: absolute;
+      display: flex;
+      width: 100%;
+      height: var(--btn-buy-height);
+      bottom: 0;
+      margin: calc(var(--btn-buy-height)/2) auto;
+      justify-content: center;
+      align-items: center;
+
+      .btn {
+        margin: 0;
+        padding: 1rem;
+
+        span {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+/*****************************************************/
+/* DARK MODE */
+/*****************************************************/
+
+@media (prefers-color-scheme: dark) {
+  .table-items {
+    --main-color: var(--color-secondary-rgb);
+  }
+}
+
+/*******************************************************/
+/* ANIMATION */
+/*******************************************************/
+
+@keyframes moveBackground {
+  0% {
+    background-position: 50% 50%;
+  }
+
+  100% {
+    background-position: 50% 50%;
+  }
+}
+
+/*******************************************************/
+/* RESPONSIVE */
+/*******************************************************/
+
+@media screen and (max-width: 1200px) {
+  .price-box {
+    width: 75% !important;
+  }
+}
+
+@media (hover: none) {
+  .table-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .item-footer {
+      margin: 0 !important;
+    }
+  }
+}

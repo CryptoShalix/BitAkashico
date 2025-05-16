@@ -1,0 +1,42 @@
+<section class="flex col w-full">
+  <h1
+    class="trn"
+    data-trn-key="pages.testimonials.title"
+  ></h1>
+
+  <span
+    class="trn description"
+    data-trn-key="pages.testimonials.description"
+  ></span>
+
+  <button
+    id="btnAddTestimonial"
+    type="button"
+    class="btn seeMore"
+    onclick="toggleTestimonialForm(event);"
+  >
+    <i
+      id="btnAddTestimonialIcon"
+      class="fa fa-user-plus"
+    ></i>
+    <span
+      class="trn"
+      data-trn-key="pages.testimonials.btnAdd"
+    ></span>
+  </button>
+
+  <div
+    id="testimonial-form"
+    class="accordion-content flex col w-full hidden"
+  ></div>
+
+</section>
+
+<span
+  id="no-testimonials"
+  class="trn"
+  data-trn-key="pages.testimonials.msgNoTestimonials"
+></span>
+
+<!-- THE TESTIMONIALS DIV IS LOADED DYNAMICALLY AT THE JS FILE -->
+<div class="testimonials"></div>

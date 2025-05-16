@@ -1,0 +1,120 @@
+[
+  {
+    "global": {
+      "title": "BitAkashico",
+      "sCopyright": "Todos los derechos reservados",
+      "sCredits": "Desarrollada con&nbsp;<i class='fa fa-heart red'></i>&nbsp;por <a target='_blank' href='https://linktr.ee/CryptoShalix'>@CryptoShalix</a>",
+      "videoNotSupported": "El video no es compatible con tu navegador.",
+      "seeMore": "¡Quiero ver más!",
+      "noEvents": "<i>No hay eventos disponibles en este momento.</i>",
+      "costType": {
+        "free": "Gratis",
+        "paid": "Pago",
+        "donation": "Donación"
+      },
+      "costPeriodicity": {
+        "hourly": "Por hora",
+        "daily": "Diario",
+        "weekly": "Semanal",
+        "biweekly": "Quincenal",
+        "monthly": "Mensual",
+        "bimonthly": "Bimestral",
+        "quarterly": "Trimestral",
+        "semiannually": "Semestral",
+        "yearly": "Anual",
+        "oneTime": "Un solo pago",
+        "session": "Por sesión"
+      }
+    },
+    "nav": {
+      "home": "Inicio",
+      "about": "Acerca de",
+      "store": "Tienda",
+      "testimonials": "Testimonios",
+      "contact": "Contacto",
+      "favorites": "Favoritos"
+    },
+    "pages": {
+      "home": {
+        "title": "Inicio"
+      },
+      "testimonials": {
+        "title": "Testimonios",
+        "description": "¡Estos son algunos de los testimonios de mis clientes y alumnos!<br/><br/>Con sus propias palabras, demuestran la calidad de mis servicios, y, al verlos, me recuerda que <i><u>juntos llegamos más lejos</u></i>, motivándome a crecer más y ayudar a más personas.<br/><br/><b>¡Gracias por ser parte de nuestra comunidad de éxito!</b><br/><br/><i>Si quieres dejar tu testimonio, puedes hacerlo desde el botón de abajo.</i>",
+        "msgNoTestimonials": "<i>No hay testimonios disponibles.</i>",
+        "btnAdd": "Agregar Testimonio",
+        "fieldService": "<i>Selecciona el servicio que has recibido y del cual deseas crear tu testimonio.</i>",
+        "fieldAnonymous": "ANÓNIMO",
+        "fieldAnonymousDescription": "Si no deseas que se muestre tu nombre o apodo, selecciona esta opción.",
+        "fieldName": "Nombre completo/Apodo",
+        "fieldNamePlaceholder": "CryptoShalix",
+        "fieldUrl": "URL de tu sitio web o red social",
+        "fieldUrlPlaceholder": "https://linktr.ee/CryptoShalix",
+        "fieldTestimonialMedia": "Puedes dejar tu testimonio en video enviandolo por email a <a href='mailto:cryptoshalix@gmail.com' target='_blank'>cryptoshalix@gmail.com</a>, tras su revisión, se publicará o se actualizará el actual testimonio en texto (si lo hubiera) por el nuevo en formato video.<br/><br/>Para crear tu testimonio, ya sea en video o texto, puedes responder a las siguientes preguntas:",
+        "fieldTestimonialText": "Testimonio en texto",
+        "testimonialQuestions": "<b>Respecto al servicio, formación o evento recibido</b><br/><br/><i>¿Cómo estabas antes de recibirlo, y cómo te sientes ahora?</i><br/><i>¿Qué te ha aportado o en qué te ha beneficiado?</i><br/><i>¿Qué te hubieses perdido si no lo hubieras comprado?</i><br/><i>¿Por qué me volverías a elegir o recomendarías?</i>",
+        "btnSend": "Enviar",
+        "msgSuccess": "¡Testimonio enviado con éxito!",
+        "msgError": "¡Error al enviar el testimonio! Por favor, inténtalo de nuevo más tarde, o contacta con soporte si el error persiste."
+      },
+      "about": {
+        "title": "Acerca de"
+      },
+      "contact": {
+        "title": "Contacto",
+        "description": "<b>¡No dudes en contactarme!</b><br/><br/>- <b>Sugerencias</b>:<br/>Tienes alguna sugerencia para mejorar algún apartado, producto o servicio de la página.<br /><br />- <b>Errores</b>:<br/>Has encontrado un error <i>(bug)</i> en la página. Se agradece el reporte para su reparación.<br /><br />- <b>Consultas</b>:<br/>Tienes alguna consulta sobre algún apartado, producto o servicio de la página.<br /><br />- <b>Solicitudes</b>:<br/>Necesitas más información acerca de algún producto, servicio, o del funcionamiento de la página.",
+        "fieldNickname": "Nombre/Apodo",
+        "fieldContactMethod": "Método de contacto",
+        "fieldContactMethodDescription": "<i>Se debe indicar al menos 1 de los siguientes métodos de contacto.</i>",
+        "fieldEmail": "Email",
+        "fieldPhone": "Teléfono",
+        "fieldTelegram": "Id de Telegram",
+        "fieldMessage": "Mensaje",
+        "fieldMessagePlaceholder": "Solicitudes, consultas, sugerencias, bugs, ...",
+        "btnSend": "Enviar",
+        "msgDataSharing": "Los datos de contacto indicados NO serán compartidos ni almacenados, y se usarán únicamente para responder a tu mensaje.",
+        "msgSuccess": "¡Mensaje enviado con éxito! ¡Gracias por contactarme!<br/>Intentaré responder lo antes posible.",
+        "msgError": "¡Error al enviar el mensaje! Por favor, inténtalo de nuevo más tarde.",
+        "msgAlert": "¡Atención! Se deben rellenar todos los campos obligatorios."
+      }
+    },
+    "store": {
+      "title": "Tienda",
+      "description": "Aquí puedes encontrar todas las formaciones, servicios y productos que se ofrecen desde <i>BitAkashico</i>.<br/><br/>Si tienes alguna duda o consulta, o cualquier problema con la compra, puedes enviar un mensaje desde la sección de <a href='/contact'>Contacto</a>.",
+      "selectionPlaceholder": "Selecciona un servicio, formación o producto",
+      "price": "Valorado en",
+      "priceForYou": "Oferta especial",
+      "priceOldStudent": "Precio antiguo alumno",
+      "btnBuy": "Comprar",
+      "btnBook": "Reservar fecha",
+      "btnAddToCart": "Añadir al carrito",
+      "btnCheckCart": "Ver carrito",
+      "btnCheckout": "Pagar",
+      "msgEmptyCart": "<i>El carrito está vacío</i>",
+      "msgTotal": "Total",
+      "checkoutSuccess": "¡El pago se ha efectuado correctamente!",
+      "checkoutCancelled": "Se ha cancelado la operación de pago o se ha producido un error. Utiliza el formulario de <a href='/contact'>Contacto</a> si tienes cualquier problema durante el proceso de compra.",
+      "checkoutError": "Se ha producido un error al realizar el pago. Si el error persiste, envía una captura del error mediante el formulario de contacto.",
+      "checkoutTitle": "Escoge un método de pago",
+      "checkoutDescription": "Selecciona el método de pago que prefieras para realizar la compra del producto o servicio seleccionado.<br/><br/>Si tienes alguna duda o consulta, o cualquier problema con la compra, puedes enviar un mensaje desde la sección de <a href='/contact'>Contacto</a>.",
+      "tagAmountConcept": "Una vez abras la aplicación, indica los siguientes datos:<br/><b>Cantidad</b>: La indicada a continuación <i>(en euros)</i>.<br/><b>Concepto</b>: El email con el que te vas a registrar."
+    },
+    "category": {
+      "formation": "Formaciones",
+      "service": "Servicios",
+      "product": "Productos"
+    },
+    "msg": {
+      "generic": "Se ha producido un error inesperado. Por favor, inténtalo de nuevo más tarde. Si el error persiste, envía una captura del error mediante el formulario de contacto.",
+      "errorFields": "Por favor, completa todos los campos obligatorios.",
+      "notFound": "La página que estás buscando no existe.",
+      "copyToClipboard": "Haz click para copiar al portapapeles",
+      "copyToClipboardSuccess": "¡Copiado al portapapeles!",
+      "scanToPay": "Escanea el código QR para realizar el pago de forma rápida y sencilla.",
+      "openNewTab": "Se abrirá una nueva pestaña.",
+      "noActivePaymentMethods": "No hay métodos de pago activos en estos momentos.<br/>Consulta otras opciones de pago desde el formulario de <a href='/contact'>Contacto</a>",
+      "fiatMoney": "Dinero fiat",
+      "fiatMoneyDescription": "El dinero fiat es un tipo de moneda emitida por el gobierno que no está respaldada por un bien físico como el oro o la plata, sino que su valor se basa en la confianza y aceptación generalizada de que será utilizado para realizar pagos.<br/>Este sistema monetario se basa en un acto de fe colectiva y en la regulación de las instituciones financieras de cada país.<br/><br/>El dinero fiat no tiene valor intrínseco y no tiene valor de uso, su valor surge porque el gobierno que lo declara como moneda de curso legal recauda impuestos en dicha moneda, haciendo necesaria su aceptación.<br/><br/>Desde el fin del sistema de Bretton Woods en 1971, las principales monedas del mundo, como el dólar estadounidense, el euro y el yen, son ejemplos de dinero fiat.<br/><br/>El término \"fiat\" deriva del latín \"fiat\", que significa \"hágase\" y se refiere a la imposición legal del gobierno que lo administra y le da el estatus de moneda de curso legal.<br/>El dinero fiat se diferencia del dinero fiduciario en que este último hace referencia a la confianza que tienen los agentes económicos en que el activo sea aceptado como medio de intercambio, mientras que el dinero fiat es una imposición legal del gobierno."
+    }
+  }
+]

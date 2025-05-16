@@ -1,0 +1,26 @@
+/******************************************************/
+/* FONTS */
+/******************************************************/
+
+/* Kreon
+  License: Copyright 2018 The Kreon Project Authors (https://github.com/googlefonts/kreon), with Reserved Font Name "Kreon".
+  This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is copied below, and is also available with a FAQ at:
+  Link: https://openfontlicense.org
+*/
+@font-face {
+  font-family: 'Kreon';
+  src: url('../fonts/Kreon/Kreon-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal, bold;
+  font-style: normal;
+}
+
+/* ArchitectsDaughter
+  License: Apache License, Version 2.0
+  More info: https://www.apache.org/licenses/LICENSE-2.0
+*/
+@font-face {
+  font-family: 'ArchitectsDaughter';
+  src: url('../fonts/Architects_Daughter/ArchitectsDaughter-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,106 @@
+/******************************************************/
+/* IMPORTS */
+/******************************************************/
+
+@import '../../css/core.css';
+
+/******************************************************/
+/* STACK CARDS */
+/******************************************************/
+
+.stack-cards {
+  --stack-card-height: 400px;
+  --stack-card-top: 125px;
+  --stack-card-font-size: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  view-timeline-name: --stack-cards;
+
+  .card {
+    position: sticky;
+    height: var(--stack-card-height);
+    top: var(--stack-card-top);
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: var(--stack-card-height);
+      color: var(--color-dark-rgb);
+      background: var(--color-light-rgb);
+      box-shadow: 0 0 1rem rgba(var(--color-dark), 0.5);
+      border-radius: 2rem;
+      transform-origin: center top;
+      animation: linear scale forwards;
+      animation-timeline: --stack-cards;
+
+      h1 {
+        margin: 0;
+        font-size: var(--stack-card-font-size);
+        font-weight: 900;
+      }
+
+      span {
+        margin: 0 5%;
+        font-size: 2rem;
+        font-weight: normal;
+      }
+    }
+
+    &:nth-child(1) {
+      --max-scale: 0.7;
+      padding-top: calc(var(--stack-card-top) / 2);
+
+      &.container {
+        animation-range: exit-crossing 0% exit-crossing 25%;
+      }
+    }
+
+    &:nth-child(2) {
+      --max-scale: 0.8;
+      --initial-range: 25%;
+      --final-range: 50%;
+      padding-top: calc(var(--stack-card-top) / 1.5);
+
+      &.container {
+        animation-range: exit-crossing 25% exit-crossing 50%;
+      }
+    }
+
+    &:nth-child(3) {
+      --max-scale: 0.9;
+      --initial-range: 50%;
+      --final-range: 75%;
+      padding-top: calc(var(--stack-card-top) / 1);
+
+      &.container {
+        animation-range: exit-crossing 50% exit-crossing 75%;
+      }
+    }
+
+    &:nth-child(4) {
+      --max-scale: 1;
+      --initial-range: 75%;
+      --final-range: 100%;
+      padding-top: calc(var(--stack-card-top) / .5);
+
+      &.container {
+        animation-range: exit-crossing 75% exit-crossing 100%;
+      }
+    }
+  }
+}
+
+/******************************************************/
+/* ANIMATIONS */
+/******************************************************/
+
+@keyframes scale {
+  to {
+    transform: scale(var(--max-scale, 1));
+  }
+}

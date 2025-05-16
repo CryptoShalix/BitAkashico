@@ -1,0 +1,66 @@
+/******************************************************/
+/* IMPORTS */
+/******************************************************/
+
+@import '../../css/core.css';
+
+/******************************************************/
+/* SOCIAL MEDIA LINKS */
+/******************************************************/
+
+.social-media-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  margin: 0 .5rem;
+  padding: .5rem 1rem;
+  background: rgba(var(--color-secondary), .5);
+  border-radius: 1rem;
+  transition: all .5s ease-in-out;
+  z-index: 5;
+
+  &:hover {
+    background: rgba(var(--color-secondary), .85);
+    transition: all .5s ease-in-out;
+  }
+
+  a {
+    display: flex;
+    width: auto;
+    min-width: var(--max-icon-size);
+    height: var(--max-icon-size);
+    color: rgba(var(--color-primary), .5);
+
+    &:hover {
+
+      span,
+      i {
+        color: rgba(var(--color-primary), 1);
+      }
+    }
+
+    span {
+      width: 100%;
+      font-size: .9rem !important;
+      text-align: right !important;
+      margin: 0 !important;
+      padding: 0 .5rem !important;
+    }
+
+    i {
+      justify-content: flex-start !important;
+      width: auto;
+      max-width: var(--max-icon-size);
+      height: 100%;
+      color: var(--color-primary-rgb);
+    }
+  }
+}
+
+@media (hover: none) {
+  .social-media-links {
+    background: rgba(var(--color-secondary), .85);
+  }
+}

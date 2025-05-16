@@ -1,0 +1,45 @@
+<div id="checkout-content">
+  <!-- HEADER -->
+  <div id="checkout-header">
+    <h2
+      id="checkout-title"
+      class="trn"
+      data-trn-key="store.checkoutTitle"
+    ></h2>
+    <i
+      id="btnCloseCheckout"
+      class="fa-solid fa-x"
+      onclick="toggleCheckout()"
+    ></i>
+  </div>
+
+  <!-- BODY -->
+  <div id="checkout-body">
+    <span
+      class="trn description"
+      data-trn-key="store.checkoutDescription"
+    ></span>
+
+    <!-- PAYMENT SELECTOR: Dynamic payment selector -->
+    <div id="checkout-payment-selector"></div>
+
+    <!-- PAYMENT FORM DATA -->
+    <div id="checkout-payment-box">
+      <i
+        id="btnBackToPaymentSelector"
+        class="fa-solid fa-arrow-left"
+        onclick="paymentProcessor.selectPaymentMethod()"
+      ></i>
+      <!-- Dynamic payment form data -->
+      <div id="checkout-payment-data"></div>
+    </div>
+  </div>
+
+  <!-- LOADING -->
+  <div
+    id="loadingOverlay"
+    class="hidden"
+  >
+    <div class="spinner"></div>
+  </div>
+</div>

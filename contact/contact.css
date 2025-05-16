@@ -1,0 +1,26 @@
+#contact-description {
+  margin-bottom: 2rem;
+
+  .contact-item {
+    width: 100%;
+
+    .contact-item-title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding: .75rem;
+
+      .icon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0 .5rem;
+        font-size: 1.2rem;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}

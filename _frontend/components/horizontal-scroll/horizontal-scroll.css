@@ -1,0 +1,135 @@
+/******************************************************/
+/* IMPORTS */
+/******************************************************/
+
+@import '../../css/core.css';
+
+/******************************************************/
+/* GALLERY or HORIZONTAL SCROLL */
+/******************************************************/
+
+.horizontal-scroll-container {
+  position: relative;
+
+  .hs-title,
+  .hs-description {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .horizontal-scroll {
+    --viewport-width: 100%;
+    --max-article-width: 752px;
+    --events: 4;
+    --max-scroll-distance: calc((var(--viewport-width) * (var(--events) * -1)) + var(--max-article-width));
+
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 0;
+    height: calc(var(--max-article-width) * (var(--events)));
+    view-timeline-name: --section-pin-tl;
+    view-timeline-axis: block;
+
+    .container {
+      box-sizing: border-box;
+      position: sticky;
+      display: flex;
+      align-items: center;
+      top: calc((var(--header-max-height) * 2) + 2rem);
+      width: calc(var(--max-article-width) * var(--events));
+      min-width: var(--max-article-width);
+      height: 75dvh;
+      margin: 100px 50px 50px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-blend-mode: soft-light;
+      aspect-ratio: 1/1;
+      border-radius: 2rem;
+
+      animation: linear move forwards;
+      animation-timeline: --section-pin-tl;
+      animation-range: contain 0% contain 100%;
+
+      article {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: calc(var(--max-article-width) - 3rem);
+        height: 100%;
+        padding: 2rem;
+        color: rgb(var(--color-light));
+        background: rgba(var(--color-dark), .5);
+        border-radius: 2rem;
+
+        .hscontainer-title {
+          padding: 1rem;
+          font-size: 3rem;
+        }
+
+        .hscontainer-price {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 3rem;
+          width: calc(100% - 2rem);
+          margin: 1rem;
+          padding: 0;
+          font-size: 2rem;
+          font-weight: 700;
+          color: rgb(var(--color-light));
+          background: rgb(var(--color-dark));
+
+          @media (prefers-color-scheme: dark) {
+            color: rgb(var(--color-dark));
+            background: rgb(var(--color-light));
+          }
+
+          border-radius: 2rem;
+        }
+
+        .hscontainer-description {
+          height: 100%;
+          padding: .5rem;
+          font-size: 1.2rem;
+          white-space: pre-wrap;
+          overflow-y: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  .horizontal-scroll {
+    --max-article-width: 100dvw;
+    --max-article-height: 75dvh;
+
+    flex-direction: column !important;
+    height: auto !important;
+    margin: 1rem auto !important;
+    gap: 2rem;
+
+    .container {
+      position: relative !important;
+      display: flex !important;
+      width: 100% !important;
+      min-width: 100% !important;
+      height: var(--max-article-height) !important;
+      top: 5rem !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      animation: none !important;
+      transform: none !important;
+
+      article {
+        width: 100% !important;
+        padding: .5rem !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "global": {
+      "title": "BitAkashico",
+      "sCopyright": "All rights reserved",
+      "sCredits": "Developed with&nbsp;<i class='fa fa-heart red'></i>&nbsp;by <a target='_blank' href='https://linktr.ee/CryptoShalix'>@CryptoShalix</a>",
+      "videoNotSupported": "The video is not supported by your browser.",
+      "seeMore": "I want to see more!"
+    },
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "store": "Store",
+      "testimonials": "Testimonials",
+      "contact": "Contact",
+      "favorites": "Favorites"
+    },
+    "pages": {
+      "home": {
+        "title": "Home",
+        "description": "Hello! I'm CryptoShalix, a self-taught web and software developer. Welcome to my website!"
+      },
+      "testimonials": {
+        "title": "Testimonials",
+        "description": "These are some testimonials from my clients and students!<br/><br/>In their own words, they demonstrate the quality of my services, and seeing them reminds me that <i><u>together we go further</u></i>, motivating me to grow more and help more people.<br/><br/><b>Thank you for being part of our success community!</b><br/><br/><i>If you want to leave your testimonial, you can do it from the button below.</i>",
+        "msgNoTestimonials": "<i>No testimonials available.</i>",
+        "btnAdd": "Add Testimonial",
+        "fieldService": "<i>Select the service you received and for which you want to create your testimonial.</i>",
+        "fieldAnonymous": "ANONYMOUS",
+        "fieldName": "* Full name/Nickname",
+        "fieldUrl": "URL of your website or social network",
+        "fieldTestimonialText": "* Testimonial in text",
+        "fieldTestimonialMedia": "* Testimonial in video/audio",
+        "fieldMessagePlaceholder": "How were you before receiving the service/training, and how do you feel now?",
+        "btnSend": "Send",
+        "msgSuccess": "Testimonial sent successfully!",
+        "msgError": "Error sending the testimonial! Please try again later, or contact support if the error persists."
+      },
+      "about": {
+        "title": "About",
+        "description": "Hello! I'm CryptoShalix, a self-taught web and software developer. Welcome to my website!"
+      },
+      "contact": {
+        "title": "Contact",
+        "description": "<b>Don't hesitate to contact me!</b><br/><br/>- <b>Suggestions</b>:<br/>You have a suggestion to improve any section, product, or service of the page.<br /><br />- <b>Errors</b>:<br/>You have found an error <i>(bug)</i> on the page. Reporting it for repair is appreciated.<br /><br />- <b>Queries</b>:<br/>You have a query about any section, product, or service of the page.<br /><br />- <b>Requests</b>:<br/>You need more information about any product, service, or the functioning of the page.",
+        "fieldNickname": "Name/Nickname",
+        "fieldContactMethod": "Contact method",
+        "fieldContactMethodDescription": "<i>At least 1 of the following contact methods must be provided.</i>",
+        "fieldEmail": "Email",
+        "fieldPhone": "Phone",
+        "fieldTelegram": "Telegram ID",
+        "fieldMessage": "Message",
+        "fieldMessagePlaceholder": "Requests, inquiries, suggestions, bugs, ...",
+        "btnSend": "Send",
+        "msgDataSharing": "The contact data provided will NOT be shared or stored, and will be used solely to reply to your message.",
+        "msgSuccess": "Message sent successfully! Thank you for contacting me!<br/>I'll try to reply as soon as possible.",
+        "msgError": "Error sending the message! Please try again later.",
+        "msgAlert": "Attention! All required fields must be filled.",
+        "msgErrorFields": "Please fill in all required fields."
+      }
+    },
+    "reservations": {
+      "title": "Book your appointment",
+      "description": "If you want to hire the services of <b><i>Technical Support</i></b> and/or <b><i>Soul Channeling</i></b>, you can do it from here.<br/><br/>Remember that the <b><i>Technical Support</i></b> service costs €25/hour, and the <b><i>Soul Channeling</i></b> service costs €15 per session.<br/><br/>If you have any questions or inquiries, you can contact me from the <a href='#contact' onclick='loadPage('contact')'>Contact</a> section.",
+      "btnBook": "Book appointment"
+    },
+    "store": {
+      "title": "Store",
+      "description": "Here you can find all the training, services and products offered by <i>BitAkashico</i>.<br/><br/>If you have any questions or queries, or any problems with the purchase, you can send a message from the <a href='/contact'>Contact</a> section.",
+      "selectionPlaceholder": "Select a service, formation, or product",
+      "price": "Valued at",
+      "priceForYou": "Special offer",
+      "priceOldStudent": "Old student price",
+      "btnBuy": "Buy",
+      "btnAddToCart": "Add to cart",
+      "btnRemoveFromCart": "Remove from cart",
+      "btnCheckout": "Checkout",
+      "btnContinueShopping": "Continue shopping",
+      "msgEmptyCart": "<i>Your cart is empty.</i>",
+      "msgItemAdded": "<i>Item added to cart.</i>",
+      "msgItemRemoved": "<i>Item removed from cart.</i>"
+    },
+    "category": {
+      "formation": "Trainings",
+      "service": "Services",
+      "product": "Products"
+    },
+    "msg": {
+      "generic": "An unexpected error has occurred. Please try again later. If the error persists, send a screenshot of the error through the contact form.",
+      "notFound": "The page you are looking for does not exist."
+    }
+  }
+]

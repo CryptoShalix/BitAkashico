@@ -1,0 +1,38 @@
+# How to?
+# 1. Install the REST Client extension: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+# 2. Add your requests. Example:
+
+### Global: title, logo and social media
+
+GET http://localhost:1337/api/global?fields[0]=title&populate[logo][fields][0]=url&populate[socialMedia]=*
+Authorization: Bearer 046044b3e618b298f9106c85e771160ddd611329be2978cf933d6eeaf0130657c2b8cd2a528fee2bdb8d7eac30e4c62f70f133db41e18382ab8f2b40332f6ef2a340c27822a3250702c10ca3af2adae131b36424795b43361034d64b54115667d40fc346dea0de269314a70ab69671ff89d1915a4633560225e882490134a74e
+
+### Store items: id, title, description, cover {url}, isActive, category and prices {price, currency, isActive}
+
+GET http://localhost:1337/api/store?locale=es&fields[0]=id&fields[1]=title&fields[2]=description&populate[cover][fields][3]=url&fields[4]=isActive&fields[5]=category&populate[prices][populate]=*
+Authorization: Bearer 046044b3e618b298f9106c85e771160ddd611329be2978cf933d6eeaf0130657c2b8cd2a528fee2bdb8d7eac30e4c62f70f133db41e18382ab8f2b40332f6ef2a340c27822a3250702c10ca3af2adae131b36424795b43361034d64b54115667d40fc346dea0de269314a70ab69671ff89d1915a4633560225e882490134a74e
+
+### Events: title, description, event {title, description, price, date, image and isActive}
+
+# GET http://localhost:1337/api/events?locale=es&fields[0]=title&fields[1]=description&populate[events]=*&sort=-date&limit=4
+GET http://localhost:1337/api/event-container?locale=es&fields[0]=title&fields[1]=description&populate[events][populate]=*
+Authorization: Bearer 046044b3e618b298f9106c85e771160ddd611329be2978cf933d6eeaf0130657c2b8cd2a528fee2bdb8d7eac30e4c62f70f133db41e18382ab8f2b40332f6ef2a340c27822a3250702c10ca3af2adae131b36424795b43361034d64b54115667d40fc346dea0de269314a70ab69671ff89d1915a4633560225e882490134a74e
+
+### Testimonials
+
+GET http://localhost:1337/api/testimonials?locale=es&populate=*
+Authorization: Bearer 046044b3e618b298f9106c85e771160ddd611329be2978cf933d6eeaf0130657c2b8cd2a528fee2bdb8d7eac30e4c62f70f133db41e18382ab8f2b40332f6ef2a340c27822a3250702c10ca3af2adae131b36424795b43361034d64b54115667d40fc346dea0de269314a70ab69671ff89d1915a4633560225e882490134a74e
+
+### Client: Create a new client
+# POST http://localhost:1337/api/client
+
+POST http://localhost:1337/api/client
+Content-Type: application/json
+Authorization: Bearer 046044b3e618b298f9106c85e771160ddd611329be2978cf933d6eeaf0130657c2b8cd2a528fee2bdb8d7eac30e4c62f70f133db41e18382ab8f2b40332f6ef2a340c27822a3250702c10ca3af2adae131b36424795b43361034d64b54115667d40fc346dea0de269314a70ab69671ff89d1915a4633560225e882490134a74e
+
+### Exchange: Create a new exchange
+# POST http://localhost:1337/api/exchange/create
+
+POST http://localhost:1337/api/exchange/create
+Content-Type: application/json
+Authorization: Bearer 046044b3e618b298f9106c85e771160ddd611329be2978cf933d6eeaf0130657c2b8cd2a528fee2bdb8d7eac30e4c62f70f133db41e18382ab8f2b40332f6ef2a340c27822a3250702c10ca3af2adae131b36424795b43361034d64b54115667d40fc346dea0de269314a70ab69671ff89d1915a4633560225e882490134a74e

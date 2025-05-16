@@ -1,0 +1,91 @@
+/******************************************************/
+/* IMPORTS */
+/******************************************************/
+
+@import '../../css/core.css';
+
+/******************************************************/
+/* GRID CARDS */
+/******************************************************/
+
+.grid-cards {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #111;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: tomato;
+    border-radius: 1.5rem;
+    aspect-ratio: 1/1;
+
+    view-timeline-name: --card-fade;
+    view-timeline-axis: block;
+    animation-timeline: --card-fade;
+    animation-name: fade-in;
+    animation-range: entry 0% cover 50%;
+
+    span {
+      margin: 0;
+      font-size: 20px;
+      font-weight: normal;
+      color: #333;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 56px;
+      font-weight: 800;
+    }
+
+    &:nth-child(1) {
+      background-color: #e1dbfd;
+    }
+
+    &:nth-child(2) {
+      background-color: #90c3cc;
+    }
+
+    &:nth-child(3) {
+      background-color: #ff764a;
+    }
+
+    &:nth-child(4) {
+      background-color: #47b171;
+    }
+
+    &:nth-child(5) {
+      background-color: #ffb84f;
+    }
+
+    &:nth-child(6) {
+      background-color: #90c3cc;
+    }
+
+    &:nth-child(7) {
+      background-color: #e1dbfd;
+    }
+
+    &:nth-child(8) {
+      background-color: #47b171;
+    }
+  }
+}
+
+/***********************************************/
+/* MEDIA QUERIES */
+/***********************************************/
+
+@media screen and (max-width: 1200px) {
+  .grid-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

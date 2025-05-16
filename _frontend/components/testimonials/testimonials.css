@@ -1,0 +1,184 @@
+.testimonials-container {
+  --color-text: var(--color-dark);
+  --color-background: var(--color-light);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50dvh, 1fr));
+  justify-content: center;
+  margin: 2rem auto;
+  gap: 2rem;
+
+  .testimonial-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 95dvw;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: rgba(var(--color-background), .85);
+    box-shadow: 0 0 10px rgba(var(--color-text), .5);
+    border-radius: 2rem;
+    aspect-ratio: 1/1;
+
+    view-timeline-name: --card-fade;
+    animation-timeline: --card-fade;
+    animation-name: fade-in;
+    animation-range: entry 0% cover 50%;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      transform: scale(1.02);
+      transition: all 0.5s ease-in-out;
+    }
+
+    .testimonial-store {
+      --testimonial-store-icon-size: 50px;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: calc(100% - 1rem);
+      margin: 0;
+      padding: .5rem;
+      color: rgb(var(--color-text));
+      background: rgba(var(--color-background), .85);
+      border-radius: 2rem 2rem 0 0;
+
+      .testimonial-store-icon {
+        width: 100%;
+        height: 100%;
+        max-width: var(--testimonial-store-icon-size);
+        max-height: var(--testimonial-store-icon-size);
+        margin: 0;
+        padding: 0;
+        border-radius: 50%;
+      }
+
+      .testimonial-store-title {
+        width: 100%;
+        margin: 0;
+        margin-left: calc(var(--testimonial-store-icon-size) * -1);
+        padding: .5rem;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: rgb(var(--color-text));
+      }
+    }
+
+    .testimonial-media {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 2/1.55;
+    }
+
+    .testimonial-text {
+      max-height: max-content;
+      padding: 1rem 1.5rem;
+      text-align: pretty;
+      font-size: 1.2rem;
+      color: rgb(var(--color-text));
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .testimonial-clientInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: calc(100% - 1rem);
+      margin: 0;
+      padding: .5rem;
+      color: rgb(var(--color-text));
+      background: rgba(var(--color-background), .85);
+      border-radius: 0 0 2rem 2rem;
+
+      span {
+        font-size: .9rem;
+        font-weight: bold;
+        font-style: italic;
+        text-transform: uppercase;
+        color: rgb(var(--color-text));
+      }
+
+      .testimonial-clientInfo-Name {
+        font-size: 1rem;
+        padding: 0;
+        color: rgb(var(--color-text));
+      }
+
+      .testimonial-clientInfo-Link {
+        padding: 0;
+        font-size: .9rem;
+        font-style: italic;
+        text-decoration: none;
+        color: rgb(var(--color-text));
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: none;
+          border-color: var(--color-accent-rgb);
+        }
+
+        &:active {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .testimonial-btn-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: rgb(var(--color-text));
+    background-color: rgba(var(--color-background), .85);
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--color-accent-rgb);
+      color: rgb(var(--color-background));
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.accordion-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content.accordion-open {
+  max-height: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .testimonial-box {
+    max-width: 85dvw !important;
+    max-height: 85dvh !important;
+    aspect-ratio: unset !important;
+  }
+
+  .testimonial-store-title {
+    font-size: 1rem !important;
+    margin: 0 !important;
+  }
+
+}
