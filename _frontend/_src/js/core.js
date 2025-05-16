@@ -51,7 +51,7 @@ $(document).ready(async function () {
 // LOADERS
 
 function generateRootPath(id, isComponent) {
-  return `..${isComponent ? `/_frontend/components` : ''}/${id}/${id}`;
+  return `..${isComponent ? `/_src/components` : ''}/${id}/${id}`;
 }
 
 function checkFileExists(url, callback) {

@@ -24,7 +24,7 @@
 const LOCALIZATION_LOCAL = false;
 
 const TRN_CLASS = '.trn';
-const TRN_PATH = '/_frontend/localization/';
+const TRN_PATH = '/_src/localization/';
 
 const languages = ['es', 'en'];
 const translations = {};
