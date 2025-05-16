@@ -22,8 +22,8 @@ const ENVIRONMENTS = {
   production: 'https://bitakashico-backend.onrender.com'
 };
 
-const SHOW_LOG = ENVIRONMENTS.local ? true : false;
 const STRAPI_HOST = ENVIRONMENTS.production;
+const SHOW_LOG = STRAPI_HOST === ENVIRONMENTS.local ? true : false;
 const STRAPI_TOKEN = "046044b3e618b298f9106c85e771160ddd611329be2978cf933d6eeaf0130657c2b8cd2a528fee2bdb8d7eac30e4c62f70f133db41e18382ab8f2b40332f6ef2a340c27822a3250702c10ca3af2adae131b36424795b43361034d64b54115667d40fc346dea0de269314a70ab69671ff89d1915a4633560225e882490134a74e";
 
 const Type = {
