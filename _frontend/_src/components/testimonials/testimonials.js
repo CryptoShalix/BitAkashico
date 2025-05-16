@@ -81,7 +81,7 @@ $(document).ready(async function () {
 
             return `<div class="testimonial-box">
             ${storeCover && storeTitle ? `<div class="testimonial-store">
-              <img class="testimonial-store-icon" src="${STRAPI_HOST}/${storeCover}" alt="${storeTitle} icon">
+              <img class="testimonial-store-icon" src="${STRAPI_HOST}${storeCover}" alt="${storeTitle} icon">
               <span class="testimonial-store-title">${storeTitle}</span>
             </div>` : ''}
           
