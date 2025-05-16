@@ -43,7 +43,7 @@ function setData_About(data) {
     data.TDI.forEach((item) => {
       const aboutBox = `
       <section class="about-section">
-        ${item.image && item.image.url ? `<img class="about-section-image" src="${STRAPI_HOST}/${item.image.url}">` : ''}
+        ${item.image && item.image.url ? `<img class="about-section-image" src="${STRAPI_HOST}${item.image.url}">` : ''}
         <div class="about-section-tdi">
           <h3 class="about-section-title">
             <i class="icon fas fa-${item.icon}"></i>
