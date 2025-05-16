@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_shared_social_medias",
+  "info": {
+    "displayName": "Social Media",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "isActive": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "regex": "^([^.]+\\.)*([^.]+)\\.([^.]+)$"
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "Discord",
+        "Facebook",
+        "Github",
+        "Instagram",
+        "Other",
+        "Stack Overflow",
+        "Telegram",
+        "TikTok",
+        "Twitter",
+        "WhatsApp",
+        "YouTube"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

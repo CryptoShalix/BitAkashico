@@ -1,0 +1,69 @@
+{
+  "collectionName": "components_shared_prices",
+  "info": {
+    "displayName": "Prices",
+    "icon": "priceTag",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "priceOriginal": {
+      "type": "string",
+      "required": true,
+      "regex": "^\\d{1,10}(?:\\.\\d{1,8})?$",
+      "default": "100"
+    },
+    "applyDiscount": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "discountPercentage": {
+      "type": "decimal",
+      "required": true,
+      "max": 90,
+      "min": 0,
+      "default": 75
+    },
+    "discountOldStudent": {
+      "type": "decimal",
+      "required": true,
+      "max": 75,
+      "min": 0,
+      "default": 25
+    },
+    "applyDiscountOldStudent": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "EUR",
+        "USD",
+        "BTC"
+      ],
+      "required": true,
+      "default": "EUR"
+    },
+    "costPeriodicity": {
+      "type": "enumeration",
+      "enum": [
+        "hourly",
+        "daily",
+        "weekly",
+        "biweekly",
+        "monthly",
+        "bimonthly",
+        "quarterly",
+        "semiannually",
+        "yearly",
+        "oneTime",
+        "session"
+      ],
+      "required": true,
+      "default": "monthly"
+    }
+  }
+}

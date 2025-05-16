@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_seos",
+  "info": {
+    "name": "Seo",
+    "icon": "allergies",
+    "displayName": "TDI",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "icon": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_shared_btc_addresses",
+  "info": {
+    "displayName": "Wallet",
+    "icon": "bold",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "TAG": {
+      "type": "string",
+      "default": "cryptoshalix@zbd.gg"
+    },
+    "TAGURL": {
+      "type": "string",
+      "required": true
+    },
+    "QR": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "QRURL": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "btc",
+        "fiat"
+      ],
+      "required": true
+    },
+    "walletId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_cards",
+  "info": {
+    "displayName": "Card"
+  },
+  "options": {},
+  "attributes": {
+    "isActive": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 200,
+      "minLength": 3,
+      "unique": true
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 500
+    }
+  }
+}

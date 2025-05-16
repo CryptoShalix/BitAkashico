@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "exchanges",
+  "info": {
+    "singularName": "exchange",
+    "pluralName": "exchanges",
+    "displayName": "Exchange",
+    "description": "Define exchange settings"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "APIKEY": {
+      "type": "string"
+    }
+  }
+}
