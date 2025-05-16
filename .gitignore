@@ -1,0 +1,12 @@
+# Node.js
+node_modules
+dist
+.env
+*.log
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Git
+.git
